@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/MainScene.unity
+    guid: 7e296d4c0f55a7d4aa07dbb4d0616f4e
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/LevelScene.unity
+    guid: b9e0e0914df7c02428053fd088d3c7a6
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

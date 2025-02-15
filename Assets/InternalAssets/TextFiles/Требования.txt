@@ -1,0 +1,57 @@
+﻿MorpehECS. Zenject используется только как DI контейнер, все остальные функции (например сигналы) запрещены.
+Интерфейс основанный на принципах MVx паттерне.
+
+Требования:
+1) View является MonoBehaviour - как сплав логики самого интерфейса и UI canvas
+2) View должен иметь возможность меняться динамический (Один View можно будет заменить на другой)
+3) ViewModel/Controller содержит в себе данные, на которые подписан View.
+4) Интерфейс может быть статичным (просто отображение информации, лишь иногда меняя View) и динамичным (С ним можно будет взаимодействовать мышкой либо включать, выключать кнопками)
+5) В случаи включения одного интерфейса - допустимо, что некоторые другие интерфейсы отключались
+6) ViewModel/Controller будет интегрирован в Ecs системы, чтобы они могли менять данные там. Я не нашел способа как можно передать измененную информацию в интерфейсы лучше.
+7) Я понятия не имею где должна быть логика проверки нажатия кнопок и проверки подходящих условий чтобы открыть/закрыть окно определенного интерфейса. Логика реализована, но я не знаю где ей следует находиться.
+8) View и Models должны быть иницализированны в самом начале, и их можно будет лишь переключать.
+
+Логика включения динамического интерфейса (не в MVx стиле)
+Класс реализует интерфейс ILayer
+{
+public void OnUpdate(float deltaTIme)
+{
+    if (!_localPlayerSession.IsLocalPlayerAlive)
+        return;
+
+    if (Input.GetKeyDown(KeyCode.E))
+    {
+        if (!LayersManager.IsLayerActive(LAYER_NAME) && LayersManager.IsLayerCanBeShown(LAYER_NAME))
+        {
+            LayersManager.ShowLayer(LAYER_NAME); 
+        }
+        else if (LayersManager.IsLayerActive(LAYER_NAME))
+        {
+            Hide();
+        }
+    }
+}
+
+public void OnShow()
+{
+    gameObject.SetActive(true);
+}
+
+public void OnHide()
+{
+    gameObject.SetActive(false);
+}
+
+public void Hide()
+{
+    if (LayersManager.IsLayerActive(LAYER_NAME))
+    {
+        LayersManager.HideLayer(LAYER_NAME);
+    }
+}
+}
+public interface ILayer
+    {
+        void OnShow();
+        void OnHide();
+    }

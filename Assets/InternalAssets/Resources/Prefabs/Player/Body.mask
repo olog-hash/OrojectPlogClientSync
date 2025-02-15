@@ -1,0 +1,2535 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Body
+  m_Mask: 01000000010000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Bip01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf/Bip01 L Foot
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf/Bip01 L Foot/Bip01
+      L Toe0
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf/Bip01 L Foot/Bip01
+      L Toe0/Bip01 L Toe0Nub
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Flame
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Pants_prizrak_e03
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Pants_tactic01_e03
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Pants_tactic02_e03
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Pants_tactic03_e03
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Pants_tactic04_e03
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Pants_tacticB01_e03
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Pants_trooper_e03
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf
+    m_Weight: 0
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf/Bip01 R Foot
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf/Bip01 R Foot/Bip01
+      R Toe0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf/Bip01 R Foot/Bip01
+      R Toe0/Bip01 R Toe0Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Flame_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Pants_prizrak_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Pants_tactic01_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Pants_tactic02_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Pants_tactic03_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Pants_tactic04_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Pants_tacticB01_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Pants_trooper_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Backpacks_arrows
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Backpacks_darts
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Backpacks_rocket01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Backpacks_rocket02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Backpacks_Snowboard
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_back01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_back02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_extinguisher
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_guit01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_guit02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_rec
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_rec2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_sarcophagus
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_Scarecrow
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_shield
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_snake01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_thanos
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_tomb
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_turt01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Backpacks_VampireBat
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Backpacks_santa
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Backpacks_santa2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Bip01 HeadNub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Flame_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_avenger
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_biker
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_cap01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_cap02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB07
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capB08
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capVKKS01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capVKKS02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_capVKKS03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_helm01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_helm02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/hat_infernal
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_tactichelm01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hat_tactichelm02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_beret01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_beret02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_beret03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_beret04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_budenka
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_business
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_english
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hat01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hat02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hat03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB07
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_hatB08
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_indiana01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_indiana02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_indiana03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_Jacklantern
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_milcap01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_milcap02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_milcap03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_Olympic
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_party01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_party02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_pilothelm
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_tacticalB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_tophat
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_ushanka
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_ushanka2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_ushmil
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_ushmilB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_ushmilB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_vietnam
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_vietnamB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_vietnamB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Hats_Witchhat
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Heads_black04_hair
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Heads_blond03_hair
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Heads_brown03_hair
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Heads_brown04_hair
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Heads_spec03_hair
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/mask_franky
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_avenger
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_aviaglass
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_band01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_band02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_band03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB07
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_bandB08
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_businessgoogles
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_gasmask01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_gasmask02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_goog01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_goog02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_goog03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_googB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_googB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_googB03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klava01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klava02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klava03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klavaB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klavaB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klavaB03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klavaB04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klavaB05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_klavaB06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_mask01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_maskB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_maskB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 Head/Masks_SnowGoggles
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Backpacks_frankyOctopus
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Backpacks_infernalRaven
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Backpacks_octopus
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Backpacks_parr01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Backpacks_Raven
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger0/Bip01 L Finger01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger0/Bip01 L Finger01/Bip01 L Finger02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger0/Bip01 L Finger01/Bip01 L Finger02/Bip01 L Finger0Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger1/Bip01 L Finger11
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger1/Bip01 L Finger11/Bip01 L Finger12
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger1/Bip01 L Finger11/Bip01 L Finger12/Bip01 L Finger1Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger2/Bip01 L Finger21
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger2/Bip01 L Finger21/Bip01 L Finger22
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger2/Bip01 L Finger21/Bip01 L Finger22/Bip01 L Finger2Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger3/Bip01 L Finger31
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger3/Bip01 L Finger31/Bip01 L Finger32
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger3/Bip01 L Finger31/Bip01 L Finger32/Bip01 L Finger3Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger4/Bip01 L Finger41
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger4/Bip01 L Finger41/Bip01 L Finger42
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L
+      Finger4/Bip01 L Finger41/Bip01 L Finger42/Bip01 L Finger4Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/Taunt8_Guitar
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01 L Forearm/Bip01 L Hand/WeaponLeft
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 L Clavicle/Bip01 L UpperArm/Flame_3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Backpacks_Morte
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger0/Bip01 R Finger01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger0/Bip01 R Finger01/Bip01 R Finger02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger0/Bip01 R Finger01/Bip01 R Finger02/Bip01 R Finger0Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger1/Bip01 R Finger11
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger1/Bip01 R Finger11/Bip01 R Finger12
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger1/Bip01 R Finger11/Bip01 R Finger12/Bip01 R Finger1Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger2/Bip01 R Finger21
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger2/Bip01 R Finger21/Bip01 R Finger22
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger2/Bip01 R Finger21/Bip01 R Finger22/Bip01 R Finger2Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger3/Bip01 R Finger31
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger3/Bip01 R Finger31/Bip01 R Finger32
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger3/Bip01 R Finger31/Bip01 R Finger32/Bip01 R Finger3Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger4/Bip01 R Finger41
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger4/Bip01 R Finger41/Bip01 R Finger42
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R
+      Finger4/Bip01 R Finger41/Bip01 R Finger42/Bip01 R Finger4Nub
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Taunt5_PioneerHorn
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Taunt5_PioneerHorn/Holder_Collider
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Taunt5_PioneerHorn/Horn_Cloth
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Taunt56_PioneerHorn
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/Taunt56_PioneerHorn/Holder_Collider_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_Sticky
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_Sticky/Sticky_Lever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_Sticky/Sticky_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_Sticky/Sticky_Muzzle
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_Sticky/Target_59
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_StickyB02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_StickyB02/Sticky_Lever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_StickyB02/Sticky_Magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_StickyB02/Sticky_Muzzle_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/BombLauncherWeapon/BL_StickyB02/Target_60
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/FL_N1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/FL_N1/Flame_4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/FL_N1/flamethrower_n1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/FL_N1/flamethrower_n1/__1_Arrow
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/FL_N1/flamethrower_n1/Flame_5
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/FL_N1/flamethrower_n1/Flame_6
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/FL_N1/Target_12
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/SNG_Snowgun
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/SNG_Snowgun/SNG_Snowgun_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/SNG_Snowgun/SNG_Snowgun_1/Flame_7
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/SNG_Snowgun/SNG_Snowgun_1/Flame_8
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/SNG_Snowgun/SNG_Snowgun_1/SNG_Snowgun_Fan
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/FlamerWeapon/SNG_Snowgun/Target_13
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet/Bullet_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet/Bullet_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet01/Bullet01_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet01/Bullet01_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet02/Bullet02_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet02/Bullet02_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet03/Bullet03_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Bullet03/Bullet03_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/FN_MAG_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Magazine_1/Magazine_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Magazine_1/Magazine_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Shutter/ShutterFN_MAG_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Shutter/ShutterFN_MAG_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_FNMAG/Target_6
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134/M134_Barrel
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134/Target_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B01/M134_Barrel_3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B01/Target_5
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B02/M134_Barrel_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B02/Target_4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B03/M134_Barrel_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M134B03/Target_3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M249
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M249/Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_M249/Target
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_N2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_N2/N2_Barrel
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GatlingGunWeapon/GG_N2/Target_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_EX41
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_EX41/Shotgun02_Shelter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_EX41/Shotgun02_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_EX41/Target_11
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_GrenadeLauncher03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_GrenadeLauncher03/GrenadeLauncher03_grenade
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_GrenadeLauncher03/GrenadeLauncher03_Shelter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_GrenadeLauncher03/GrenadeLauncher03_Shelter/GrenadeLauncher03_Muzzle
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_GrenadeLauncher03/GrenadeLauncher03_ShelterLevers
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_GrenadeLauncher03/GrenadeLauncher03_Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_GrenadeLauncher03/Target_10
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor/MilkorBand
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor/MilkorMuzzle
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor/MilkorMuzzle/MilkorBarrel
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor/Target_7
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor_A
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor_A/MilkorBand_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor_A/MilkorMuzzle_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor_A/MilkorMuzzle_1/MilkorBarrel_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_Milkor_A/Target_9
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_SnowLauncher
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_SnowLauncher/SnowLauncher_Cap
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_SnowLauncher/SnowLauncher_Lever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/GrenadeLauncherWeapon/GL_SnowLauncher/Target_8
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Desert
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Desert/Desert_Shutter_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Desert/Desert_Shutter_1/Desert_Magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Desert/Desert_ShutterLever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Desert/Desert_Trigger_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Desert/Target_69
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_DesertB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_DesertB01/Desert_Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_DesertB01/Desert_Shutter/Desert_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_DesertB01/Desert_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_DesertB01/Desert_Trigger
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_DesertB01/Target_68
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Glock_S
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Glock_S/Glock18Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Glock_S/Target_61
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_GlockB01_S
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_GlockB01_S/Glock18Shutter_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_GlockB01_S/Target_62
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Makarov
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Makarov/MakarovShutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Makarov/Target_63
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_SIGSauerP226_B
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_SIGSauerP226_B/SIGSauerP226Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_SIGSauerP226_B/Target_64
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Taurus
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Taurus/Magazine_7
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Taurus/Magazine_7/DrumRevolver
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Taurus/Magazine_7/DrumRevolver/Taurus___ylinder
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Taurus/Magazine_7/Taurus_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Taurus/Target_71
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_TT
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_TT/Target_65
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_TT/TTShutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_USP
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_USP/Target_70
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_USP/USP_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_USP/USP_Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_USP/USP_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Walther_R
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Walther_R/Target_66
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_Walther_R/WaltherShutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_WaltherP99
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_WaltherP99/P99Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/HandGunWeapon/HG_WaltherP99/Target_67
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47/Magazine_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47/Shutter_4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47/Target_20
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B06/Magazine_3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B06/Shutter_5
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B06/Target_21
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B07
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B07/Magazine_4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B07/Shutter_6
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B07/Target_22
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B08
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B08/Magazine_5
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B08/Shutter_7
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK47B08/Target_23
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103/AK103Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103/AK103ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103/Target_24
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103_O/AK103Butt2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103_O/AK103Magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103_O/AK103Optics1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103_O/AK103ShutterLever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103_O/Target_25
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103Butt1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103Butt2_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103Laser
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103Magazine_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103MagazineDrumm
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103Optics1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103Optics2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/AK103ShutterLever_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AK103D_O/Target_26
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle02/AssaultRifle02_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle02/AssaultRifle02_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle02/Target_43
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle03/AssaultRifle03_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle03/AssaultRifle03_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AssaultRifle03/Target_42
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG1_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG1_O/SteyrAUG_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG1_O/Target_36
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG2_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG2_O/SteyrAUG_LOD1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG2_O/Target_37
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG3_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG3_O/SteyrAUG_LOD1_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG3_O/Target_38
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG4_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG4_O/SteyrAUG_LOD1_3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG4_O/Target_39
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG5_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG5_O/SteyrAUG_LOD1_4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_AUG5_O/Target_40
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4/MP4Butt1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4/MP4Handle
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4/MP4Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4/MP4ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4/Target_27
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4_O/MP4Butt1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4_O/MP4Magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4_O/MP4Optics1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4_O/MP4ShutterLever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4_O/Target_28
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4Butt1_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4Butt2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4Handle_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4Magazine_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4MagazineDrumm
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4Optics1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4Optics2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/MP4ShutterLever_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M4D_O/Target_29
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M16
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M16/M16Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M16/M16ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_M16/Target_30
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45/Target_34
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45/tmp_L0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45/tmp_L1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45/tmp_magazine_L0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45/tmp_magazine_L1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O/Target_35
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O/UMP_AndyL0_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O/UMP_AndyL0_magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O/UMP_AndyL0_ShutterLever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O/UMP_AndyL1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O/UMP_AndyL1_magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D2_O/UMP_AndyL1_ShutterLever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O/Target_33
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O/UMP_AndyL0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O/UMP_AndyL0_magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O/UMP_AndyL0_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O/UMP_AndyL1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O/UMP_AndyL1_magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45D_O/UMP_AndyL1_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O/Target_32
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O/UMP_aimpoint_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O/UMP_magazine2_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O/UMP_magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O/UMP_ShutterLever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O/UMP_silencer_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45Dold_O/UMP_stock_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old/Target_31
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old/UMP_aimpoint
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old/UMP_magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old/UMP_magazine2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old/UMP_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old/UMP_silencer
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45old/UMP_stock
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O/Target_41
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O/UMP_AndyL0_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O/UMP_AndyL0_magazine_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O/UMP_AndyL0_ShutterLever_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O/UMP_AndyL1_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O/UMP_AndyL1_magazine_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/MachineGunWeapon/MG_UMP45VKKS_O/UMP_AndyL1_ShutterLever_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_BasebalBat
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_BasebalBat2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Candy
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Candy2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Crowbar
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Icicle_W
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Machete
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Torch_F
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Torch_F/Particle
+      System
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/OneHandedColdArmsWeapon/OHCA_Zombie
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_M202A1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_M202A1/Target_55
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG7
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG7/RPG7_rocket
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG7/Target_56
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG7B02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG7B02/RPG7_rocket_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG7B02/Target_57
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG26
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG26/RPG26_Rocket
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG26/RPG26_SafetyLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG26/RPG26_Sight
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/RocketLauncherWeapon/RL_RPG26/Target_58
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_DB
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_DB/DB_Barrels
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_DB/Target_14
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Novapump
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Novapump/novamump_lever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Novapump/novapump_shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Novapump/novapump_shutter_lever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Novapump/Target_16
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Bullet_3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Bullet_3/Bullet_LOD0_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Bullet_3/Bullet_LOD1_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/LowerShutter_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/LowerShutter_2/RemingtonLowerShutter_LOD0_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/LowerShutter_2/RemingtonLowerShutter_LOD1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Remington_870_LOD0_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Shutter_3
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Shutter_3/Dummy001_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Shutter_3/RemingtonShutter_LOD0_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Shutter_3/RemingtonShutter_LOD1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Shutter_3/ShutterLever_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Shutter_3/ShutterLever_2/RemingtonShutterLever_LOD0_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Shutter_3/ShutterLever_2/RemingtonShutterLever_LOD1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington/Target_19
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Bullet_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Bullet_2/Bullet_LOD0_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Bullet_2/Bullet_LOD1_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/LowerShutter_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/LowerShutter_1/RemingtonLowerShutter_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/LowerShutter_1/RemingtonLowerShutter_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Remington_870_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Remington_870_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Shutter_2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Shutter_2/Dummy001_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Shutter_2/RemingtonShutter_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Shutter_2/RemingtonShutter_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Shutter_2/ShutterLever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Shutter_2/ShutterLever_1/RemingtonShutterLever_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Shutter_2/ShutterLever_1/RemingtonShutterLever_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Remington_old/Target_18
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Bullet_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Bullet_1/SpasBullet_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Bullet_1/SpasBullet_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/LowerShutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/LowerShutter/LowerShutter_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/LowerShutter/LowerShutter_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Shutter_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Shutter_1/Dummy001
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Shutter_1/ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Shutter_1/ShutterLever/SpasShutterLever_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Shutter_1/ShutterLever/SpasShutterLever_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Shutter_1/SpasShutter_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Shutter_1/SpasShutter_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Spas_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Spas_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Spas/Target_17
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Winchester1887
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Winchester1887/Target_15
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Winchester1887/Winchester1887_BulletShaft
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/ShotGunWeapon/SG_Winchester1887/Winchester1887_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Arctic
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Arctic/Arctic_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Arctic/Arctic_Shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Arctic/Arctic_Shutter_Lever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Arctic/Target_44
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_ArcticB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_ArcticB01/Arctic_Magazine_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_ArcticB01/Arctic_Shutter_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_ArcticB01/Arctic_Shutter_Lever_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_ArcticB01/Target_50
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_HK417_D
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_HK417_D/HK417Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_HK417_D/HK417ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_HK417_D/Target_45
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_M110_B
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_M110_B/M110Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_M110_B/Target_46
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SniperRifle03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SniperRifle03/SniperRifle03_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SniperRifle03/SniperRifle03_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SniperRifle03/Target_53
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Steyr
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Steyr/steyrscout_shutter
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Steyr/Target_47
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SteyrB01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SteyrB01/steyrscout_shutter_1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SteyrB01/Target_48
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SVD
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SVD/SVD_Magazine
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SVD/SVD_ShutterLever
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_SVD/Target_49
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Magazine_6
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Magazine_6/Vintorez_Magazine_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Magazine_6/Vintorez_Magazine_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Shutter_8
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Shutter_8/Vintorez_Shutter_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Shutter_8/Vintorez_Shutter_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Target_54
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Vintorez_LOD0
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Vintorez/Vintorez_LOD1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Wildcat1
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Wildcat1/Target_51
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Wildcat2
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/SniperRifleWeapon/SR_Wildcat2/Target_52
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/TwoHandedColdArmsWeapon
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/TwoHandedColdArmsWeapon/Katana_old
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/TwoHandedColdArmsWeapon/THCA_Katana_B
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01 R Forearm/Bip01 R Hand/WeaponRight/TwoHandedColdArmsWeapon/THCA_Scythe_B
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Spine3/Bip01
+      Neck/Bip01 R Clavicle/Bip01 R UpperArm/Flame_9
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Flame_10
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_prizrak_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_prizrak_e03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_prizrak_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic01_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic01_e03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic01_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic02_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic02_e03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic02_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic03_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic03_e03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic03_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic04_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic04_e03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tactic04_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tacticB01_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tacticB01_e03
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Shirts_tacticB01_e04
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_prizrak_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_prizrak_e06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic01_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic01_e06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic02_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic02_e06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic03_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic03_e06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic04_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tactic04_e06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tacticB01_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Shirts_tacticB01_e06
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_prizrak_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_prizrak_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic01_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic01_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic02_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic02_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic03_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic03_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic04_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tactic04_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tacticB01_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_tacticB01_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_trooper_e01
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Pants_trooper_e02
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Shirts_prizrak_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Shirts_tactic01_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Shirts_tactic02_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Shirts_tactic03_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Shirts_tactic04_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Bip01 Spine/Shirts_tacticB01_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Pants_prizrak_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Pants_tactic01_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Pants_tactic02_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Pants_tactic03_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Pants_tactic04_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Pants_tacticB01_e05
+    m_Weight: 1
+  - m_Path: Bip01/Bip01 Pelvis/Pants_trooper_e05
+    m_Weight: 1
+  - m_Path: CameraTarget
+    m_Weight: 1
+  - m_Path: CameraTargetPosition
+    m_Weight: 1
+  - m_Path: Capsule
+    m_Weight: 1
+  - m_Path: Cloth
+    m_Weight: 1
+  - m_Path: Cloth/Boots_anarch
+    m_Weight: 1
+  - m_Path: Cloth/Boots_avenger
+    m_Weight: 1
+  - m_Path: Cloth/Boots_bear
+    m_Weight: 1
+  - m_Path: Cloth/Boots_boot01
+    m_Weight: 1
+  - m_Path: Cloth/Boots_boot02
+    m_Weight: 1
+  - m_Path: Cloth/Boots_business
+    m_Weight: 1
+  - m_Path: Cloth/Boots_foot01
+    m_Weight: 1
+  - m_Path: Cloth/Boots_franky
+    m_Weight: 1
+  - m_Path: Cloth/Boots_infernal
+    m_Weight: 1
+  - m_Path: Cloth/Boots_mummy
+    m_Weight: 1
+  - m_Path: Cloth/Boots_prizrak
+    m_Weight: 1
+  - m_Path: Cloth/Boots_santa
+    m_Weight: 1
+  - m_Path: Cloth/Boots_santa2
+    m_Weight: 1
+  - m_Path: Cloth/Boots_skeleton
+    m_Weight: 1
+  - m_Path: Cloth/Boots_slip01
+    m_Weight: 1
+  - m_Path: Cloth/Boots_slip99
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneak01
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneak02
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakOlimpic
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B01
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B02
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B03
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B04
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B05
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B06
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B07
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B08
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B09
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV2B10
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV201
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV202
+    m_Weight: 1
+  - m_Path: Cloth/Boots_sneakV203
+    m_Weight: 1
+  - m_Path: Cloth/Boots_stalker
+    m_Weight: 1
+  - m_Path: Cloth/Boots_tactical01
+    m_Weight: 1
+  - m_Path: Cloth/Boots_tactical02
+    m_Weight: 1
+  - m_Path: Cloth/Boots_tactical03
+    m_Weight: 1
+  - m_Path: Cloth/Boots_tacticalB01
+    m_Weight: 1
+  - m_Path: Cloth/Boots_thanos
+    m_Weight: 1
+  - m_Path: Cloth/Boots_zadira
+    m_Weight: 1
+  - m_Path: Cloth/Boots_zombie_boots
+    m_Weight: 1
+  - m_Path: Cloth/Boots_zombieboss_boots
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_avenger
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_biker
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_bint01
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_bint02
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_business
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_clock01
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_clock01_hands
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_clock02
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_clock02_hands
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_franky
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_glov01
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_glov02
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_glov022
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_hand01
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_infernal
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_mummy
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_Olympic
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_prizrak
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_santa
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_santa2
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_skeleton
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_stalker
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_tactical01
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_tactical02
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_tacticalB01
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_thanos
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_wristwrapB01
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_wristwrapB02
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_wristwrapB03
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_zombie
+    m_Weight: 1
+  - m_Path: Cloth/Gloves_zombieboss
+    m_Weight: 1
+  - m_Path: Cloth/Hats_pharaoh
+    m_Weight: 1
+  - m_Path: Cloth/Hats_santa
+    m_Weight: 1
+  - m_Path: Cloth/Hats_santa2
+    m_Weight: 1
+  - m_Path: Cloth/Hats_stalker
+    m_Weight: 1
+  - m_Path: Cloth/Heads_bald01
+    m_Weight: 1
+  - m_Path: Cloth/Heads_bald02
+    m_Weight: 1
+  - m_Path: Cloth/Heads_black01
+    m_Weight: 1
+  - m_Path: Cloth/Heads_black02
+    m_Weight: 1
+  - m_Path: Cloth/Heads_black03
+    m_Weight: 1
+  - m_Path: Cloth/Heads_black04
+    m_Weight: 1
+  - m_Path: Cloth/Heads_blond01
+    m_Weight: 1
+  - m_Path: Cloth/Heads_blond02
+    m_Weight: 1
+  - m_Path: Cloth/Heads_blond03
+    m_Weight: 1
+  - m_Path: Cloth/Heads_brown01
+    m_Weight: 1
+  - m_Path: Cloth/Heads_brown02
+    m_Weight: 1
+  - m_Path: Cloth/Heads_brown03
+    m_Weight: 1
+  - m_Path: Cloth/Heads_brown04
+    m_Weight: 1
+  - m_Path: Cloth/Heads_franky
+    m_Weight: 1
+  - m_Path: Cloth/Heads_spec01
+    m_Weight: 1
+  - m_Path: Cloth/Heads_spec02
+    m_Weight: 1
+  - m_Path: Cloth/Heads_spec03
+    m_Weight: 1
+  - m_Path: Cloth/Heads_spec04
+    m_Weight: 1
+  - m_Path: Cloth/Heads_spec99
+    m_Weight: 1
+  - m_Path: Cloth/Heads_thanos
+    m_Weight: 1
+  - m_Path: Cloth/Heads_zombie
+    m_Weight: 1
+  - m_Path: Cloth/Heads_zombieboss
+    m_Weight: 1
+  - m_Path: Cloth/Masks_infernal_H
+    m_Weight: 1
+  - m_Path: Cloth/Masks_mummy_H
+    m_Weight: 1
+  - m_Path: Cloth/Masks_santa
+    m_Weight: 1
+  - m_Path: Cloth/Masks_santa2
+    m_Weight: 1
+  - m_Path: Cloth/Masks_skeleton_H
+    m_Weight: 1
+  - m_Path: Cloth/Masks_stalkergasmask
+    m_Weight: 1
+  - m_Path: Cloth/Masks_thanos
+    m_Weight: 1
+  - m_Path: Cloth/Pants_avenger
+    m_Weight: 1
+  - m_Path: Cloth/Pants_business
+    m_Weight: 1
+  - m_Path: Cloth/Pants_franky
+    m_Weight: 1
+  - m_Path: Cloth/Pants_infernal
+    m_Weight: 1
+  - m_Path: Cloth/Pants_jeans01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_jeans02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_jeansB01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_jeansB02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_jeansB03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_legs01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_mummy
+    m_Weight: 1
+  - m_Path: Cloth/Pants_Olympic
+    m_Weight: 1
+  - m_Path: Cloth/Pants_pant01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_pant02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_pant03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_pant032
+    m_Weight: 1
+  - m_Path: Cloth/Pants_prizrak
+    m_Weight: 1
+  - m_Path: Cloth/Pants_santa
+    m_Weight: 1
+  - m_Path: Cloth/Pants_santa2
+    m_Weight: 1
+  - m_Path: Cloth/Pants_short01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_short02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_short03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_short04
+    m_Weight: 1
+  - m_Path: Cloth/Pants_short05
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB04
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB05
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB06
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB07
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB08
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB09
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB10
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB11
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB12
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB13
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB14
+    m_Weight: 1
+  - m_Path: Cloth/Pants_shortB15
+    m_Weight: 1
+  - m_Path: Cloth/Pants_skeleton
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sport01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sport02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sport03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sport04
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB04
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB05
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB06
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB07
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB08
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB09
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportB10
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportVKKS01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportVKKS02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_sportVKKS03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_stalker
+    m_Weight: 1
+  - m_Path: Cloth/Pants_tactic01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_tactic02
+    m_Weight: 1
+  - m_Path: Cloth/Pants_tactic03
+    m_Weight: 1
+  - m_Path: Cloth/Pants_tactic04
+    m_Weight: 1
+  - m_Path: Cloth/Pants_tacticB01
+    m_Weight: 1
+  - m_Path: Cloth/Pants_thanos
+    m_Weight: 1
+  - m_Path: Cloth/Pants_trooper
+    m_Weight: 1
+  - m_Path: Cloth/Pants_zombie
+    m_Weight: 1
+  - m_Path: Cloth/Pants_zombieboss
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_anarch
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_armor01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_armor02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_armor03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_armor04
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_avenger
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_biker
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_business
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_chood01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_chood02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_chood03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_franky
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hood01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hood02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hood03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hood04
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hood05
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB04
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB05
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB06
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB07
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB08
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB09
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodB10
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodOlimpic
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_hoodZong
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_infernal
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_jack01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_jack02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_jack03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_jackB01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_jackB02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_mummy
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_prizrak
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_santa
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_santa2
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirt01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirt02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirt03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirt04
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB04
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB05
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB06
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB07
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB08
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB09
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB10
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB11
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB12
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB13
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_shirtB14
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_singl01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_singl02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_singl03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_singl04
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_singl05
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_singl06
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_skeleton
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_stalker
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_tactic01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_tactic02
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_tactic03
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_tactic04
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_tacticB01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_thanos
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_tors01
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_trooper
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_trooper2
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_zombie
+    m_Weight: 1
+  - m_Path: Cloth/Shirts_zombieboss
+    m_Weight: 1
+  - m_Path: EnergyShieldContainer
+    m_Weight: 1
+  - m_Path: info
+    m_Weight: 1
+  - m_Path: info/name
+    m_Weight: 1
+  - m_Path: info/nemesis_4
+    m_Weight: 1
+  - m_Path: Legs
+    m_Weight: 1
+  - m_Path: RessurectShield
+    m_Weight: 1
+  - m_Path: RessurectShield/nemesis
+    m_Weight: 1
+  - m_Path: RessurectShield/nemesis_1
+    m_Weight: 1
+  - m_Path: RessurectShield/nemesis_2
+    m_Weight: 1
+  - m_Path: RessurectShield/nemesis_3
+    m_Weight: 1
+  - m_Path: TPSCameraHolder
+    m_Weight: 1
+  - m_Path: TPSCameraHolder/TPSCamera
+    m_Weight: 1
