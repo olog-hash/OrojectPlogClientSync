@@ -1,8 +1,10 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code._InDevs.Players.Respawn;
 using ProjectOlog.Code.Game.Core;
-using ProjectOlog.Code.Mechanics.Repercussion.Core.Victims;
+using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Networking.Game.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
@@ -20,7 +22,7 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.PanelInfo
         public override void OnAwake()
         {
             _spawnPlayerFilter = World.Filter.With<RespawnPlayerEvent>().Build();
-            _playerDeathFilter = World.Filter.With<DeathEvent>().With<PlayerVictimMarker>().Build();
+            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -36,23 +38,23 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.PanelInfo
             // Мониторим ивенты смерти
             foreach (var entityEvent in _playerDeathFilter)
             {
-                ref var deathEvent = ref entityEvent.GetComponent<DeathEvent>();
+                ref var entityVictimEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
                 
-                DeathEvent(deathEvent, entityEvent);
+                DeathEvent(entityVictimEvent, entityEvent);
             }
         }
 
         public void SpawnEvent(RespawnPlayerEvent respawnEvent)
         {
             var playerProvider = respawnEvent.PlayerProvider;
-            if (playerProvider is null || playerProvider.Entity.Has<LocalPlayerMarker>()) return;
+            if (playerProvider is null || !playerProvider.Entity.Has<NetworkPlayer>() || playerProvider.Entity.Has<LocalPlayerMarker>()) return;
 
             EnableNicknamePanel(playerProvider.Entity, true);
         }
         
-        private void DeathEvent(DeathEvent deathEvent, Entity entityEvent)
+        private void DeathEvent(EntityVictimEvent entityVictimEvent, Entity entityEvent)
         {
-            var playerEntity = deathEvent.VictimEntity;
+            var playerEntity = entityVictimEvent.VictimEntity;
             if (playerEntity is null || playerEntity.Has<LocalPlayerMarker>()) return;
 
             EnableNicknamePanel(playerEntity, false);

@@ -1,5 +1,6 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Respawn;
-using ProjectOlog.Code.Mechanics.Repercussion.Core.Victims;
+using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using ProjectOlog.Code.Networking.Game.Core;
 using ProjectOlog.Code.Networking.Profiles.Users;
@@ -28,16 +29,16 @@ namespace ProjectOlog.Code._InDevs.UserDataGameUpdate
         public override void OnAwake()
         {
             _spawnPlayerFilter = World.Filter.With<RespawnPlayerEvent>().Build();
-            _playerDeathFilter = World.Filter.With<DeathEvent>().With<PlayerVictimMarker>().Without<VirtualEventMarker>().Build();
+            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().Without<VirtualEventMarker>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
         {
             foreach (var entityEvent in _playerDeathFilter)
             {
-                ref var deathEvent = ref entityEvent.GetComponent<DeathEvent>();
+                ref var entityVictimEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
                 
-                DeathEvent(deathEvent, entityEvent);
+                DeathEvent(entityVictimEvent, entityEvent);
             }
             
             // Мониторим ивенты спавна
@@ -49,9 +50,9 @@ namespace ProjectOlog.Code._InDevs.UserDataGameUpdate
             }
         }
         
-        private void DeathEvent(DeathEvent deathEvent, Entity entityEvent)
+        private void DeathEvent(EntityVictimEvent entityVictimEvent, Entity entityEvent)
         {
-            var playerEntity = deathEvent.VictimEntity;
+            var playerEntity = entityVictimEvent.VictimEntity;
             if (playerEntity is null || !playerEntity.Has<NetworkPlayer>()) return;
 
             ref var networkPlayer = ref playerEntity.GetComponent<NetworkPlayer>();

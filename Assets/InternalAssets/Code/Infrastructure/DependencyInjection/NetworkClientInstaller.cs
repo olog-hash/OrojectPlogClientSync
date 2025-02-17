@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using ProjectOlog.Code.Networking.Client;
-using ProjectOlog.Code.Networking.Handlers.ComponentHandlers;
+using ProjectOlog.Code.Networking.Infrastructure.CompoundEvents;
 using ProjectOlog.Code.Networking.Infrastructure.Core;
 using ProjectOlog.Code.Networking.Profiles.Entities;
 using ProjectOlog.Code.Networking.Profiles.Snapshots;
@@ -23,8 +23,8 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
             Container.Bind<NetworkSnapshotContainer>().AsSingle();
             Container.Bind<NetTransportProvider>().AsSingle();
 
-            // Сериализаторы компонентов
-            BindAllComponentSerializators();
+            // Распаковщики ивентов
+            BindAllEventUnpacker();
             
             // Нетворкеры
             BindAllNetWorkers();
@@ -32,6 +32,15 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
             // Системы и все остальное
             Container.Bind<NetworkClientGate>().AsSingle();
             Container.BindInterfacesAndSelfTo<NetworkClient>().FromInstance(_networkClient).AsSingle().NonLazy();
+        }
+
+        private void BindAllEventUnpacker()
+        {
+            Container.Bind(x => x.AllTypes()
+                    .DerivingFrom<NetworkEventUnpacker>()
+                    .Where(type => !type.IsAbstract && !type.IsGenericTypeDefinition))
+                .ToSelf()
+                .AsTransient();
         }
         
         private void BindAllNetWorkers()
@@ -51,21 +60,6 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
                     .Where(type => !type.IsAbstract && !type.IsGenericTypeDefinition))
                 .ToSelf()
                 .AsTransient();
-        }
-        
-        private void BindAllComponentSerializators()
-        {
-            Container.Bind<ComponentSerializatorFactory>().AsSingle().NonLazy();
-            Container.Bind<ComponentSerializator>().AsSingle().NonLazy();
-            
-            // Обновленная привязка для обобщенного IComponentSerializer<>
-            Container.Bind(x => x.AllTypes()
-                    .Where(type => type.GetInterfaces()
-                        .Any(i => i.IsGenericType && 
-                                  i.GetGenericTypeDefinition() == typeof(IComponentSerializer<>)))
-                    .Where(type => !type.IsAbstract && !type.IsGenericTypeDefinition))
-                .ToSelf()
-                .AsSingle();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using ProjectOlog.Code._InDevs.Data;
 using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code._InDevs.Players.Visual.SpectatorPersonSystem.SpectatorPerson.Switching;
+using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
@@ -28,7 +30,7 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.SpectatorPersonSystem.Rules
         public override void OnAwake()
         {
             _ruleFilter = World.Filter.With<DeathCameraTransitionRule>().Build();
-            _deathPlayerFilter = World.Filter.With<DeathEvent>().Build();
+            _deathPlayerFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().Build();
             _spectatorSwitchingFilter = World.Filter.With<SpectatorSwitchRequestEvent>().Build(); 
         }
 
@@ -41,10 +43,10 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.SpectatorPersonSystem.Rules
             // Обработка события смерти
             foreach (var entityEvent in _deathPlayerFilter)
             {
-                ref var deathEvent = ref entityEvent.GetComponent<DeathEvent>();
-                if (deathEvent.VictimEntity.IsNullOrDisposed()) continue;
+                ref var entityVictimEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
+                if (entityVictimEvent.VictimEntity.IsNullOrDisposed()) continue;
 
-                if (deathEvent.VictimEntity.Has<LocalPlayerMarker>())
+                if (entityVictimEvent.VictimEntity.Has<LocalPlayerMarker>())
                 {
                     LaunchRule(ref deathCameraTransitionRule);
                     break;

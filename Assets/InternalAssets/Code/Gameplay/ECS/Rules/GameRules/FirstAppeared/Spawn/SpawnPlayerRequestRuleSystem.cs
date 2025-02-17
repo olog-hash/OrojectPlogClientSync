@@ -2,6 +2,8 @@
 using ProjectOlog.Code._InDevs.Data;
 using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code.Input.Controls;
+using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Players;
 using Scellecs.Morpeh;
@@ -31,7 +33,7 @@ namespace ProjectOlog.Code.Gameplay.ECS.Rules.GameRules.FirstAppeared.Spawn
         public override void OnAwake()
         {
             _ruleFilter = World.Filter.With<SpawnRequestRule>().Build();
-            _localPlayerDeathFilter = World.Filter.With<DeathEvent>().Build();
+            _localPlayerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -58,10 +60,11 @@ namespace ProjectOlog.Code.Gameplay.ECS.Rules.GameRules.FirstAppeared.Spawn
         {
             foreach (var deathEntity in _localPlayerDeathFilter)
             {
-                ref var deathEvent = ref deathEntity.GetComponent<DeathEvent>();
-                if (deathEvent.VictimEntity == null) continue;
+                ref var entityVictimEvent = ref deathEntity.GetComponent<EntityVictimEvent>();
+                
+                if (entityVictimEvent.VictimEntity == null) continue;
 
-                if (deathEvent.VictimEntity.Has<LocalPlayerMarker>())
+                if (entityVictimEvent.VictimEntity.Has<LocalPlayerMarker>())
                 {
                     return true;
                 }

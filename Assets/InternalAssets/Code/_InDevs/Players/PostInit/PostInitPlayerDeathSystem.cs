@@ -1,5 +1,7 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
-using ProjectOlog.Code.Mechanics.Repercussion.Core.Victims;
+using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Death;
+using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
@@ -44,12 +46,12 @@ namespace ProjectOlog.Code._InDevs.Players.PostInit
         {
             var tickEvent = World.CreateTickEvent().AddVirtualMarker();
             
-            tickEvent.AddComponentData(new DeathEvent()
+            tickEvent.AddComponentData(new EntityVictimEvent()
             {
                 VictimEntity = playerEntity
             });
-
-            tickEvent.AddComponent<PlayerVictimMarker>();
+            
+            tickEvent.AddComponent<DeathEvent>();
         }
     }
 }

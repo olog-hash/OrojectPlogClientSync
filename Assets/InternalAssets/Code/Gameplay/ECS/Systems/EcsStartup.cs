@@ -60,7 +60,7 @@ namespace ProjectOlog.Code.Gameplay.ECS.Systems
             _systemsFactory.CreateFeature<DebuggerSystemsFeature>(_systemsGroup);
             _systemsFactory.CreateFeature<BattleHudFeature>(_systemsGroup);
 
-            _systemsFactory.CreateFeature<RepercussionFeature>(_systemsGroup); 
+            _systemsFactory.CreateFeature<DamageRepercussionFeature>(_systemsGroup);
             
             _systemsFactory.CreateFeature<PlayerRespawnViewFeature>(_systemsGroup);
             

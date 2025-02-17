@@ -1,5 +1,6 @@
-﻿using ProjectOlog.Code.Mechanics.Repercussion.Core.Pressures;
-using ProjectOlog.Code.Mechanics.Repercussion.Core.Victims;
+﻿using ProjectOlog.Code.Mechanics.Impact.Aggressors;
+using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using ProjectOlog.Code.Networking.Profiles.Users;
 using ProjectOlog.Code.UI.HUD.KillPanel.Builder;
@@ -29,27 +30,27 @@ namespace ProjectOlog.Code.UI.HUD.KillPanel.Systems.PlayerNotifications
         
         public override void OnAwake()
         {
-            _playerDeathFilter = World.Filter.With<DeathEvent>().With<PlayerVictimMarker>().With<EnvironmentPressure>().Without<VirtualEventMarker>().Build();
+            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().With<EnvironmentAggressorEvent>().Without<VirtualEventMarker>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
         {
             foreach (var entityEvent in _playerDeathFilter)
             {
-                ref var deathEvent = ref entityEvent.GetComponent<DeathEvent>();
+                ref var entityVictimEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
                 
-                DeathEvent(deathEvent, entityEvent);
+                DeathEvent(entityVictimEvent, entityEvent);
             }
         }
 
-        private void DeathEvent(DeathEvent deathEvent, Entity entityEvent)
+        private void DeathEvent(EntityVictimEvent entityVictimEvent, Entity entityEvent)
         {
-            if (!_usersContainer.TryGetUserDataByID(GetPlayerID(deathEvent.VictimEntity), out var userData)) return;
+            if (!_usersContainer.TryGetUserDataByID(GetPlayerID(entityVictimEvent.VictimEntity), out var userData)) return;
             
-            ref var environmentPressure = ref entityEvent.GetComponent<EnvironmentPressure>();
+            ref var environmentAggressorEvent = ref entityEvent.GetComponent<EnvironmentAggressorEvent>();
 
             string userName = userData.Username;
-            string environmentType = environmentPressure.EnvironmentType.ToString();
+            string environmentType = environmentAggressorEvent.EnvironmentType.ToString();
             
             var builder1 = new KillMessageBuilder();
             builder1

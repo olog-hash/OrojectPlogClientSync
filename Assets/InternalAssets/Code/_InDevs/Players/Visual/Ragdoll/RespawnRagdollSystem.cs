@@ -1,7 +1,9 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Respawn;
 using ProjectOlog.Code.Game.Core;
-using ProjectOlog.Code.Mechanics.Repercussion.Core.Victims;
+using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Networking.Game.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
@@ -20,16 +22,16 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.Ragdoll
         public override void OnAwake()
         {
             _spawnPlayerFilter = World.Filter.With<RespawnPlayerEvent>().Build();
-            _playerDeathFilter = World.Filter.With<DeathEvent>().With<PlayerVictimMarker>().Build();
+            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
         {
             foreach (var entityEvent in _playerDeathFilter)
             {
-                ref var deathEvent = ref entityEvent.GetComponent<DeathEvent>();
+                ref var entityVictimEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
                 
-                DeathEvent(deathEvent, entityEvent);
+                DeathEvent(entityVictimEvent, entityEvent);
             }
             
             // Мониторим ивенты спавна
@@ -41,10 +43,10 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.Ragdoll
             }
         }
 
-        private void DeathEvent(DeathEvent deathEvent, Entity entityEvent)
+        private void DeathEvent(EntityVictimEvent entityVictimEvent, Entity entityEvent)
         {
-            var playerEntity = deathEvent.VictimEntity;
-            if (playerEntity is null || !playerEntity.Has<PlayerRagdollComponent>()) return;
+            var playerEntity = entityVictimEvent.VictimEntity;
+            if (playerEntity is null || !playerEntity.Has<NetworkPlayer>() || !playerEntity.Has<PlayerRagdollComponent>()) return;
 
             EnableCollider(playerEntity, true);
             
