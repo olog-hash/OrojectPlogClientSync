@@ -1,4 +1,8 @@
-﻿using ProjectOlog.Code.Game.Core;
+﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
+using ProjectOlog.Code._InDevs.TranslationUtilits;
+using ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation;
+using ProjectOlog.Code.Game.Core;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
@@ -14,11 +18,11 @@ namespace ProjectOlog.Code._InDevs.Players.Respawn
     {
         private Filter _spawnPlayerFilter;
         
-        private EntityLifeProcessor _entityLifeProcessor;
+        private EntityMortalityHelper _entityMortalityHelper;
         
         public override void OnAwake()
         {
-            _entityLifeProcessor = new EntityLifeProcessor();
+            _entityMortalityHelper = new EntityMortalityHelper();
             _spawnPlayerFilter = World.Filter.With<RespawnPlayerEvent>().Build();
         }
 
@@ -37,18 +41,24 @@ namespace ProjectOlog.Code._InDevs.Players.Respawn
         {
             if (respawnEvent.PlayerProvider is null || respawnEvent.PlayerProvider.Entity is null) return;
             var playerEntity = respawnEvent.PlayerProvider.Entity;
-            
-            playerEntity.AddComponentData(new SetPositionRotation()
-            {
-                Position = respawnEvent.Position,
-                Rotation = respawnEvent.Rotation,
-            });
-            
 
-            if (_entityLifeProcessor.IsDead(playerEntity))
+            if (playerEntity.Has<LocalPlayerMarker>())
             {
-                _entityLifeProcessor.ReviveEntity(playerEntity);
+                CharacterTranslationUtilits.SetPositionAndRotation(
+                    playerEntity,
+                    respawnEvent.Position,
+                    respawnEvent.Rotation);
             }
+            else
+            {
+                RemoteCharacterTranslationUtilits.SetPositionAndRotation(
+                    playerEntity,
+                    respawnEvent.Position,
+                    respawnEvent.Rotation);
+            }
+
+            // Возрождаем.
+            _entityMortalityHelper.TryReborn(playerEntity);
         }
     }
 }

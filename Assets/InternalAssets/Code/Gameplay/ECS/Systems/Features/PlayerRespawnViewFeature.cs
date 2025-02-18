@@ -17,8 +17,6 @@ namespace ProjectOlog.Code.Gameplay.ECS.Systems.Features
             _systemsFactory.CreateSystem<RespawnNicknameSystem>(_systemsGroup);
 
             _systemsFactory.CreateSystem<RespawnKinematicControllerSystem>(_systemsGroup);
-
-            _systemsFactory.CreateSystem<RemotePlayerSetPositionSystem>(_systemsGroup);
         }
     }
 }

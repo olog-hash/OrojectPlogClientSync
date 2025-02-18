@@ -28,17 +28,6 @@ namespace ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation
                 ref var translation = ref entity.GetComponent<Translation>();
                 var transformInterpolation = entity.GetComponent<CharacterInterpolation>();
 
-                if (HasComponent<SetPositionRotation>(entity))
-                {
-                    ref var setPosRot = ref entity.GetComponent<SetPositionRotation>();
-
-                    translation.position = setPosRot.Position;
-                    translation.rotation = setPosRot.Rotation;
-                    transformInterpolation.SkipNextTranslationInterpolation();
-
-                    entity.RemoveComponent<SetPositionRotation>();
-                }
-
                 transformInterpolation.PreviousTransform = transformInterpolation.CurrentTransform;
 
                 entity.SetComponent(transformInterpolation);

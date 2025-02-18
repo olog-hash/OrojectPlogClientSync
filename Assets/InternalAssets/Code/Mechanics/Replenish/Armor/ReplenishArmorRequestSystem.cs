@@ -12,11 +12,11 @@ namespace ProjectOlog.Code.Mechanics.Replenish
     public sealed class ReplenishArmorRequestSystem : TickrateSystem
     {
         private Filter _replenishArmorRequestsFilter;
-        private EntityLifeProcessor _entityLifeProcessor;
+        private EntityReplenishHelper _entityReplenishHelper;
         
         public override void OnAwake()
         {
-            _entityLifeProcessor = new EntityLifeProcessor();
+            _entityReplenishHelper = new EntityReplenishHelper();
             _replenishArmorRequestsFilter = World.Filter.With<ReplenishArmorEvent>().Build();
         }
 
@@ -32,7 +32,7 @@ namespace ProjectOlog.Code.Mechanics.Replenish
 
         private void ReplenishArmor(ReplenishArmorEvent replenishArmorEvent)
         {
-            _entityLifeProcessor.ReplenishArmor(replenishArmorEvent.VictimEntity,
+            _entityReplenishHelper.TryReplenishArmor(replenishArmorEvent.VictimEntity,
                 replenishArmorEvent.ReplenishCount, out int _);
         }
     }

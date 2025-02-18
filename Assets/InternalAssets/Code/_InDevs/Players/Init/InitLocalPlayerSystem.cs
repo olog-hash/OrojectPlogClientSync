@@ -1,5 +1,6 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code._InDevs.Players.PostInit;
+using ProjectOlog.Code._InDevs.TranslationUtilits;
 using ProjectOlog.Code.Game.Core;
 using ProjectOlog.Code.Gameplay.Battle;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
@@ -9,6 +10,7 @@ using Scellecs.Morpeh;
 using Scellecs.Morpeh.Providers;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ProjectOlog.Code._InDevs.Players.Init
@@ -57,7 +59,7 @@ namespace ProjectOlog.Code._InDevs.Players.Init
                 .Instantiate(_battleContentFactory.FirstPersonCharacter, initPlayerEvent.Position,
                     initPlayerEvent.Rotation)
                 .GetComponent<EntityProvider>();
-
+            
             entityProvider.Entity.AddComponent<LocalPlayerMarker>();
 
             entityProvider.Entity.AddComponentData(new NetworkIdentity()
@@ -79,12 +81,7 @@ namespace ProjectOlog.Code._InDevs.Players.Init
                 Health = DEFAULT_HEALTH,
                 Armor = DEFAULT_ARMOR,
             });
-
-            entityProvider.Entity.AddComponentData(new SetPositionRotation()
-            {
-                Position = initPlayerEvent.Position,
-                Rotation = initPlayerEvent.Rotation,
-            });
+            
 
             // Добавляем игрока в контейнер
             _entitiesContainer.PlayerEntities.AddEntity(entityProvider);

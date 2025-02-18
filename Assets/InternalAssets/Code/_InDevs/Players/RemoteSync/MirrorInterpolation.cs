@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.Logger;
 using ProjectOlog.Code.Networking.Client;
 using ProjectOlog.Code.Networking.Libs.MirrorInterpolation;
@@ -176,7 +177,7 @@ namespace ProjectOlog.Code._InDevs.Players.RemoteSync
             
             foreach (KeyValuePair<double, Snapshot3D> snapshot in snapshots)
             {
-                if (Vector3.Distance(snapshot.Value.Position, position) > 0.05)
+                if (Vector3.Distance(snapshot.Value.Position, position) > 0.005)
                 {
                     keysToDelete.Add(snapshot.Key);
                 }
@@ -191,6 +192,26 @@ namespace ProjectOlog.Code._InDevs.Players.RemoteSync
                 snapshots.Remove(key);
             }
 
+            transform.position = position;
+            transform.rotation = rotation;
+        }
+
+        public void SetPositionAndRotationClear(Vector3 position, Quaternion rotation)
+        {
+            if (snapshots.Count > 0)
+            {
+                var lastSnapshot = snapshots.Last();
+                var lastSnapshotKey = lastSnapshot.Key;
+                var lastSnapshotValue = lastSnapshot.Value;
+                
+                lastSnapshotValue.Position = position;
+                lastSnapshotValue.Rotation = rotation;
+                
+                snapshots.Clear();
+                
+                snapshots.Add(lastSnapshotKey, lastSnapshotValue);
+            }
+            
             transform.position = position;
             transform.rotation = rotation;
         }

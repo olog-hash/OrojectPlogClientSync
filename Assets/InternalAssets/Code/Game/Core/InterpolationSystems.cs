@@ -27,18 +27,6 @@ namespace ProjectOlog.Code.Game.Core
                 ref var translation = ref entity.GetComponent<Translation>();
                 var transformInterpolation = entity.GetComponent<Interpolation>();
 
-                if (HasComponent<SetPositionRotation>(entity))
-                {
-                    ref var setPosRot = ref entity.GetComponent<SetPositionRotation>();
-
-                    translation.position = setPosRot.Position;
-                    translation.rotation = setPosRot.Rotation;
-                    transformInterpolation.SkipNextTranslationInterpolation();
-                    transformInterpolation.SkipNextRotationInterpolation();
-
-                    entity.RemoveComponent<SetPositionRotation>();
-                }
-
                 // TODO : Пропускать при назначении (skip)
 
                 transformInterpolation.PreviousTransform = transformInterpolation.CurrentTransform;

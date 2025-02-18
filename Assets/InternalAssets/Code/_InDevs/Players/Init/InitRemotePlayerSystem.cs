@@ -1,5 +1,6 @@
 ﻿using ProjectOlog.Code._InDevs.Players.PostInit;
 using ProjectOlog.Code._InDevs.Players.Visual.PanelInfo;
+using ProjectOlog.Code._InDevs.TranslationUtilits;
 using ProjectOlog.Code.Game.Core;
 using ProjectOlog.Code.Gameplay.Battle;
 using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
@@ -76,12 +77,6 @@ namespace ProjectOlog.Code._InDevs.Players.Init
 
                 Health = DEFAULT_HEALTH,
                 Armor = DEFAULT_ARMOR,
-            });
-
-            entityProvider.Entity.AddComponentData(new SetPositionRotation()
-            {
-                Position = initPlayerEvent.Position,
-                Rotation = initPlayerEvent.Rotation,
             });
 
             if (entityProvider.TryGetComponent<PlayerInfoPanel>(out var playerInfoPanel))
