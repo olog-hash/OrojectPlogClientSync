@@ -38,6 +38,8 @@ namespace ProjectOlog.Code._InDevs.KitPacksInteract.Modules.AudioSound
                 ref var agressorEvent = ref entityEvent.GetComponent<EntityAggressorEvent>();
                 ref var victimEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
 
+                if (agressorEvent.AggressorEntity is null || victimEvent.VictimEntity is null) continue;
+                
                 if (agressorEvent.AggressorEntity.Has<KitPackAudio>()
                     && victimEvent.VictimEntity.Has<LocalPlayerMarker>())
                 {
@@ -50,6 +52,8 @@ namespace ProjectOlog.Code._InDevs.KitPacksInteract.Modules.AudioSound
                 ref var agressorEvent = ref entityEvent.GetComponent<EntityAggressorEvent>();
                 ref var victimEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
 
+                if (agressorEvent.AggressorEntity is null || victimEvent.VictimEntity is null) continue;
+                
                 if (agressorEvent.AggressorEntity.Has<KitPackAudio>()
                     && victimEvent.VictimEntity.Has<LocalPlayerMarker>())
                 {
