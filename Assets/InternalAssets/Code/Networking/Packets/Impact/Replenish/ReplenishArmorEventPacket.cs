@@ -1,28 +1,28 @@
 ﻿using LiteNetLib.Utils;
-using ProjectOlog.Code.Networking.Packets.Mortality.Components;
+using ProjectOlog.Code.Networking.Packets.Impact.Replenish.Components;
 using ProjectOlog.Code.Networking.Packets.Mortality.Impact;
 
-namespace ProjectOlog.Code.Networking.Packets.Mortality
+namespace ProjectOlog.Code.Networking.Packets.Impact.Replenish
 {
-    public class DamageEventPacket : INetPackageSerializable
+    public class ReplenishArmorEventPacket : INetPackageSerializable
     {
         // Impact
         public ImpactEventData ImpactEventData;
         
-        // Additional Components
-        public DamageData[] DamageDatas;
+        // Components
+        public ReplenishArmorData[] ReplenishArmorDatas;
         
         public NetDataPackage GetPackage()
         {
             return new NetDataPackage(
                 ImpactEventData,
-                DamageDatas);
+                ReplenishArmorDatas);
         }
 
         public void Deserialize(NetDataPackage dataPackage)
         {
             ImpactEventData = dataPackage.GetHeadlessCustom<ImpactEventData>();
-            DamageDatas = dataPackage.GetHeadlessCustomArray<DamageData>();
+            ReplenishArmorDatas = dataPackage.GetHeadlessCustomArray<ReplenishArmorData>();
         }
     }
 }

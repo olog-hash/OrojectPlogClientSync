@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
+﻿using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
 using ProjectOlog.Code.Mechanics.Replenish.Events;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
@@ -17,7 +18,7 @@ namespace ProjectOlog.Code.Mechanics.Replenish
         public override void OnAwake()
         {
             _entityReplenishHelper = new EntityReplenishHelper();
-            _replenishHealthRequestsFilter = World.Filter.With<ReplenishHealthEvent>().Build();
+            _replenishHealthRequestsFilter = World.Filter.With<ReplenishHealthEvent>().With<EntityVictimEvent>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -25,15 +26,12 @@ namespace ProjectOlog.Code.Mechanics.Replenish
             foreach (var entityEvent in _replenishHealthRequestsFilter)
             {
                 ref var replenishHealthEvent = ref entityEvent.GetComponent<ReplenishHealthEvent>();
-
-                ReplenishArmor(replenishHealthEvent);
+                ref var victimEntityEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
+                
+                // Добавляем здоровья сущности в упрощенном виде
+                _entityReplenishHelper.TryReplenishHealth(victimEntityEvent.VictimEntity,
+                    replenishHealthEvent.ReplenishCount, out var _);
             }
-        }
-
-        private void ReplenishArmor(ReplenishHealthEvent replenishHealthEvent)
-        {
-            _entityReplenishHelper.TryReplenishHealth(replenishHealthEvent.VictimEntity,
-                replenishHealthEvent.ReplenishCount, out var _);
         }
     }
 }

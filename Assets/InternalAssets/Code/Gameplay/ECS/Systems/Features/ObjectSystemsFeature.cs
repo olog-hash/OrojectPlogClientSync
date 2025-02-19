@@ -17,8 +17,7 @@ namespace ProjectOlog.Code.Gameplay.ECS.Systems.Features
             _systemsFactory.CreateSystem<InteractiveLogicUpdateSystem>(_systemsGroup); 
             _systemsFactory.CreateSystem<RemoteStateTransitionBroadcastSystem>(_systemsGroup); 
             _systemsFactory.CreateSystem<RemoteDataBroadcastSystem>(_systemsGroup);
-
-            _systemsFactory.CreateSystem<KitPackInteractSystem>(_systemsGroup);
+            
             _systemsFactory.CreateSystem<KitPackAudioSystem>(_systemsGroup);
             
             // Хотя она используется как для игроков так и для обьектов.

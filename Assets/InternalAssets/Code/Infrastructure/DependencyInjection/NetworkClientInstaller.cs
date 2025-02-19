@@ -37,7 +37,7 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
         private void BindAllEventUnpacker()
         {
             Container.Bind(x => x.AllTypes()
-                    .DerivingFrom<NetworkEventUnpacker>()
+                    .DerivingFrom<NetworkEventsUnpacker>()
                     .Where(type => !type.IsAbstract && !type.IsGenericTypeDefinition))
                 .ToSelf()
                 .AsTransient();

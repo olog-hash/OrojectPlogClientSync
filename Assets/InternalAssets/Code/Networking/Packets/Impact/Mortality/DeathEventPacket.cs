@@ -9,7 +9,7 @@ namespace ProjectOlog.Code.Networking.Packets.Mortality
         // Impact
         public ImpactEventData ImpactEventData;
         
-        // Additional Components
+        // Components
         public DeathData[] DeathDatas;
         
         public NetDataPackage GetPackage()

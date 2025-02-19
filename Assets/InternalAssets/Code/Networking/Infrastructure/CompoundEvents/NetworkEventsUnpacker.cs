@@ -5,7 +5,7 @@ using Zenject;
 
 namespace ProjectOlog.Code.Networking.Infrastructure.CompoundEvents
 {
-    public abstract class NetworkEventUnpacker
+    public abstract class NetworkEventsUnpacker
     {
         // Словарь для хранения распакованных событий по EventID
         protected Dictionary<ushort, Entity> _eventEntities = new Dictionary<ushort, Entity>();
@@ -74,8 +74,7 @@ namespace ProjectOlog.Code.Networking.Infrastructure.CompoundEvents
         }
         
         /// <summary>
-        /// Заглушка для получения сущности по серверному ID.
-        /// Реализация зависит от вашей ECS-системы.
+        /// Просто пытается получить сущность по её ServerID
         /// </summary>
         protected Entity GetNetworkEntityByServerID(int serverID)
         {

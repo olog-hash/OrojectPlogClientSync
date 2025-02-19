@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
+﻿using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
 using ProjectOlog.Code.Mechanics.Replenish.Events;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
@@ -17,7 +18,7 @@ namespace ProjectOlog.Code.Mechanics.Replenish
         public override void OnAwake()
         {
             _entityReplenishHelper = new EntityReplenishHelper();
-            _replenishArmorRequestsFilter = World.Filter.With<ReplenishArmorEvent>().Build();
+            _replenishArmorRequestsFilter = World.Filter.With<ReplenishArmorEvent>().With<EntityVictimEvent>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -25,15 +26,13 @@ namespace ProjectOlog.Code.Mechanics.Replenish
             foreach (var entityEvent in _replenishArmorRequestsFilter)
             {
                 ref var replenishArmorEvent = ref entityEvent.GetComponent<ReplenishArmorEvent>();
+                ref var victimEntityEvent = ref entityEvent.GetComponent<EntityVictimEvent>();
 
-                ReplenishArmor(replenishArmorEvent);
+                // Добавляем брони сущности в упрощенном виде
+                _entityReplenishHelper.TryReplenishArmor(victimEntityEvent.VictimEntity,
+                    replenishArmorEvent.ReplenishCount, out int _);
             }
         }
-
-        private void ReplenishArmor(ReplenishArmorEvent replenishArmorEvent)
-        {
-            _entityReplenishHelper.TryReplenishArmor(replenishArmorEvent.VictimEntity,
-                replenishArmorEvent.ReplenishCount, out int _);
-        }
+        
     }
 }

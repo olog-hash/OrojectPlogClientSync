@@ -10,7 +10,6 @@ namespace ProjectOlog.Code.Mechanics.Replenish.Events
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public struct ReplenishArmorEvent : IComponent
     {
-        public Entity VictimEntity; 
         public int ReplenishCount; 
     }
 }

@@ -9,33 +9,31 @@ using UnityEngine;
 
 namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Repercussion.Damage
 {
-    public class BasicMortalityNetworker : NetWorkerClient
+    public sealed class BasicMortalityNetworker : NetWorkerClient
     {
-        private MortalityEventUnpacker _mortalityEventUnpacker;
+        private MortalityEventsUnpacker _mortalityEventsUnpacker;
 
-        public BasicMortalityNetworker(MortalityEventUnpacker mortalityEventUnpacker)
+        public BasicMortalityNetworker(MortalityEventsUnpacker mortalityEventsUnpacker)
         {
-            _mortalityEventUnpacker = mortalityEventUnpacker;
+            _mortalityEventsUnpacker = mortalityEventsUnpacker;
         }
-
-        // Сообщает информацию про дамаг
+        
         [NetworkCallback]
         private void DamageCompoundEvent(NetPeer peer, NetDataPackage dataPackage)
         {
             var damagePacket = new DamageEventPacket();
             damagePacket.Deserialize(dataPackage);
             
-            _mortalityEventUnpacker.UnpackDamageEventPacket(damagePacket);
+            _mortalityEventsUnpacker.UnpackDamageEventPacket(damagePacket);
         }
-
-        // Уведомление об убийстве игрока для всех
+        
         [NetworkCallback]
         private void DeathCompoundEvent(NetPeer peer, NetDataPackage dataPackage)
         {
             var deathPacket = new DeathEventPacket();
             deathPacket.Deserialize(dataPackage);
             
-            _mortalityEventUnpacker.UnpackDeathEventPacket(deathPacket);
+            _mortalityEventsUnpacker.UnpackDeathEventPacket(deathPacket);
         }
     }
 }
