@@ -74,3 +74,6 @@ crashlytics-build.properties
 # Exceptions
 !*.dll
 !*.obj
+Packages/manifest.json
+Packages/manifest.json
+Packages/packages-lock.json
