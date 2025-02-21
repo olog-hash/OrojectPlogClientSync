@@ -3,18 +3,19 @@ using ProjectOlog.Code.Networking.Packets.Mortality;
 
 namespace ProjectOlog.Code.Networking.Packets.Impact.Replenish.Components
 {
-    public class ReplenishHealthData : BaseEventData, IHeadlessPackageSerializable
+    public class ReplenishHealthData : BaseSubPacketData
     {
         public int ReplenishHealthCount;
         
-        public HeadLessDataPacket GetPackage()
+        public override HeadLessDataPacket GetPackage()
         {
             return new HeadLessDataPacket(EventID, ReplenishHealthCount);
         }
 
-        public void Deserialize(HeadLessDataPacket dataPackage)
+        public override void Deserialize(HeadLessDataPacket dataPackage)
         {
-            EventID = dataPackage.GetUShort();
+            base.Deserialize(dataPackage);
+            
             ReplenishHealthCount = dataPackage.GetInt();
         }
     }

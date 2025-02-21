@@ -5,7 +5,7 @@ using Scellecs.Morpeh;
 
 namespace ProjectOlog.Code.Networking.Infrastructure.CompoundEvents.Unpackers
 {
-    public class ImpactEventsUnpacker : NetworkEventsUnpacker
+    public class ImpactEventsUnpacker : BasedNetworkUnpacker
     {
         /// <summary>
         /// Унифицированная обработка Impact-данных: агрессоры, жертвы и прочее.

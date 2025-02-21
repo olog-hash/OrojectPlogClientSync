@@ -5,7 +5,7 @@ using Zenject;
 
 namespace ProjectOlog.Code.Networking.Infrastructure.CompoundEvents
 {
-    public abstract class NetworkEventsUnpacker
+    public abstract class BasedNetworkUnpacker
     {
         // Словарь для хранения распакованных событий по EventID
         protected Dictionary<ushort, Entity> _eventEntities = new Dictionary<ushort, Entity>();

@@ -2,18 +2,19 @@
 
 namespace ProjectOlog.Code.Networking.Packets.Mortality.Components
 {
-    public class DamageData : BaseEventData, IHeadlessPackageSerializable
+    public class DamageData : BaseSubPacketData
     {
         public int DamageCount;
         
-        public HeadLessDataPacket GetPackage()
+        public override HeadLessDataPacket GetPackage()
         {
             return new HeadLessDataPacket(EventID, DamageCount);
         }
 
-        public void Deserialize(HeadLessDataPacket dataPackage)
+        public override void Deserialize(HeadLessDataPacket dataPackage)
         {
-            EventID = dataPackage.GetUShort();
+            base.Deserialize(dataPackage);
+            
             DamageCount = dataPackage.GetInt();
         }
     }

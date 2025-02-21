@@ -3,18 +3,19 @@ using ProjectOlog.Code.Mechanics.Impact.Aggressors;
 
 namespace ProjectOlog.Code.Networking.Packets.Mortality.Impact
 {
-    public class EnvironmentAggressionData : BaseEventData, IHeadlessPackageSerializable
+    public class EnvironmentAggressionData : BaseSubPacketData
     {
         public EEnvironmentType EnvironmentType;
         
-        public HeadLessDataPacket GetPackage()
+        public override HeadLessDataPacket GetPackage()
         {
             return new HeadLessDataPacket(EventID, (byte)EnvironmentType);
         }
 
-        public void Deserialize(HeadLessDataPacket dataPackage)
+        public override void Deserialize(HeadLessDataPacket dataPackage)
         {
-            EventID = dataPackage.GetUShort();
+            base.Deserialize(dataPackage);
+            
             EnvironmentType = (EEnvironmentType)dataPackage.GetByte();
         }
     }
