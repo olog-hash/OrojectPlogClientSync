@@ -1,11 +1,14 @@
 ﻿using LiteNetLib;
 using LiteNetLib.Utils;
 using ProjectOlog.Code._InDevs.Data.Sessions;
-using ProjectOlog.Code._InDevs.Players.Init;
+using ProjectOlog.Code._InDevs.Players.Instantiate;
 using ProjectOlog.Code._InDevs.Players.Respawn;
 using ProjectOlog.Code.Networking.Infrastructure.Core;
+using ProjectOlog.Code.Networking.Infrastructure.SubComponents.Core;
 using ProjectOlog.Code.Networking.Packets;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Instantiate;
 using Scellecs.Morpeh;
+using UnityEngine;
 
 namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Players
 {
@@ -19,31 +22,24 @@ namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Players
         [NetworkCallback]
         private void InitPlayer(NetPeer peer, NetDataPackage dataPackage)
         {
-            var playerDataCached = new InitPlayerPacket();
-            playerDataCached.Deserialize(dataPackage);
+            var instantiatePlayerPacket = new InstantiatePlayerPacket();
+            instantiatePlayerPacket.Deserialize(dataPackage);
             
-            if (!_usersContainer.TryGetUserDataByID(playerDataCached.UserID, out var userData)) return;
-            bool isLocalPlayer = LocalData.LocalID == playerDataCached.UserID;
-
-            var initPlayerEvent = new InitPlayerEvent
+            if (instantiatePlayerPacket.NetworkPlayerDatas.Length > 0)
             {
-                ServerID = playerDataCached.ServerID,
-                UserID = playerDataCached.UserID,
-                Username = userData?.Username != null ? userData.Username : "NONE",
-
-                Position = playerDataCached.Position,
-                Rotation = playerDataCached.Rotation,
-                IsDead = playerDataCached.IsDead,
-                IsLocalPlayer = isLocalPlayer,
-            };
-            
-            World.Default.CreateTickEvent().AddComponentData(initPlayerEvent);
+                World.Default.CreateTickEvent().AddComponentData(new InstantiatePlayerEvent()
+                {
+                    InstantiatePlayerPacket = instantiatePlayerPacket,
+                    EntityProviderMappingPool = new EntityProviderMappingPool()
+                });
+            }
         }
         
         [NetworkCallback]
         private void RespawnPlayer(NetPeer peer, NetDataPackage dataPackage)
         {
             byte userID = dataPackage.GetByte();
+            ushort stateVersion = dataPackage.GetUShort();
             var position = dataPackage.GetVector3();
             var rotation = dataPackage.GetVector4();
 
@@ -52,16 +48,12 @@ namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Players
             var respawnPlayerEvent = new RespawnPlayerEvent
             {
                 PlayerProvider = playerProvider,
+                LastStateVersion = stateVersion,
                 Position = position,
                 Rotation = rotation,
             };
             
             World.Default.CreateTickEvent().AddComponentData(respawnPlayerEvent);
-        }
-
-        public void RespawnPlayerInfoReceived()
-        {
-            SendTo(nameof(RespawnPlayerInfoReceived), new NetDataPackage(), DeliveryMethod.ReliableOrdered);
         }
     }
 }

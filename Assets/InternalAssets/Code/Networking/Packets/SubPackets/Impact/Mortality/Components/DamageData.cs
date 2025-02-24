@@ -1,6 +1,7 @@
 ﻿using LiteNetLib.Utils;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Based;
 
-namespace ProjectOlog.Code.Networking.Packets.Mortality.Components
+namespace ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Mortality.Components
 {
     public class DamageData : BaseSubPacketData
     {

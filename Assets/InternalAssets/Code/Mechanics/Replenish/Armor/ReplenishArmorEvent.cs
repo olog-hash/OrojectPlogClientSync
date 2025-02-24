@@ -2,7 +2,7 @@
 using Scellecs.Morpeh;
 using Unity.IL2CPP.CompilerServices;
 
-namespace ProjectOlog.Code.Mechanics.Replenish.Events
+namespace ProjectOlog.Code.Mechanics.Replenish.Armor
 {
     [Serializable]
     [Il2CppSetOption(Option.NullChecks, false)]

@@ -1,8 +1,9 @@
 ﻿using LiteNetLib;
 using LiteNetLib.Utils;
-using ProjectOlog.Code._InDevs.Players.Init;
-using ProjectOlog.Code.Entities.Objects.Initialization;
+using ProjectOlog.Code._InDevs.Players.Instantiate;
+using ProjectOlog.Code.Entities.Objects.Instantiate;
 using ProjectOlog.Code.Networking.Infrastructure.Core;
+using ProjectOlog.Code.Networking.Infrastructure.SubComponents.Core;
 using ProjectOlog.Code.Networking.Packets;
 using ProjectOlog.Code.Networking.Profiles.Users;
 using ProjectOlog.Code.UI.HUD;
@@ -40,39 +41,23 @@ namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Core
             }
             
             // Спавним пользователей что имеются.
-            foreach (var initPlayerData in serverInitializedCached.InitPlayers)
+            if (serverInitializedCached.InstantiatePlayerPacket.Length > 0)
             {
-                var userData = _usersContainer.GetUserDataByID(initPlayerData.UserID);
-  
-                var initPlayerEvent = new InitPlayerEvent 
+                World.Default.CreateTickEvent().AddComponentData(new InstantiatePlayerEvent()
                 {
-                    ServerID = initPlayerData.ServerID,
-                    UserID = initPlayerData.UserID,
-                    Username = (userData?.Username != null ? userData.Username : "NONE"),
-
-                    Position = initPlayerData.Position,
-                    Rotation = initPlayerData.Rotation,
-                    IsDead = initPlayerData.IsDead,
-                };
-                
-                World.Default.CreateTickEvent().AddComponentData(initPlayerEvent);
+                    InstantiatePlayerPacket = serverInitializedCached.InstantiatePlayerPacket,
+                    EntityProviderMappingPool = new EntityProviderMappingPool()
+                });
             }
-
+            
             // Спавним обьекты, что имеются
-            foreach (var initObjectData in serverInitializedCached.InitObjects)
+            if (serverInitializedCached.InstantiateObjectPacket.Length > 0)
             {
-               var initObjectEvent = new InitObjectEvent
+                World.Default.CreateTickEvent().AddComponentData(new InstantiateObjectEvent()
                 {
-                    ServerID = initObjectData.ServerID,
-                    ObjectType = initObjectData.ObjectType,
-
-                    Position = initObjectData.Position,
-                    Rotation = initObjectData.Rotation,
-                    
-                    ObjectData = initObjectData.ObjectData,
-                };
-
-                World.Default.CreateTickEvent().AddComponentData(initObjectEvent);
+                    InstantiateObjectPacket = serverInitializedCached.InstantiateObjectPacket,
+                    EntityProviderMappingPool = new EntityProviderMappingPool()
+                });
             }
 
             NotificationUtilits.SendChatMessageNone($"Добро пожаловать на сервер!");

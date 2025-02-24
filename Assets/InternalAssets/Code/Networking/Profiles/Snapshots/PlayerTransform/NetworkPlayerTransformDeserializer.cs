@@ -1,9 +1,8 @@
-﻿using System;
-using LiteNetLib.Utils;
-using NetCode;
+﻿using NetCode;
+using ProjectOlog.Code.Networking.Profiles.Snapshots.Core;
 using UnityEngine;
 
-namespace ProjectOlog.Code.Networking.Profiles.Snapshots.NetworkTransformUtilits
+namespace ProjectOlog.Code.Networking.Profiles.Snapshots.PlayerTransform
 {
     public class NetworkPlayerTransformDeserializer
     {

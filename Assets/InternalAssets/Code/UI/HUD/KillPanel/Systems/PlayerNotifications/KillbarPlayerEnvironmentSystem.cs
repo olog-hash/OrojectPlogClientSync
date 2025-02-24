@@ -1,7 +1,6 @@
 ﻿using ProjectOlog.Code.Mechanics.Impact.Aggressors;
 using ProjectOlog.Code.Mechanics.Impact.Victims;
 using ProjectOlog.Code.Mechanics.Mortality.Death;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using ProjectOlog.Code.Networking.Profiles.Users;
 using ProjectOlog.Code.UI.HUD.KillPanel.Builder;
 using Scellecs.Morpeh;

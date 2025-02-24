@@ -4,7 +4,7 @@ using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.FirstPersonController;
 using ProjectOlog.Code.Infrastructure.Application.Layers;
 using ProjectOlog.Code.Input.PlayerInput.FirstPerson;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Objects;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;

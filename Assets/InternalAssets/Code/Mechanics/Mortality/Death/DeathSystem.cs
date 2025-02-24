@@ -1,5 +1,4 @@
 ﻿using ProjectOlog.Code.Mechanics.Impact.Victims;
-using ProjectOlog.Code.Mechanics.Mortality.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using UnityEngine;

@@ -1,7 +1,6 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Respawn;
 using ProjectOlog.Code.Mechanics.Impact.Victims;
 using ProjectOlog.Code.Mechanics.Mortality.Death;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using ProjectOlog.Code.Networking.Game.Core;
 using ProjectOlog.Code.Networking.Profiles.Users;
 using Scellecs.Morpeh;

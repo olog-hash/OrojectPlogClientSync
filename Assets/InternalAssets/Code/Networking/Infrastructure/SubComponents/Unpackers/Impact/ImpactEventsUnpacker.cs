@@ -1,9 +1,10 @@
 ﻿using ProjectOlog.Code.Mechanics.Impact.Aggressors;
 using ProjectOlog.Code.Mechanics.Impact.Victims;
-using ProjectOlog.Code.Networking.Packets.Mortality.Impact;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Core;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Core.Components;
 using Scellecs.Morpeh;
 
-namespace ProjectOlog.Code.Networking.Infrastructure.CompoundEvents.Unpackers
+namespace ProjectOlog.Code.Networking.Infrastructure.SubComponents.Unpackers.Impact
 {
     public class ImpactEventsUnpacker : BasedNetworkUnpacker
     {

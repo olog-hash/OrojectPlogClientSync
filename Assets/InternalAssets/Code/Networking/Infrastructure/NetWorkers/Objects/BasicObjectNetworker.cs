@@ -1,9 +1,11 @@
 ﻿using LiteNetLib;
 using LiteNetLib.Utils;
 using ProjectOlog.Code.Entities.Objects.Destruction;
-using ProjectOlog.Code.Entities.Objects.Initialization;
+using ProjectOlog.Code.Entities.Objects.Instantiate;
 using ProjectOlog.Code.Networking.Infrastructure.Core;
+using ProjectOlog.Code.Networking.Infrastructure.SubComponents.Core;
 using ProjectOlog.Code.Networking.Packets;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Instantiate;
 using Scellecs.Morpeh;
 
 namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Objects
@@ -19,21 +21,17 @@ namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Objects
         [NetworkCallback]
         private void InitObject(NetPeer peer, NetDataPackage dataPackage)
         {
-            var initObjectCached = new InitObjectPacket();
-            initObjectCached.Deserialize(dataPackage);
+            var instantiateObjectPacket = new InstantiateObjectPacket();
+            instantiateObjectPacket.Deserialize(dataPackage);
 
-            var initObjectEvent = new InitObjectEvent
+            if (instantiateObjectPacket.Length > 0)
             {
-                ServerID = initObjectCached.ServerID,
-                ObjectType = initObjectCached.ObjectType,
-
-                Position = initObjectCached.Position,
-                Rotation = initObjectCached.Rotation,
-
-                ObjectData = initObjectCached.ObjectData,
-            };
-            
-            World.Default.CreateTickEvent().AddComponentData(initObjectEvent);
+                World.Default.CreateTickEvent().AddComponentData(new InstantiateObjectEvent()
+                {
+                    InstantiateObjectPacket = instantiateObjectPacket,
+                    EntityProviderMappingPool = new EntityProviderMappingPool()
+                });
+            }
         }
         
         [NetworkCallback]

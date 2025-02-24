@@ -19,5 +19,8 @@ namespace ProjectOlog.Code.Networking.Game.Core
 	public struct NetworkPlayer : IComponent 
 	{
 		public int UserID;
+		
+		/// После респавна - версия должна меняться, чтобы игрок не присылал устаревшие данные своего состояния.
+		public ushort LastStateVersion;
     }
 }

@@ -11,5 +11,6 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.ShieldProtectPlayer.Events
     public struct ShieldAddedEvent : IComponent
     {
         public int ServerID;
+        public float ShieldTime;
     }
 }

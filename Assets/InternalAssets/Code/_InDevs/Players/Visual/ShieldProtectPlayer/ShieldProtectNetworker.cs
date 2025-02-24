@@ -12,10 +12,12 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.ShieldProtectPlayer
         private void ShieldAdded(NetPeer peer, NetDataPackage dataPackage)
         {
             int serverID = dataPackage.GetInt();
+            float shieldTime = dataPackage.GetFloat();
 
             var shieldAddEvent = new ShieldAddedEvent
             {
-                ServerID = serverID
+                ServerID = serverID,
+                ShieldTime = shieldTime
             };
             
             World.Default.CreateTickEvent().AddComponentData(shieldAddEvent);

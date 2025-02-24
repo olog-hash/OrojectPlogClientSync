@@ -2,7 +2,6 @@
 using ProjectOlog.Code.Game.Core;
 using ProjectOlog.Code.Mechanics.Impact.Victims;
 using ProjectOlog.Code.Mechanics.Mortality.Death;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using ProjectOlog.Code.Networking.Game.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;

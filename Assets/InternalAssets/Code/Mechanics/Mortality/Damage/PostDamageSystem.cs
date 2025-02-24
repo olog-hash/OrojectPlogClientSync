@@ -1,11 +1,9 @@
 ﻿using ProjectOlog.Code.Mechanics.Impact.Victims;
-using ProjectOlog.Code.Mechanics.Mortality.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
-using UnityEngine;
 using Unity.IL2CPP.CompilerServices;
 
-namespace ProjectOlog.Code.Mechanics.Mortality.PostDamage
+namespace ProjectOlog.Code.Mechanics.Mortality.Damage
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]

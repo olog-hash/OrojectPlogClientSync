@@ -2,7 +2,7 @@
 {
     public class LocalData
     {
-        public static int LocalID;
+        public static int LocalUserID;
         public static string LocalName;
 
         public LocalData()
@@ -12,7 +12,7 @@
 
         public static void Initialize()
         {
-            LocalID = -1;
+            LocalUserID = -1;
             LocalName = string.Empty;
         }
     }

@@ -2,7 +2,7 @@
 using ProjectOlog.Code._InDevs.KitPacksInteract.Modules.AudioSound;
 using ProjectOlog.Code._InDevs.Players.SyncObjectActions;
 using ProjectOlog.Code.Entities.Objects.Destruction;
-using ProjectOlog.Code.Entities.Objects.Initialization;
+using ProjectOlog.Code.Entities.Objects.Instantiate;
 using ProjectOlog.Code.Entities.Objects.Interactables.Core.Systems;
 using Scellecs.Morpeh;
 
@@ -12,7 +12,9 @@ namespace ProjectOlog.Code.Gameplay.ECS.Systems.Features
     {
         public override void Execute(SystemsGroup _systemsGroup, EcsSystemsFactory _systemsFactory)
         {
-            _systemsFactory.CreateSystem<InitObjectSystem>(_systemsGroup); 
+            _systemsFactory.CreateSystem<InstantiateObjectSystem>(_systemsGroup); 
+            _systemsFactory.CreateSystem<InstantiateObjectExpandedSystem>(_systemsGroup); 
+            
             _systemsFactory.CreateSystem<SyncPlayerSpawnObjectSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<InteractiveLogicUpdateSystem>(_systemsGroup); 
             _systemsFactory.CreateSystem<RemoteStateTransitionBroadcastSystem>(_systemsGroup); 

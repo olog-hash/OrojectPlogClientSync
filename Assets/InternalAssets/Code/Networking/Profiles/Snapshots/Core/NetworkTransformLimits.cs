@@ -1,7 +1,6 @@
 ﻿using NetCode.Limits;
-using UnityEngine;
 
-namespace ProjectOlog.Code.Networking.Profiles.Snapshots.NetworkTransformUtilits
+namespace ProjectOlog.Code.Networking.Profiles.Snapshots.Core
 {
     public static class NetworkTransformLimits
     {

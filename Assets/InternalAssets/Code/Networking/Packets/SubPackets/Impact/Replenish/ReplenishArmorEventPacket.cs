@@ -1,8 +1,8 @@
 ﻿using LiteNetLib.Utils;
-using ProjectOlog.Code.Networking.Packets.Impact.Replenish.Components;
-using ProjectOlog.Code.Networking.Packets.Mortality.Impact;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Core;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Replenish.Components;
 
-namespace ProjectOlog.Code.Networking.Packets.Impact.Replenish
+namespace ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Replenish
 {
     public class ReplenishArmorEventPacket : INetPackageSerializable
     {

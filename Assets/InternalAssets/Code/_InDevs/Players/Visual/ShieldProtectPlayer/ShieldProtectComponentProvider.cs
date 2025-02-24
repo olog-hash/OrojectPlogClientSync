@@ -21,6 +21,7 @@ namespace ProjectOlog.Code._InDevs.Players.Visual.ShieldProtectPlayer
     public struct ShieldProtectComponent : IComponent
     {
         public bool IsActive;
+        public float ShieldTime;
         public BaseObjectViewMarker ShieldObject;
     }
 }

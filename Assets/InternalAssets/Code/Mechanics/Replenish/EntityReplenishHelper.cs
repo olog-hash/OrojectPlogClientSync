@@ -1,6 +1,6 @@
 ﻿using System;
+using ProjectOlog.Code.Mechanics.Mortality;
 using ProjectOlog.Code.Mechanics.Mortality.Core;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
 using Scellecs.Morpeh;
 
 namespace ProjectOlog.Code.Mechanics.Replenish

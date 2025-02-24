@@ -2,7 +2,7 @@ using ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.Utilits;
 using ProjectOlog.Code.Game.Core;
 using ProjectOlog.Code.Input.PlayerInput.FirstPerson;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;

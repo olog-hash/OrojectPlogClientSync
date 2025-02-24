@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code._InDevs.Players.Init;
+﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
+using ProjectOlog.Code._InDevs.Players.Instantiate;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
@@ -14,22 +15,22 @@ namespace ProjectOlog.Code._InDevs.CameraSystem.Player.ViewModes.Lifecycle
         
         public override void OnAwake()
         {
-            _initPlayersFilter = World.Filter.With<InitPlayerEvent>().Build();
+            _initPlayersFilter = World.Filter.With<PostInstantiatePlayerEvent>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
         {
             foreach (var entityEvent in _initPlayersFilter)
             {
-                ref var initPlayerEvent = ref entityEvent.GetComponent<InitPlayerEvent>();
+                ref var postInstantiatePlayerEvent = ref entityEvent.GetComponent<PostInstantiatePlayerEvent>();
                 
-                InitPlayer(initPlayerEvent);
+                InitPlayer(postInstantiatePlayerEvent);
             }
         }
 
-        public void InitPlayer(InitPlayerEvent initPlayerEvent)
+        public void InitPlayer(PostInstantiatePlayerEvent postInstantiatePlayerEvent)
         {
-            if (!initPlayerEvent.IsLocalPlayer) return;
+            if (!postInstantiatePlayerEvent.PlayerEntity.Has<LocalPlayerMarker>()) return;
             
             World.CreateTickEvent(1).AddComponentData(new SwitchPersonViewEvent
             {

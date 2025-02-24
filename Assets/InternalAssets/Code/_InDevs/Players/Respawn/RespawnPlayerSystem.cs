@@ -2,8 +2,8 @@
 using ProjectOlog.Code._InDevs.TranslationUtilits;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation;
 using ProjectOlog.Code.Game.Core;
-using ProjectOlog.Code.Mechanics.Mortality.Core;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
+using ProjectOlog.Code.Mechanics.Mortality;
+using ProjectOlog.Code.Networking.Game.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
@@ -41,6 +41,8 @@ namespace ProjectOlog.Code._InDevs.Players.Respawn
         {
             if (respawnEvent.PlayerProvider is null || respawnEvent.PlayerProvider.Entity is null) return;
             var playerEntity = respawnEvent.PlayerProvider.Entity;
+            
+            ref var networkPlayer = ref playerEntity.GetComponent<NetworkPlayer>();
 
             if (playerEntity.Has<LocalPlayerMarker>())
             {
@@ -56,6 +58,9 @@ namespace ProjectOlog.Code._InDevs.Players.Respawn
                     respawnEvent.Position,
                     respawnEvent.Rotation);
             }
+
+            // Обновляем последнее состояние
+            networkPlayer.LastStateVersion = respawnEvent.LastStateVersion;
 
             // Возрождаем.
             _entityMortalityHelper.TryReborn(playerEntity);

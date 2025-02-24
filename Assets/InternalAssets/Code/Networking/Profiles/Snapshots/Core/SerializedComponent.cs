@@ -1,6 +1,6 @@
 ﻿using System.Buffers;
 
-namespace ProjectOlog.Code.Networking.Profiles.Snapshots.NetworkTransformUtilits
+namespace ProjectOlog.Code.Networking.Profiles.Snapshots.Core
 {
     public struct SerializedComponent
     {

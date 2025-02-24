@@ -1,5 +1,5 @@
 ﻿using NetCode;
-using ProjectOlog.Code.Networking.Profiles.Snapshots.NetworkTransformUtilits;
+using ProjectOlog.Code.Networking.Profiles.Snapshots.Core;
 using UnityEngine;
 
 namespace ProjectOlog.Code.Networking.Profiles.Snapshots.ObjectTransform

@@ -1,12 +1,10 @@
 ﻿using LiteNetLib;
 using LiteNetLib.Utils;
-using ProjectOlog.Code.Mechanics.Replenish.Events;
-using ProjectOlog.Code.Networking.Infrastructure.CompoundEvents.Unpackers;
 using ProjectOlog.Code.Networking.Infrastructure.Core;
-using ProjectOlog.Code.Networking.Packets.Impact.Replenish;
-using Scellecs.Morpeh;
+using ProjectOlog.Code.Networking.Infrastructure.SubComponents.Unpackers.Impact;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Replenish;
 
-namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Repercussion.Damage
+namespace ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Impact
 {
     public sealed class BasicReplenishNetworker : NetWorkerClient
     {

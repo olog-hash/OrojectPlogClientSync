@@ -1,7 +1,6 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code.Mechanics.Impact.Victims;
 using ProjectOlog.Code.Mechanics.Mortality.Death;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;

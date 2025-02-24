@@ -1,10 +1,9 @@
 ﻿using System;
 using ProjectOlog.Code._InDevs.Players.Visual.ShieldProtectPlayer;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using Scellecs.Morpeh;
 
-namespace ProjectOlog.Code.Mechanics.Mortality.Core
+namespace ProjectOlog.Code.Mechanics.Mortality
 {
     public class EntityMortalityHelper
     {

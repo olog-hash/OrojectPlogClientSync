@@ -1,7 +1,8 @@
 ﻿using LiteNetLib.Utils;
 using ProjectOlog.Code.Mechanics.Impact.Aggressors;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Based;
 
-namespace ProjectOlog.Code.Networking.Packets.Mortality.Impact
+namespace ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Core.Components
 {
     public class EnvironmentAggressionData : BaseSubPacketData
     {

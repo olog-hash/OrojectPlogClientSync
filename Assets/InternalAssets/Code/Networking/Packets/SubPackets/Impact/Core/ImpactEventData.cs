@@ -1,6 +1,7 @@
 ﻿using LiteNetLib.Utils;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Core.Components;
 
-namespace ProjectOlog.Code.Networking.Packets.Mortality.Impact
+namespace ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Core
 {
     public class ImpactEventData : IHeadlessPackageSerializable
     {

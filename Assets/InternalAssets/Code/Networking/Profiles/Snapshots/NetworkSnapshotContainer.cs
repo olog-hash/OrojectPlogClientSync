@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ProjectOlog.Code.Networking.Client;
-using ProjectOlog.Code.Networking.Profiles.Snapshots.NetworkTransformUtilits;
 using UnityEngine;
 
 namespace ProjectOlog.Code.Networking.Profiles.Snapshots

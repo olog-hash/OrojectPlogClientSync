@@ -3,11 +3,12 @@ using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.Logger;
 using ProjectOlog.Code.Game.Core;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using ProjectOlog.Code.Networking.Client;
+using ProjectOlog.Code.Networking.Game.Core;
 using ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Core;
 using ProjectOlog.Code.Networking.Packets.SystemSync.Send;
-using ProjectOlog.Code.Networking.Profiles.Snapshots.NetworkTransformUtilits;
+using ProjectOlog.Code.Networking.Profiles.Snapshots.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
@@ -49,11 +50,25 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.LocalSync
             var clientSyncPacket = new ClientSystemSyncPacket()
             {
                 LastKnownServerTick = NetworkTime.LastServerTick,
+                LastStateVersion = GetLocalPlayerStateVersion(),
                 
                 PlayerStateData = localPlayerStateData,
             };
             
             _syncGameNetworker.SyncPlayerRequest(clientSyncPacket.GetPackage());
+        }
+
+        private ushort GetLocalPlayerStateVersion()
+        {
+            foreach (var localPlayer in _localPlayerFilter)
+            {
+                ref var translation = ref localPlayer.GetComponent<Translation>();
+                ref var networkPlayer = ref localPlayer.GetComponent<NetworkPlayer>();
+
+                return networkPlayer.LastStateVersion;
+            }
+
+            return 0;
         }
 
         private ClientSyncPlayerStateData GetLocalPlayerSyncData()
@@ -66,6 +81,7 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.LocalSync
             foreach (var localPlayer in _localPlayerFilter)
             {
                 ref var translation = ref localPlayer.GetComponent<Translation>();
+                ref var networkPlayer = ref localPlayer.GetComponent<NetworkPlayer>();
                 ref var characterInterpolation = ref localPlayer.GetComponent<CharacterInterpolation>();
                 ref var characterBodyLogger = ref localPlayer.GetComponent<CharacterBodyLogger>();
 

@@ -896,6 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedData:
     IsActive: 0
+    ShieldTime: 0
     ShieldObject: {fileID: 7839950523679998507}
 --- !u!114 &6553072850060302299
 MonoBehaviour:
@@ -948,7 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializedData:
-    MirrorInterpolation: {fileID: 3988730353483561921}
+    RemotePlayerInterpolation: {fileID: 3988730353483561921}
 --- !u!1 &6593530165875861392
 GameObject:
   m_ObjectHideFlags: 0

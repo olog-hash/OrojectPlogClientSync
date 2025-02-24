@@ -1,11 +1,9 @@
 ﻿using ProjectOlog.Code.Mechanics.Impact.Victims;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core;
-using ProjectOlog.Code.Mechanics.Replenish.Events;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
 
-namespace ProjectOlog.Code.Mechanics.Replenish
+namespace ProjectOlog.Code.Mechanics.Replenish.Armor
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]

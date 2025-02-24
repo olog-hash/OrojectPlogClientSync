@@ -1,8 +1,8 @@
 ﻿using LiteNetLib.Utils;
-using ProjectOlog.Code.Networking.Packets.Mortality.Components;
-using ProjectOlog.Code.Networking.Packets.Mortality.Impact;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Core;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Mortality.Components;
 
-namespace ProjectOlog.Code.Networking.Packets.Mortality
+namespace ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Mortality
 {
     public class DamageEventPacket : INetPackageSerializable
     {

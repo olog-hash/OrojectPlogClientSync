@@ -1,4 +1,5 @@
 ﻿using LiteNetLib.Utils;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Instantiate;
 
 namespace ProjectOlog.Code.Networking.Packets
 {
@@ -8,12 +9,12 @@ namespace ProjectOlog.Code.Networking.Packets
         public uint Tickrate;
         
         public InitUserPacket[] InitUsers;
-        public InitPlayerPacket[] InitPlayers;
-        public InitObjectPacket[] InitObjects;
+        public InstantiatePlayerPacket InstantiatePlayerPacket;
+        public InstantiateObjectPacket InstantiateObjectPacket;
 
         public NetDataPackage GetPackage()
         {
-            return new NetDataPackage(Tickrate, InitUsers, InitPlayers, InitObjects);
+            return new NetDataPackage(Tickrate, InitUsers, InstantiatePlayerPacket, InstantiateObjectPacket);
         }
         
         public void Deserialize(NetDataPackage dataPackage)
@@ -21,8 +22,8 @@ namespace ProjectOlog.Code.Networking.Packets
             Tickrate = dataPackage.GetUInt();
             
             InitUsers = dataPackage.GetCustomArray<InitUserPacket>();
-            InitPlayers = dataPackage.GetCustomArray<InitPlayerPacket>();
-            InitObjects = dataPackage.GetCustomArray<InitObjectPacket>();
+            InstantiatePlayerPacket = dataPackage.GetCustom<InstantiatePlayerPacket>();
+            InstantiateObjectPacket = dataPackage.GetCustom<InstantiateObjectPacket>();
         }
     }
 }

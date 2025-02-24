@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using ProjectOlog.Code._InDevs.Players.Core.Markers;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using ProjectOlog.Code.Networking.Game.Core;
 using Scellecs.Morpeh;
 

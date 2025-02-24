@@ -73,9 +73,9 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.Receive
                 if (playerEntity.Has<LocalPlayerMarker>())
                     continue;
 
-                if (playerEntity.TryGetComponent<MirrorInterpolationComponent>(out var mirrorInterpolationComponent))
+                if (playerEntity.TryGetComponent<RemotePlayerInterpolationComponent>(out var mirrorInterpolationComponent))
                 {
-                    var snap = new Snapshot3D()
+                    var snap = new RemotePlayerInterpolationSnapshot()
                     {
                         remoteTime = currentSnapshot.ServerTime,
 
@@ -87,7 +87,7 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.Receive
                         IsGrounded = currentTransform.IsGrounded,
                     };
 
-                    mirrorInterpolationComponent.MirrorInterpolation.OnMessage(snap);
+                    mirrorInterpolationComponent.RemotePlayerInterpolation.OnMessage(snap);
                 }
             }
         }

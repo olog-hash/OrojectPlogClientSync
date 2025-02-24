@@ -24,7 +24,7 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
         
         public override void Enter()
         {
-            // UnityEngine.Application.targetFrameRate = 60;
+             UnityEngine.Application.targetFrameRate = 60;
             
             // Initialization
             _layersController = new ApplicationLayersController(_runtimeHelper);

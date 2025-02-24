@@ -1,7 +1,8 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code.Mechanics.Impact.Aggressors;
 using ProjectOlog.Code.Mechanics.Impact.Victims;
-using ProjectOlog.Code.Mechanics.Replenish.Events;
+using ProjectOlog.Code.Mechanics.Replenish.Armor;
+using ProjectOlog.Code.Mechanics.Replenish.Health;
 using ProjectOlog.Code.Networking.Game.Core;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;

@@ -14,10 +14,10 @@ namespace ProjectOlog.Code._InDevs.TranslationUtilits
         public static void SetPositionAndRotation(Entity entity, Vector3 position, Quaternion rotation)
         {
             ref var translation = ref entity.GetComponent<Translation>();
-            ref var mirrorInterpolationComponent = ref entity.GetComponent<MirrorInterpolationComponent>();
+            ref var mirrorInterpolationComponent = ref entity.GetComponent<RemotePlayerInterpolationComponent>();
             
             translation.position = position;
-            mirrorInterpolationComponent.MirrorInterpolation.SetPositionAndRotationClear(position, rotation);
+            mirrorInterpolationComponent.RemotePlayerInterpolation.SetPositionAndRotationClear(position, rotation);
         }
     }
 }

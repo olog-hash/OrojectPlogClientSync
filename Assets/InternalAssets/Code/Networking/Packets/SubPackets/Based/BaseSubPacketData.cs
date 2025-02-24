@@ -1,6 +1,6 @@
 ﻿using LiteNetLib.Utils;
 
-namespace ProjectOlog.Code.Networking.Packets.Mortality
+namespace ProjectOlog.Code.Networking.Packets.SubPackets.Based
 {
     /// <summary>
     /// Базовый класс для пакетов (суб-пактов data).

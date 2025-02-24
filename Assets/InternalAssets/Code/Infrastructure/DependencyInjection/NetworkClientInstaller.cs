@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using ProjectOlog.Code.Networking.Client;
-using ProjectOlog.Code.Networking.Infrastructure.CompoundEvents;
 using ProjectOlog.Code.Networking.Infrastructure.Core;
+using ProjectOlog.Code.Networking.Infrastructure.SubComponents;
 using ProjectOlog.Code.Networking.Profiles.Entities;
 using ProjectOlog.Code.Networking.Profiles.Snapshots;
 using ProjectOlog.Code.Networking.Profiles.Users;

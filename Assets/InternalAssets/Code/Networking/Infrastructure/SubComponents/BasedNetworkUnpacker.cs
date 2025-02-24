@@ -3,7 +3,7 @@ using ProjectOlog.Code.Networking.Profiles.Entities;
 using Scellecs.Morpeh;
 using Zenject;
 
-namespace ProjectOlog.Code.Networking.Infrastructure.CompoundEvents
+namespace ProjectOlog.Code.Networking.Infrastructure.SubComponents
 {
     public abstract class BasedNetworkUnpacker
     {

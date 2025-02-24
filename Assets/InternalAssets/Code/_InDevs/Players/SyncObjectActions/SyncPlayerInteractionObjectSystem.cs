@@ -2,7 +2,7 @@
 using ProjectOlog.Code.Entities.Objects.Interactables;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.FirstPersonController;
 using ProjectOlog.Code.Input.PlayerInput.FirstPerson;
-using ProjectOlog.Code.Mechanics.Repercussion.Damage.Core.Death;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using ProjectOlog.Code.Networking.Game.Core;
 using ProjectOlog.Code.Networking.Infrastructure.NetWorkers.Objects;
 using ProjectOlog.Code.UI.HUD.CrossHair.InteractionPanel;

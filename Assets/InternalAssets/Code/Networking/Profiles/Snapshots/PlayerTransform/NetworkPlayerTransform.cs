@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace ProjectOlog.Code.Networking.Profiles.Snapshots.NetworkTransformUtilits
+namespace ProjectOlog.Code.Networking.Profiles.Snapshots.PlayerTransform
 {
     public class NetworkPlayerTransform
     {

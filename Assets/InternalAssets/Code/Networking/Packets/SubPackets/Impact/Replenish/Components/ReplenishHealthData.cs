@@ -1,7 +1,7 @@
 ﻿using LiteNetLib.Utils;
-using ProjectOlog.Code.Networking.Packets.Mortality;
+using ProjectOlog.Code.Networking.Packets.SubPackets.Based;
 
-namespace ProjectOlog.Code.Networking.Packets.Impact.Replenish.Components
+namespace ProjectOlog.Code.Networking.Packets.SubPackets.Impact.Replenish.Components
 {
     public class ReplenishHealthData : BaseSubPacketData
     {

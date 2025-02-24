@@ -4,7 +4,7 @@ using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
 
-namespace ProjectOlog.Code.Mechanics.Repercussion.Damage.Core
+namespace ProjectOlog.Code.Mechanics.Mortality.Core
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
