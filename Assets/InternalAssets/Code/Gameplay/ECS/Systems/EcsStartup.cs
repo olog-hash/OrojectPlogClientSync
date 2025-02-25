@@ -1,5 +1,6 @@
 ﻿using ProjectOlog.Code._InDevs.Players.RemoteSync;
 using ProjectOlog.Code._InDevs.UserDataGameUpdate;
+using ProjectOlog.Code.Entities.Objects.Snapshot;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation;
 using ProjectOlog.Code.Game.Core;
 using ProjectOlog.Code.Gameplay.ECS.Systems.Features;
@@ -52,6 +53,8 @@ namespace ProjectOlog.Code.Gameplay.ECS.Systems
 
             _systemsFactory.CreateSystem<SnapshotReceiveSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<SnapshotSyncSystem>(_systemsGroup);
+
+            _systemsFactory.CreateSystem<RemoteObjectInterpolationSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<RemotePlayerInterpolationSystem>(_systemsGroup);
             
             _systemsFactory.CreateFeature<PlayerSystemsFeature>(_systemsGroup);

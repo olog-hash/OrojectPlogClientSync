@@ -1,5 +1,7 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Instantiate;
+using ProjectOlog.Code._InDevs.Players.RemoteSync;
 using ProjectOlog.Code.Core.Enums;
+using ProjectOlog.Code.Entities.Objects.Snapshot;
 using ProjectOlog.Code.Game.Core;
 using ProjectOlog.Code.Gameplay.Battle;
 using ProjectOlog.Code.Infrastructure.ResourceManagement;
@@ -99,12 +101,14 @@ namespace ProjectOlog.Code.Entities.Objects.Instantiate
             foreach (var entityProvider in mapping.EventIDToEntityProvider.Values)
             {
                 entityProvider.AddComponent<TranslationProvider>();
-                entityProvider.AddComponent<InterpolationProvider>();
+                
+                var remoteObjectInterpolation = entityProvider.AddComponent<RemoteObjectInterpolation>();
+                entityProvider.Entity.AddComponentData(new RemoteObjectInterpolationComponent()
+                {
+                    RemoteObjectInterpolation = remoteObjectInterpolation
+                });
 
-                ref var interpolation = ref entityProvider.Entity.GetComponent<Interpolation>();
-                interpolation.InterpolateTranslation = true;
-                interpolation.InterpolateRotation = true;
-                interpolation.SkipNextInterpolation();
+                remoteObjectInterpolation.interpolate = true;
             }
         }
         

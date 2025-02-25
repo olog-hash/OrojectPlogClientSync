@@ -1,5 +1,6 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
 using ProjectOlog.Code._InDevs.Players.RemoteSync;
+using ProjectOlog.Code.Entities.Objects.Snapshot;
 using ProjectOlog.Code.Game.Characters.KinematicCharacter.Logger;
 using ProjectOlog.Code.Game.Core;
 using ProjectOlog.Code.Networking.Profiles.Entities;
@@ -110,27 +111,37 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.Receive
                     continue;
 
                 var objectEntity = objectProvider.Entity;
-                
-                
-                if (objectEntity.Has<Interpolation>())
+
+
+                if (objectEntity.Has<RemoteObjectInterpolationComponent>())
                 {
                     ref var translation = ref objectEntity.GetComponent<Translation>();
-                    ref var interpolationComponent = ref objectEntity.GetComponent<Interpolation>();
-                    
+                    ref var remoteObjectInterpolation = ref objectEntity.GetComponent<RemoteObjectInterpolationComponent>();
+
+                    var position = translation.position;
+                    var rotation = translation.rotation;
+                    var scale = translation.scale;
+
                     if (currentTransform.Position.HasValue)
                     {
-                        interpolationComponent.CurrentTransform.position = currentTransform.Position.Value;
+                        position = currentTransform.Position.Value;
                     }
-                
+
                     if (currentTransform.Rotation.HasValue)
                     {
-                        interpolationComponent.CurrentTransform.rotation = Quaternion.Euler(currentTransform.Rotation.Value);
+                        rotation = Quaternion.Euler(currentTransform.Rotation.Value);
                     }
-                
+
                     if (currentTransform.Scale.HasValue)
                     {
-                        translation.scale = currentTransform.Scale.Value;
+                        scale = currentTransform.Scale.Value;
                     }
+
+                    
+
+                    var remoteObjectSnapshot = new RemoteObjectInterpolationSnapshot(currentSnapshot.ServerTime, 0f, position, rotation, scale);
+                    remoteObjectInterpolation.RemoteObjectInterpolation.OnMessage(remoteObjectSnapshot);
+
                 }
             }
         }
