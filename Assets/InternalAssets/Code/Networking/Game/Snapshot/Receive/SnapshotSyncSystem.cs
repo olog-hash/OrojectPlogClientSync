@@ -78,7 +78,7 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.Receive
                 {
                     var snap = new RemotePlayerInterpolationSnapshot()
                     {
-                        remoteTime = currentSnapshot.ServerTime,
+                        remoteTime = currentTransform.RemoteTime,
 
                         Position = currentTransform.Position,
                         Rotation = Quaternion.Euler(0, currentTransform.YawDegrees, 0),

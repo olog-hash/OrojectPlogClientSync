@@ -46,11 +46,13 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.LocalSync
         public override void OnUpdate(float deltaTime)
         {
             var localPlayerStateData = GetLocalPlayerSyncData();
+            var lastPlayerStateVersion = GetLocalPlayerStateVersion();
             
             var clientSyncPacket = new ClientSystemSyncPacket()
             {
                 LastKnownServerTick = NetworkTime.LastServerTick,
-                LastStateVersion = GetLocalPlayerStateVersion(),
+                LastStateVersion = lastPlayerStateVersion,
+                RemoteTime = NetworkTime.localTime,
                 
                 PlayerStateData = localPlayerStateData,
             };

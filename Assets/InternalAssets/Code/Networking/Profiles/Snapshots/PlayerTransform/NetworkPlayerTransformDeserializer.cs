@@ -32,6 +32,8 @@ namespace ProjectOlog.Code.Networking.Profiles.Snapshots.PlayerTransform
         private NetworkPlayerTransform DeserializeGlobal()
         {
             NetworkPlayerTransform result = new();
+
+            result.RemoteTime = _bitReader.ReadDouble();
             
             result.Position = new Vector3(
                 _bitReader.ReadFloat(),
@@ -53,6 +55,8 @@ namespace ProjectOlog.Code.Networking.Profiles.Snapshots.PlayerTransform
         private NetworkPlayerTransform DeserializeChanged(NetworkPlayerTransform before)
         {
             NetworkPlayerTransform result = new();
+            
+            result.RemoteTime = _bitReader.ReadDouble();
             
             bool isPositionExtended = _bitReader.ReadBool();
             

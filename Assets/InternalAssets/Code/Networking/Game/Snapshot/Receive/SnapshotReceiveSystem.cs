@@ -123,7 +123,9 @@ namespace ProjectOlog.Code.Networking.Game.Snapshot.Receive
                     // Если он все еще существует на карте
                     if (_entitiesContainer.PlayerEntities.TryGetPlayerEntity(playerID, out var networkEntity))
                     {
-                        snapshot.AddPlayerTransform(playerID, playerTransform.Clone());
+                        var playerTransformClone = playerTransform.Clone();
+                        
+                        snapshot.AddPlayerTransform(playerID, playerTransformClone);
                     }
                 }
             }

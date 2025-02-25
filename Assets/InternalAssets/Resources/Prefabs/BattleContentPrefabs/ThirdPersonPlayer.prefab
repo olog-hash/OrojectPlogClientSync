@@ -926,7 +926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interpolate: 1
   snapshotSettings:
-    bufferTimeMultiplier: 2
+    bufferTimeMultiplier: 2.5
     bufferLimit: 32
     catchupNegativeThreshold: -1
     catchupPositiveThreshold: 1
@@ -934,8 +934,8 @@ MonoBehaviour:
     slowdownSpeed: 0.03999999910593033
     driftEmaDuration: 1
     dynamicAdjustment: 1
-    dynamicAdjustmentTolerance: 3
-    deliveryTimeEmaDuration: 5
+    dynamicAdjustmentTolerance: 1
+    deliveryTimeEmaDuration: 2
 --- !u!114 &3000995150536115064
 MonoBehaviour:
   m_ObjectHideFlags: 0
