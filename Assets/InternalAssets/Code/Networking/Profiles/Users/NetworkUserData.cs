@@ -2,7 +2,7 @@
 {
     public class NetworkUserData
     {
-        public int UserID;
+        public byte UserID;
         public string Username;
         public int DeathCount;
         public int Ping;

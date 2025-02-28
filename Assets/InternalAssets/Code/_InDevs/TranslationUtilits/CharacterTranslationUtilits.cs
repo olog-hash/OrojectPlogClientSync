@@ -17,8 +17,8 @@ namespace ProjectOlog.Code._InDevs.TranslationUtilits
             ref var characterInterpolation = ref entity.GetComponent<CharacterInterpolation>();
             
             translation.position = position;
-            characterInterpolation.CurrentTransform.position = position;
-            characterInterpolation.PreviousTransform.position = position;
+            characterInterpolation.CurrentTransform.Position = position;
+            characterInterpolation.PreviousTransform.Position = position;
             
             characterInterpolation.SkipNextInterpolation();
         }
@@ -29,8 +29,8 @@ namespace ProjectOlog.Code._InDevs.TranslationUtilits
             ref var characterInterpolation = ref entity.GetComponent<CharacterInterpolation>();
             
             translation.rotation = rotation;
-            characterInterpolation.CurrentTransform.rotation = rotation;
-            characterInterpolation.PreviousTransform.rotation = rotation;
+            characterInterpolation.CurrentTransform.Rotation = rotation;
+            characterInterpolation.PreviousTransform.Rotation = rotation;
             
             characterInterpolation.SkipNextInterpolation();
         }
@@ -41,12 +41,12 @@ namespace ProjectOlog.Code._InDevs.TranslationUtilits
             ref var characterInterpolation = ref entity.GetComponent<CharacterInterpolation>();
             
             translation.rotation = rotation;
-            characterInterpolation.CurrentTransform.rotation = rotation;
-            characterInterpolation.PreviousTransform.rotation = rotation;
+            characterInterpolation.CurrentTransform.Rotation = rotation;
+            characterInterpolation.PreviousTransform.Rotation = rotation;
             
             translation.position = position;
-            characterInterpolation.CurrentTransform.position = position;
-            characterInterpolation.PreviousTransform.position = position;
+            characterInterpolation.CurrentTransform.Position = position;
+            characterInterpolation.PreviousTransform.Position = position;
             
             characterInterpolation.SkipNextInterpolation();
         }

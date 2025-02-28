@@ -392,11 +392,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedData:
     PreviousTransform:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 0}
+      Position: {x: 0, y: 0, z: 0}
+      Rotation: {x: 0, y: 0, z: 0, w: 0}
     CurrentTransform:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 0}
+      Position: {x: 0, y: 0, z: 0}
+      Rotation: {x: 0, y: 0, z: 0, w: 0}
     InterpolateTranslation: 1
     InterpolateRotation: 0
     InterpolationSkipping: 0
@@ -981,8 +981,8 @@ MonoBehaviour:
     JumpPostGroundingGraceTime: 0
     MaxFallSpeed: -200
     Gravity: {x: -0, y: -30, z: -0}
-    MinVAngle: -90
-    MaxVAngle: 90
+    MinVAngle: -89
+    MaxVAngle: 89
     CharacterViewEntity: {fileID: 0}
     ViewYawDegrees: 0
     ViewPitchDegrees: 0

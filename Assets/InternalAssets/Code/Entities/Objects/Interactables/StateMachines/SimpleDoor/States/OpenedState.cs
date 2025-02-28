@@ -14,7 +14,7 @@ namespace ProjectOlog.Code.Entities.Objects.Interactables.StateMachines.SimpleDo
 
         public override void EnterState()
         {
-            Context.InterpolationProvider.GetData().CurrentTransform.rotation = Quaternion.Euler(0, -90, 0);
+            Context.InterpolationProvider.GetData().CurrentTransform.Rotation = Quaternion.Euler(0, -90, 0);
             Context.InterpolationProvider.GetData().SkipNextInterpolation();
         }
 

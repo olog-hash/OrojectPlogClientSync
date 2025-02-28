@@ -1,5 +1,4 @@
 ﻿using ProjectOlog.Code._InDevs.Players.Core.Markers;
-using ProjectOlog.Code.Core.Extensions;
 using ProjectOlog.Code.Mechanics.Mortality.Core;
 using Scellecs.Morpeh;
 

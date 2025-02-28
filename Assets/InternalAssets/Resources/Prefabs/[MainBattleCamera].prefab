@@ -74,16 +74,16 @@ MonoBehaviour:
   BlockVertical: 0
   BlockHorizontal: 0
   IsFallowRotation: 0
-  DefaultVerticalAngle: 20
-  MinVerticalAngle: -90
-  MaxVerticalAngle: 90
+  DefaultVerticalAngle: 8
+  MinVerticalAngle: -89
+  MaxVerticalAngle: 89
   RotationSpeed: 1
   RotationSharpness: 10000
   RotateWithPhysicsMover: 0
   ObstructionCheckRadius: 0.2
   ObstructionLayers:
     serializedVersion: 2
-    m_Bits: 1015
+    m_Bits: 55
   ObstructionSharpness: 10000
   IgnoredColliders: []
 --- !u!1 &6251644295894792374

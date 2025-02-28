@@ -30,9 +30,9 @@ namespace ProjectOlog.Code._InDevs.CameraSystem.Game.Camera.CameraExtended
         [Range(-90f, 90f)]
         public float DefaultVerticalAngle = 20f;
         [Range(-90f, 90f)]
-        public float MinVerticalAngle = -90f;
+        public float MinVerticalAngle = -89f;
         [Range(-90f, 90f)]
-        public float MaxVerticalAngle = 90f;
+        public float MaxVerticalAngle = 89f;
         public float RotationSpeed = 1f;
         public float RotationSharpness = 10000f;
         public bool RotateWithPhysicsMover = false;

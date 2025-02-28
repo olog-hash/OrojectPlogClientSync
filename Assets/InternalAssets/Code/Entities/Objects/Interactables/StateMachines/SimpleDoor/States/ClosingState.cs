@@ -27,7 +27,7 @@ namespace ProjectOlog.Code.Entities.Objects.Interactables.StateMachines.SimpleDo
         {
             _rotateInterpolation.OnUpdate(deltaTime);
             
-            Context.InterpolationProvider.GetData().CurrentTransform.rotation = _rotateInterpolation.CurrentRotation;
+            Context.InterpolationProvider.GetData().CurrentTransform.Rotation = _rotateInterpolation.CurrentRotation;
         }
     }
 }
