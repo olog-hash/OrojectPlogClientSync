@@ -1,10 +1,10 @@
 ﻿using System;
 using Scellecs.Morpeh;
-using UnityEngine;
 using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
+using UnityEngine;
 
-namespace ProjectOlog.Code._InDevs.KitPacksInteract.Modules.AudioSound
+namespace ProjectOlog.Code._InDevs.KitPacksInteract.AudioSound
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]

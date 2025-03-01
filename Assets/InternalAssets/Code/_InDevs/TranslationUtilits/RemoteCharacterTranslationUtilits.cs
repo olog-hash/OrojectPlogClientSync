@@ -1,6 +1,5 @@
-﻿using ProjectOlog.Code._InDevs.Players.RemoteSync;
-using ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation;
-using ProjectOlog.Code.Game.Core;
+﻿using ProjectOlog.Code.Engine.Transform;
+using ProjectOlog.Code.Features.Players.Interpolation;
 using Scellecs.Morpeh;
 using UnityEngine;
 

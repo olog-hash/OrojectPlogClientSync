@@ -1,4 +1,4 @@
-using ProjectOlog.Code.Core.Enums;
+using ProjectOlog.Code.Network.Gameplay.Core.Enums;
 
 namespace ProjectOlog.Code._InDevs.Data.Sessions
 {

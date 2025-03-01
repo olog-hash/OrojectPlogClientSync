@@ -1,5 +1,5 @@
-﻿using ProjectOlog.Code.Game.Characters.KinematicCharacter.Interpolation;
-using ProjectOlog.Code.Game.Core;
+﻿using ProjectOlog.Code.Engine.Characters.KinematicCharacter.Interpolation;
+using ProjectOlog.Code.Engine.Transform;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Providers;
 using UnityEngine;
