@@ -12,5 +12,10 @@ namespace ProjectOlog.Code.Network.Infrastructure.Core.Batch
         public string MethodName;
         
         public DeliveryMethod DeliveryMethod;
+        
+        /// <summary>
+        /// Должны ли однотипные пакеты быть склеены в один.
+        /// </summary>
+        public bool IsShouldIgnoreBatching;
     }
 }

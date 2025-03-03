@@ -30,6 +30,9 @@ namespace ProjectOlog.Code.Network.Infrastructure.Core.Batch
             if (_sourcePackages.Count > 0 && ((_currentSize + sourceDataPacket.Length) > MAX_SIZE))
                 return false;
 
+            if (_sourcePackages.Count > 0 && _packageHeader.IsShouldIgnoreBatching)
+                return false;
+            
             _sourcePackages.Add(sourceDataPacket);
             _currentSize += sourceDataPacket.Length;
             return true;

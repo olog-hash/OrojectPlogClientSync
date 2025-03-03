@@ -26,10 +26,13 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
             foreach (var entity in _remotePlayerFilter)
             {
                 ref var mirrorInterpolation = ref entity.GetComponent<RemotePlayerInterpolationComponent>();
-                ref var characterBodyLogger =  ref entity.GetComponent<CharacterBodyLogger>();
-            
-                // Обновление позиции должно происходить в Update цикле
-                mirrorInterpolation.RemotePlayerInterpolation.UpdatePosition(deltaTime, ref characterBodyLogger);
+                ref var characterBodyLogger = ref entity.GetComponent<CharacterBodyLogger>();
+        
+                // Обновление позиции с использованием сглаживателя
+                mirrorInterpolation.RemotePlayerInterpolation.UpdatePosition(
+                    deltaTime, 
+                    ref characterBodyLogger, 
+                    mirrorInterpolation.MovementSmoother);
             }
         }
     }

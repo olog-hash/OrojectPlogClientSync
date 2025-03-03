@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using ProjectOlog.Code.Engine.Characters.Animations.Core;
 using ProjectOlog.Code.Engine.Characters.KinematicCharacter.Logger;
 using ProjectOlog.Code.Network.Client;
 using ProjectOlog.Code.Networking.Libs.MirrorInterpolation;
@@ -95,7 +96,7 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                 ref deliveryTimeEma);
         }
 
-        public void UpdatePosition(float deltaTime, ref CharacterBodyLogger characterBodyLogger)
+        public void UpdatePosition(float deltaTime, ref CharacterBodyLogger characterBodyLogger, CharacterMovementSmoother movementSmoother)
         {
             // accumulated delta allows us to simulate correct low fps + deltaTime
             // if necessary in client low fps mode.
@@ -146,10 +147,11 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                             characterBodyLogger.IsGrounded = computed.IsGrounded;
                         }
                     }
-
-                    characterBodyLogger.MoveDirection = CalculateMoveVector(fromSnapshot.Position, toSnapshot.Position, toSnapshot.Rotation);
-
-                    //Debug.Log($"Interpolation: t={t:F3}, From={fromSnapshot.Position}, To={toSnapshot.Position}");
+                    
+                    // Обновляем сглаженное движение
+                    movementSmoother.UpdateMovement(toSnapshot.Position, toSnapshot.Rotation);
+                    characterBodyLogger.MoveDirection = movementSmoother.GetSmoothedMoveVector();
+                    
                 }
                 // apply raw
                 else
@@ -160,6 +162,7 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                     characterBodyLogger.ViewPitchDegrees = snap.ViewPitchDegrees;
                     characterBodyLogger.IsGrounded = snap.IsGrounded;
                     characterBodyLogger.CharacterBodyState = snap.CharacterBodyState;
+                    
                     snapshots.RemoveAt(0);
                 }
             }

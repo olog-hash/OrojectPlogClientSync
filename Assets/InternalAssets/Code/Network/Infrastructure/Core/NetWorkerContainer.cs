@@ -56,7 +56,7 @@ namespace ProjectOlog.Code.Network.Infrastructure.Core
                     ExecuteMethod(peer, methodName, sourceDataPackage);
                 }
                 
-                Debug.Log($"Прибыло много пакетов типа {methodName} в кол-ве {packages.Length}");
+                //Debug.Log($"Прибыло много пакетов типа {methodName} в кол-ве {packages.Length}");
             }
         }
 

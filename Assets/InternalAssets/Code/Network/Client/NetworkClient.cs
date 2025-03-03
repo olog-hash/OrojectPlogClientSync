@@ -45,7 +45,7 @@ namespace ProjectOlog.Code.Network.Client
                 IPv6Enabled = false,
                 SimulateLatency = true,
                 SimulationMinLatency = 50,
-                SimulatePacketLoss = false,
+                SimulatePacketLoss = true,
                 SimulationPacketLossChance = 15
             };
             _netManager.Start();

@@ -18,7 +18,7 @@ namespace ProjectOlog.Code.Battle.ECS.Rules.ComplexRules.SpawnPlayerRequestRule
         /// <summary>
         /// Максимальное время кулдауна между возрождениями в секундах.
         /// </summary>
-        public const float MaxCooldown = 5f;
+        public const float MaxCooldown = 1f;
         
         /// <summary>
         /// Оставшееся время кулдауна до возможности возрождения в секундах.

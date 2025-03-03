@@ -45,17 +45,16 @@ namespace ProjectOlog.Code.Network.Infrastructure.Core
 
         #region Senders
 
-        protected void SendTo(string methodName, NetDataPackage sourceDataPackage, DeliveryMethod deliveryMethod)
+        protected void SendTo(string methodName, NetDataPackage sourceDataPackage, DeliveryMethod deliveryMethod, bool IsShouldIgnoreBatching = false)
         {
-            //var dataPackage = new NetDataPackage(Name, methodName, sourceDataPackage);
-            //_clientSender.Send(_clientSender.WritePacket(dataPackage.GetData()), deliveryMethod);
-            
             var header = new PackageHeader()
             {
                 NetWorkerName = Name,
                 MethodName = methodName,
                 
                 DeliveryMethod = deliveryMethod,
+                
+                IsShouldIgnoreBatching = IsShouldIgnoreBatching
             };
             
             _transportProvider.EnqueuePackage(header, sourceDataPackage);

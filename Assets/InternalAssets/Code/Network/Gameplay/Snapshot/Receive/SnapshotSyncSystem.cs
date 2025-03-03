@@ -87,7 +87,7 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
                         CharacterBodyState = (ECharacterBodyState)currentTransform.CharacterBodyState,
                         IsGrounded = currentTransform.IsGrounded,
                     };
-
+                    
                     mirrorInterpolationComponent.RemotePlayerInterpolation.OnMessage(snap);
                 }
             }

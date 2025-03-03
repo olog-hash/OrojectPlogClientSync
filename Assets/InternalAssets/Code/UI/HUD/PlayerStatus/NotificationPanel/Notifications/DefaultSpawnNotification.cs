@@ -1,4 +1,5 @@
 ﻿using ProjectOlog.Code._InDevs.Data;
+using ProjectOlog.Code.Battle.ECS.Rules.ComplexRules.SpawnPlayerRequestRule;
 using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Notifications
@@ -15,7 +16,7 @@ namespace ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Notifications
 
         public override void Initialize()
         {
-            _remainingTime = 5f; 
+            _remainingTime = SpawnRequestRule.MaxCooldown; 
             UpdateNotificationMessage();
         }
 
