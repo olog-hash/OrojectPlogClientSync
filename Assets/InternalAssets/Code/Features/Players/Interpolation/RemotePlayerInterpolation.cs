@@ -147,11 +147,10 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                             characterBodyLogger.IsGrounded = computed.IsGrounded;
                         }
                     }
-                    
+
                     // Обновляем сглаженное движение
-                    movementSmoother.UpdateMovement(toSnapshot.Position, toSnapshot.Rotation);
-                    characterBodyLogger.MoveDirection = movementSmoother.GetSmoothedMoveVector();
-                    
+                    movementSmoother.UpdateMovement(computed.Position, computed.Rotation, ref characterBodyLogger);
+
                 }
                 // apply raw
                 else

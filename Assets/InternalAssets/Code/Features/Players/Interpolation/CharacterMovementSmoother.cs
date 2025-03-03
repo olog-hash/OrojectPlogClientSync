@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjectOlog.Code.Engine.Characters.Animations.Controllers;
 using ProjectOlog.Code.Engine.Characters.Animations.Core;
 using ProjectOlog.Code.Engine.Characters.KinematicCharacter.Logger;
 using UnityEngine;
@@ -6,107 +7,124 @@ using UnityEngine;
 namespace ProjectOlog.Code.Features.Players.Interpolation
 {
     /// <summary>
-    /// Класс для сглаживания движений удаленных игроков для предотвращения дрожания анимации
+    /// Класс для сглаживания движений удаленных игроков и определения направления движения
     /// </summary>
-     public class CharacterMovementSmoother
+    public class CharacterMovementSmoother
     {
-        private Vector3 _previousPosition;
-        private Quaternion _previousRotation;
-        private Vector2 _smoothedMoveVector = Vector2.zero;
-        
-        // Коэффициенты сглаживания
-        private float _deltaSmooth = 0.2f;
-        private float _deltaRotationSmooth = 0.2f;
-        
-        // Пороги для определения движения
+        // Константы для определения порогов движения (из ActorAnimator)
         private const float IDLE_THRESHOLD = 0.0001f;
-        private const float ROTATION_IDLE_THRESHOLD = 4.0f;
+        private const float STRAFE_THRESHOLD = 0.1f;
+        private const float ROTATION_IDLE_THRESHOLD = 4f;
+        private const int IDLE_PERIOD = 1000000; // ~0.1 секунды
         
-        private float _lastUpdateTime;
+        private const float VELOCITY_IDLE_THRESHOLD = 0.05f;
+        
+        // Параметры сглаживания
+        private float deltaSmooth = 0.2f;
+        private float deltaRotationSmooth = 0.2f;
+        
+        // Текущие значения дельт движения
+        private float deltaX;
+        private float deltaZ;
+        private float deltaR; // вращение
+        
+        // Хранение предыдущего состояния
+        private Vector3 lastPosition = Vector3.zero;
+        private Vector3 lastRotation = Vector3.zero;
+        private long lastPositionTime = DateTime.Now.Ticks;
 
-        public void UpdateMovement(Vector3 position, Quaternion rotation)
+        /// <summary>
+        /// Обновляет состояние движения на основе текущего положения и вращения
+        /// и записывает направление в bodyLogger
+        /// </summary>
+        public void UpdateMovement(Vector3 position, Quaternion rotation, ref CharacterBodyLogger bodyLogger)
         {
-            float deltaTime = Time.deltaTime;
-            
-            if (_previousPosition == Vector3.zero)
+            // Если это первый вызов, инициализируем
+            if (lastPosition == Vector3.zero)
             {
-                // Инициализация при первом вызове
-                _previousPosition = position;
-                _previousRotation = rotation;
-                _lastUpdateTime = Time.time;
+                lastPosition = position;
+                lastRotation = rotation.eulerAngles;
+                bodyLogger.MovementDirection = DetailedMovementDirection.Idle;
                 return;
             }
             
-            // Проверяем изменение позиции
-            Vector3 positionDelta = position - _previousPosition;
-            if (positionDelta.sqrMagnitude < IDLE_THRESHOLD)
+            float deltaTime = (float)(DateTime.Now.Ticks - lastPositionTime) / 1E+07f;
+            if (deltaTime < 0.0001f) deltaTime = 0.016f; // Защита от деления на ноль
+            
+            float rotationDelta = Mathf.DeltaAngle(lastRotation.y, rotation.eulerAngles.y) / deltaTime;
+            Vector3 direction = position - lastPosition;
+            
+            // Проверка на неподвижность (включая вращение на месте)
+            if (direction.sqrMagnitude < IDLE_THRESHOLD)
             {
-                // Если персонаж почти не двигается, плавно уменьшаем вектор движения
-                _smoothedMoveVector = Vector2.Lerp(_smoothedMoveVector, Vector2.zero, deltaTime * 5f);
+                // При вращении на месте тоже устанавливаем Idle
+                bodyLogger.MovementDirection = DetailedMovementDirection.Idle;
                 
-                // Проверяем вращение на месте
-                float rotationDelta = Quaternion.Angle(_previousRotation, rotation);
-                if (rotationDelta > ROTATION_IDLE_THRESHOLD)
+                if (DateTime.Now.Ticks - lastPositionTime > IDLE_PERIOD)
                 {
-                    // Если персонаж поворачивается на месте, создаем имитацию движения в сторону
-                    float rotationDirection = Mathf.Sign(rotation.eulerAngles.y - _previousRotation.eulerAngles.y);
-                    if (Mathf.Abs(rotation.eulerAngles.y - _previousRotation.eulerAngles.y) > 180f)
-                        rotationDirection = -rotationDirection;
-                    
-                    _smoothedMoveVector = new Vector2(rotationDirection, 0) * (rotationDelta / 90f);
+                    // Обновляем время и состояние для длительного бездействия
+                    lastPositionTime = DateTime.Now.Ticks;
+                }
+                
+                // Обновляем вращение для последующих вычислений
+                lastRotation = rotation.eulerAngles;
+                
+                // Сбрасываем дельты движения
+                deltaX = 0f;
+                deltaZ = 0f;
+                deltaR = 0f;
+                return;
+            }
+            
+            // Обновление времени последнего движения
+            lastPositionTime = DateTime.Now.Ticks;
+            lastRotation = rotation.eulerAngles;
+            
+            // Обновление последней позиции
+            lastPosition = position;
+            
+            // Преобразование в локальное пространство (как в ActorAnimator)
+            Vector3 localDir = Quaternion.Inverse(rotation) * direction;
+            
+            // Новый расчет скорости движения
+            float targetX = localDir.x / deltaTime;
+            float targetZ = localDir.z / deltaTime;
+            
+            // Сглаживание движения
+            deltaX = Mathf.Lerp(deltaX, targetX, deltaSmooth);
+            deltaZ = Mathf.Lerp(deltaZ, targetZ, deltaSmooth);
+            
+            if (Mathf.Abs(deltaX) < VELOCITY_IDLE_THRESHOLD && Mathf.Abs(deltaZ) < VELOCITY_IDLE_THRESHOLD)
+            {
+                bodyLogger.MovementDirection = DetailedMovementDirection.Idle;
+                return;
+            }
+            
+            // Определение направления движения на основе дельт и пороговых значений
+            if (Mathf.Abs(deltaX) > Mathf.Abs(deltaZ) + STRAFE_THRESHOLD)
+            {
+                // Преобладает боковое движение
+                if (deltaX > 0f)
+                {
+                    bodyLogger.MovementDirection = DetailedMovementDirection.StrafeRight;
+                }
+                else
+                {
+                    bodyLogger.MovementDirection = DetailedMovementDirection.StrafeLeft;
                 }
             }
             else
             {
-                // Вычисляем вектор движения в локальном пространстве персонажа
-                Vector2 currentMoveVector = CalculateMoveVector(_previousPosition, position, rotation);
-                
-                // Сглаживаем движение для плавности анимаций
-                _smoothedMoveVector = Vector2.Lerp(_smoothedMoveVector, currentMoveVector, _deltaSmooth);
-                
-                _lastUpdateTime = Time.time;
+                // Преобладает движение вперед/назад
+                if (deltaZ > 0f)
+                {
+                    bodyLogger.MovementDirection = DetailedMovementDirection.Forward;
+                }
+                else
+                {
+                    bodyLogger.MovementDirection = DetailedMovementDirection.Backward;
+                }
             }
-            
-            // Обновляем предыдущие значения для следующего кадра
-            _previousPosition = position;
-            _previousRotation = rotation;
-        }
-        
-        public Vector2 GetSmoothedMoveVector()
-        {
-            // Если давно не было обновлений, постепенно уменьшаем движение
-            if (Time.time - _lastUpdateTime > 0.2f)
-            {
-                _smoothedMoveVector = Vector2.Lerp(_smoothedMoveVector, Vector2.zero, Time.deltaTime * 5f);
-            }
-            
-            return _smoothedMoveVector;
-        }
-        
-        private Vector2 CalculateMoveVector(Vector3 previousPosition, Vector3 currentPosition, Quaternion currentRotation)
-        {
-            // Вычисляем дельту позиции
-            float deltaX = currentPosition.x - previousPosition.x;
-            float deltaZ = currentPosition.z - previousPosition.z;
-            
-            Vector2 inputMoveDirection = new Vector2(deltaX, deltaZ);
-            
-            // Преобразуем в локальное пространство персонажа
-            float rotationAngle = currentRotation.eulerAngles.y * Mathf.Deg2Rad;
-            
-            float sin = Mathf.Sin(rotationAngle);
-            float cos = Mathf.Cos(rotationAngle);
-            
-            // Поворачиваем вектор движения относительно поворота персонажа
-            Vector2 rotatedMoveDirection = new Vector2(
-                inputMoveDirection.x * cos - inputMoveDirection.y * sin,
-                inputMoveDirection.x * sin + inputMoveDirection.y * cos
-            );
-            
-            // Инвертируем X для правильного направления
-            rotatedMoveDirection.x = -rotatedMoveDirection.x;
-            
-            return rotatedMoveDirection.normalized * inputMoveDirection.magnitude * 10f; // Множитель для усиления сигнала
         }
     }
 }

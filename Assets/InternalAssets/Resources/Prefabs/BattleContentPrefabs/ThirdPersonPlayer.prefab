@@ -835,6 +835,7 @@ MonoBehaviour:
     PreviousFallVelocity: 0
     IsGrounded: 0
     MoveDirection: {x: 0, y: 0}
+    MovementDirection: 0
     CharacterBodyState: 0
 --- !u!114 &1596407169451171049
 MonoBehaviour:
@@ -1905,6 +1906,7 @@ MonoBehaviour:
         type: 3}
       _Speed: 1
       _NormalizedStartTime: NaN
+    AnimationSpeed: 0.95
   _sprintPack:
     Idle:
       _FadeDuration: 0.25
@@ -1956,6 +1958,7 @@ MonoBehaviour:
         type: 3}
       _Speed: 1
       _NormalizedStartTime: NaN
+    AnimationSpeed: 1
   _crouchPack:
     Idle:
       _FadeDuration: 0.25
@@ -2007,6 +2010,9 @@ MonoBehaviour:
         type: 3}
       _Speed: 1
       _NormalizedStartTime: NaN
+    AnimationSpeed: 1
+  _idleSpeed: 1
+  _jumpSpeed: 1
 --- !u!114 &2119334083109805798
 MonoBehaviour:
   m_ObjectHideFlags: 0

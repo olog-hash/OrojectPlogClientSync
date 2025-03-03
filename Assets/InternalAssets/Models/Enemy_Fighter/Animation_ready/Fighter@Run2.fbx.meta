@@ -16,11 +16,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'Bip01 L
-      Thigh' : position error = 41.845894 mm\n\t'Bip01 R Thigh' : position error
-      = 16.470602 mm\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Run2' has import animation warnings that might
       lower retargeting quality:\n\t'Bip01 Pelvis' is inbetween humanoid transforms

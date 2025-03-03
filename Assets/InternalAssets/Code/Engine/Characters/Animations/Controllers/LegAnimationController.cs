@@ -10,13 +10,20 @@ namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
     {
         [SerializeField] private AnimancerComponent _animancer;
 
-        [Header("AnimationClips")] 
-        [SerializeField] private ClipTransition _defaultIdleAnimation;
+        [Header("AnimationClips")] [SerializeField]
+        private ClipTransition _defaultIdleAnimation;
+
         [SerializeField] private ClipTransition _jumpAnimation;
         [SerializeField] private AnimationPack _walkPack;
         [SerializeField] private AnimationPack _sprintPack;
         [SerializeField] private AnimationPack _crouchPack;
 
+        [Header("Animation Speeds")]
+        [Range(0.5f, 2.0f)]
+        [SerializeField] private float _idleSpeed = 1.0f;
+        [Range(0.5f, 2.0f)]
+        [SerializeField] private float _jumpSpeed = 1.0f;
+        
         private Dictionary<ECharacterBodyState, AnimationPack> _animationPacks;
         private AnimancerState _currentState;
 
@@ -44,46 +51,58 @@ namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
             }
         }
 
+        // Основной метод обновления анимации - использует только данные из CharacterBodyLogger
         public void UpdateAnimation(CharacterBodyLogger bodyLogger)
         {
-            ClipTransition targetAnimation = DetermineTargetAnimation(bodyLogger);
+            // Определяем целевую анимацию по данным из bodyLogger
+            (ClipTransition targetAnimation, float speed) = DetermineTargetAnimation(bodyLogger);
 
+            // Воспроизводим анимацию, если она изменилась или нужно обновить скорость
             if (_currentState == null || _currentState.Clip != targetAnimation.Clip)
             {
                 _currentState = _animancer.Play(targetAnimation);
+                _currentState.Speed = speed; // Устанавливаем скорость анимации
             }
-
-            UpdateAnimationParameters(bodyLogger);
-        }
-
-        private ClipTransition DetermineTargetAnimation(CharacterBodyLogger bodyLogger)
-        {
-            if (!bodyLogger.IsGrounded || bodyLogger.CharacterBodyState == ECharacterBodyState.NoClip)
-                return _jumpAnimation;
-
-            if (!_animationPacks.TryGetValue(bodyLogger.CharacterBodyState, out var currentPack))
+            else if (_currentState.Speed != speed)
             {
-                return _defaultIdleAnimation;
+                _currentState.Speed = speed; // Обновляем только скорость, если анимация не изменилась
+            }
+        }
+
+        private (ClipTransition, float) DetermineTargetAnimation(CharacterBodyLogger bodyLogger)
+        {
+            // Если персонаж в воздухе или в режиме прыжка
+            if (!bodyLogger.IsGrounded || bodyLogger.CharacterBodyState == ECharacterBodyState.Jump || 
+                bodyLogger.CharacterBodyState == ECharacterBodyState.NoClip)
+            {
+                return (_jumpAnimation, _jumpSpeed);
             }
 
-            MovementDirection direction = DetermineMovementDirection(bodyLogger.MoveDirection);
-            return currentPack.GetClip(direction);
+            // Если персонаж в покое и не двигается
+            if (bodyLogger.CharacterBodyState == ECharacterBodyState.Idle || 
+                bodyLogger.CharacterBodyState == ECharacterBodyState.None)
+            {
+                return (_defaultIdleAnimation, _idleSpeed);
+            }
+
+            // Получаем нужный пакет анимаций для текущего состояния тела
+            if (_animationPacks.TryGetValue(bodyLogger.CharacterBodyState, out var animationPack))
+            {
+                // Получаем анимацию из пакета на основе направления
+                var clip = animationPack.GetClip(bodyLogger.MovementDirection);
+                
+                // Для Idle используем более медленную скорость, даже если это из пакета
+                float speed = bodyLogger.MovementDirection == DetailedMovementDirection.Idle 
+                    ? _idleSpeed 
+                    : animationPack.AnimationSpeed;
+                    
+                return (clip, speed);
+            }
+
+            // Если не нашли подходящий пакет анимаций, используем анимацию покоя
+            return (_defaultIdleAnimation, _idleSpeed);
         }
 
-        private MovementDirection DetermineMovementDirection(Vector2 movementDir)
-        {
-            if (movementDir.magnitude < 0.1f)
-                return MovementDirection.Idle;
-
-            float angle = Vector2.SignedAngle(Vector2.up, movementDir);
-            if (angle < -135 || angle >= 135)
-                return MovementDirection.MoveBack;
-            if (angle >= -135 && angle < -45)
-                return MovementDirection.MoveLeft;
-            if (angle >= 45 && angle < 135)
-                return MovementDirection.MoveRight;
-            return MovementDirection.MoveForward;
-        }
 
         private void UpdateAnimationParameters(CharacterBodyLogger bodyLogger)
         {

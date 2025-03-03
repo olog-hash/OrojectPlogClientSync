@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjectOlog.Code.Engine.Characters.Animations.Controllers;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
@@ -30,6 +31,7 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.Logger
         public float PreviousFallVelocity;
         public bool IsGrounded;
         public Vector2 MoveDirection;
+        public DetailedMovementDirection MovementDirection;
         public ECharacterBodyState CharacterBodyState;
     }
 }

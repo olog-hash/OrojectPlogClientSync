@@ -29,15 +29,20 @@ namespace ProjectOlog.Code.Engine.Cameras.Types
         {
             if (_battleMainPoint == null) return;
 
-            ResetBattlePosition(_battleMainPoint);
+            ResetBattlePosition();
+        }
+
+        public void SetBattleCameraTarget(UnityEngine.Transform mainPoirnt)
+        {
+            _battleMainPoint = mainPoirnt;
         }
         
         /// <summary>
         /// Сбрасывает позицию камеры боя на указанную точку обзора.
         /// </summary>
-        public void ResetBattlePosition(UnityEngine.Transform battleMainPoint)
+        public void ResetBattlePosition()
         {
-            _battleCameraService.SetTarget(battleMainPoint);
+            _battleCameraService.SetTarget(_battleMainPoint);
             _battleCameraService.SetZoomAbility(false, true);
             _battleCameraService.SetFallowRotation(true);
             _battleCameraService.SetCameraActive(true);
