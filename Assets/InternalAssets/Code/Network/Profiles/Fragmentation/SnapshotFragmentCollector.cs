@@ -14,7 +14,7 @@ namespace ProjectOlog.Code.Network.Profiles.Snapshots.Fragmentation
         private SortedSet<uint> _snapshotIds = new SortedSet<uint>(); // Отсортированный набор ID снапшотов
         private const int MAX_SNAPSHOTS = 10; 
         
-        public void AddFragment(SnapshotFragment fragment, float currentTime)
+        public void AddFragment(SnapshotFragment fragment)
         {
             // Проверка корректности входных данных
             if (fragment == null || fragment.FragmentData == null)

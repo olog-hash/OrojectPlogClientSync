@@ -10,9 +10,8 @@ namespace ProjectOlog.Code.Network.Packets.SystemSync.Send
     /// </summary>
     public class PlayerTransformStateData : INetPackageSerializable
     {
-        // Пакет пустой или же нет
-        public bool IsPacketAvaliable;
-
+        public ushort LastStateVersion;
+        
         // Данные игрока
         public Vector3 Position;
         public float YawDegrees;
@@ -25,12 +24,14 @@ namespace ProjectOlog.Code.Network.Packets.SystemSync.Send
 
         public NetDataPackage GetPackage()
         {
-            return new NetDataPackage(Position, YawDegrees, PitchDegrees, PreviousFallVelocity, IsGrounded,
+            return new NetDataPackage(LastStateVersion, Position, YawDegrees, PitchDegrees, PreviousFallVelocity, IsGrounded,
                 (byte)CharacterBodyState);
         }
 
         public void Deserialize(NetDataPackage dataPackage)
         {
+            LastStateVersion = dataPackage.GetUShort();
+            
             Position = dataPackage.GetVector3();
             YawDegrees = dataPackage.GetFloat();
             PitchDegrees = dataPackage.GetFloat();

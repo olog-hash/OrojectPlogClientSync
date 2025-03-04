@@ -9,7 +9,6 @@ namespace ProjectOlog.Code.Network.Packets.SystemSync.Send
     public class PlayerStateClientPacket : INetPackageSerializable
     {
         public uint LastKnownServerTick;
-        public ushort LastStateVersion;
         public double RemoteTime;
 
         // Остаточные данные
@@ -17,13 +16,12 @@ namespace ProjectOlog.Code.Network.Packets.SystemSync.Send
         
         public NetDataPackage GetPackage()
         {
-            return new NetDataPackage(LastKnownServerTick, LastStateVersion,RemoteTime, PlayerTransformStateData);
+            return new NetDataPackage(LastKnownServerTick,RemoteTime, PlayerTransformStateData);
         }
 
         public void Deserialize(NetDataPackage dataPackage)
         {
             LastKnownServerTick = dataPackage.GetUInt();
-            LastStateVersion = dataPackage.GetUShort();
             RemoteTime = dataPackage.GetDouble();
             PlayerTransformStateData = dataPackage.GetCustom<PlayerTransformStateData>();
         }

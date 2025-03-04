@@ -54,9 +54,10 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
                 ref var snapshotEvent = ref eventEntity.GetComponent<ServerSnapshotEvent>();
 
                 // Пакеты могут придти не совсем по по порядку.
-                // Контейнеру снапшотов по идее пофиг, он и так все разберет (хотя если снапшот слишком старый и за буфером - хз),
-                // однако, нам важен только самый последний тик с сервера.
-                if (NetworkTime.LastServerTick < snapshotEvent.LastServerTick)
+                // Контейнеру снапшотов по идее пофиг, он и так все разберет (хотя если снапшот слишком старый и за буфером - хз).
+                // Однако, нам важен только самый последний тик с сервера. Если это глобальный - ставим без всяких притензий (ибо это гарантия полного пакета)
+                if (NetworkTime.LastServerTick < snapshotEvent.LastServerTick ||
+                    snapshotEvent.BroadcastType == ESnapshotBroadcastType.Global)
                 {
                     NetworkTime.SetServerTick(snapshotEvent.LastServerTick);
                 }

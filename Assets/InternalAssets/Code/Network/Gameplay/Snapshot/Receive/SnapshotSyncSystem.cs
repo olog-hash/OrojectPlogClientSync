@@ -112,7 +112,6 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
 
                 var objectEntity = objectProvider.Entity;
 
-
                 if (objectEntity.Has<RemoteObjectInterpolationComponent>())
                 {
                     ref var translation = ref objectEntity.GetComponent<Translation>();
@@ -136,12 +135,9 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
                     {
                         scale = currentTransform.Scale.Value;
                     }
-
                     
-
                     var remoteObjectSnapshot = new RemoteObjectInterpolationSnapshot(currentSnapshot.ServerTime, 0f, position, rotation, scale);
                     remoteObjectInterpolation.RemoteObjectInterpolation.OnMessage(remoteObjectSnapshot);
-
                 }
             }
         }

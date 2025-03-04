@@ -51,13 +51,12 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.LocalSync
             var clientSyncPacket = new PlayerStateClientPacket()
             {
                 LastKnownServerTick = NetworkTime.LastServerTick,
-                LastStateVersion = lastPlayerStateVersion,
                 RemoteTime = NetworkTime.localTime,
                 
                 PlayerTransformStateData = localPlayerStateData,
             };
             
-            _syncGameNetworker.SyncPlayerRequest(clientSyncPacket.GetPackage());
+            _syncGameNetworker.SyncPlayerRequest(clientSyncPacket);
         }
 
         private ushort GetLocalPlayerStateVersion()
@@ -77,7 +76,7 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.LocalSync
         {
             if (_localPlayerMonitoring.IsDead())
             {
-                //return new ClientSyncPlayerStateData();;
+                //return new ClientSyncPlayerStateData();
             }
 
             foreach (var localPlayer in _localPlayerFilter)
@@ -91,6 +90,8 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.LocalSync
 
                 var playerStateData = new PlayerTransformStateData()
                 {
+                    LastStateVersion = networkPlayer.LastStateVersion,
+                    
                     Position = playerPosition,
                     YawDegrees = translation.rotation.eulerAngles.y,
                     PitchDegrees = characterBodyLogger.ViewPitchDegrees,
