@@ -42,6 +42,16 @@ namespace ProjectOlog.Code.Features.Players.Visual.Cloth
         {
             ClearAllDictionaries();
 
+            // Добавляем опцию "None" для всех слотов
+            bootsSlot.availableItems.Add("None");
+            glovesSlot.availableItems.Add("None");
+            hatSlot.availableItems.Add("None");
+            headSlot.availableItems.Add("None");
+            maskSlot.availableItems.Add("None");
+            pantsSlot.availableItems.Add("None");
+            shirtSlot.availableItems.Add("None");
+            backpackSlot.availableItems.Add("None");
+
             var allChildren = GetComponentsInChildren<Transform>(true);
             foreach (var child in allChildren)
             {
@@ -89,35 +99,54 @@ namespace ProjectOlog.Code.Features.Players.Visual.Cloth
             backpackSlot.availableItems.Clear();
         }
 
-        public void RandomizeOutfit()
+        // Новый метод для рандомизации на основе никнейма
+        public void RandomizeOutfitBySeed(string nickname)
+        {
+            // Создаем сид на основе хеш-кода никнейма
+            int seed = nickname.GetHashCode();
+            System.Random random = new System.Random(seed);
+
+            RandomizeWithGenerator(random);
+        }
+
+        // Вспомогательный метод для рандомизации с определенным генератором
+        private void RandomizeWithGenerator(System.Random random)
         {
             if (bootsSlot.availableItems.Count > 0)
-                EquipItem(bootsItems, bootsSlot.availableItems[Random.Range(0, bootsSlot.availableItems.Count)],
+                EquipItem(bootsItems, bootsSlot.availableItems[random.Next(0, bootsSlot.availableItems.Count)],
                     ref bootsSlot.currentItem);
             if (glovesSlot.availableItems.Count > 0)
-                EquipItem(glovesItems, glovesSlot.availableItems[Random.Range(0, glovesSlot.availableItems.Count)],
+                EquipItem(glovesItems, glovesSlot.availableItems[random.Next(0, glovesSlot.availableItems.Count)],
                     ref glovesSlot.currentItem);
             if (hatSlot.availableItems.Count > 0)
-                EquipItem(hatsItems, hatSlot.availableItems[Random.Range(0, hatSlot.availableItems.Count)],
+                EquipItem(hatsItems, hatSlot.availableItems[random.Next(0, hatSlot.availableItems.Count)],
                     ref hatSlot.currentItem);
             if (headSlot.availableItems.Count > 0)
-                EquipItem(headsItems, headSlot.availableItems[Random.Range(0, headSlot.availableItems.Count)],
+                EquipItem(headsItems, headSlot.availableItems[random.Next(0, headSlot.availableItems.Count)],
                     ref headSlot.currentItem);
             if (maskSlot.availableItems.Count > 0)
-                EquipItem(masksItems, maskSlot.availableItems[Random.Range(0, maskSlot.availableItems.Count)],
+                EquipItem(masksItems, maskSlot.availableItems[random.Next(0, maskSlot.availableItems.Count)],
                     ref maskSlot.currentItem);
             if (pantsSlot.availableItems.Count > 0)
-                EquipItem(pantsItems, pantsSlot.availableItems[Random.Range(0, pantsSlot.availableItems.Count)],
+                EquipItem(pantsItems, pantsSlot.availableItems[random.Next(0, pantsSlot.availableItems.Count)],
                     ref pantsSlot.currentItem);
             if (shirtSlot.availableItems.Count > 0)
-                EquipItem(shirtsItems, shirtSlot.availableItems[Random.Range(0, shirtSlot.availableItems.Count)],
+                EquipItem(shirtsItems, shirtSlot.availableItems[random.Next(0, shirtSlot.availableItems.Count)],
                     ref shirtSlot.currentItem);
             if (backpackSlot.availableItems.Count > 0)
                 EquipItem(backpacksItems,
-                    backpackSlot.availableItems[Random.Range(0, backpackSlot.availableItems.Count)],
+                    backpackSlot.availableItems[random.Next(0, backpackSlot.availableItems.Count)],
                     ref backpackSlot.currentItem);
         }
-        
+
+        // Обновление существующего метода RandomizeOutfit для использования вспомогательного метода
+        public void RandomizeOutfit()
+        {
+            // Используем текущее время как сид
+            System.Random random = new System.Random(System.DateTime.Now.Millisecond);
+            RandomizeWithGenerator(random);
+        }
+
         public void EquipItemInSlot(string slotType, string itemName)
         {
             switch (slotType)
@@ -192,9 +221,16 @@ namespace ProjectOlog.Code.Features.Players.Visual.Cloth
             {
                 foreach (var item in items)
                 {
-                    if(item != null)
+                    if (item != null)
                         item.SetActive(false);
                 }
+            }
+
+            // Если выбрано "None", просто деактивируем все и выходим
+            if (itemName == "None")
+            {
+                currentItem = "None";
+                return;
             }
 
             // Теперь активируем только нужный предмет
@@ -202,9 +238,10 @@ namespace ProjectOlog.Code.Features.Players.Visual.Cloth
             {
                 foreach (var obj in itemDict[itemName])
                 {
-                    if(obj != null)
+                    if (obj != null)
                         obj.SetActive(true);
                 }
+
                 currentItem = itemName;
             }
         }

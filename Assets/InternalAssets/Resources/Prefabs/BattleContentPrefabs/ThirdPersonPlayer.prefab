@@ -741,6 +741,7 @@ GameObject:
   - component: {fileID: 6553072850060302299}
   - component: {fileID: 3988730353483561921}
   - component: {fileID: 3000995150536115064}
+  - component: {fileID: 6867802252951488440}
   m_Layer: 0
   m_Name: ThirdPersonPlayer
   m_TagString: Player
@@ -834,8 +835,6 @@ MonoBehaviour:
     ViewPitchDegrees: 0
     PreviousFallVelocity: 0
     IsGrounded: 0
-    MoveDirection: {x: 0, y: 0}
-    MovementDirection: 0
     CharacterBodyState: 0
 --- !u!114 &1596407169451171049
 MonoBehaviour:
@@ -951,6 +950,391 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedData:
     RemotePlayerInterpolation: {fileID: 3988730353483561921}
+--- !u!114 &6867802252951488440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869872490224677030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f5052185e84a7a84810d7757fdb7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bootsSlot:
+    currentItem: Boots_tactical01
+    availableItems:
+    - Boots_anarch
+    - Boots_avenger
+    - Boots_bear
+    - Boots_boot01
+    - Boots_boot02
+    - Boots_business
+    - Boots_foot01
+    - Boots_franky
+    - Boots_infernal
+    - Boots_mummy
+    - Boots_prizrak
+    - Boots_santa
+    - Boots_santa2
+    - Boots_skeleton
+    - Boots_slip01
+    - Boots_slip99
+    - Boots_sneak01
+    - Boots_sneak02
+    - Boots_sneakOlimpic
+    - Boots_sneakV2B01
+    - Boots_sneakV2B02
+    - Boots_sneakV2B03
+    - Boots_sneakV2B04
+    - Boots_sneakV2B05
+    - Boots_sneakV2B06
+    - Boots_sneakV2B07
+    - Boots_sneakV2B08
+    - Boots_sneakV2B09
+    - Boots_sneakV2B10
+    - Boots_sneakV201
+    - Boots_sneakV202
+    - Boots_sneakV203
+    - Boots_stalker
+    - Boots_tactical01
+    - Boots_tactical02
+    - Boots_tactical03
+    - Boots_tacticalB01
+    - Boots_thanos
+    - Boots_zadira
+    - Boots_zombie
+    - Boots_zombieboss
+  glovesSlot:
+    currentItem: Gloves_avenger
+    availableItems:
+    - Gloves_avenger
+    - Gloves_biker
+    - Gloves_bint01
+    - Gloves_bint02
+    - Gloves_business
+    - Gloves_clock01
+    - Gloves_clock02
+    - Gloves_franky
+    - Gloves_glov01
+    - Gloves_glov02
+    - Gloves_glov022
+    - Gloves_hand01
+    - Gloves_infernal
+    - Gloves_mummy
+    - Gloves_Olympic
+    - Gloves_prizrak
+    - Gloves_santa
+    - Gloves_santa2
+    - Gloves_skeleton
+    - Gloves_stalker
+    - Gloves_tactical01
+    - Gloves_tactical02
+    - Gloves_tacticalB01
+    - Gloves_thanos
+    - Gloves_wristwrapB01
+    - Gloves_wristwrapB02
+    - Gloves_wristwrapB03
+    - Gloves_zombie
+    - Gloves_zombieboss
+  hatSlot:
+    currentItem: Hats_beret01
+    availableItems:
+    - Hats_beret01
+    - Hats_beret02
+    - Hats_beret03
+    - Hats_beret04
+    - Hats_budenka
+    - Hats_business
+    - Hats_english
+    - Hats_hat01
+    - Hats_hat02
+    - Hats_hat03
+    - Hats_hatB01
+    - Hats_hatB02
+    - Hats_hatB03
+    - Hats_hatB04
+    - Hats_hatB05
+    - Hats_hatB06
+    - Hats_hatB07
+    - Hats_hatB08
+    - Hats_indiana01
+    - Hats_indiana02
+    - Hats_indiana03
+    - Hats_Jacklantern
+    - Hats_milcap01
+    - Hats_milcap02
+    - Hats_milcap03
+    - Hats_Olympic
+    - Hats_party01
+    - Hats_party02
+    - Hats_pilothelm
+    - Hats_tacticalB01
+    - Hats_tophat
+    - Hats_ushanka
+    - Hats_ushanka2
+    - Hats_ushmil
+    - Hats_ushmilB01
+    - Hats_ushmilB02
+    - Hats_vietnam
+    - Hats_vietnamB01
+    - Hats_vietnamB02
+    - Hats_Witchhat
+    - Hats_pharaoh
+    - Hats_santa
+    - Hats_santa2
+    - Hats_stalker
+  headSlot:
+    currentItem: Heads_black01
+    availableItems:
+    - Heads_black04
+    - Heads_blond03
+    - Heads_brown03
+    - Heads_brown04
+    - Heads_spec03
+    - Heads_bald01
+    - Heads_bald02
+    - Heads_black01
+    - Heads_black02
+    - Heads_black03
+    - Heads_blond01
+    - Heads_blond02
+    - Heads_brown01
+    - Heads_brown02
+    - Heads_franky
+    - Heads_spec01
+    - Heads_spec02
+    - Heads_spec04
+    - Heads_spec99
+    - Heads_thanos
+    - Heads_zombie
+    - Heads_zombieboss
+  maskSlot:
+    currentItem: Masks_thanos
+    availableItems:
+    - Masks_avenger
+    - Masks_aviaglass
+    - Masks_band01
+    - Masks_band02
+    - Masks_band03
+    - Masks_bandB01
+    - Masks_bandB02
+    - Masks_bandB03
+    - Masks_bandB04
+    - Masks_bandB05
+    - Masks_bandB06
+    - Masks_bandB07
+    - Masks_bandB08
+    - Masks_businessgoogles
+    - Masks_gasmask01
+    - Masks_gasmask02
+    - Masks_goog01
+    - Masks_goog02
+    - Masks_goog03
+    - Masks_googB01
+    - Masks_googB02
+    - Masks_googB03
+    - Masks_klava01
+    - Masks_klava02
+    - Masks_klava03
+    - Masks_klavaB01
+    - Masks_klavaB02
+    - Masks_klavaB03
+    - Masks_klavaB04
+    - Masks_klavaB05
+    - Masks_klavaB06
+    - Masks_mask01
+    - Masks_maskB01
+    - Masks_maskB02
+    - Masks_SnowGoggles
+    - Masks_infernal
+    - Masks_mummy
+    - Masks_santa
+    - Masks_santa2
+    - Masks_skeleton
+    - Masks_stalkergasmask
+    - Masks_thanos
+  pantsSlot:
+    currentItem: Pants_sportB04
+    availableItems:
+    - Pants_prizrak
+    - Pants_tactic01
+    - Pants_tactic02
+    - Pants_tactic03
+    - Pants_tactic04
+    - Pants_tacticB01
+    - Pants_trooper
+    - Pants_avenger
+    - Pants_business
+    - Pants_franky
+    - Pants_infernal
+    - Pants_jeans01
+    - Pants_jeans02
+    - Pants_jeansB01
+    - Pants_jeansB02
+    - Pants_jeansB03
+    - Pants_legs01
+    - Pants_mummy
+    - Pants_Olympic
+    - Pants_pant01
+    - Pants_pant02
+    - Pants_pant03
+    - Pants_pant032
+    - Pants_santa
+    - Pants_santa2
+    - Pants_short01
+    - Pants_short02
+    - Pants_short03
+    - Pants_short04
+    - Pants_short05
+    - Pants_shortB01
+    - Pants_shortB02
+    - Pants_shortB03
+    - Pants_shortB04
+    - Pants_shortB05
+    - Pants_shortB06
+    - Pants_shortB07
+    - Pants_shortB08
+    - Pants_shortB09
+    - Pants_shortB10
+    - Pants_shortB11
+    - Pants_shortB12
+    - Pants_shortB13
+    - Pants_shortB14
+    - Pants_shortB15
+    - Pants_skeleton
+    - Pants_sport01
+    - Pants_sport02
+    - Pants_sport03
+    - Pants_sport04
+    - Pants_sportB01
+    - Pants_sportB02
+    - Pants_sportB03
+    - Pants_sportB04
+    - Pants_sportB05
+    - Pants_sportB06
+    - Pants_sportB07
+    - Pants_sportB08
+    - Pants_sportB09
+    - Pants_sportB10
+    - Pants_sportVKKS01
+    - Pants_sportVKKS02
+    - Pants_sportVKKS03
+    - Pants_stalker
+    - Pants_thanos
+    - Pants_zombie
+    - Pants_zombieboss
+  shirtSlot:
+    currentItem: Shirts_hoodB01
+    availableItems:
+    - Shirts_prizrak
+    - Shirts_tactic01
+    - Shirts_tactic02
+    - Shirts_tactic03
+    - Shirts_tactic04
+    - Shirts_tacticB01
+    - Shirts_anarch
+    - Shirts_armor01
+    - Shirts_armor02
+    - Shirts_armor03
+    - Shirts_armor04
+    - Shirts_avenger
+    - Shirts_biker
+    - Shirts_business
+    - Shirts_chood01
+    - Shirts_chood02
+    - Shirts_chood03
+    - Shirts_franky
+    - Shirts_hood01
+    - Shirts_hood02
+    - Shirts_hood03
+    - Shirts_hood04
+    - Shirts_hood05
+    - Shirts_hoodB01
+    - Shirts_hoodB02
+    - Shirts_hoodB03
+    - Shirts_hoodB04
+    - Shirts_hoodB05
+    - Shirts_hoodB06
+    - Shirts_hoodB07
+    - Shirts_hoodB08
+    - Shirts_hoodB09
+    - Shirts_hoodB10
+    - Shirts_hoodOlimpic
+    - Shirts_hoodZong
+    - Shirts_infernal
+    - Shirts_jack01
+    - Shirts_jack02
+    - Shirts_jack03
+    - Shirts_jackB01
+    - Shirts_jackB02
+    - Shirts_mummy
+    - Shirts_santa
+    - Shirts_santa2
+    - Shirts_shirt01
+    - Shirts_shirt02
+    - Shirts_shirt03
+    - Shirts_shirt04
+    - Shirts_shirtB01
+    - Shirts_shirtB02
+    - Shirts_shirtB03
+    - Shirts_shirtB04
+    - Shirts_shirtB05
+    - Shirts_shirtB06
+    - Shirts_shirtB07
+    - Shirts_shirtB08
+    - Shirts_shirtB09
+    - Shirts_shirtB10
+    - Shirts_shirtB11
+    - Shirts_shirtB12
+    - Shirts_shirtB13
+    - Shirts_shirtB14
+    - Shirts_singl01
+    - Shirts_singl02
+    - Shirts_singl03
+    - Shirts_singl04
+    - Shirts_singl05
+    - Shirts_singl06
+    - Shirts_skeleton
+    - Shirts_stalker
+    - Shirts_thanos
+    - Shirts_tors01
+    - Shirts_trooper
+    - Shirts_trooper2
+    - Shirts_zombie
+    - Shirts_zombieboss
+  backpackSlot:
+    currentItem: Backpacks_octopus
+    availableItems:
+    - Backpacks_arrows
+    - Backpacks_darts
+    - Backpacks_rocket01
+    - Backpacks_rocket02
+    - Backpacks_Snowboard
+    - Backpacks_back01
+    - Backpacks_back02
+    - Backpacks_extinguisher
+    - Backpacks_guit01
+    - Backpacks_guit02
+    - Backpacks_rec
+    - Backpacks_rec2
+    - Backpacks_sarcophagus
+    - Backpacks_Scarecrow
+    - Backpacks_shield
+    - Backpacks_snake01
+    - Backpacks_thanos
+    - Backpacks_tomb
+    - Backpacks_turt01
+    - Backpacks_VampireBat
+    - Backpacks_santa
+    - Backpacks_santa2
+    - Backpacks_frankyOctopus
+    - Backpacks_infernalRaven
+    - Backpacks_octopus
+    - Backpacks_parr01
+    - Backpacks_Raven
+    - Backpacks_Morte
 --- !u!1 &6593530165875861392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,12 +1697,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 34711393634948264}
     m_Modifications:
+    - target: {fileID: 89204008786922093, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 97865318217286637, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114538615479353899, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 139946123636849100, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150320167367310170, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 283406917877582563, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 434885913710664224, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440510873315121525, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 570154880933202047, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1067626164349789221, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158081381521114162, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1343,7 +1772,37 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1352984053629597841, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437162174055534104, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447839909206947846, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459075023069911931, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707443915839534742, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1752167501680845209, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821051524393084566, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1358,12 +1817,37 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2077875028473578763, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084304112139643679, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2121868668174102781, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2194989081685746533, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220427411418493100, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2262522574684913077, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298358159406246556, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1383,7 +1867,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2543860332130086894, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585075356506158456, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2629348423752012029, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777291138556960573, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885487708450614639, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1393,6 +1897,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3299019449415531708, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323819213212436821, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_UseGravity
@@ -1402,6 +1911,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336962393686633405, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592841932840060492, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760712311652075995, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039631659434485794, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095451775033358290, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230063082467516265, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400300126570169563, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408704750827265935, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460741254223836578, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591493151775979548, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
@@ -1433,6 +1987,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4842929007054605089, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4977065077554005411, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_UseGravity
@@ -1442,6 +2001,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038483522425955793, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5223033005652077526, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
@@ -1468,6 +2032,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374833988731098224, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590861507776671639, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5594048974536158231, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
@@ -1478,12 +2052,52 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5641579815690591264, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642349904263408848, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644081973930141456, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690817360931341090, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5841772689155173173, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6046984048254279163, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068740822802631451, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6073748391855935909, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100917701536823552, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168719056352006882, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1518,6 +2132,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6831367872890874495, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940049005035054132, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6953696989723708143, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
@@ -1533,6 +2157,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7244496563498822813, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7282797720640716644, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
@@ -1543,15 +2172,75 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7645878659558239586, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732044966309546135, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752311873605072558, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796439234441898405, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885901145604327937, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8074025362655130750, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172817274776618181, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330838708101049240, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351863703158090974, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391517694428370877, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8469713029863854475, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_Name
       value: Ready_Enemy_Fighter_locomotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497340351435381449, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500167141651636342, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502926593662017746, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8540217691052496130, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
@@ -1566,6 +2255,16 @@ PrefabInstance:
     - target: {fileID: 9013564517623888392, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024117838341861094, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045660427353099869, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133765742581779249, guid: 948aec6cd886c0841979bd8ed6f4de82,
@@ -1617,6 +2316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170331277383945497, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -8,6 +8,8 @@ namespace ProjectOlog.Code.Features.Players.Visual.Cloth
      [CustomEditor(typeof(CharacterClothingManager))]
     public class CharacterClothingManagerEditor : Editor
     {
+        private static string _nickname = "";
+        
         public override void OnInspectorGUI()
         {
             CharacterClothingManager manager = (CharacterClothingManager)target;
@@ -23,8 +25,21 @@ namespace ProjectOlog.Code.Features.Players.Visual.Cloth
                 manager.RandomizeOutfit();
             }
 
+            // Добавляем поле для ввода никнейма и кнопку для тестирования
             EditorGUILayout.Space();
-            EditorGUILayout.LabelField("Clothing Slots", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Randomize By Nickname", EditorStyles.boldLabel);
+    
+            // Создаем статическую переменную для хранения введенного никнейма
+            if (_nickname == null) _nickname = "";
+            _nickname = EditorGUILayout.TextField("Nickname", _nickname);
+    
+            if (GUILayout.Button("Randomize By Nickname"))
+            {
+                if (!string.IsNullOrEmpty(_nickname))
+                {
+                    manager.RandomizeOutfitBySeed(_nickname);
+                }
+            }
 
             DrawClothingSlot("Boots", manager, manager.bootsSlot);
             DrawClothingSlot("Gloves", manager, manager.glovesSlot);
