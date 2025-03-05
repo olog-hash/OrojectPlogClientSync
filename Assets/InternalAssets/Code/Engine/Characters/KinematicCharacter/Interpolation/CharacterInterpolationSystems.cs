@@ -1,3 +1,4 @@
+using ProjectOlog.Code.Engine.Characters.KinematicCharacter.Logger;
 using ProjectOlog.Code.Engine.Interpolation;
 using ProjectOlog.Code.Engine.Transform;
 using ProjectOlog.Code.Infrastructure.TimeManagement;
@@ -54,7 +55,7 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.Interpolation
 
         public override void OnAwake()
         {
-            filter = World.Filter.With<Translation>().With<CharacterInterpolation>().Build();
+            filter = World.Filter.With<Translation>().With<CharacterInterpolation>().With<CharacterBodyLogger>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -73,6 +74,7 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.Interpolation
             {
                 var translation = entity.GetComponent<Translation>();
                 var transformInterpolation = entity.GetComponent<CharacterInterpolation>();
+                ref var characterBodyLogger = ref entity.GetComponent<CharacterBodyLogger>();
 
                 RigidTransform targetTransform = transformInterpolation.CurrentTransform;
 
@@ -99,7 +101,10 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.Interpolation
                 {
                     interpolatedRot = Quaternion.Slerp(transformInterpolation.PreviousTransform.Rotation, targetTransform.Rotation, NormalizedTimeAhead);
                 }
-
+                
+                // Обновляем положение логгера
+                //characterBodyLogger.MoveDirection = interpolatedPos;
+                
                 translation.localPosition = interpolatedPos;
                 //translation.localRotation = interpolatedRot;
             }

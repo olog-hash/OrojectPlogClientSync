@@ -10,11 +10,7 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class RemotePlayerInterpolationProvider : MonoProvider<RemotePlayerInterpolationComponent>
     {
-        private void Awake()
-        {
-            ref RemotePlayerInterpolationComponent data = ref GetData();
-            data.MovementSmoother = new CharacterMovementSmoother();
-        }
+        
     }
 
     [Serializable]
@@ -24,6 +20,5 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
     public struct RemotePlayerInterpolationComponent : IComponent
     {
         public RemotePlayerInterpolation RemotePlayerInterpolation;
-        public CharacterMovementSmoother MovementSmoother;
     }
 }

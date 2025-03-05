@@ -30,8 +30,6 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.Logger
         public float ViewPitchDegrees;
         public float PreviousFallVelocity;
         public bool IsGrounded;
-        public Vector2 MoveDirection;
-        public DetailedMovementDirection MovementDirection;
         public ECharacterBodyState CharacterBodyState;
     }
 }

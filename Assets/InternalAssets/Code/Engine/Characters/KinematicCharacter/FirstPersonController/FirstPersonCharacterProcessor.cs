@@ -107,7 +107,6 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.FirstPersonContr
             CharacterBodyLogger.ViewPitchDegrees = FirstPersonCharacter.ViewPitchDegrees;
             CharacterBodyLogger.IsGrounded = wasGrounded || isGroundedNow;
             CharacterBodyLogger.PreviousFallVelocity = initialVelocity.y;
-            CharacterBodyLogger.MoveDirection = CalculateMoveVector();
         }
 
         public void CharacterCollisionAndGroundingUpdate()

@@ -2,6 +2,7 @@
 using Animancer;
 using ProjectOlog.Code.Engine.Characters.Animations.Core;
 using ProjectOlog.Code.Engine.Characters.KinematicCharacter.Logger;
+using ProjectOlog.Code.Features.Players.Interpolation;
 using UnityEngine;
 
 namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
@@ -27,6 +28,8 @@ namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
         private Dictionary<ECharacterBodyState, AnimationPack> _animationPacks;
         private AnimancerState _currentState;
 
+        private CharacterMovementSmoother _movementSmoother;
+
         public void Awake()
         {
             InitializeAnimationPacks();
@@ -34,6 +37,8 @@ namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
 
         private void InitializeAnimationPacks()
         {
+            _movementSmoother = new CharacterMovementSmoother();
+            
             _animationPacks = new Dictionary<ECharacterBodyState, AnimationPack>
             {
                 { ECharacterBodyState.Walk, _walkPack },
@@ -51,11 +56,18 @@ namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
             }
         }
 
+        // Обновляем положение персонажа
+        public void UpdateMovement(Vector3 position, Quaternion rotation)
+        {
+            _movementSmoother.UpdateMovement(position, rotation);
+        }
+
         // Основной метод обновления анимации - использует только данные из CharacterBodyLogger
         public void UpdateAnimation(CharacterBodyLogger bodyLogger)
         {
             // Определяем целевую анимацию по данным из bodyLogger
-            (ClipTransition targetAnimation, float speed) = DetermineTargetAnimation(bodyLogger);
+            DetailedMovementDirection movementDirection = _movementSmoother.GetNextMovementDirection();
+            (ClipTransition targetAnimation, float speed) = DetermineTargetAnimation(bodyLogger, movementDirection);
 
             // Воспроизводим анимацию, если она изменилась или нужно обновить скорость
             if (_currentState == null || _currentState.Clip != targetAnimation.Clip)
@@ -69,7 +81,7 @@ namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
             }
         }
 
-        private (ClipTransition, float) DetermineTargetAnimation(CharacterBodyLogger bodyLogger)
+        private (ClipTransition, float) DetermineTargetAnimation(CharacterBodyLogger bodyLogger, DetailedMovementDirection movementDirection)
         {
             // Если персонаж в воздухе или в режиме прыжка
             if (!bodyLogger.IsGrounded || bodyLogger.CharacterBodyState == ECharacterBodyState.Jump || 
@@ -89,10 +101,10 @@ namespace ProjectOlog.Code.Engine.Characters.Animations.Controllers
             if (_animationPacks.TryGetValue(bodyLogger.CharacterBodyState, out var animationPack))
             {
                 // Получаем анимацию из пакета на основе направления
-                var clip = animationPack.GetClip(bodyLogger.MovementDirection);
+                var clip = animationPack.GetClip(movementDirection);
                 
                 // Для Idle используем более медленную скорость, даже если это из пакета
-                float speed = bodyLogger.MovementDirection == DetailedMovementDirection.Idle 
+                float speed = movementDirection == DetailedMovementDirection.Idle 
                     ? _idleSpeed 
                     : animationPack.AnimationSpeed;
                     

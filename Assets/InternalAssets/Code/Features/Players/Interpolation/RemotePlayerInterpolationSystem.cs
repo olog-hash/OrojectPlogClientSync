@@ -29,10 +29,7 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                 ref var characterBodyLogger = ref entity.GetComponent<CharacterBodyLogger>();
         
                 // Обновление позиции с использованием сглаживателя
-                mirrorInterpolation.RemotePlayerInterpolation.UpdatePosition(
-                    deltaTime, 
-                    ref characterBodyLogger, 
-                    mirrorInterpolation.MovementSmoother);
+                mirrorInterpolation.RemotePlayerInterpolation.UpdatePosition(deltaTime, ref characterBodyLogger);
             }
         }
     }

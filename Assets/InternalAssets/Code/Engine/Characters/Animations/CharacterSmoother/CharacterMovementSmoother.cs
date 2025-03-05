@@ -32,19 +32,22 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
         private Vector3 lastPosition = Vector3.zero;
         private Vector3 lastRotation = Vector3.zero;
         private long lastPositionTime = DateTime.Now.Ticks;
+        
+        // Следующее направление движения
+        private DetailedMovementDirection _nextMovementDirection;
 
         /// <summary>
         /// Обновляет состояние движения на основе текущего положения и вращения
         /// и записывает направление в bodyLogger
         /// </summary>
-        public void UpdateMovement(Vector3 position, Quaternion rotation, ref CharacterBodyLogger bodyLogger)
+        public void UpdateMovement(Vector3 position, Quaternion rotation)
         {
             // Если это первый вызов, инициализируем
             if (lastPosition == Vector3.zero)
             {
                 lastPosition = position;
                 lastRotation = rotation.eulerAngles;
-                bodyLogger.MovementDirection = DetailedMovementDirection.Idle;
+                _nextMovementDirection = DetailedMovementDirection.Idle;
                 return;
             }
             
@@ -58,7 +61,7 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
             if (direction.sqrMagnitude < IDLE_THRESHOLD)
             {
                 // При вращении на месте тоже устанавливаем Idle
-                bodyLogger.MovementDirection = DetailedMovementDirection.Idle;
+                _nextMovementDirection = DetailedMovementDirection.Idle;
                 
                 if (DateTime.Now.Ticks - lastPositionTime > IDLE_PERIOD)
                 {
@@ -96,7 +99,7 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
             
             if (Mathf.Abs(deltaX) < VELOCITY_IDLE_THRESHOLD && Mathf.Abs(deltaZ) < VELOCITY_IDLE_THRESHOLD)
             {
-                bodyLogger.MovementDirection = DetailedMovementDirection.Idle;
+                _nextMovementDirection = DetailedMovementDirection.Idle;
                 return;
             }
             
@@ -106,11 +109,11 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                 // Преобладает боковое движение
                 if (deltaX > 0f)
                 {
-                    bodyLogger.MovementDirection = DetailedMovementDirection.StrafeRight;
+                    _nextMovementDirection = DetailedMovementDirection.StrafeRight;
                 }
                 else
                 {
-                    bodyLogger.MovementDirection = DetailedMovementDirection.StrafeLeft;
+                    _nextMovementDirection = DetailedMovementDirection.StrafeLeft;
                 }
             }
             else
@@ -118,13 +121,18 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                 // Преобладает движение вперед/назад
                 if (deltaZ > 0f)
                 {
-                    bodyLogger.MovementDirection = DetailedMovementDirection.Forward;
+                    _nextMovementDirection = DetailedMovementDirection.Forward;
                 }
                 else
                 {
-                    bodyLogger.MovementDirection = DetailedMovementDirection.Backward;
+                    _nextMovementDirection = DetailedMovementDirection.Backward;
                 }
             }
+        }
+
+        public DetailedMovementDirection GetNextMovementDirection()
+        {
+            return _nextMovementDirection;
         }
     }
 }

@@ -96,7 +96,7 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                 ref deliveryTimeEma);
         }
 
-        public void UpdatePosition(float deltaTime, ref CharacterBodyLogger characterBodyLogger, CharacterMovementSmoother movementSmoother)
+        public void UpdatePosition(float deltaTime, ref CharacterBodyLogger characterBodyLogger)
         {
             // accumulated delta allows us to simulate correct low fps + deltaTime
             // if necessary in client low fps mode.
@@ -147,10 +147,6 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
                             characterBodyLogger.IsGrounded = computed.IsGrounded;
                         }
                     }
-
-                    // Обновляем сглаженное движение
-                    movementSmoother.UpdateMovement(computed.Position, computed.Rotation, ref characterBodyLogger);
-
                 }
                 // apply raw
                 else
@@ -216,28 +212,6 @@ namespace ProjectOlog.Code.Features.Players.Interpolation
             
             transform.position = position;
             transform.rotation = rotation;
-        }
-        
-        private Vector2 CalculateMoveVector(Vector3 previousPosition, Vector3 currentPosition, Quaternion currentRotation)
-        {
-            float deltaX = currentPosition.x - previousPosition.x;
-            float deltaZ = currentPosition.z - previousPosition.z;
-
-            Vector2 inputMoveDirection = new Vector2(deltaX, deltaZ);
-            
-            float rotationAngle = currentRotation.eulerAngles.y * Mathf.Deg2Rad;
-            
-            float sin = Mathf.Sin(rotationAngle);
-            float cos = Mathf.Cos(rotationAngle);
-            
-            Vector2 rotatedMoveDirection = new Vector2(
-                inputMoveDirection.x * cos - inputMoveDirection.y * sin,
-                inputMoveDirection.x * sin + inputMoveDirection.y * cos
-            );
-            
-            rotatedMoveDirection.x = -rotatedMoveDirection.x;
-
-            return rotatedMoveDirection;
         }
     }
 }
