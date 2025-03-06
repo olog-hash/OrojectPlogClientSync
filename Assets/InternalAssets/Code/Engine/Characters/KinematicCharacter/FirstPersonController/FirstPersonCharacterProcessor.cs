@@ -153,28 +153,5 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.FirstPersonContr
 
             return false;
         }
-
-        private Vector2 CalculateMoveVector()
-        {
-            Vector2 inputMoveDirection = new Vector2(FirstPersonInputs.MoveVector.x, FirstPersonInputs.MoveVector.z);
-
-// Получаем угол поворота вокруг оси Y в радианах
-            float rotationAngle = Rotation.eulerAngles.y * Mathf.Deg2Rad;
-
-// Вычисляем синус и косинус угла
-            float sin = Mathf.Sin(rotationAngle);
-            float cos = Mathf.Cos(rotationAngle);
-
-// Применяем поворот к вектору движения
-            Vector2 rotatedMoveDirection = new Vector2(
-                inputMoveDirection.x * cos - inputMoveDirection.y * sin,
-                inputMoveDirection.x * sin + inputMoveDirection.y * cos
-            );
-            
-            // Инвертируем X-компонент для исправления инверсии право-лево
-            rotatedMoveDirection.x = -rotatedMoveDirection.x;
-
-            return rotatedMoveDirection;
-        }
     }
 }

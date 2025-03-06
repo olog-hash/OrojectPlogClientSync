@@ -99,14 +99,6 @@ namespace ProjectOlog.Code.Features.Objects.Instantiate
             foreach (var entityProvider in mapping.EventIDToEntityProvider.Values)
             {
                 entityProvider.AddComponent<TranslationProvider>();
-                
-                var remoteObjectInterpolation = entityProvider.AddComponent<RemoteObjectInterpolation>();
-                entityProvider.Entity.AddComponentData(new RemoteObjectInterpolationComponent()
-                {
-                    RemoteObjectInterpolation = remoteObjectInterpolation
-                });
-
-                remoteObjectInterpolation.interpolate = true;
             }
         }
         

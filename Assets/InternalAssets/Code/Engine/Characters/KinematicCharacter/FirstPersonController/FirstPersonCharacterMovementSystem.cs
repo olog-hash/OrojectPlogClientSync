@@ -45,7 +45,7 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.FirstPersonContr
                 ref var characterInterpolation = ref GetComponent<CharacterInterpolation>(entity);
                 ref var kinematicCharacterBody = ref GetComponent<KinematicCharacterBody>(entity);
                 ref var firstPersonCharacter = ref GetComponent<FirstPersonCharacter>(entity);
-                ref var cameraInterpolation = ref GetComponent<CharacterInterpolation>(firstPersonCharacter.CharacterViewEntity);
+                //ref var cameraInterpolation = ref GetComponent<CharacterInterpolation>(firstPersonCharacter.CharacterViewEntity);
                 ref var firstCharacterStateMachine = ref GetComponent<FirstCharacterStateMachine>(entity);
                 ref var characterBodyLogger = ref GetComponent<CharacterBodyLogger>(entity);
                 var transitionStateRequestComponent = entity.Has<TransitionStateRequestComponent>() ? GetComponent<TransitionStateRequestComponent>(entity) : new TransitionStateRequestComponent();
@@ -71,7 +71,7 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.FirstPersonContr
                 
 
                 characterInterpolation.CurrentTransform = new RigidTransform(processor.Translation, processor.Rotation);
-                cameraInterpolation.CurrentTransform.Position = firstPersonCharacter.CameraPointHeight * Vector3.up;
+                //cameraInterpolation.CurrentTransform.Position = firstPersonCharacter.CameraPointHeight * Vector3.up;
                 
                 // Delete single-request component
                 if (transitionStateRequestComponent.IsActive) entity.RemoveComponent<TransitionStateRequestComponent>();

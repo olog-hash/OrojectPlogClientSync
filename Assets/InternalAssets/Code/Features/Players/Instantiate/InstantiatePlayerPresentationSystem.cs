@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.Features.Players.Visual.PanelInfo;
+﻿using ProjectOlog.Code.Features.Players.Visual.Cloth;
+using ProjectOlog.Code.Features.Players.Visual.PanelInfo;
 using ProjectOlog.Code.Network.Gameplay.Core.Components;
 using ProjectOlog.Code.Network.Infrastructure.SubComponents.Core;
 using ProjectOlog.Code.Network.Profiles.Users;
@@ -36,6 +37,7 @@ namespace ProjectOlog.Code.Features.Players.Instantiate
                 var packet = instantiatePlayerEvent.InstantiatePlayerPacket;
 
                 ProcessPlayersName(ref mapping);
+                ProcessPlayersSkin(ref mapping);
             }
         }
         
@@ -53,6 +55,25 @@ namespace ProjectOlog.Code.Features.Players.Instantiate
                     if (_networkUsersContainer.TryGetUserDataByID(networkPlayer.UserID, out var userData))
                     {
                         playerInfoPanel.Initialize(userData.Username);
+                    }
+                }
+            }
+        }
+
+        // Меняем скин персонажу исходя из его ника.
+        private void ProcessPlayersSkin(ref EntityProviderMappingPool mapping)
+        {
+            foreach (var provider in mapping.EventIDToEntityProvider.Values)
+            {
+                if (!provider.Has<NetworkPlayer>()) continue;
+                
+                if (provider.TryGetComponent<CharacterClothingManager>(out var characterClothingManager))
+                {
+                    var networkPlayer = provider.Entity.GetComponent<NetworkPlayer>();
+
+                    if (_networkUsersContainer.TryGetUserDataByID(networkPlayer.UserID, out var userData))
+                    {
+                        characterClothingManager.RandomizeOutfitBySeed(userData.Username);
                     }
                 }
             }

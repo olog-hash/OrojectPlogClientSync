@@ -51,7 +51,6 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.FirstPersonContr
         [HideInInspector] public EntityProvider CharacterViewEntity;
         [HideInInspector] public float ViewYawDegrees;
         [HideInInspector] public float ViewPitchDegrees;
-        [HideInInspector] public float CameraPointHeight;
         [HideInInspector] public Vector3 GroundingUp;
         [HideInInspector] public Vector3 InternalVelocityAdd;
 
@@ -77,7 +76,6 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.FirstPersonContr
                 MinVAngle = -89f,
                 MaxVAngle = 89f,
 
-                CameraPointHeight = KinematicCharacterUtilities.Constants.MaxCameraHeight,
                 GroundingUp = Vector3.up,
             };
         }

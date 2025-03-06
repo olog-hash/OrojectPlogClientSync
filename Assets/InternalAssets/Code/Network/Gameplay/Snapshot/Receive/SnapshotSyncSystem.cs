@@ -3,11 +3,13 @@ using ProjectOlog.Code.Engine.Transform;
 using ProjectOlog.Code.Features.Objects.Interpolation;
 using ProjectOlog.Code.Features.Players.Core.Markers;
 using ProjectOlog.Code.Features.Players.Interpolation;
+using ProjectOlog.Code.Network.Gameplay.Core.Components;
 using ProjectOlog.Code.Network.Profiles.Entities;
 using ProjectOlog.Code.Network.Profiles.Snapshots;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
@@ -105,40 +107,57 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
             {
                 var objectID = objectData.Key;
                 var currentTransform = objectData.Value;
-                
+
                 // Если такой сущности нет в мире - пропускаем
                 if (!_entitiesContainer.TryGetNetworkEntity(objectID, out var objectProvider))
                     continue;
 
-                var objectEntity = objectProvider.Entity;
+                var networkSyncTransformProvider = objectProvider;
 
-                if (objectEntity.Has<RemoteObjectInterpolationComponent>())
+                // Если у обьекта есть дочерний обьект, что требует синхронизации - то выбираем его.
+                if (objectProvider.Entity.Has<NetworkSyncTransform>())
                 {
-                    ref var translation = ref objectEntity.GetComponent<Translation>();
-                    ref var remoteObjectInterpolation = ref objectEntity.GetComponent<RemoteObjectInterpolationComponent>();
+                    ref var networkSyncTransform = ref objectProvider.Entity.GetComponent<NetworkSyncTransform>();
 
-                    var position = translation.position;
-                    var rotation = translation.rotation;
-                    var scale = translation.scale;
-
-                    if (currentTransform.Position.HasValue)
+                    if (networkSyncTransform.Target != null && !networkSyncTransform.Target.IsNullOrDisposed())
                     {
-                        position = currentTransform.Position.Value;
+                        networkSyncTransformProvider = networkSyncTransform.Target;
                     }
-
-                    if (currentTransform.Rotation.HasValue)
-                    {
-                        rotation = Quaternion.Euler(currentTransform.Rotation.Value);
-                    }
-
-                    if (currentTransform.Scale.HasValue)
-                    {
-                        scale = currentTransform.Scale.Value;
-                    }
-                    
-                    var remoteObjectSnapshot = new RemoteObjectInterpolationSnapshot(currentSnapshot.ServerTime, 0f, position, rotation, scale);
-                    remoteObjectInterpolation.RemoteObjectInterpolation.OnMessage(remoteObjectSnapshot);
                 }
+
+                // Если отсутствет интерполятор - добавляем свой.
+                if (!networkSyncTransformProvider.Entity.Has<RemoteObjectInterpolationComponent>())
+                {
+                    networkSyncTransformProvider.AddComponent<RemoteObjectInterpolationProvider>();
+                }
+                
+                // Остальная логика интерполяции.
+                ref var translation = ref networkSyncTransformProvider.Entity.GetComponent<Translation>();
+                ref var remoteObjectInterpolation =
+                    ref networkSyncTransformProvider.Entity.GetComponent<RemoteObjectInterpolationComponent>();
+
+                var position = translation.position;
+                var rotation = translation.rotation;
+                var scale = translation.scale;
+
+                if (currentTransform.Position.HasValue)
+                {
+                    position = currentTransform.Position.Value;
+                }
+
+                if (currentTransform.Rotation.HasValue)
+                {
+                    rotation = Quaternion.Euler(currentTransform.Rotation.Value);
+                }
+
+                if (currentTransform.Scale.HasValue)
+                {
+                    scale = currentTransform.Scale.Value;
+                }
+
+                var remoteObjectSnapshot =
+                    new RemoteObjectInterpolationSnapshot(currentSnapshot.ServerTime, 0f, position, rotation, scale);
+                remoteObjectInterpolation.RemoteObjectInterpolation.OnMessage(remoteObjectSnapshot);
             }
         }
     }

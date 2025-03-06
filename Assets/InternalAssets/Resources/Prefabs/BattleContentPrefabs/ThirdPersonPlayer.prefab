@@ -957,7 +957,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5869872490224677030}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00f5052185e84a7a84810d7757fdb7a2, type: 3}
   m_Name: 
@@ -965,6 +965,7 @@ MonoBehaviour:
   bootsSlot:
     currentItem: Boots_tactical01
     availableItems:
+    - None
     - Boots_anarch
     - Boots_avenger
     - Boots_bear
@@ -1009,6 +1010,7 @@ MonoBehaviour:
   glovesSlot:
     currentItem: Gloves_avenger
     availableItems:
+    - None
     - Gloves_avenger
     - Gloves_biker
     - Gloves_bint01
@@ -1041,6 +1043,7 @@ MonoBehaviour:
   hatSlot:
     currentItem: Hats_beret01
     availableItems:
+    - None
     - Hats_beret01
     - Hats_beret02
     - Hats_beret03
@@ -1088,6 +1091,7 @@ MonoBehaviour:
   headSlot:
     currentItem: Heads_black01
     availableItems:
+    - None
     - Heads_black04
     - Heads_blond03
     - Heads_brown03
@@ -1111,8 +1115,9 @@ MonoBehaviour:
     - Heads_zombie
     - Heads_zombieboss
   maskSlot:
-    currentItem: Masks_thanos
+    currentItem: None
     availableItems:
+    - None
     - Masks_avenger
     - Masks_aviaglass
     - Masks_band01
@@ -1158,6 +1163,7 @@ MonoBehaviour:
   pantsSlot:
     currentItem: Pants_sportB04
     availableItems:
+    - None
     - Pants_prizrak
     - Pants_tactic01
     - Pants_tactic02
@@ -1228,6 +1234,7 @@ MonoBehaviour:
   shirtSlot:
     currentItem: Shirts_hoodB01
     availableItems:
+    - None
     - Shirts_prizrak
     - Shirts_tactic01
     - Shirts_tactic02
@@ -1305,8 +1312,9 @@ MonoBehaviour:
     - Shirts_zombie
     - Shirts_zombieboss
   backpackSlot:
-    currentItem: Backpacks_octopus
+    currentItem: None
     availableItems:
+    - None
     - Backpacks_arrows
     - Backpacks_darts
     - Backpacks_rocket01
@@ -1892,6 +1900,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2891085439014040550, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2901628317537636096, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
@@ -2157,6 +2170,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7199507559762828877, guid: 948aec6cd886c0841979bd8ed6f4de82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7244496563498822813, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
@@ -2185,7 +2203,7 @@ PrefabInstance:
     - target: {fileID: 7752311873605072558, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7796439234441898405, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
@@ -2265,7 +2283,7 @@ PrefabInstance:
     - target: {fileID: 9045660427353099869, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133765742581779249, guid: 948aec6cd886c0841979bd8ed6f4de82,
         type: 3}

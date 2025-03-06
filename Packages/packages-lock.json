@@ -1,19 +1,19 @@
 {
   "dependencies": {
     "com.mathijsbakker.extenject": {
-      "version": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/Zenject",
+      "version": "file:D:/Projects/UnityProjects/Shared/Zenject",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.revenantx.litenetlib": {
-      "version": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/LiteNetLib",
+      "version": "file:D:/Projects/UnityProjects/Shared/LiteNetLib",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.scellecs.morpeh": {
-      "version": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/MorpehECS",
+      "version": "file:D:/Projects/UnityProjects/Shared/MorpehECS",
       "depth": 0,
       "source": "local",
       "dependencies": {}

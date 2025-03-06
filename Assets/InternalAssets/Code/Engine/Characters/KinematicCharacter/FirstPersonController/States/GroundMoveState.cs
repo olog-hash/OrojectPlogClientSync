@@ -58,9 +58,7 @@ namespace ProjectOlog.Code.Engine.Characters.KinematicCharacter.FirstPersonContr
                 CharacterControlUtilities.ApplyDragToVelocity(ref p.CharacterBody.BaseVelocity, p.DeltaTime, p.FirstPersonCharacter.AirDrag);
             }
             
-            CharacterControlUtilities.InternalVelocityApply(ref p.CharacterBody, ref p.FirstPersonCharacter.InternalVelocityAdd);
-            CharacterControlUtilities.CameraPositionUpdate(ref p.FirstPersonCharacter.CameraPointHeight, p.FirstPersonInputs.CrouchRequested, p.DeltaTime);
-        }
+            CharacterControlUtilities.InternalVelocityApply(ref p.CharacterBody, ref p.FirstPersonCharacter.InternalVelocityAdd); }
 
         private void DefineCharacterState(ref FirstPersonCharacterProcessor p, out float groundMaxSpeed)
         {

@@ -1,3 +1,4 @@
+using ProjectOlog.Code.Engine.Interpolation;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
@@ -8,6 +9,7 @@ namespace ProjectOlog.Code.Engine.Transform
 	[Il2CppSetOption(Option.NullChecks, false)]
 	[Il2CppSetOption(Option.ArrayBoundsChecks, false)]
 	[Il2CppSetOption(Option.DivideByZeroChecks, false)]
+	[RequireComponent(typeof(InterpolationProvider))]
 	public sealed class TransferProvider : MonoProvider<Transfer> 
 	{
 

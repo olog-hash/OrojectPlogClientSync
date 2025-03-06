@@ -12,12 +12,18 @@ namespace ProjectOlog.Code.Engine.Interpolation
 	[Il2CppSetOption(Option.DivideByZeroChecks, false)]
 	public sealed class InterpolationProvider : MonoProvider<Interpolation> 
 	{
-        private void Awake()
+        public void Awake()
         {
             ref Interpolation data = ref GetData();
             UnityEngine.Transform transform = GetComponent<UnityEngine.Transform>();
-            data.CurrentTransform.Position = transform.localPosition;
-            data.CurrentTransform.Rotation = transform.localRotation;
+
+            var startTransform = new RigidTransform(transform.localPosition, transform.localRotation);
+
+            data.CurrentTransform = startTransform;
+            data.PreviousTransform = startTransform;
+            
+            data.InterpolateRotation = true;
+            data.InterpolateTranslation = true;
         }
     }
 

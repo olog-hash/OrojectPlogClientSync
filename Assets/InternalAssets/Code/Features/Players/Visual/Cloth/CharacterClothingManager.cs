@@ -33,13 +33,20 @@ namespace ProjectOlog.Code.Features.Players.Visual.Cloth
         public Dictionary<string, List<GameObject>> shirtsItems = new Dictionary<string, List<GameObject>>();
         public Dictionary<string, List<GameObject>> backpacksItems = new Dictionary<string, List<GameObject>>();
 
+        private bool _isAlreadyCached = false;
+        
         private void Awake()
         {
-            CacheAllClothingItems();
+            if (!_isAlreadyCached)
+            {
+                CacheAllClothingItems();
+            }
         }
 
         public void CacheAllClothingItems()
         {
+            _isAlreadyCached = true;
+            
             ClearAllDictionaries();
 
             // Добавляем опцию "None" для всех слотов

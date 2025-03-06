@@ -5,6 +5,7 @@ using ProjectOlog.Code.Network.Packets.SubPackets.Instantiate.Components;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
+using Unity.VisualScripting;
 
 namespace ProjectOlog.Code.Features.Objects.Instantiate
 {
@@ -39,6 +40,8 @@ namespace ProjectOlog.Code.Features.Objects.Instantiate
             {
                 if (mapping.EventIDToEntityProvider.TryGetValue(transferObject.EventID, out var provider))
                 {
+                    provider.AddComponent<TransferProvider>();
+                    
                     provider.Entity.SetComponent(new Transfer
                     {
                         LinearVelocity = transferObject.LinearVelocity,
