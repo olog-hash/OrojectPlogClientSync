@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjectOlog.Code.Network.Gameplay.Core.Enums;
 using ProjectOlog.Code.UI.HUD.ChatPanel;
 
 namespace ProjectOlog.Code.UI.HUD
@@ -11,42 +12,41 @@ namespace ProjectOlog.Code.UI.HUD
         {
             OnChatMessageReceived = null;
         }
-        
-        public static void SendChatMessageNone(string messageText)
-        {
-            var message = new ChatMessageData(ChatMessageType.None, "None", messageText);
 
-            SendChatMessageEvent(message);
-        }
-
-        public static void SendChatMessageAlert(string messageText)
-        {
-            var message = new ChatMessageData(ChatMessageType.Alert, "None", messageText);
-
-            SendChatMessageEvent(message);
-        }
-
-        public static void SendChatMessageSystem(string messageText)
+        public static void ProcessServerMessage(ENetworkChatMessageType messageType, string messageText)
         {
             var message = new ChatMessageData(ChatMessageType.System, "None", messageText);
 
             SendChatMessageEvent(message);
         }
 
-        public static void SendChatMessageUser(string from, string messageText)
+        public static void ProcessPlayerMessage(string fromUserName, string messageText)
         {
-            var message = new ChatMessageData(ChatMessageType.User, from, messageText);
+            var message = new ChatMessageData(ChatMessageType.Player, fromUserName, messageText);
+
+            SendChatMessageEvent(message);
+        }
+        
+        public static void ProcessNoneMessage(string messageText)
+        {
+            var message = new ChatMessageData(ChatMessageType.None, "None", messageText);
 
             SendChatMessageEvent(message);
         }
 
-        public static void SendChatMessagePlayer(string from, string messageText, byte Team = 0)
+        public static void ProcessAlertMessage(string messageText)
         {
-            var message = new ChatMessageData(ChatMessageType.Player, from, messageText);
+            var message = new ChatMessageData(ChatMessageType.Alert, "None", messageText);
 
             SendChatMessageEvent(message);
         }
 
+        public static void ProcessSystemMessage(string messageText)
+        {
+            var message = new ChatMessageData(ChatMessageType.System, "None", messageText);
+
+            SendChatMessageEvent(message);
+        }
 
         public static void SendChatMessageEvent(ChatMessageData chatMessageData)
         {

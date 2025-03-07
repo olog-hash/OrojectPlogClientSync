@@ -60,7 +60,7 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
                 });
             }
 
-            NotificationUtilits.SendChatMessageNone($"Добро пожаловать на сервер!");
+            NotificationUtilits.ProcessNoneMessage($"Добро пожаловать на сервер!");
         }
 
         [NetworkCallback]
@@ -75,7 +75,7 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
                 Username = userDataCached.Username,
             });
 
-            NotificationUtilits.SendChatMessageNone($"Игрок {userDataCached.Username} зашел на сервер!");
+            NotificationUtilits.ProcessNoneMessage($"Игрок {userDataCached.Username} зашел на сервер!");
         }
         
         [NetworkCallback]
@@ -87,7 +87,7 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
             { 
                 _usersContainer.RemoveUser(userID);
                 
-                NotificationUtilits.SendChatMessageNone($"Игрок {user.Username} покинул сервер!");
+                NotificationUtilits.ProcessNoneMessage($"Игрок {user.Username} покинул сервер!");
             }
         }
     }

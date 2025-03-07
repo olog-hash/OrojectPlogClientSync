@@ -107,7 +107,7 @@ namespace ProjectOlog.Code.Network.Client
 
         public void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
         {
-            NotificationUtilits.SendChatMessageAlert("Подключение к серверу было разорвано!");
+            NotificationUtilits.ProcessAlertMessage("Подключение к серверу было разорвано!");
         }
     }
 }

@@ -50,7 +50,7 @@ namespace ProjectOlog.Code.Features.Players.Respawn
             }
             else
             {
-                RemoteCharacterTranslationUtilits.SetPositionAndRotation(
+                RemotePlayerTranslationUtilits.SetPositionAndRotation(
                     playerEntity,
                     respawnEvent.Position,
                     respawnEvent.Rotation);

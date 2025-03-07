@@ -4,6 +4,7 @@
     {
         public bool IsVisible { get; private set; } = true;
         public float LifeTime { get; private set; }
+        
         public ChatMessageType Type = ChatMessageType.None;
         public string FromName = "NONE";
         public string Text = string.Empty;

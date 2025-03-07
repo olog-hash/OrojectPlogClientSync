@@ -11,8 +11,18 @@ namespace ProjectOlog.Code._InDevs.TranslationUtilits
     /// </summary>
     public static class CharacterTranslationUtilits
     {
+        private static bool IsEntityAvaliable(Entity entity)
+        {
+            if (entity == null || entity.IsNullOrDisposed()) return false;
+            if (!entity.Has<Translation>() || !entity.Has<CharacterInterpolation>()) return false;
+
+            return true;
+        }
+        
         public static void SetPosition(Entity entity, Vector3 position)
         {
+            if (!IsEntityAvaliable(entity)) return;
+            
             ref var translation  = ref entity.GetComponent<Translation>();
             ref var characterInterpolation = ref entity.GetComponent<CharacterInterpolation>();
             
@@ -25,6 +35,8 @@ namespace ProjectOlog.Code._InDevs.TranslationUtilits
 
         public static void SetRotation(Entity entity, Quaternion rotation)
         {
+            if (!IsEntityAvaliable(entity)) return;
+            
             ref var translation  = ref entity.GetComponent<Translation>();
             ref var characterInterpolation = ref entity.GetComponent<CharacterInterpolation>();
             
@@ -37,6 +49,8 @@ namespace ProjectOlog.Code._InDevs.TranslationUtilits
 
         public static void SetPositionAndRotation(Entity entity, Vector3 position, Quaternion rotation)
         {
+            if (!IsEntityAvaliable(entity)) return;
+            
             ref var translation  = ref entity.GetComponent<Translation>();
             ref var characterInterpolation = ref entity.GetComponent<CharacterInterpolation>();
             

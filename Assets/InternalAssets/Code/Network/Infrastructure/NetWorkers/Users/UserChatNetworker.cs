@@ -14,31 +14,52 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
             
             SendTo(nameof(SendMessageRequest), dataPackage, DeliveryMethod.ReliableOrdered);
         }
-
+        
+        // Обработка получение глобального сообщения от сервера
         [NetworkCallback]
-        public void SendMessageReceived(NetPeer peer, NetDataPackage dataPackage)
+        private void SendServerMessageForAll(NetPeer peer, NetDataPackage dataPackage)
         {
-            byte fromUserID = dataPackage.GetByte();
             var messageType = (ENetworkChatMessageType)dataPackage.GetByte();
-            string message = dataPackage.GetString();
+            string messageText = dataPackage.GetString();
 
-            var userData = _usersContainer.GetUserDataByID(fromUserID);
-            string userName = userData is not null ? userData.Username : "NONE";
+            NotificationUtilits.ProcessServerMessage(messageType, messageText);
+        }
+        
+        // Обработка получения личного сообщения от сервера
+        [NetworkCallback]
+        private void SendServerMessageFor(NetPeer peer, NetDataPackage dataPackage)
+        {
+            var messageType = (ENetworkChatMessageType)dataPackage.GetByte();
+            string messageText = dataPackage.GetString();
 
-            switch (messageType)
-            {
-                case ENetworkChatMessageType.None:
-                    NotificationUtilits.SendChatMessageNone(message);
-                    break;
-                case ENetworkChatMessageType.System:
-                    NotificationUtilits.SendChatMessageSystem(message);
-                    break;
-                case ENetworkChatMessageType.User:
-                    NotificationUtilits.SendChatMessagePlayer(userName, message);
-                    break;
-                default:
-                    break;
-            }
+            NotificationUtilits.ProcessServerMessage(messageType, messageText);
+        }
+        
+        // Обработка получение глобального сообщения от игрока.
+        [NetworkCallback]
+        public void SendPlayerMessageForAll(NetPeer peer, NetDataPackage dataPackage)
+        {
+            var messageType = (ENetworkChatMessageType)dataPackage.GetByte();
+            byte fromUserID = dataPackage.GetByte();
+            string messageText = dataPackage.GetString();
+
+            if (!_usersContainer.TryGetUserDataByID(fromUserID, out var userData)) return;
+            
+            NotificationUtilits.ProcessPlayerMessage(userData.Username, messageText);
+        }
+        
+        // Обработка получение личного сообщения от игрока.
+        [NetworkCallback]
+        public void SendPlayerMessageFor(NetPeer peer, NetDataPackage dataPackage)
+        {
+            var messageType = (ENetworkChatMessageType)dataPackage.GetByte();
+            byte fromUserID = dataPackage.GetByte();
+            byte toUserID = dataPackage.GetByte();
+            string messageText = dataPackage.GetString();
+
+            if (!_usersContainer.TryGetUserDataByID(fromUserID, out var userData)) return;
+            
+            NotificationUtilits.ProcessPlayerMessage(userData.Username, messageText);
         }
     }
 }
