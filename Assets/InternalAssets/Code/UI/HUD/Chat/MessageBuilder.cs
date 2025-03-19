@@ -11,7 +11,7 @@ namespace ProjectOlog.Code.UI.HUD.Chat
         
         // Стандартные цвета
         public static readonly Color DefaultColor = Color.white;
-        public static readonly Color GrayColor = Color.gray;
+        public static readonly Color GrayColor = new Color(0.42f, 0.41f, 0.39f);
         public static readonly Color SystemColor = new Color(1f, 0.8f, 0f);
         public static readonly Color ErrorColor = new Color(1f, 0.3f, 0.3f);
         public static readonly Color SuccessColor = new Color(0.3f, 1f, 0.3f);

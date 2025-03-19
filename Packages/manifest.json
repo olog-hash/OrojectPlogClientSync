@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
-    "com.mathijsbakker.extenject": "file:D:/Projects/UnityProjects/Shared/Zenject",
-    "com.revenantx.litenetlib": "file:D:/Projects/UnityProjects/Shared/LiteNetLib",
-    "com.scellecs.morpeh": "file:D:/Projects/UnityProjects/Shared/MorpehECS",
+    "com.mathijsbakker.extenject": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/Zenject",
+    "com.revenantx.litenetlib": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/LiteNetLib",
+    "com.scellecs.morpeh": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/MorpehECS",
     "com.unity.ai.navigation": "2.0.0",
     "com.unity.collab-proxy": "2.6.0",
     "com.unity.ide.rider": "3.0.27",

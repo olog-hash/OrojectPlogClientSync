@@ -1,12 +1,21 @@
-﻿namespace ProjectOlog.Code.Network.Profiles.Users
+﻿using ProjectOlog.Code.Network.Profiles.Users.DataStoregs;
+
+namespace ProjectOlog.Code.Network.Profiles.Users
 {
     public class NetworkUserData
     {
-        public byte ID;
-        public string Username;
-        public int DeathCount;
-        public int Ping;
+        public byte ID => Identity.ID;
+        public short Ping => GameState.Ping.Value;
+        public string Username => Identity.Username;
 
-        public bool IsDead;
+        // Хранилища
+        public readonly UserIdentity Identity;
+        public readonly UserGameState GameState;
+
+        public NetworkUserData(byte id, string username)
+        {
+            Identity = new UserIdentity(id, username);
+            GameState = new UserGameState();
+        }
     }
 }

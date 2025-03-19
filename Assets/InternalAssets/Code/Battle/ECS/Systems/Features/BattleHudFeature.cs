@@ -7,7 +7,7 @@ using ProjectOlog.Code.UI.HUD.PlayerStatus.HealthPanel;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Systems;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Systems.PlayerNotifications;
 using ProjectOlog.Code.UI.HUD.Systems;
-using ProjectOlog.Code.UI.HUD.TabPanel;
+using ProjectOlog.Code.UI.HUD.Tab;
 using Scellecs.Morpeh;
 
 namespace ProjectOlog.Code.Battle.ECS.Systems.Features

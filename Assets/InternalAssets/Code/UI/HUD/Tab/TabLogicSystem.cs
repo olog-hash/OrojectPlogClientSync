@@ -1,9 +1,10 @@
 ﻿using ProjectOlog.Code.Infrastructure.Application.Layers;
+using ProjectOlog.Code.UI.HUD.Tab.Presenter;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
 
-namespace ProjectOlog.Code.UI.HUD.TabPanel
+namespace ProjectOlog.Code.UI.HUD.Tab
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]

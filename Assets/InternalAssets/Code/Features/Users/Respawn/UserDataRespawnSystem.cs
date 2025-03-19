@@ -57,8 +57,7 @@ namespace ProjectOlog.Code.Network.Gameplay.UserDataGameUpdate
             if (!_networkUsersContainer.TryGetUserDataByID(networkPlayer.UserID, out var userData)) return;
             
             // Обновляем информацию в userData
-            userData.IsDead = true;
-            userData.DeathCount++;
+            userData.GameState.DeathUser();
             
             // Обновляем информацию
             _networkUsersContainer.OnUsersUpdate?.Invoke();
@@ -73,7 +72,7 @@ namespace ProjectOlog.Code.Network.Gameplay.UserDataGameUpdate
             if (!_networkUsersContainer.TryGetUserDataByID(networkPlayer.UserID, out var userData)) return;
             
             // Обновляем информацию в userData
-            userData.IsDead = false;
+            userData.GameState.ReviveUser();
             
             // Обновляем информацию
             _networkUsersContainer.OnUsersUpdate?.Invoke();

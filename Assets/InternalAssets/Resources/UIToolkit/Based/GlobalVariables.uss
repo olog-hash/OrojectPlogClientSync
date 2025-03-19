@@ -1,15 +1,13 @@
 :root {
     /* Пути к шрифтам */
     --font-fat: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Fat');
-    --font-fat-custom:  url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Fat-Custom');
-    --font-light:  url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Light');
-    
-    --font-regular:  url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Regular');
-    --font-stencil:  url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Stencil');
-    --font-kill:  url('project://database/Assets/InternalAssets/Resources/GUI/fonts/RedOctoberKill');
-    
-    --font-tahoma:  url('project://database/Assets/InternalAssets/Resources/GUI/fonts/tahoma');
-    --font-tahomabd:  url('project://database/Assets/InternalAssets/Resources/GUI/fonts/tahomabd');
+    --font-fat-custom: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Fat-Custom');
+    --font-light: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Light');
+    --font-regular: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Regular');
+    --font-stencil: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/Red October-Stencil');
+    --font-kill: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/RedOctoberKill');
+    --font-tahoma: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/tahoma');
+    --font-tahomabd: url('project://database/Assets/InternalAssets/Resources/GUI/fonts/tahomabd');
 
     /* Размеры шрифтов */
     --font-size-small: 12px;
@@ -18,7 +16,164 @@
     --font-size-header: 20px;
     --font-size-title: 24px;
 
-    /* При желании можно добавить и другие глобальные переменные */
-    --color-text-primary: rgb(255, 255, 255);
+    /* Цвета */
+    --color-white: #FFFFFF;
+    --color-beige: #B8A68A;
+    --color-dark-gray: #262521;
+    --color-black: #000000;
+    --color-salmon: #E66A5C;
+    --color-orange: #F29D20;
+    --color-red: #E14C4C;
+    --color-blue: rgb(92, 159, 230); /* из 0x5C/255f, 0x9F/255f, 0xE6/255f */
+
+    /* Основные цвета текста */
+    --color-text-primary: var(--color-white);
     --color-text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+/* Стили для шрифтов */
+.font-fat {
+    -unity-font: var(--font-fat);
+}
+
+.font-fat-custom {
+    -unity-font: var(--font-fat-custom);
+}
+
+.font-light {
+    -unity-font: var(--font-light);
+}
+
+.font-regular {
+    -unity-font: var(--font-regular);
+}
+
+.font-stencil {
+    -unity-font: var(--font-stencil);
+}
+
+.font-kill {
+    -unity-font: var(--font-kill);
+}
+
+.font-tahoma {
+    -unity-font: var(--font-tahoma);
+}
+
+.font-tahoma-bold {
+    -unity-font: var(--font-tahomabd);
+}
+
+/* Стили для размеров текста */
+.text-small {
+    font-size: var(--font-size-small);
+}
+
+.text-normal {
+    font-size: var(--font-size-normal);
+}
+
+.text-large {
+    font-size: var(--font-size-large);
+}
+
+.text-header {
+    font-size: var(--font-size-header);
+}
+
+.text-title {
+    font-size: var(--font-size-title);
+}
+
+/* Стили для цветов */
+.color-red {
+    color: var(--color-red);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.color-beige {
+    color: var(--color-beige);
+}
+
+.color-dark-gray {
+    color: var(--color-dark-gray);
+}
+
+.color-black {
+    color: var(--color-black);
+}
+
+.color-salmon {
+    color: var(--color-salmon);
+}
+
+.color-orange {
+    color: var(--color-orange);
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+/* Стили для фоновых цветов */
+.bg-red {
+    background-color: var(--color-red);
+}
+
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-beige {
+    background-color: var(--color-beige);
+}
+
+.bg-dark-gray {
+    background-color: var(--color-dark-gray);
+}
+
+.bg-black {
+    background-color: var(--color-black);
+}
+
+.bg-salmon {
+    background-color: var(--color-salmon);
+}
+
+.bg-orange {
+    background-color: var(--color-orange);
+}
+
+.bg-blue {
+    background-color: var(--color-blue);
+}
+
+/* Комбинированные стили */
+.header-text {
+    -unity-font: var(--font-fat);
+    font-size: var(--font-size-header);
+    color: var(--color-white);
+}
+
+.title-text {
+    -unity-font: var(--font-regular);
+    font-size: var(--font-size-title);
+    color: var(--color-white);
+}
+
+.button-primary {
+    -unity-font: var(--font-tahoma-bold);
+    font-size: var(--font-size-normal);
+    color: var(--color-white);
+    background-color: var(--color-red);
+}
+
+.button-secondary {
+    -unity-font: var(--font-tahoma);
+    font-size: var(--font-size-normal);
+    color: var(--color-white);
+    background-color: var(--color-blue);
 }

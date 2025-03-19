@@ -18,9 +18,7 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
                 if (_usersContainer.TryGetUserDataByID(networkUserState.UserID, out var userData))
                 {
                     // Обновляем все мета-данные
-                    userData.Ping = networkUserState.Ping;
-                    //userData.IsDead = networkUserState.IsDead; 
-                    //userData.DeathCount = networkUserState.DeathCount;
+                    userData.GameState.Ping.Value = networkUserState.Ping;
                 }
             }
 

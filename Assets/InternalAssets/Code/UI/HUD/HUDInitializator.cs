@@ -18,8 +18,8 @@ using ProjectOlog.Code.UI.HUD.PlayerStatus.HealthPanel;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Presenter;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.View;
-using ProjectOlog.Code.UI.HUD.TabPanel;
-using ProjectOlog.Code.UI.HUD.TabPanel.DefaultTabView;
+using ProjectOlog.Code.UI.HUD.Tab.Presenter;
+using ProjectOlog.Code.UI.HUD.Tab.View;
 using UnityEngine;
 using Zenject;
 
@@ -93,7 +93,7 @@ namespace ProjectOlog.Code.UI.HUD
         {
             _interfaceBindLogic.SwitchView<ChatView>();
             _interfaceBindLogic.SwitchView<PlayerStatsView>();
-            _interfaceBindLogic.SwitchView<DefaultTabView>();
+            _interfaceBindLogic.SwitchView<TabView>();
             _interfaceBindLogic.SwitchView<InteractionView>();
             _interfaceBindLogic.SwitchView<CrossView>();
             

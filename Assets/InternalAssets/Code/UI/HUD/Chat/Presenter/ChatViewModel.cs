@@ -78,7 +78,7 @@ namespace ProjectOlog.Code.UI.HUD.Chat.Presenter
         
         public override void OnHide()
         {
-            IsInputActive.Value = false;
+            //IsInputActive.Value = false;
             CurrentInputText.Value = "";
         }
         

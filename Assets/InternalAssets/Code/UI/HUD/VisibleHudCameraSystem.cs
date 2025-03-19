@@ -1,4 +1,5 @@
 ﻿using ProjectOlog.Code.Engine.Cameras.Core;
+using ProjectOlog.Code.UI.Core.Services;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
@@ -30,12 +31,14 @@ namespace ProjectOlog.Code.UI.HUD.Systems
                         MainCamera.Instance.ShowItemsCamera(_isActive);
                     }
                     
+                    GlobalUIVisibility.SetVisibility(_isActive);
                     MainCamera.Instance.ShowHudCamera(_isActive);
                 }
                 else
                 {
                     _isActive = !_isActive;
                     
+                    GlobalUIVisibility.SetVisibility(_isActive);
                     MainCamera.Instance.ShowItemsCamera(_isActive);
                     MainCamera.Instance.ShowHudCamera(_isActive);
                 }

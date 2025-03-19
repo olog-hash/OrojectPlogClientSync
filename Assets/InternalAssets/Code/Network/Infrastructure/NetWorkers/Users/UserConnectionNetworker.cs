@@ -29,13 +29,9 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
             // Заполняем мета-информацию о пользователях на сервере
             foreach (var userData in serverInitializedCached.InitUsers)
             {
-                var user = new NetworkUserData()
-                {
-                    ID = userData.UserID,
-                    Username = userData.Username,
-                    DeathCount = userData.DeathCount,
-                    IsDead = userData.IsDead
-                };
+                var user = new NetworkUserData(userData.UserID, userData.Username);
+                user.GameState.Deaths.Value = userData.DeathCount;
+                user.GameState.IsDead.Value = userData.IsDead;
 
                 _usersContainer.AddUser(user);
             }
@@ -69,11 +65,8 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
             var userDataCached = new InitUserPacket();
             userDataCached.Deserialize(dataPackage);
 
-            _usersContainer.AddUser(new NetworkUserData()
-            {
-                ID = userDataCached.UserID,
-                Username = userDataCached.Username,
-            });
+            var user = new NetworkUserData(userDataCached.UserID, userDataCached.Username);
+            _usersContainer.AddUser(user);
 
             NotificationUtilits.ProcessNoneMessage($"Игрок {userDataCached.Username} зашел на сервер!");
         }

@@ -80,8 +80,8 @@ namespace ProjectOlog.Code.UI.HUD.Killbar.View
             itemElement.style.maxWidth = 450;
             itemElement.style.minHeight = 20;
             itemElement.style.flexDirection = FlexDirection.Row;
-            itemElement.style.paddingLeft = 12;
-            itemElement.style.paddingRight = 12;
+            itemElement.style.paddingLeft = 8; // 12
+            itemElement.style.paddingRight = 8; // 12
             itemElement.style.paddingTop = 1;
             itemElement.style.paddingBottom = 1;
             itemElement.style.marginTop = 0;

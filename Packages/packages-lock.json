@@ -8,19 +8,19 @@
       "hash": "fe31ad0904abee296b5ea72c6073157accba59e8"
     },
     "com.mathijsbakker.extenject": {
-      "version": "file:D:/Projects/UnityProjects/Shared/Zenject",
+      "version": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/Zenject",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.revenantx.litenetlib": {
-      "version": "file:D:/Projects/UnityProjects/Shared/LiteNetLib",
+      "version": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/LiteNetLib",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.scellecs.morpeh": {
-      "version": "file:D:/Projects/UnityProjects/Shared/MorpehECS",
+      "version": "file:D:/Projects/UnityProjects/Projects2025/ProjectOlog/Shared/MorpehECS",
       "depth": 0,
       "source": "local",
       "dependencies": {}
