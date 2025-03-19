@@ -1,0 +1,15 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="inventory" style="flex-grow: 1; left: 50%; bottom: auto; translate: -50% -50%; max-height: 500px; max-width: 630px; position: relative; top: 50%; background-color: rgba(38, 37, 33, 0.82); overflow: hidden; border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px;">
+        <engine:VisualElement name="header" style="flex-grow: 1; max-height: 35px; background-color: rgb(27, 27, 27);">
+            <engine:Label text="Хранилище" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; -unity-font-definition: resource(&apos;GUI/fonts/tahomabd&apos;); font-size: 16px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="items-container" style="flex-grow: 1; padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; flex-direction: row; flex-shrink: 1; flex-basis: auto; top: auto; justify-content: flex-start; align-items: stretch; flex-wrap: wrap; align-self: auto; gap: 10px;">
+            <engine:VisualElement name="item-slot" style="flex-grow: 0; width: 86px; height: 86px; max-width: 86px; max-height: 86px; background-color: rgba(255, 255, 255, 0); padding-top: 6px; padding-right: 6px; padding-bottom: 6px; padding-left: 6px;">
+                <engine:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.35); padding-top: 6px; padding-right: 6px; padding-bottom: 6px; padding-left: 6px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;">
+                    <engine:Button style="width: 100%; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; background-color: rgb(255, 255, 255); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="bottom" style="flex-grow: 1; max-height: 15px; background-color: rgb(27, 27, 27);" />
+    </engine:VisualElement>
+</engine:UXML>

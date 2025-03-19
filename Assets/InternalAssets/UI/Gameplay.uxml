@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/InternalAssets/UI/Gameplay.uss?fileID=7433441132597879392&amp;guid=feeed23da2db49947ab50b04642629d6&amp;type=3#Gameplay" />
-    <ui:VisualElement name="Background" style="flex-grow: 1;">
-        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 255px; -unity-text-align: middle-center; height: 42px; position: absolute; top: 160px; left: 48px;" />
-    </ui:VisualElement>
-</ui:UXML>

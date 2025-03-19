@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Notifications;
+using Zenject;
 
 namespace ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel
 {

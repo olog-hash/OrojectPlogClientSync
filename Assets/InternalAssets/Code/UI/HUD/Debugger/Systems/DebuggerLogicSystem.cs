@@ -27,11 +27,11 @@ namespace ProjectOlog.Code.UI.HUD.Debugger.Systems
             {
                 if (_debuggerViewModel.IsActive)
                 {
-                    _debuggerViewModel.OnHide();
+                    _debuggerViewModel.HideLayer();
                 }
                 else
                 {
-                    _debuggerViewModel.OnShow();
+                    _debuggerViewModel.ShowLayer();
                 }
             }
         }

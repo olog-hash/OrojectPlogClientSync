@@ -1,0 +1,143 @@
+.player-slot {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: auto;
+    align-self: auto;
+    margin: 0 6px;
+    min-height: 24px;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.local-player {
+    background-color: rgb(242, 157, 32);
+    border-color: rgb(0, 0, 0);
+}
+
+.remote-player {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.player-info-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: auto;
+    align-self: center;
+    padding-left: 10px;
+    max-width: 205px;
+    margin-left: 31px;
+}
+
+.player-stats-container {
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    position: relative;
+    min-height: 16px;
+}
+
+.player-rank {
+    -unity-font-definition: url("project://database/Assets/Templates/Fonts/tahoma.ttf?fileID=12800000&guid=013ee0d06d0c6f7459b67b7680971b1b&type=3#tahoma");
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.player-name {
+    -unity-font-definition: url("project://database/Assets/Templates/Fonts/tahoma.ttf?fileID=12800000&guid=013ee0d06d0c6f7459b67b7680971b1b&type=3#tahoma");
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.player-stat {
+    -unity-font-definition: url("project://database/Assets/Templates/Fonts/tahoma.ttf?fileID=12800000&guid=013ee0d06d0c6f7459b67b7680971b1b&type=3#tahoma");
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.player-total-score {
+    -unity-font-definition: url("project://database/Assets/Templates/Fonts/tahoma.ttf?fileID=12800000&guid=013ee0d06d0c6f7459b67b7680971b1b&type=3#tahoma");
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.player-rank {
+    align-self: center;
+}
+
+.player-name {
+    margin-left: 16px;
+    white-space: normal;
+    min-width: 170px;
+    align-self: center;
+}
+
+.player-stat {
+    position: absolute;
+    align-self: center;
+    -unity-text-align: upper-center;
+    top: 0;
+    left: 0;
+    right: 139px;
+    bottom: 0;
+    min-height: 15px;
+}
+
+.stat-kills {
+    translate: 1px 0;
+}
+
+.stat-deaths {
+    translate: 46px 0;
+}
+
+.stat-assists {
+    translate: 94px 0;
+}
+
+.player-total-score {
+    position: absolute;
+    color: rgb(140, 126, 106);
+    align-self: center;
+    -unity-text-align: upper-center;
+    translate: 136px 0;
+    top: 0;
+    left: 0;
+    right: 139px;
+    bottom: 0;
+    min-height: 15px;
+}
+
+.local-player .player-rank {
+    color: rgb(0, 0, 0);
+}
+
+.local-player .player-name {
+    color: rgb(0, 0, 0);
+}
+
+.local-player .player-stat {
+    color: rgb(0, 0, 0);
+}
+
+.remote-player .player-rank {
+    color: rgb(255, 255, 255);
+}
+
+.remote-player .player-name {
+    color: rgb(255, 255, 255);
+}
+
+.remote-player .player-stat {
+    color: rgb(255, 255, 255);
+}

@@ -2,7 +2,8 @@
 {
     public interface ILayer
     {
-        void OnShow();
-        void OnHide();
+        void ShowLayer();
+
+        void HideLayer();
     }
 }

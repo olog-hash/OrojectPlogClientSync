@@ -1,0 +1,10 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/InternalAssets/Resources/HUD/Indicators/IndicatorStyles.uss?fileID=7433441132597879392&amp;guid=192b471d8edb48445970d633c76e7c29&amp;type=3#IndicatorStyles" />
+    <engine:VisualElement name="indicator-container" style="width: 76px; height: 76px; flex-grow: 0; flex-shrink: 1; align-items: auto; justify-content: flex-start; flex-wrap: nowrap; flex-direction: column; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; bottom: 0; left: 0;">
+        <engine:VisualElement name="indicator-mask" style="height: 100%;">
+            <engine:VisualElement name="indicator-background" style="background-image: resource(&apos;gui/health_gray_transparent&apos;); height: 76px; width: 76px; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(217, 65, 36); -unity-background-scale-mode: scale-to-fit;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="indicator-outline" style="flex-grow: 1; background-image: resource(&apos;gui/health_bg&apos;); position: absolute; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0);" />
+        <engine:Label text="10" name="indicator-low-value" style="position: absolute; translate: 68px 55px; align-self: flex-start; color: rgb(255, 255, 255); -unity-font-definition: resource(&apos;HUD/Fonts/Red October-Light&apos;); font-size: 24px; width: 62px; height: 30px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-left;" />
+    </engine:VisualElement>
+</engine:UXML>

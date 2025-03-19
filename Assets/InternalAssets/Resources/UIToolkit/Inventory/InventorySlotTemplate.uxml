@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/InternalAssets/Resources/HUD/Inventory/InventoryStyles.uss?fileID=7433441132597879392&amp;guid=7d9e46b49642ef444a32705d371df83a&amp;type=3#InventoryStyles" />
+    <engine:VisualElement style="flex-grow: 0; width: 86px; height: 86px; max-width: 86px; max-height: 86px; background-color: rgba(0, 0, 0, 0); padding: 6px;">
+        <engine:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.35); padding: 6px; border-radius: 6px;">
+            <engine:Button style="width: 100%; height: 100%; margin: 0; padding: 0; border-radius: 6px; background-color: white; border-width: 0;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

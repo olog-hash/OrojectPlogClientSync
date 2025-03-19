@@ -16,7 +16,7 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
         
         protected override void OnBind(InventoryViewModel model)
         {
-            OnShowHideChanged(false);
+            HideOnAwake = true;
             
             _currentViewModel = model;
             _currentViewModel.OnShowHideChanged += OnShowHideChanged;

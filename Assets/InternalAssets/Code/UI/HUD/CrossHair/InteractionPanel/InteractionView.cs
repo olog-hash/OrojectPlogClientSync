@@ -14,7 +14,7 @@ namespace ProjectOlog.Code.UI.HUD.CrossHair.InteractionPanel
         
         protected override void OnBind(InteractionViewModel model)
         {
-            OnShowHideChanged(false);
+            HideOnAwake = true;
             
             _currentViewModel = model;
             _currentViewModel.OnShowHideChanged += OnShowHideChanged;

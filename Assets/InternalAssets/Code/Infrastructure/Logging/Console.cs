@@ -604,12 +604,12 @@ namespace ProjectOlog.Code.Infrastructure.Logging
 
         #endregion
 
-        public void OnShow()
+        public void ShowLayer()
         {
             ConsoleSet(true);
         }
 
-        public void OnHide()
+        public void HideLayer()
         {
             ConsoleSet(false);
         }

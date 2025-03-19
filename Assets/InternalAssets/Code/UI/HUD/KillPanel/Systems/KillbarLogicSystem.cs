@@ -1,4 +1,5 @@
-﻿using Scellecs.Morpeh.Systems;
+﻿using ProjectOlog.Code.UI.HUD.Killbar.Presenter;
+using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
 
 namespace ProjectOlog.Code.UI.HUD.KillPanel.Systems
@@ -8,9 +9,9 @@ namespace ProjectOlog.Code.UI.HUD.KillPanel.Systems
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class KillbarLogicSystem : TickrateSystem
     {
-        private KillBarViewModel _killbarViewModel;
+        private KillbarViewModel _killbarViewModel;
 
-        public KillbarLogicSystem(KillBarViewModel killbarViewModel)
+        public KillbarLogicSystem(KillbarViewModel killbarViewModel)
         {
             _killbarViewModel = killbarViewModel;
         }

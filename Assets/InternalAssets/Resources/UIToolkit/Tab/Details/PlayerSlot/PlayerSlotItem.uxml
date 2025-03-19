@@ -1,0 +1,16 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/InternalAssets/Resources/HUD/Tab/Details/PlayerSlot/PlayerSlotStyle.uss?fileID=7433441132597879392&amp;guid=abe666647921d8a4fbcf2dda4436ef16&amp;type=3#PlayerSlotStyle" />
+    <engine:VisualElement name="player-list-item" class="player-slot" style="visibility: visible; display: flex; opacity: 1; align-items: center;">
+        <engine:VisualElement name="player-status" style="flex-grow: 1; height: 20px; width: 24px; position: absolute; background-image: resource(&apos;gui/icons/battle/tab/tabicon_deadman&apos;); align-self: center; align-items: center; margin-left: 2px;" />
+        <engine:VisualElement name="player-info" class="player-info-container" style="align-items: center; justify-content: flex-start;">
+            <engine:Label name="rank" text="0" class="player-stat stat-kills" style="translate: -1px 0; right: 181px; left: 5px; top: 0; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+            <engine:Label name="name" text="Игрок" class="player-name" style="margin-left: 20px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="player-stats" class="player-stats-container">
+            <engine:Label name="total-score" text="0" class="player-stat stat-kills" />
+            <engine:Label name="kill-stats" text="0" class="player-stat stat-deaths" />
+            <engine:Label name="death-stats" text="0" class="player-stat stat-assists" />
+            <engine:Label name="ping-stats" text="0" class="player-total-score" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

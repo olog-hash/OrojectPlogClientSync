@@ -1,0 +1,73 @@
+.unity-list-view {
+    --unity-list-view-hover-background-color: transparent;
+    --unity-list-view-selected-background-color: transparent;
+    --unity-list-view-selected-hover-background-color: transparent;
+}
+
+.unity-list-view__item:hover {
+    background-color: transparent;
+}
+
+.unity-list-view__item--selected {
+    background-color: transparent;
+}
+
+.unity-scroller {
+    display: none;
+}
+
+.unity-scroller--vertical {
+    display: none;
+}
+
+.unity-scroller__low-button {
+    width: 0;
+    height: 0;
+    min-width: 0;
+    min-height: 0;
+    max-width: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.unity-scroller__high-button {
+    width: 0;
+    height: 0;
+    min-width: 0;
+    min-height: 0;
+    max-width: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.unity-scroller__slider {
+    width: 0;
+    height: 0;
+    min-width: 0;
+    min-height: 0;
+    max-width: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.unity-collection-view__scroll-view .unity-scroller--vertical {
+    position: absolute;
+    width: 0;
+    right: -1000px;
+    display: none;
+    visibility: hidden;
+}
+
+.unity-list-view__scroll-view .unity-scroller--vertical {
+    position: absolute;
+    width: 0;
+    right: -1000px;
+    display: none;
+    visibility: hidden;
+}

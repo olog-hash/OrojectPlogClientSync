@@ -1,6 +1,7 @@
 using ProjectOlog.Code.UI.Core;
 using ProjectOlog.Code.UI.HUD;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel;
+using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Notifications;
 using UnityEngine;
 using Zenject;
 

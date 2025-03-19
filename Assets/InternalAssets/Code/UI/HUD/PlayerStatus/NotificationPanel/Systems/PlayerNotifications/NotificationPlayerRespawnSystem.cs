@@ -1,6 +1,7 @@
 ﻿using ProjectOlog.Code.Mechanics.Impact.Victims;
 using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Notifications;
+using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Presenter;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
@@ -13,6 +14,7 @@ namespace ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Systems.PlayerN
     public sealed class NotificationPlayerRespawnSystem : TickrateSystem
     {
         private Filter _playerDeathFilter;
+        
         private NotificationViewModel _notificationViewModel;
 
         public NotificationPlayerRespawnSystem(NotificationViewModel notificationViewModel)

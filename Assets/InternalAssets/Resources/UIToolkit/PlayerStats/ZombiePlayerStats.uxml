@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/InternalAssets/Resources/HUD/PlayerStats/PlayerStatsStyle.uss?fileID=7433441132597879392&amp;guid=b535ce26620331d41affc30a6f916a1c&amp;type=3#PlayerStatsStyle" />
+    <engine:VisualElement name="player-stats-container" style="flex-grow: 1; flex-direction: column; align-self: auto; justify-content: flex-start; flex-wrap: nowrap;">
+        <engine:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; justify-content: flex-start; padding-top: 1%; padding-right: 1%; padding-bottom: 1%; padding-left: 1%; align-self: auto;">
+            <engine:VisualElement name="health-indicator" style="width: 70px; height: 70px; flex-grow: 0; flex-shrink: 1; align-items: auto; justify-content: flex-start; flex-wrap: nowrap; flex-direction: column; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; bottom: 0; left: 0; align-self: flex-end; max-width: none; max-height: none; min-width: auto; min-height: auto;">
+                <engine:VisualElement name="indicator-mask" style="height: 100%; width: 100%;">
+                    <engine:VisualElement name="indicator-background" style="background-image: none; height: 70px; width: 70px; display: none; visibility: hidden;" />
+                </engine:VisualElement>
+                <engine:VisualElement name="indicator-outline" style="flex-grow: 1; background-image: resource(&apos;gui/battle/icons/health_bg_zombie&apos;); position: absolute; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0); align-self: auto;" />
+                <engine:Label text="100" name="indicator-low-value" style="position: absolute; translate: 46px 49px; align-self: flex-start; color: rgb(255, 255, 255); -unity-font-definition: resource(&apos;HUD/Fonts/Red October-Light&apos;); font-size: 20px; width: 62px; height: 30px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-center;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

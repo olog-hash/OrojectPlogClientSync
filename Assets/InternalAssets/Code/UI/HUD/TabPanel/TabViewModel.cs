@@ -100,12 +100,12 @@ namespace ProjectOlog.Code.UI.HUD.TabPanel
             }
         }
 
-        public void OnShow()
+        public void ShowLayer()
         {
             OnShowHideChanged?.Invoke(true);
         }
 
-        public void OnHide()
+        public void HideLayer()
         {
             OnShowHideChanged?.Invoke(false);
         }

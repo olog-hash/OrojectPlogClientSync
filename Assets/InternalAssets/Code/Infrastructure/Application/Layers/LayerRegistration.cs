@@ -23,13 +23,13 @@
         public void Show()
         {
             IsEnabled = true;
-            LayerHandler?.OnShow();
+            LayerHandler?.ShowLayer();
         }
 
         public void Hide()
         {
             IsEnabled = false;
-            LayerHandler?.OnHide();
+            LayerHandler?.HideLayer();
         }
     }
 }

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ae9e180e3d93476f837083a8ec112269
+timeCreated: 1551127413
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  fontName: "tahomabd"
+  fontNames:
+  - Tahoma
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

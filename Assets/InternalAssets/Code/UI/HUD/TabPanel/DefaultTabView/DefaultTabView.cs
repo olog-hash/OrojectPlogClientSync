@@ -14,7 +14,7 @@ namespace ProjectOlog.Code.UI.HUD.TabPanel.DefaultTabView
 
         protected override void OnBind(TabViewModel model)
         {
-            OnShowHideChanged(false);
+            HideOnAwake = true;
             
             _currentViewModel = model;
             _currentViewModel.OnUsersListChanged += OnUsersListChanged;

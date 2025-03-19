@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2fae4d361f094c01a16f952da5937f82
+timeCreated: 1548515451
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 32
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  fontName: "Red October-Fat-Custom"
+  fontNames:
+  - Red October
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

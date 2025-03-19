@@ -18,11 +18,11 @@ namespace ProjectOlog.Code.UI.HUD.Debugger
         
         protected override void OnBind(DebuggerViewModel model)
         {
+            HideOnAwake = true;
+            
             _currentViewModel = model;
             _currentViewModel.OnShowHideChanged += OnShowHideChanged;
             _currentViewModel.OnDebuggerUpdate += OnDebuggerUpdate;
-            
-            OnShowHideChanged(false);
         }
         
         protected override void OnUnbind(DebuggerViewModel model)

@@ -43,13 +43,13 @@ namespace ProjectOlog.Code.UI.HUD.Debugger
             OnDebuggerUpdate?.Invoke();
         }
         
-        public void OnShow()
+        public void ShowLayer()
         {
             _isActive = true;
             OnShowHideChanged?.Invoke(_isActive);
         }
 
-        public void OnHide()
+        public void HideLayer()
         {
             _isActive = false;
             OnShowHideChanged?.Invoke(_isActive);

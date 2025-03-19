@@ -1,0 +1,26 @@
+#indicator-container {
+    width: 60px;
+    height: 120px;
+    position: relative;
+    /* Опционально, для визуализации границ */
+    border-width: 1px;
+    border-color: white;
+}
+
+#indicator-mask {
+    width: 100%;
+    /* Высота будет меняться программно */
+    height: 50%; /* Начальное значение */
+    position: absolute;
+    bottom: 0; /* Важно: маска начинается снизу */
+    overflow: hidden; /* Ключевое свойство для обрезки */
+}
+
+#indicator-background {
+    width: 100%;
+    height: 200%; /* Важно: высота в 2 раза больше маски */
+    position: absolute;
+    bottom: 0; /* Изображение прижато к низу маски */
+    /* Изображение будет установлено программно */
+    -unity-background-scale-mode: scale-to-fit;
+}

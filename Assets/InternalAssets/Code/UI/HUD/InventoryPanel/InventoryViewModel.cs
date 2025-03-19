@@ -26,12 +26,12 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
             OnHandleClose?.Invoke();
         }
         
-        public void OnShow()
+        public void ShowLayer()
         {
             OnShowHideChanged?.Invoke(true);
         }
 
-        public void OnHide()
+        public void HideLayer()
         {
             OnShowHideChanged?.Invoke(false);
         }

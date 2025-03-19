@@ -1,12 +1,15 @@
 ﻿using System;
 using ProjectOlog.Code.Network.Gameplay.Core.Enums;
+using ProjectOlog.Code.UI.HUD.Chat;
+using ProjectOlog.Code.UI.HUD.Chat.Models;
 using ProjectOlog.Code.UI.HUD.ChatPanel;
+using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD
 {
     public static class NotificationUtilits
     {
-        public static Action<ChatMessageData> OnChatMessageReceived;
+        public static Action<ChatMessageModel> OnChatMessageReceived;
 
         public static void Reset()
         {
@@ -15,42 +18,43 @@ namespace ProjectOlog.Code.UI.HUD
 
         public static void ProcessServerMessage(ENetworkChatMessageType messageType, string messageText)
         {
-            var message = new ChatMessageData(ChatMessageType.System, "None", messageText);
-
-            SendChatMessageEvent(message);
+            var messageModel = MessageBuilder.SystemMessage(messageText);
+            
+            SendChatMessageEvent(messageModel);
         }
 
         public static void ProcessPlayerMessage(string fromUserName, string messageText)
         {
-            var message = new ChatMessageData(ChatMessageType.Player, fromUserName, messageText);
-
-            SendChatMessageEvent(message);
+            var messageModel = MessageBuilder.PlayerMessage(fromUserName, messageText);
+            
+            SendChatMessageEvent(messageModel);
         }
         
         public static void ProcessNoneMessage(string messageText)
         {
-            var message = new ChatMessageData(ChatMessageType.None, "None", messageText);
-
-            SendChatMessageEvent(message);
+            var messageBuilder = new MessageBuilder();
+            var messageModel = messageBuilder.AddGrayText(messageText).Build();
+            
+            SendChatMessageEvent(messageModel);
         }
 
         public static void ProcessAlertMessage(string messageText)
         {
-            var message = new ChatMessageData(ChatMessageType.Alert, "None", messageText);
-
-            SendChatMessageEvent(message);
+            var messageModel = MessageBuilder.ErrorMessage(messageText);
+            
+            SendChatMessageEvent(messageModel);
         }
 
         public static void ProcessSystemMessage(string messageText)
         {
-            var message = new ChatMessageData(ChatMessageType.System, "None", messageText);
-
-            SendChatMessageEvent(message);
+            var messageModel = MessageBuilder.SystemMessage(messageText);
+            
+            SendChatMessageEvent(messageModel);
         }
 
-        public static void SendChatMessageEvent(ChatMessageData chatMessageData)
+        public static void SendChatMessageEvent(ChatMessageModel chatMessageModel)
         {
-            OnChatMessageReceived?.Invoke(chatMessageData);
+            OnChatMessageReceived?.Invoke(chatMessageModel);
         }
     }
 }

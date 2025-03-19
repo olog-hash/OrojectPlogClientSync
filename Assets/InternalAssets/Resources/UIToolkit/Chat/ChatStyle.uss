@@ -1,0 +1,22 @@
+@import url("project://database/Assets/InternalAssets/Resources/UIToolkit/Based/GlobalVariables.uss");
+
+.unity-text-field__input {
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(205, 205, 205);
+    --unity-cursor-color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -unity-font-definition: var(--font-tahoma);
+    font-size: 13px;
+}
