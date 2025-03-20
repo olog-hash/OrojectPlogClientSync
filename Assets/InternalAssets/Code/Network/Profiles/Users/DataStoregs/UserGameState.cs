@@ -4,7 +4,7 @@ namespace ProjectOlog.Code.Network.Profiles.Users.DataStoregs
 {
     public class UserGameState
     {
-        public ReactiveProperty<int> TeamID { get; } = new ReactiveProperty<int>();
+        public ReactiveProperty<int> TeamID { get; } = new ReactiveProperty<int>(1);
         public ReactiveProperty<int> TeamRang { get; } = new ReactiveProperty<int>();
 
         public ReactiveProperty<bool> IsDead { get; } = new ReactiveProperty<bool>();
@@ -27,7 +27,7 @@ namespace ProjectOlog.Code.Network.Profiles.Users.DataStoregs
 
         public void ReviveUser()
         {
-            IsDead.Value = true;
+            IsDead.Value = false;
         }
     }
 }

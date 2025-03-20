@@ -1,4 +1,5 @@
 ﻿using ProjectOlog.Code.UI.Core;
+using R3;
 using TMPro;
 using UnityEngine;
 
@@ -10,33 +11,27 @@ namespace ProjectOlog.Code.UI.HUD.CrossHair.InteractionPanel
         [SerializeField] private TextMeshProUGUI ObjectAction;
         [SerializeField] private TextMeshProUGUI ObjectDescription;
         
-        private InteractionViewModel _currentViewModel;
-        
         protected override void OnBind(InteractionViewModel model)
         {
             HideOnAwake = true;
             
-            _currentViewModel = model;
-            _currentViewModel.OnShowHideChanged += OnShowHideChanged;
-            _currentViewModel.OnUpdateData += OnUpdateData;
+            // Подписываемся на изменения в модели представления
+            model.InteractionObjectName
+                .Subscribe(name => ObjectName.text = name)
+                .AddTo(_disposables);
+                
+            model.InteractionActionName
+                .Subscribe(action => ObjectAction.text = action)
+                .AddTo(_disposables);
+                
+            model.InteractionObjectDescription
+                .Subscribe(description => ObjectDescription.text = description)
+                .AddTo(_disposables);
         }
 
         protected override void OnUnbind(InteractionViewModel model)
         {
-            _currentViewModel.OnShowHideChanged -= OnShowHideChanged;
-            _currentViewModel.OnUpdateData -= OnUpdateData;
-        }
-        
-        private void OnShowHideChanged(bool isShown)
-        {
-            gameObject.SetActive(isShown);
-        }
-
-        private void OnUpdateData()
-        {
-            ObjectName.text = _currentViewModel.InteractionObjectName;
-            ObjectAction.text = _currentViewModel.InteractionActionName;
-            ObjectDescription.text = _currentViewModel.InteractionObjectDescription;
+            // Отписки автоматически обрабатываются через _disposables.Clear() в базовом классе
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using ObservableCollections;
 using ProjectOlog.Code.Infrastructure.Application.Layers;
+using ProjectOlog.Code.Network.Profiles.Users;
 using ProjectOlog.Code.UI.Core;
 using ProjectOlog.Code.UI.HUD.Tab.Models;
 using R3;
@@ -25,6 +26,32 @@ namespace ProjectOlog.Code.UI.HUD.Tab.Presenter
         public ReactiveProperty<int> PlayerExperienceGained { get; } = new ReactiveProperty<int>();
     
         public Subject<PlayerViewModel> PlayerTeamChanged { get; } = new Subject<PlayerViewModel>();
+        
+        private NetworkToTabAdapter _networkToTabAdapter;
+
+        public TabViewModel(NetworkUsersContainer usersContainer) : base()
+        {
+            _networkToTabAdapter = new NetworkToTabAdapter(usersContainer, this);
+
+            SetupInitialData();
+        }
+
+        private void SetupInitialData()
+        {
+            // Устанавливаем информацию о матче
+            this.SetMatchInfo(
+                "2х2 не мешать!", 
+                "Сервер 7 Москва (11 - 20 уровень)",
+                "Ангар. задний двор.",
+                "(CD) Захват флага"
+            );
+        
+            // Устанавливаем статистику игрока
+            this.SetPlayerStats(17, 9000, 97, 10000);
+            
+            // Создание команд
+            this.AddTeam(1, "Игроки", 5);
+        }
         
         public void SetMatchInfo(string roomName, string serverName, string mapName, string modeName)
         {
@@ -61,14 +88,6 @@ namespace ProjectOlog.Code.UI.HUD.Tab.Presenter
         public PlayerViewModel AddPlayer(string name, int teamID, bool isLocal = false)
         {
             var player = new PlayerViewModel(name, teamID, isLocal);
-
-            var random = new Random();
-            
-            player.Deaths.Value = random.Next(0, 70);
-            player.Kills.Value = random.Next(0, 70);
-            
-            player.IsDead.Value = player.Kills.Value % 2 == 0;
-            //player.IsLocal.Value = player.Deaths.Value % 2 == 0;
             
             // Подписываемся на изменение команды
             player.TeamID.Subscribe(_ => PlayerTeamChanged.OnNext(player))
@@ -105,6 +124,8 @@ namespace ProjectOlog.Code.UI.HUD.Tab.Presenter
             PlayerNextLevelExperience.Dispose();
         
             PlayerTeamChanged.Dispose();
+            
+            _networkToTabAdapter.Dispose();
         }
 
         public void ShowLayer() => Show();

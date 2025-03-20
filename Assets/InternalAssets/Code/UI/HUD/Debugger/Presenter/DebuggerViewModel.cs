@@ -5,13 +5,8 @@ using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.Debugger
 {
-    public class DebuggerViewModel: BaseViewModel, ILayer
+    public class DebuggerViewModel: BaseViewModel
     {
-        public bool IsActive => _isActive;
-        
-        public Action<bool> OnShowHideChanged;
-        public Action OnDebuggerUpdate;
-
         // Основные данные
         public float FrameRate;
         public Vector3 Position;
@@ -30,29 +25,5 @@ namespace ProjectOlog.Code.UI.HUD.Debugger
         public int BytesOutPerSecond;
         public int PacketsOutPerSecond;
         public float PacketLoss;
-        
-        private bool _isActive;
-
-        public DebuggerViewModel()
-        {
-            OnShowHideChanged = null;
-        }
-
-        public void DebuggerUpdate()
-        {
-            OnDebuggerUpdate?.Invoke();
-        }
-        
-        public void ShowLayer()
-        {
-            _isActive = true;
-            OnShowHideChanged?.Invoke(_isActive);
-        }
-
-        public void HideLayer()
-        {
-            _isActive = false;
-            OnShowHideChanged?.Invoke(_isActive);
-        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using ProjectOlog.Code.Network.Gameplay.Core.Enums;
 using ProjectOlog.Code.UI.Core;
+using R3;
 using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.InventoryPanel
@@ -12,64 +13,71 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
         [SerializeField] private List<ObjectInventorySlot> _inventoryItems = new List<ObjectInventorySlot>();
         
         private List<InventorySlotUI> _inventorySlotUI = new List<InventorySlotUI>();
+
         private InventoryViewModel _currentViewModel;
         
         protected override void OnBind(InventoryViewModel model)
         {
+            // Установим HideOnAwake для скрытия экрана после инициализации
             HideOnAwake = true;
             
-            _currentViewModel = model;
-            _currentViewModel.OnShowHideChanged += OnShowHideChanged;
-
             CreateInventorySlots();
+            
+            // Подписываемся на изменения выбранного предмета
+            model.SelectedObjectID
+                .Subscribe(OnSelectedItemChanged)
+                .AddTo(_disposables);
         }
 
         protected override void OnUnbind(InventoryViewModel model)
         {
-            _currentViewModel.OnShowHideChanged -= OnShowHideChanged;
-
-            OnDestroy();
+            ClearInventorySlots();
+        }
+        
+        private void OnSelectedItemChanged(ENetworkObjectType objectID)
+        {
+            // Можно добавить визуальное выделение выбранного слота
+            foreach (var slot in _inventorySlotUI)
+            {
+                bool isSelected = slot.ObjectID == objectID;
+            }
         }
         
         private void CreateInventorySlots()
         {
+            ClearInventorySlots();
+            
             foreach (var item in _inventoryItems)
             {
                 // Создаем клон префаба слота инвентаря
                 InventorySlotUI inventorySlot = Instantiate(_inventorySlotPrefab, _inventorySlotsParent);
                 inventorySlot.gameObject.SetActive(true);
 
-                // Настройка UI элементов внутри слота исходя из данных ObjectInventorySlot
+                // Настройка UI элементов внутри слота
                 inventorySlot.Icon.sprite = item.Icon;
                 inventorySlot.ItemName = item.ItemName;
                 inventorySlot.Discription = item.Discription;
                 inventorySlot.ObjectID = item.ObjectID;
 
-                inventorySlot.SelectInventorySlot += OnInventorySlotClicked;
+                // Привязываем обработчик клика к методу в ViewModel
+                inventorySlot.SelectInventorySlot = (objectID) => _model.SelectInventorySlot(objectID);
 
                 _inventorySlotUI.Add(inventorySlot);
             }
         }
-
-        public void OnInventorySlotClicked(ENetworkObjectType objectID)
-        {
-            if (this.isActiveAndEnabled)
-            {
-                _currentViewModel.OnInventorySlotClicked(objectID);
-            }
-        }
-
-        private void OnShowHideChanged(bool isShown)
-        {
-            gameObject.SetActive(isShown);
-        }
         
-        public void OnDestroy()
+        private void ClearInventorySlots()
         {
             foreach (var item in _inventorySlotUI)
             {
-                item.SelectInventorySlot -= OnInventorySlotClicked;
+                if (item != null)
+                {
+                    item.SelectInventorySlot = null;
+                    Destroy(item.gameObject);
+                }
             }
+            
+            _inventorySlotUI.Clear();
         }
     }
 }

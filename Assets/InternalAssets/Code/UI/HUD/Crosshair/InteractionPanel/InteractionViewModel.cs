@@ -1,87 +1,45 @@
 ﻿using System;
 using ProjectOlog.Code.UI.Core;
+using R3;
 
 namespace ProjectOlog.Code.UI.HUD.CrossHair.InteractionPanel
 {
     public class InteractionViewModel: BaseViewModel
     {
-        public bool IsVisible
-        {
-            get => _isVisible;
-            set
-            {
-                if (_isVisible != value)
-                {
-                    _isVisible = value;
-                    OnShowHideChanged?.Invoke(value);
-                }
-            }
-        }
+        // Использование реактивных свойств вместо обычных свойств с событиями
+        private ReactiveProperty<string> _interactionObjectName = new ReactiveProperty<string>(string.Empty);
+        private ReactiveProperty<string> _interactionObjectDescription = new ReactiveProperty<string>(string.Empty);
+        private ReactiveProperty<string> _interactionActionName = new ReactiveProperty<string>(string.Empty);
         
-        public string InteractionObjectName
-        {
-            get => _interactionObjectName;
-            set
-            {
-                if (InteractionObjectName != value)
-                {
-                    _interactionObjectName = value;
-                    OnUpdateData?.Invoke();
-                }
-            }
-        }
-        
-        public string InteractionObjectDescription
-        {
-            get => _interactionObjectDescription;
-            set
-            {
-                if (_interactionObjectDescription != value)
-                {
-                    _interactionObjectDescription = value;
-                    OnUpdateData?.Invoke();
-                }
-            }
-        }
-        
-        public string InteractionActionName
-        {
-            get => _interactionActionName;
-            set
-            {
-                if (_interactionActionName != value)
-                {
-                    _interactionActionName = value;
-                    OnUpdateData?.Invoke();
-                }
-            }
-        }
-        
-        
-        
-        public Action<bool> OnShowHideChanged;
-        public Action OnUpdateData;
-        
-        private bool _isVisible;
-        private string _interactionObjectName;
-        private string _interactionObjectDescription;
-        private string _interactionActionName;
+        public ReadOnlyReactiveProperty<string> InteractionObjectName => _interactionObjectName.ToReadOnlyReactiveProperty();
+        public ReadOnlyReactiveProperty<string> InteractionObjectDescription => _interactionObjectDescription.ToReadOnlyReactiveProperty();
+        public ReadOnlyReactiveProperty<string> InteractionActionName => _interactionActionName.ToReadOnlyReactiveProperty();
         
         public InteractionViewModel()
         {
-            _isVisible = false;
-            OnShowHideChanged = null;
-            
-            InteractionObjectName = string.Empty;
-            InteractionObjectDescription = string.Empty;
-            InteractionActionName = string.Empty;
+            // Конструктор базового класса уже инициализирует видимость
+        }
+
+        public void SetInteractionObjectName(string value)
+        {
+            _interactionObjectName.Value = value;
+        }
+        
+        public void SetInteractionObjectDescription(string value)
+        {
+            _interactionObjectDescription.Value = value;
+        }
+        
+        public void SetInteractionActionName(string value)
+        {
+            _interactionActionName.Value = value;
         }
 
         public void ClearInfoText()
         {
-            InteractionObjectName = string.Empty;
-            InteractionObjectDescription = string.Empty;
-            InteractionActionName = string.Empty;
+            _interactionObjectName.Value = string.Empty;
+            _interactionObjectDescription.Value = string.Empty;
+            _interactionActionName.Value = string.Empty;
         }
     }
 }

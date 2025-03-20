@@ -25,13 +25,13 @@ namespace ProjectOlog.Code.UI.HUD.Debugger.Systems
         {
             if (UnityEngine.Input.GetKeyDown(KeyCode.F3))
             {
-                if (_debuggerViewModel.IsActive)
+                if (_debuggerViewModel.IsLocalVisible.CurrentValue)
                 {
-                    _debuggerViewModel.HideLayer();
+                    _debuggerViewModel.Hide();
                 }
                 else
                 {
-                    _debuggerViewModel.ShowLayer();
+                    _debuggerViewModel.Show();
                 }
             }
         }

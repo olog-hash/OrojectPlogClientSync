@@ -60,16 +60,20 @@ namespace ProjectOlog.Code.Features.Players.SyncObjectActions
 
                             if (interactionObjectComponent.ObjectStateManager.IsAvaliableToInteract())
                             {
-                                _interactionViewModel.IsVisible = true;
+                                _interactionViewModel.Show();
+                                
                                 // Название обьекта
-                                _interactionViewModel.InteractionObjectName = interactionObjectComponent
-                                    .ObjectStateManager.InteractionObjectName;
+                                _interactionViewModel.SetInteractionObjectName(interactionObjectComponent
+                                    .ObjectStateManager.InteractionObjectName);
+                                
                                 // Описание обьекта
-                                _interactionViewModel.InteractionObjectDescription = interactionObjectComponent
-                                    .ObjectStateManager.InteractionObjectDescription;
+                                _interactionViewModel.SetInteractionObjectDescription(interactionObjectComponent
+                                    .ObjectStateManager.InteractionObjectDescription);
+                                
                                 // Название действия.
                                 var actionName = interactionObjectComponent.ObjectStateManager.GetStateInteractName();
-                                _interactionViewModel.InteractionActionName = $"F - {actionName}";
+                                string finalActionName = $"F - {actionName}";
+                                _interactionViewModel.SetInteractionActionName(finalActionName);
 
                                 if (playerInputs.IsUseLocked)
                                 {
@@ -79,19 +83,19 @@ namespace ProjectOlog.Code.Features.Players.SyncObjectActions
                             }
                             else
                             {
-                                _interactionViewModel.IsVisible = false;  
+                                _interactionViewModel.Hide(); 
                             }
                         }
                     }
                     else
                     {
-                        _interactionViewModel.IsVisible = false;
+                        _interactionViewModel.Hide();
                         _interactionViewModel.ClearInfoText();
                     }
                 }
                 else
                 {
-                    _interactionViewModel.IsVisible = false;
+                    _interactionViewModel.Hide();
                     _interactionViewModel.ClearInfoText();
                 }
             }

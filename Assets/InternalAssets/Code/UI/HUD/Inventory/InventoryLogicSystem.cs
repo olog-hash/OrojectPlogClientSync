@@ -42,7 +42,8 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
            
             if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
-                if (!LayersManager.IsLayerActive(LAYER_NAME) && LayersManager.IsLayerCanBeShown(LAYER_NAME))
+                if (!LayersManager.IsLayerActive(LAYER_NAME) && LayersManager.IsLayerCanBeShown(LAYER_NAME) &&
+                    !_localPlayerMonitoring.IsDead())
                 {
                     LayersManager.ShowLayer(LAYER_NAME);
                 }

@@ -33,47 +33,52 @@ namespace ProjectOlog.Code.Features.Players.Visual.CrossPanel
             // Базовые проверки
             if (_localPlayerMonitoring.IsDead() || !_localPlayerMonitoring.TryGetLocalPlayer(out Entity playerEntity))
             {
-                _crossViewModel.IsTargetOnAim = false;
+                _crossViewModel.SetTargetOnAim(false);
                 return;
             }
     
             if (playerEntity.TryGetComponent(out ShotOrigin shotOrigin))
             {
-                RaycastHit[] hits = Physics.RaycastAll(
-                    shotOrigin.ShotOriginTranslation.position,
-                    shotOrigin.ShotOriginTranslation.Transform.forward,
-                    Mathf.Infinity
-                );
+                bool targetOnAim = CheckShotOriginEnemyTarget(shotOrigin);
                 
-                // Сортируем попадания по дистанции
-                Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
-        
-                if (hits.Length > 0)
+                _crossViewModel.SetTargetOnAim(targetOnAim);
+            }
+        }
+
+        private bool CheckShotOriginEnemyTarget(ShotOrigin shotOrigin)
+        {
+            RaycastHit[] hits = Physics.RaycastAll(
+                shotOrigin.ShotOriginTranslation.position,
+                shotOrigin.ShotOriginTranslation.Transform.forward,
+                Mathf.Infinity
+            );
+
+            // Сортируем попадания по дистанции
+            Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+            if (hits.Length > 0)
+            {
+                // Проверяем первый коллайдер
+                if (hits[0].collider.CompareTag("Player"))
                 {
-                    // Проверяем первый коллайдер
-                    if (hits[0].collider.CompareTag("Player"))
+                    // Если это игрок и есть второй коллайдер - проверяем его
+                    if (hits.Length > 1)
                     {
-                        // Если это игрок и есть второй коллайдер - проверяем его
-                        if (hits.Length > 1)
-                        {
-                            _crossViewModel.IsTargetOnAim = hits[1].collider.GetComponent<DamagableMarker>() != null;
-                        }
-                        else
-                        {
-                            _crossViewModel.IsTargetOnAim = false;
-                        }
+                        return hits[1].collider.GetComponent<DamagableMarker>() != null;
                     }
                     else
                     {
-                        // Если первый коллайдер не игрок - проверяем только его
-                        _crossViewModel.IsTargetOnAim = hits[0].collider.GetComponent<DamagableMarker>() != null;
+                        return false;
                     }
                 }
                 else
                 {
-                    _crossViewModel.IsTargetOnAim = false;
+                    // Если первый коллайдер не игрок - проверяем только его
+                    return hits[0].collider.GetComponent<DamagableMarker>() != null;
                 }
             }
+
+            return false;
         }
     }
 }

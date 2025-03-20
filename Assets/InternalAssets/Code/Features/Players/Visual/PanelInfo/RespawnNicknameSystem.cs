@@ -46,7 +46,7 @@ namespace ProjectOlog.Code.Features.Players.Visual.PanelInfo
         public void SpawnEvent(RespawnPlayerEvent respawnEvent)
         {
             var playerProvider = respawnEvent.PlayerProvider;
-            if (playerProvider is null || !playerProvider.Entity.Has<NetworkPlayer>() || playerProvider.Entity.Has<LocalPlayerMarker>()) return;
+            if (playerProvider is null || !playerProvider.Entity.Has<NetworkPlayer>()) return;
 
             EnableNicknamePanel(playerProvider.Entity, true);
         }
@@ -54,7 +54,7 @@ namespace ProjectOlog.Code.Features.Players.Visual.PanelInfo
         private void DeathEvent(EntityVictimEvent entityVictimEvent, Entity entityEvent)
         {
             var playerEntity = entityVictimEvent.VictimEntity;
-            if (playerEntity is null || playerEntity.Has<LocalPlayerMarker>()) return;
+            if (playerEntity is null || !playerEntity.Has<NetworkPlayer>()) return;
 
             EnableNicknamePanel(playerEntity, false);
         }

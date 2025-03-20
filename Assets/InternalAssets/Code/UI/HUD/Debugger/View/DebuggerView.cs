@@ -21,14 +21,11 @@ namespace ProjectOlog.Code.UI.HUD.Debugger
             HideOnAwake = true;
             
             _currentViewModel = model;
-            _currentViewModel.OnShowHideChanged += OnShowHideChanged;
-            _currentViewModel.OnDebuggerUpdate += OnDebuggerUpdate;
         }
         
         protected override void OnUnbind(DebuggerViewModel model)
         {
-            _currentViewModel.OnShowHideChanged -= OnShowHideChanged;
-            _currentViewModel.OnDebuggerUpdate -= OnDebuggerUpdate;
+            
         }
 
         private void Update()
@@ -49,16 +46,6 @@ OUT: {_currentViewModel.BytesOutPerSecond / 1000f} KB/s({_currentViewModel.Packe
 Loss: {_currentViewModel.PacketLoss}";
 
             _secondDebuggerText.text = string.Empty;
-        }
-
-        private void OnDebuggerUpdate()
-        {
-            
-        }
-        
-        private void OnShowHideChanged(bool isShown)
-        {
-            gameObject.SetActive(isShown);
         }
     }
 }
