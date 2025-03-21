@@ -13,7 +13,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Services
         private const float PADDING = 10f;
 
         public Dictionary<int, float> CalculateTeamHeights(
-            IList<TeamViewModel> teams,
+            IList<TeamModel> teams,
             Dictionary<int, VisualElement> teamElements,
             float totalAvailableHeight)
         {

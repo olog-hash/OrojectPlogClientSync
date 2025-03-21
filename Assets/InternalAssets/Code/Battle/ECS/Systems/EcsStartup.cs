@@ -72,6 +72,7 @@ namespace ProjectOlog.Code.Battle.ECS.Systems
             
             _systemsFactory.CreateFeature<PlayerAnimationsFeature>(_systemsGroup);
 
+            _systemsFactory.CreateSystem<UserDataInitDestroySystem>(_systemsGroup);
             _systemsFactory.CreateSystem<UserDataRespawnSystem>(_systemsGroup);
             
             _systemsFactory.CreateSystem<InterpolationVariableUpdateSystem>(_systemsGroup);

@@ -31,11 +31,11 @@ namespace ProjectOlog.Code.UI.HUD.PlayerStatus.HealthPanel
             {
                 ref var healthComponent = ref localPlayerEntity.GetComponent<HealthArmorComponent>();
                 
-                _playerStatsViewModel.MaxHealth.Value = healthComponent.MaxHealth;
-                _playerStatsViewModel.Health.Value = healthComponent.Health;
+                _playerStatsViewModel.HealthArmorModel.SetMaxHealth(healthComponent.MaxHealth);
+                _playerStatsViewModel.HealthArmorModel.SetHealth(healthComponent.Health);
                 
-                _playerStatsViewModel.MaxArmor.Value = 100;
-                _playerStatsViewModel.Armor.Value = healthComponent.Armor;
+                _playerStatsViewModel.HealthArmorModel.SetMaxArmor(100);
+                _playerStatsViewModel.HealthArmorModel.SetArmor(healthComponent.Armor);
             }
         }
     }

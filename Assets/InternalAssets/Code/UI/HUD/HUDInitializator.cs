@@ -11,6 +11,8 @@ using ProjectOlog.Code.UI.HUD.InventoryPanel;
 using ProjectOlog.Code.UI.HUD.Killbar.Presenter;
 using ProjectOlog.Code.UI.HUD.Killbar.View;
 using ProjectOlog.Code.UI.HUD.KillPanel;
+using ProjectOlog.Code.UI.HUD.Overlays.DamageScreen.Presenter;
+using ProjectOlog.Code.UI.HUD.Overlays.DamageScreen.View;
 using ProjectOlog.Code.UI.HUD.PlayerStats.Presenter;
 using ProjectOlog.Code.UI.HUD.PlayerStats.View;
 using ProjectOlog.Code.UI.HUD.PlayerStatus;
@@ -70,6 +72,7 @@ namespace ProjectOlog.Code.UI.HUD
             
             _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<NotificationViewModel>());
             _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<KillbarViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<DamageScreenViewModel>());
             
             _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<PlayerBlockViewModel>());
             
@@ -100,6 +103,8 @@ namespace ProjectOlog.Code.UI.HUD
             _interfaceBindLogic.SwitchView<DebuggerView>();
             _interfaceBindLogic.SwitchView<NotificationView>();
             _interfaceBindLogic.SwitchView<KillbarView>();
+            
+            _interfaceBindLogic.SwitchView<DamageScreenView>();
             
             _interfaceBindLogic.SwitchView<InventoryView>();
         }

@@ -3,6 +3,7 @@ using ProjectOlog.Code.UI.HUD.Debugger.Systems;
 using ProjectOlog.Code.UI.HUD.InventoryPanel;
 using ProjectOlog.Code.UI.HUD.KillPanel.Systems;
 using ProjectOlog.Code.UI.HUD.KillPanel.Systems.PlayerNotifications;
+using ProjectOlog.Code.UI.HUD.Overlays.DamageScreen;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.HealthPanel;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Systems;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Systems.PlayerNotifications;
@@ -24,6 +25,7 @@ namespace ProjectOlog.Code.Battle.ECS.Systems.Features
             _systemsFactory.CreateSystem<DebuggerLogicSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<NotificationLogicSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<KillbarLogicSystem>(_systemsGroup);
+            _systemsFactory.CreateSystem<DamageScreenEventSystem>(_systemsGroup);
 
             _systemsFactory.CreateSystem<VisibleHudCameraSystem>(_systemsGroup);
 

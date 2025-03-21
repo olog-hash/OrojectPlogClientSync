@@ -40,14 +40,14 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Controllers
 
             // Подписываемся на изменения в списке команд через один Observable
             Observable.Merge(
-                _model.Teams.ObserveCountChanged().Select(_ => Unit.Default),
-                _model.Teams.ObserveAdd().Select(_ => Unit.Default),
-                _model.Teams.ObserveRemove().Select(_ => Unit.Default),
-                _model.Teams.ObserveReplace().Select(_ => Unit.Default)
+                _model.TeamsManagerModel.Teams.ObserveCountChanged().Select(_ => Unit.Default),
+                _model.TeamsManagerModel.Teams.ObserveAdd().Select(_ => Unit.Default),
+                _model.TeamsManagerModel.Teams.ObserveRemove().Select(_ => Unit.Default),
+                _model.TeamsManagerModel.Teams.ObserveReplace().Select(_ => Unit.Default)
             ).Subscribe(_ => RefreshTeamsList()).AddTo(_disposables);
 
             // Подписываемся на изменения игроков для перерасчета высоты
-            _model.PlayerTeamChanged.Subscribe(_ => UpdateTeamHeights()).AddTo(_disposables);
+            _model.TeamsManagerModel.PlayerTeamChanged.Subscribe(_ => UpdateTeamHeights()).AddTo(_disposables);
 
             // Инициализация списка команд
             RefreshTeamsList();
@@ -67,7 +67,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Controllers
             _teamsContainer.Clear();
             _teamElements.Clear();
 
-            foreach (var team in _model.Teams)
+            foreach (var team in _model.TeamsManagerModel.Teams)
             {
                 var teamElement = _teamBlockTemplate.Instantiate();
                 _teamsContainer.Add(teamElement);
@@ -81,7 +81,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Controllers
             UpdateTeamHeights();
         }
 
-        private void SetupTeamElement(VisualElement teamElement, TeamViewModel team)
+        private void SetupTeamElement(VisualElement teamElement, TeamModel team)
         {
             // UI элементы
             var teamNameLabel = teamElement.Q<Label>("team-name");
@@ -140,7 +140,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Controllers
                 
                 // Используем внешний калькулятор для расчета высот
                 var teamHeights = _heightCalculator.CalculateTeamHeights(
-                    _model.Teams, 
+                    _model.TeamsManagerModel.Teams, 
                     _teamElements,
                     totalAvailableHeight);
                 
@@ -173,13 +173,13 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Controllers
             });
         }
 
-        private List<PlayerViewModel> CreateSortedPlayersList(TeamViewModel team)
+        private List<PlayerModel> CreateSortedPlayersList(TeamModel team)
         {
             // Создаем копию списка, отсортированную по рангу
             return team.Players.OrderBy(p => p.TeamRang.Value).ToList();
         }
 
-        private void BindTeamInfo(TeamViewModel team, Label nameLabel, Label countLabel, Label scoreLabel)
+        private void BindTeamInfo(TeamModel team, Label nameLabel, Label countLabel, Label scoreLabel)
         {
             // Привязка названия команды
             team.TeamName
@@ -208,7 +208,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Controllers
                 .AddTo(_disposables);
         }
 
-        private void BindPlayerItem(VisualElement element, PlayerViewModel player)
+        private void BindPlayerItem(VisualElement element, PlayerModel player)
         {
             var item = element.Q("player-list-item");
             var statusElement = element.Q<VisualElement>("player-status");

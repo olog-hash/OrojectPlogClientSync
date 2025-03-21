@@ -8,19 +8,24 @@ using R3;
 
 namespace ProjectOlog.Code.UI.HUD.Tab
 {
+    /// <summary>
+    /// Адаптер, связывающий сетевую подсистему с интерфейсом табло.
+    /// Преобразует сетевые данные о пользователях в модели игроков для отображения,
+    /// отслеживает присоединение и отключение игроков, и обновляет их статистику.
+    /// </summary>
     public class NetworkToTabAdapter : IDisposable
     {
         private readonly NetworkUsersContainer _usersContainer;
-        private readonly TabViewModel _tabViewModel;
+        private readonly TeamsManagerModel _TeamsManagerModel;
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
 
         // Словарь для отслеживания связи между сетевыми пользователями и их представлениями в Tab
-        private readonly Dictionary<byte, PlayerViewModel> _playerViewModels = new Dictionary<byte, PlayerViewModel>();
+        private readonly Dictionary<byte, PlayerModel> _playerViewModels = new Dictionary<byte, PlayerModel>();
 
-        public NetworkToTabAdapter(NetworkUsersContainer usersContainer, TabViewModel tabViewModel)
+        public NetworkToTabAdapter(NetworkUsersContainer usersContainer, TeamsManagerModel teamsManagerModel)
         {
             _usersContainer = usersContainer;
-            _tabViewModel = tabViewModel;
+            _TeamsManagerModel = teamsManagerModel;
 
             // Подписываемся на события контейнера пользователей
             _usersContainer.OnUserJoin += OnUserJoin;
@@ -52,7 +57,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab
         {
             if (_playerViewModels.TryGetValue(userId, out var playerViewModel))
             {
-                _tabViewModel.RemovePlayer(playerViewModel);
+                _TeamsManagerModel.RemovePlayer(playerViewModel);
                 _playerViewModels.Remove(userId);
             }
         }
@@ -68,7 +73,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab
             bool isLocalPlayer = userData.ID == LocalData.LocalUserID;
 
             // Создаем ViewModel для игрока и добавляем в Tab
-            var playerViewModel = _tabViewModel.AddPlayer(userData.Username,
+            var playerViewModel = _TeamsManagerModel.AddPlayer(userData.Username,
                 userData.GameState.TeamID.Value,
                 isLocalPlayer);
 
@@ -79,31 +84,31 @@ namespace ProjectOlog.Code.UI.HUD.Tab
             SubscribeToUserDataChanges(userData, playerViewModel);
         }
 
-        private void SubscribeToUserDataChanges(NetworkUserData userData, PlayerViewModel playerViewModel)
+        private void SubscribeToUserDataChanges(NetworkUserData userData, PlayerModel playerModel)
         {
             // Синхронизируем данные между UserGameState и PlayerViewModel
             userData.GameState.TeamID
-                .Subscribe(teamId => playerViewModel.ChangeTeam(teamId))
+                .Subscribe(teamId => playerModel.ChangeTeam(teamId))
                 .AddTo(_disposables);
 
             userData.GameState.IsDead
-                .Subscribe(isDead => playerViewModel.IsDead.Value = isDead)
+                .Subscribe(isDead => playerModel.IsDead.Value = isDead)
                 .AddTo(_disposables);
 
             userData.GameState.Kills
-                .Subscribe(kills => playerViewModel.Kills.Value = kills)
+                .Subscribe(kills => playerModel.Kills.Value = kills)
                 .AddTo(_disposables);
 
             userData.GameState.Deaths
-                .Subscribe(deaths => playerViewModel.Deaths.Value = deaths)
+                .Subscribe(deaths => playerModel.Deaths.Value = deaths)
                 .AddTo(_disposables);
 
             userData.GameState.Assists
-                .Subscribe(assists => playerViewModel.Assists.Value = assists)
+                .Subscribe(assists => playerModel.Assists.Value = assists)
                 .AddTo(_disposables);
 
             userData.GameState.Ping
-                .Subscribe(ping => playerViewModel.Ping.Value = ping)
+                .Subscribe(ping => playerModel.Ping.Value = ping)
                 .AddTo(_disposables);
         }
 

@@ -1,35 +1,23 @@
 ﻿using ProjectOlog.Code.UI.Core;
+using ProjectOlog.Code.UI.HUD.PlayerStatus.PlayerStats.Models;
 using R3;
 using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.PlayerStats.Presenter
 {
+    /// <summary>
+    /// Модель-представление статистики игрока.
+    /// Координирует отображение и обновление различных показателей состояния игрока,
+    /// включая здоровье и броню. Служит связующим звеном между моделями данных
+    /// игрока и их визуальным представлением в интерфейсе.
+    /// </summary>
     public class PlayerStatsViewModel : BaseViewModel
     {
-        // Реактивные свойства для здоровья и брони
-        public ReactiveProperty<float> Health { get; } = new ReactiveProperty<float>(100f);
-        public ReactiveProperty<float> MaxHealth { get; } = new ReactiveProperty<float>(100f);
-        
-        public ReactiveProperty<float> Armor { get; } = new ReactiveProperty<float>(100f);
-        public ReactiveProperty<float> MaxArmor { get; } = new ReactiveProperty<float>(100f);
-        
-        // Методы для изменения значений здоровья и брони
-        public void SetHealth(float value)
-        {
-            Health.Value = Mathf.Clamp(value, 0, MaxHealth.Value);
-        }
-        
-        public void SetArmor(float value)
-        {
-            Armor.Value = Mathf.Clamp(value, 0, MaxArmor.Value);
-        }
+        public HealthArmorModel HealthArmorModel { get; } = new HealthArmorModel();
         
         public override void Dispose()
         {
-            Health.Dispose();
-            MaxHealth.Dispose();
-            Armor.Dispose();
-            MaxArmor.Dispose();
+            HealthArmorModel.Dispose();
             
             base.Dispose();
         }

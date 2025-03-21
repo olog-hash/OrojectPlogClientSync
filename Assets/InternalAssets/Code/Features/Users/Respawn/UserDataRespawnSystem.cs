@@ -1,5 +1,6 @@
 ﻿using ProjectOlog.Code.Features.Players.Respawn;
 using ProjectOlog.Code.Mechanics.Impact.Victims;
+using ProjectOlog.Code.Mechanics.Mortality.Core;
 using ProjectOlog.Code.Mechanics.Mortality.Death;
 using ProjectOlog.Code.Network.Gameplay.Core.Components;
 using ProjectOlog.Code.Network.Profiles.Users;
@@ -55,9 +56,10 @@ namespace ProjectOlog.Code.Network.Gameplay.UserDataGameUpdate
 
             ref var networkPlayer = ref playerEntity.GetComponent<NetworkPlayer>();
             if (!_networkUsersContainer.TryGetUserDataByID(networkPlayer.UserID, out var userData)) return;
-            
+
             // Обновляем информацию в userData
-            userData.GameState.DeathUser();
+            bool isRealDeath = playerEntity.Has<DeadMarker>();
+            userData.GameState.KillUser(isRealDeath);
             
             // Обновляем информацию
             _networkUsersContainer.OnUsersUpdate?.Invoke();

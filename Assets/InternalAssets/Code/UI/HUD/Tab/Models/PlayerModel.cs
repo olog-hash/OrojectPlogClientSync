@@ -3,7 +3,12 @@ using R3;
 
 namespace ProjectOlog.Code.UI.HUD.Tab.Models
 {
-    public class PlayerViewModel : IDisposable
+    /// <summary>
+    /// Представляет отдельного игрока в системе табло.
+    /// Отслеживает статистику игрока (убийства, смерти, помощь),
+    /// принадлежность к команде и позицию в рейтинге команды.
+    /// </summary>
+    public class PlayerModel : IDisposable
     {
         public ReactiveProperty<int> TeamID { get; } = new ReactiveProperty<int>();
         public ReactiveProperty<int> TeamRang { get; } = new ReactiveProperty<int>();
@@ -19,7 +24,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab.Models
     
         private CompositeDisposable _disposables = new CompositeDisposable();
 
-        public PlayerViewModel(string name, int teamID, bool isLocal = false)
+        public PlayerModel(string name, int teamID, bool isLocal = false)
         {
             Name.Value = name;
             TeamID.Value = teamID;

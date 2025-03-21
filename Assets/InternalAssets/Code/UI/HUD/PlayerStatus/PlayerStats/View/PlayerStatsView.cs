@@ -29,47 +29,49 @@ namespace ProjectOlog.Code.UI.HUD.PlayerStats.View
 
         protected override void OnBind(PlayerStatsViewModel model)
         {
+            var healthArmorModel = model.HealthArmorModel;
+            
             // Устанавливаем начальные максимальные значения
             if (_healthIndicator != null)
             {
-                _healthIndicator.SetMaxValue(model.MaxHealth.Value);
+                _healthIndicator.SetMaxValue(healthArmorModel.MaxHealth.Value);
             }
             
             if (_armorIndicator != null)
             {
-                _armorIndicator.SetMaxValue(model.MaxArmor.Value);
+                _armorIndicator.SetMaxValue(healthArmorModel.MaxArmor.Value);
             }
             
             // Подписываемся на изменения здоровья
-            model.Health
+            healthArmorModel.Health
                 .Subscribe(health => {
                     if (_healthIndicator != null)
                         _healthIndicator.SetValue(health);
                 })
                 .AddTo(_disposables);
                 
-            model.MaxHealth
+            healthArmorModel.MaxHealth
                 .Subscribe(maxHealth => {
                     if (_healthIndicator != null) {
                         _healthIndicator.SetMaxValue(maxHealth);
-                        _healthIndicator.SetValue(model.Health.Value); // Обновляем текущее значение
+                        _healthIndicator.SetValue(healthArmorModel.Health.Value); // Обновляем текущее значение
                     }
                 })
                 .AddTo(_disposables);
             
             // Подписываемся на изменения брони
-            model.Armor
+            healthArmorModel.Armor
                 .Subscribe(armor => {
                     if (_armorIndicator != null)
                         _armorIndicator.SetValue(armor);
                 })
                 .AddTo(_disposables);
                 
-            model.MaxArmor
+            healthArmorModel.MaxArmor
                 .Subscribe(maxArmor => {
                     if (_armorIndicator != null) {
                         _armorIndicator.SetMaxValue(maxArmor);
-                        _armorIndicator.SetValue(model.Armor.Value); // Обновляем текущее значение
+                        _armorIndicator.SetValue(healthArmorModel.Armor.Value); // Обновляем текущее значение
                     }
                 })
                 .AddTo(_disposables);

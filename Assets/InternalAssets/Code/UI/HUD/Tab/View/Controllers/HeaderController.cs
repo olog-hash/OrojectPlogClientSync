@@ -33,19 +33,19 @@ namespace ProjectOlog.Code.UI.HUD.Tab.View.Controllers
             _model = model;
         
             // Подписываемся на изменения
-            _model.RoomName
+            _model.MatchInfoModel.RoomName
                 .Subscribe(name => _roomNameLabel.text = name)
                 .AddTo(_disposables);
             
-            _model.ServerName
+            _model.MatchInfoModel.ServerName
                 .Subscribe(name => _serverNameLabel.text = name)
                 .AddTo(_disposables);
             
-            _model.MapName
+            _model.MatchInfoModel.MapName
                 .Subscribe(name => _mapNameLabel.text = name)
                 .AddTo(_disposables);
             
-            _model.ModeName
+            _model.MatchInfoModel.ModeName
                 .Subscribe(name => _modeNameLabel.text = name)
                 .AddTo(_disposables);
         }
