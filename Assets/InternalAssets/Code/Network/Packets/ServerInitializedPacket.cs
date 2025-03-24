@@ -1,5 +1,6 @@
 ﻿using LiteNetLib.Utils;
 using ProjectOlog.Code.Network.Packets.SubPackets.Instantiate;
+using ProjectOlog.Code.Network.Packets.SubPackets.Users;
 
 namespace ProjectOlog.Code.Network.Packets
 {
@@ -8,7 +9,7 @@ namespace ProjectOlog.Code.Network.Packets
         // Базовая информация о сервере
         public uint Tickrate;
         
-        public InitUserPacket[] InitUsers;
+        public InstantiateUserPacket InitUsers;
         public InstantiatePlayerPacket InstantiatePlayerPacket;
         public InstantiateObjectPacket InstantiateObjectPacket;
 
@@ -21,7 +22,7 @@ namespace ProjectOlog.Code.Network.Packets
         {
             Tickrate = dataPackage.GetUInt();
             
-            InitUsers = dataPackage.GetCustomArray<InitUserPacket>();
+            InitUsers = dataPackage.GetCustom<InstantiateUserPacket>();
             InstantiatePlayerPacket = dataPackage.GetCustom<InstantiatePlayerPacket>();
             InstantiateObjectPacket = dataPackage.GetCustom<InstantiateObjectPacket>();
         }

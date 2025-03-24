@@ -5,7 +5,9 @@ using ProjectOlog.Code.Features.Players.Instantiate;
 using ProjectOlog.Code.Network.Infrastructure.Core;
 using ProjectOlog.Code.Network.Infrastructure.SubComponents.Core;
 using ProjectOlog.Code.Network.Packets;
+using ProjectOlog.Code.Network.Packets.SubPackets.Users;
 using ProjectOlog.Code.Network.Profiles.Users;
+using ProjectOlog.Code.Network.Serialization.MetaData.Users;
 using ProjectOlog.Code.UI.HUD;
 using Scellecs.Morpeh;
 
@@ -13,6 +15,8 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
 {
     public sealed class UserConnectionNetworker : NetWorkerClient
     {
+        private InstantiateUserUnpacker _instantiateUserUnpacker = new();
+
         public void ServerInitializeRequest()
         {
             var dataPackage = new NetDataPackage();
@@ -25,15 +29,16 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
         {  
             var serverInitializedCached = new ServerInitializedPacket();
             serverInitializedCached.Deserialize(dataPackage);
-            
-            // Заполняем мета-информацию о пользователях на сервере
-            foreach (var userData in serverInitializedCached.InitUsers)
-            {
-                var user = new NetworkUserData(userData.UserID, userData.Username);
-                user.GameState.Deaths.Value = userData.DeathCount;
-                user.GameState.IsDead.Value = userData.IsDead;
 
-                _usersContainer.AddUser(user);
+            // Заполняем мета-информацию о пользователях на сервере
+            if (serverInitializedCached.InitUsers.UserDataPackets.Length > 0)
+            {
+                var usersArray = _instantiateUserUnpacker.UnpackInstantiateUsersPacket(serverInitializedCached.InitUsers);
+
+                for (int i = 0; i < usersArray.Length; i++)
+                {
+                    _usersContainer.AddUser(usersArray[i]);
+                }
             }
             
             // Спавним пользователей что имеются.
@@ -62,13 +67,21 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
         [NetworkCallback]
         public void OnUserConnected(NetPeer peer, NetDataPackage dataPackage)
         {
-            var userDataCached = new InitUserPacket();
-            userDataCached.Deserialize(dataPackage);
+            var initUsersPacket = new InstantiateUserPacket();
+            initUsersPacket.Deserialize(dataPackage);
 
-            var user = new NetworkUserData(userDataCached.UserID, userDataCached.Username);
-            _usersContainer.AddUser(user);
+            // Заполняем мета-информацию о пользователях на сервере
+            if (initUsersPacket.UserDataPackets.Length > 0)
+            {
+                var usersArray = _instantiateUserUnpacker.UnpackInstantiateUsersPacket(initUsersPacket);
 
-            NotificationUtilits.ProcessNoneMessage($"Игрок {userDataCached.Username} зашел на сервер!");
+                for (int i = 0; i < usersArray.Length; i++)
+                {
+                    _usersContainer.AddUser(usersArray[i]);
+                    
+                    NotificationUtilits.ProcessNoneMessage($"Игрок {usersArray[i].Username} зашел на сервер!");
+                }
+            }
         }
         
         [NetworkCallback]

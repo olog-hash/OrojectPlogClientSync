@@ -12,10 +12,10 @@ namespace ProjectOlog.Code.Network.Profiles.Users
         public readonly UserIdentity Identity;
         public readonly UserGameState GameState;
 
-        public NetworkUserData(byte id, string username)
+        public NetworkUserData(UserIdentity identity, UserGameState gameState)
         {
-            Identity = new UserIdentity(id, username);
-            GameState = new UserGameState();
+            Identity = identity;
+            GameState = gameState;
         }
     }
 }

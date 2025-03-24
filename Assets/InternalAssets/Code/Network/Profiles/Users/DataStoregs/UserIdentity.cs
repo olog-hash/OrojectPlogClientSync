@@ -4,13 +4,13 @@
     {
         public byte ID { get; }
         public string Username { get; }
-        public string UserToken { get; set; }
         public bool IsAdmin { get; }
         
-        public UserIdentity(byte id, string username)
+        public UserIdentity(byte id, string username, bool isAdmin)
         {
             ID = id;
             Username = username;
+            IsAdmin = isAdmin;
         }
     }
 }
