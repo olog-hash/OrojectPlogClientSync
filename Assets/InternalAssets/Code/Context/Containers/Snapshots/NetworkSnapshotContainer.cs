@@ -1,14 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using ProjectOlog.Code.DataStorage.Core;
 using ProjectOlog.Code.Network.Client;
 
 namespace ProjectOlog.Code.Network.Profiles.Snapshots
 {
-    public class NetworkSnapshotContainer
+    public sealed class NetworkSnapshotContainer : ISceneContainer
     {
         public const int MAX_BUFFER_LENGTH = NetworkTime.DEFAULT_TICK_RATE * 3;
 
-        private readonly Dictionary<uint, NetworkSnapshot> _snapshots;
+        // Предварительное выделение ёмкости
+        private readonly Dictionary<uint, NetworkSnapshot> _snapshots = new Dictionary<uint, NetworkSnapshot>(MAX_BUFFER_LENGTH); 
         private uint _oldestTick;
         private uint _newestTick;
         private bool _oldestTickValid; // Флаг для отслеживания валидности _oldestTick
@@ -27,15 +29,7 @@ namespace ProjectOlog.Code.Network.Profiles.Snapshots
             }
         }
 
-        public NetworkSnapshotContainer()
-        {
-            _snapshots = new Dictionary<uint, NetworkSnapshot>(MAX_BUFFER_LENGTH); // Предварительное выделение ёмкости
-            _oldestTick = 0;
-            _newestTick = 0;
-            _oldestTickValid = true;
-        }
-
-        public void ClearContainer()
+        public void Reset()
         {
             _snapshots.Clear();
             _oldestTick = 0;

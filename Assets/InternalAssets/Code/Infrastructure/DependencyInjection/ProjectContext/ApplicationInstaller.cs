@@ -13,7 +13,7 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
                     .DerivingFrom<ApplicationState>() 
                     .Where(type => !type.IsAbstract && !type.IsGenericTypeDefinition)) // исключая абстрактные классы и определения обобщенных типов
                 .ToSelf() // привязать как их собственные типы
-                .AsTransient(); // с транзитным временем жизни
+                .AsSingle(); // с транзитным временем жизни
 
             Container.BindInterfacesAndSelfTo<ApplicationStateMachine>().AsSingle();
         }

@@ -70,7 +70,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab
         private void AddPlayerViewModel(NetworkUserData userData)
         {
             // Определяем, локальный ли это игрок
-            bool isLocalPlayer = userData.ID == LocalData.LocalUserID;
+            bool isLocalPlayer = userData.ID == LocalData.LocalID;
 
             // Создаем ViewModel для игрока и добавляем в Tab
             var playerViewModel = _TeamsManagerModel.AddPlayer(userData.Username,

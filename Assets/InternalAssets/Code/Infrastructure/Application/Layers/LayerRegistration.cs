@@ -1,8 +1,10 @@
 ﻿namespace ProjectOlog.Code.Infrastructure.Application.Layers
 {
+    /// <summary>
+    /// Класс для записи регистрации слоя со всем базовыми данными
+    /// </summary>
     public class LayerRegistration
     {
-
         public int LayerID;
         public string Layername;
         public ILayer LayerHandler;

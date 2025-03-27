@@ -5,6 +5,10 @@ using UnityEngine;
 
 namespace ProjectOlog.Code.Infrastructure.Application.Layers
 {
+    /// <summary>
+    /// Контроллер отвечающий за исполнения логики текущего (доминантного слоя).
+    /// Инкапсулирует логику применения настроек влияющие на управления в игре исходя из информации текущего слоя.
+    /// </summary>
     public class ApplicationLayersController : IUpdate
     {
         private static LayerInfo CurrentLayerInfo;

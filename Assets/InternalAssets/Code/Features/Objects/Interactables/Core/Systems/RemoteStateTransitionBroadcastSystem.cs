@@ -25,7 +25,7 @@ namespace ProjectOlog.Code.Features.Objects.Interactables.Core.Systems
                 
                 ObjectStateTransition(remoteStateTransitionEvent);
                 
-                entityEvent.Dispose();
+                entityEvent.FinalSystemDispose();
             }
         }
 

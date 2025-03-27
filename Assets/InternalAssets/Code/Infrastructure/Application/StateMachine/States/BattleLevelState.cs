@@ -13,25 +13,17 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
     /// </summary>
     public class BattleLevelState : ApplicationState
     {
-        private IClientSender _clientSender;
-        private RuntimeHelper _runtimeHelper;
-        private ApplicationStateMachine _applicationStateMachine;
         private UserConnectionNetworker _userConnectionNetworker;
 
         [Inject]
-        public BattleLevelState(RuntimeHelper runtimeHelper, ApplicationStateMachine applicationStateMachine, IClientSender clientSender, UserConnectionNetworker userConnectionNetworker)
+        public BattleLevelState(UserConnectionNetworker userConnectionNetworker)
         {
-            _runtimeHelper = runtimeHelper;
-            _applicationStateMachine = applicationStateMachine;
-            _clientSender = clientSender;
             _userConnectionNetworker = userConnectionNetworker;
         }
 
         public override void Enter()
         {
-            // Очищаем все необходимые данные
-            //BattleHUDSession.Initialize();
-
+            // Выполняем загрузку и переключения слоя.
             SceneManager.LoadScene(1);
             LayersManager.ShowLayer("Gameplay");
             

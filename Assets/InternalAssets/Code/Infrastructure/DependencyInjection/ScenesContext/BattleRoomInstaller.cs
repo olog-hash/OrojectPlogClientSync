@@ -9,7 +9,7 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
 
         public override void InstallBindings()
         {
-            Container.Bind<LocalPlayerSession>().AsSingle().NonLazy();
+            Container.Bind<LocalInventorySession>().AsSingle().NonLazy();
             Container.Bind<LocalPlayerMonitoring>().AsSingle().NonLazy();
         }
     }

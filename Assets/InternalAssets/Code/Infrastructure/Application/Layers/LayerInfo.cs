@@ -1,5 +1,11 @@
 ﻿namespace ProjectOlog.Code.Infrastructure.Application.Layers
 {
+    /// <summary>
+    /// Информация о действующем активном слое:
+    /// будет ли заблокирован курсор,
+    /// будет ли заблокировано вращение камеры,
+    /// будет ли заблокировано перемещение.
+    /// </summary>
     public readonly struct LayerInfo
     {
         public bool IsCursorLocked { get; }

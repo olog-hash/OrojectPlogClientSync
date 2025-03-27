@@ -3,6 +3,11 @@ using System.Linq;
 
 namespace ProjectOlog.Code.Infrastructure.Application.Layers
 {
+    /// <summary>
+    /// Центральное управление всеми слоями приложение.
+    /// Слои - это элементы игры (за частую интерфейса) и каждый интерфейс (или его отсутствия) может по разному влиять на игру.
+    /// Например останавливать движение, разблокировать курсор мыши и т.д.
+    /// </summary>
     public static class LayersManager
     {
         /*
@@ -11,7 +16,6 @@ namespace ProjectOlog.Code.Infrastructure.Application.Layers
          */
         
         private static Dictionary<string, LayerRegistration> _layers = new Dictionary<string, LayerRegistration>();
-        
 
         public static void Reset()
         {

@@ -18,9 +18,6 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
         public override void InstallBindings()
         {
             // Основные данные
-            Container.Bind<NetworkUsersContainer>().AsSingle();
-            Container.Bind<NetworkEntitiesContainer>().AsSingle();
-            Container.Bind<NetworkSnapshotContainer>().AsSingle();
             Container.Bind<NetTransportProvider>().AsSingle();
 
             // Распаковщики ивентов
@@ -40,7 +37,7 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
                     .DerivingFrom<BasedNetworkUnpacker>()
                     .Where(type => !type.IsAbstract && !type.IsGenericTypeDefinition))
                 .ToSelf()
-                .AsTransient();
+                .AsSingle();
         }
         
         private void BindAllNetWorkers()
@@ -59,7 +56,7 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
                     .DerivingFrom<NetWorkerClient>()
                     .Where(type => !type.IsAbstract && !type.IsGenericTypeDefinition))
                 .ToSelf()
-                .AsTransient();
+                .AsSingle();
         }
     }
 }

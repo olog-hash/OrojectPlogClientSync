@@ -26,7 +26,7 @@ namespace ProjectOlog.Code.Features.Objects.Interactables.Core.Systems
 
                 RemoteDataBroadcast(remoteObjectDataEvent);
                 
-                entityEvent.Dispose();
+                entityEvent.FinalSystemDispose();
             }
         }
 

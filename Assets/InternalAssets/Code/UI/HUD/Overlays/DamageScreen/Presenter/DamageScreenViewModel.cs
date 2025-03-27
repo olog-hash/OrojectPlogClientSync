@@ -34,9 +34,6 @@ namespace ProjectOlog.Code.UI.HUD.Overlays.DamageScreen.Presenter
         private bool _isFadingOut = false;         // Находимся ли мы в режиме окончательного затухания
         private float _fadeOutStartTime = 0f;      // Время начала финального затухания
         private float _fadeOutStartAlpha = 0f;     // Начальная альфа для финального затухания
-        
-        // Игнорируем глобальную видимость UI для эффекта урона
-        protected override bool IsCanIgnoreGlobalVisibility => true;
 
         // Активация эффекта при получении урона
         public void ApplyDamage(float damageAmount)

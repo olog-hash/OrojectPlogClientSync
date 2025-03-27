@@ -94,7 +94,7 @@ namespace ProjectOlog.Code.Features.Players.Instantiate
         {
             EntityProvider playerProvider;
             
-            if (userID == LocalData.LocalUserID)
+            if (userID == LocalData.LocalID)
             {
                 playerProvider = CreateLocalPlayer();
             }

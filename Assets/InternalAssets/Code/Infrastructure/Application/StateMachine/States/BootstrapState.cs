@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.Engine.Inputs;
+﻿using ProjectOlog.Code.DataStorage.Core;
+using ProjectOlog.Code.Engine.Inputs;
 using ProjectOlog.Code.Infrastructure.Application.Layers;
 using ProjectOlog.Code.Infrastructure.Logging;
 using ProjectOlog.Code.Infrastructure.ResourceManagement;
@@ -19,15 +20,39 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
         private ApplicationStateMachine _applicationStateMachine;
         
         private ApplicationLayersController _layersController;
+        private ContainersReloadService _containersReloadService;
 
         [Inject]
-        public BootstrapState(RuntimeHelper runtimeHelper, ApplicationStateMachine applicationStateMachine) 
+        public BootstrapState(RuntimeHelper runtimeHelper, ApplicationStateMachine applicationStateMachine, ContainersReloadService containersReloadService) 
         {
             _runtimeHelper = runtimeHelper;
             _applicationStateMachine = applicationStateMachine;
+            _containersReloadService = containersReloadService;
         }
         
         public override void Enter()
+        {
+            // Делаем lock для частоты кадров, ограничивая её способностью монитора.
+            LockRefreshRate();
+
+            // Проводим очистку данных в основных сервисах игры
+            ResetProjectServices();
+            
+            Console.Log("Bootstrap was completed.");
+            _applicationStateMachine.Enter<NetworkLunchState>();
+        }
+
+        public override void OnUpdate(float deltaTime)
+        {
+
+        }
+
+        public override void Exit()
+        {
+
+        }
+
+        private void LockRefreshRate()
         {
             // Получение частоты обновления монитора (примерно)
             int refreshRate = Screen.currentResolution.refreshRate;
@@ -36,7 +61,10 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
             UnityEngine.Device.Application.targetFrameRate = refreshRate;
 
             Debug.Log($"Включено ограничение FPS : {refreshRate}");
-            
+        }
+
+        private void ResetProjectServices()
+        {
             // Initialization
             _layersController = new ApplicationLayersController(_runtimeHelper);
             
@@ -51,18 +79,7 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
             NetworkTime.Reset();
             NetworkObjectRegistration.RegisterNetworkObjects();
             
-            Console.Log("Bootstrap was completed.");
-            _applicationStateMachine.Enter<NetworkLunchState>();
-        }
-
-        public override void OnUpdate(float deltaTime)
-        {
-
-        }
-
-        public override void Exit()
-        {
-
+            _containersReloadService.ResetAllContainers();
         }
     }
 }

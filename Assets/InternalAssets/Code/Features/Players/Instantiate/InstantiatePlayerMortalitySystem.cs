@@ -80,7 +80,7 @@ namespace ProjectOlog.Code.Features.Players.Instantiate
             {
                 if (mapping.EventIDToEntityProvider.TryGetValue(shieldProtect.EventID, out var provider))
                 {
-                    var tickEvent = World.CreateTickEvent().AddVirtualMarker();
+                    var tickEvent = World.CreateTickEvent().AddFakeEventMarker();
                     tickEvent.AddComponentData(new EntityVictimEvent() { VictimEntity = provider.Entity });
                     tickEvent.AddComponent<DeathEvent>();
                 }

@@ -35,7 +35,7 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Users
                 byte userID = dataPackage.GetByte();
                 string userName = dataPackage.GetString();
                 
-                LocalData.LocalUserID = userID;
+                LocalData.LocalID = userID;
                 
                 Debug.Log($"Запрос на регистрацию прошел успешно {userID} {userName}");
             }

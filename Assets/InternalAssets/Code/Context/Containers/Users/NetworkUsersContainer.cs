@@ -1,32 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using ProjectOlog.Code.DataStorage.Core;
 
 namespace ProjectOlog.Code.Network.Profiles.Users
 {
      /// <summary>
     /// Контейнер всех пользователей что подключены и авторизованы.
     /// </summary>
-    public class NetworkUsersContainer
+    public sealed class NetworkUsersContainer : ISceneContainer
     {
-        // Основное хранилище по ID (O(1) доступ)
-        private readonly Dictionary<byte, NetworkUserData> _usersById;
+        // Свойство для доступа к списку (при необходимости)
+        public IReadOnlyCollection<NetworkUserData> UsersList => _usersById.Values;
+        public int UsersCount => UsersList.Count;
         
+        // Основное хранилище по ID (O(1) доступ)
+        private readonly Dictionary<byte, NetworkUserData> _usersById = new Dictionary<byte, NetworkUserData>();
+        
+        // Ивенты
         public Action OnUsersUpdate;
         public Action<byte> OnUserJoin;
         public Action<byte> OnUserLeave;
 
-        public NetworkUsersContainer() 
-        {
-            _usersById = new Dictionary<byte, NetworkUserData>();
-        }
-        
-        // Свойство для доступа к списку (при необходимости)
-        public IReadOnlyCollection<NetworkUserData> UsersList => _usersById.Values;
-        public int UsersCount => UsersList.Count;
-
-        public void ClearContainer()
+        public void Reset()
         {
             _usersById.Clear();
+
+            OnUsersUpdate = null;
+            OnUserJoin = null;
+            OnUserLeave = null;
         }
         
         public void AddUser(NetworkUserData userData)

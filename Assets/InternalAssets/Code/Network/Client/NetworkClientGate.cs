@@ -44,9 +44,7 @@ namespace ProjectOlog.Code.Network.Client
 
         private void InitializeData()
         {
-            _usersContainer.ClearContainer();
-            _entitiesContainer.ClearContainer();
-            _snapshotContainer.ClearContainer();
+            // Раньше тут проводилась чистка контейнеров
         }
         
         private void RegisterAllNetWorkers()

@@ -11,8 +11,6 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
         private DiContainer _container;
         private ApplicationStateMachine _applicationStateMachine;
 
-        private NetworkUsersContainer _networkUsersContainer;
-
         [Inject]
         public MainMenuState(DiContainer container, ApplicationStateMachine applicationStateMachine)
         {
@@ -22,7 +20,7 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
 
         public override void Enter()
         {
-            _networkUsersContainer = _container.Resolve<NetworkUsersContainer>();
+            
         }
 
         public override void OnUpdate(float deltaTime)

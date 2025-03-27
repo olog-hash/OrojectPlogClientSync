@@ -1,30 +1,23 @@
 ﻿using System.Linq;
 using ProjectOlog.Code.Battle.ECS.Rules;
+using ProjectOlog.Code.DataStorage.Core;
 using ProjectOlog.Code.Network.Profiles.Entities.Containers;
 using Scellecs.Morpeh.Providers;
 using UnityEngine;
 
 namespace ProjectOlog.Code.Network.Profiles.Entities
 {
-    public class NetworkEntitiesContainer
+    public sealed class NetworkEntitiesContainer : ISceneContainer
     {
         public EcsRules EcsRules;
 
-        public PlayerEntityContainer PlayerEntities { get; }
-        public ObjectEntityContainer ObjectEntities { get; }
+        public PlayerEntityContainer PlayerEntities { get; } = new PlayerEntityContainer();
+        public ObjectEntityContainer ObjectEntities { get; } = new ObjectEntityContainer();
         
         // Статистика
         public int TotalEntitiesCount => PlayerEntities.Count + ObjectEntities.Count;
-
-        public NetworkEntitiesContainer()
-        {
-            PlayerEntities = new PlayerEntityContainer();
-            ObjectEntities = new ObjectEntityContainer();
-            
-            ClearContainer();
-        }
-
-        public void ClearContainer()
+        
+        public void Reset()
         {
             ObjectEntities.Clear();
             PlayerEntities.Clear();

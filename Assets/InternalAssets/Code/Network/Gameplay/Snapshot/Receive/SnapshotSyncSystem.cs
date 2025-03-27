@@ -49,7 +49,7 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
                 SyncRemotePlayerStates(snapshotEvent.LastServerTick);
                 SyncRemoteObjectStates(snapshotEvent.LastServerTick);
                 
-                eventEntity.Dispose();
+                eventEntity.FinalSystemDispose();
             }
         }
 

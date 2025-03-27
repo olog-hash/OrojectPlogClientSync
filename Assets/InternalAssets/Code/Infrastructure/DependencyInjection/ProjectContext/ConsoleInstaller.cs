@@ -6,7 +6,7 @@ using Console = ProjectOlog.Code.Infrastructure.Logging.Console;
 
 namespace ProjectOlog.Code.Infrastructure.DependencyInjection
 {
-    public class ConsoleInstaller: MonoInstaller
+    public class ConsoleInstaller : MonoInstaller
     {
         [SerializeField]
         private Console _console;

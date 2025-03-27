@@ -20,12 +20,12 @@ namespace ProjectOlog.Code.Features.Players.SyncObjectActions
         private Filter _localPlayerFilter;
 
         private ObjectNetworker _objectNetworker;
-        private LocalPlayerSession _localPlayerSession;
+        private LocalInventorySession _localInventorySession;
 
-        public SyncPlayerSpawnObjectSystem(ObjectNetworker objectNetworker, LocalPlayerSession localPlayerSession)
+        public SyncPlayerSpawnObjectSystem(ObjectNetworker objectNetworker, LocalInventorySession localInventorySession)
         {
             _objectNetworker = objectNetworker;
-            _localPlayerSession = localPlayerSession;
+            _localInventorySession = localInventorySession;
         }
 
 
@@ -59,7 +59,7 @@ namespace ProjectOlog.Code.Features.Players.SyncObjectActions
                     //Object.Instantiate(NetworkObjectRegistry.GetNetworkObjectPrefab(1), hit.point, lookRotation);
                     
                     // Отправляем данные
-                    _objectNetworker.SpawnObjectRequest(_localPlayerSession.CurrentSpawnObjectID, hit.point, lookRotation);
+                    _objectNetworker.SpawnObjectRequest(_localInventorySession.CurrentSpawnObjectID, hit.point, lookRotation);
                 }
             }
         }

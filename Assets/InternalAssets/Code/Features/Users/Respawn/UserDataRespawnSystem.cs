@@ -28,7 +28,7 @@ namespace ProjectOlog.Code.Network.Gameplay.UserDataGameUpdate
         public override void OnAwake()
         {
             _spawnPlayerFilter = World.Filter.With<RespawnPlayerEvent>().Build();
-            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().Without<VirtualEventMarker>().Build();
+            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().Without<FakeEventMarker>().Build();
         }
 
         public override void OnUpdate(float deltaTime)

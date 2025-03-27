@@ -4,6 +4,7 @@ using ProjectOlog.Code.Infrastructure.Application.Layers;
 using ProjectOlog.Code.Network.Gameplay.Core.Enums;
 using ProjectOlog.Code.UI.Core;
 using R3;
+using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.InventoryPanel
 {
@@ -16,18 +17,18 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
         // Событие для закрытия, как в оригинальном коде
         public event Action OnHandleClose;
         
-        private LocalPlayerSession _localPlayerSession;
+        private LocalInventorySession _localInventorySession;
 
-        public InventoryViewModel(LocalPlayerSession localPlayerSession)
+        public InventoryViewModel(LocalInventorySession localInventorySession)
         {
-            _localPlayerSession = localPlayerSession;
+            _localInventorySession = localInventorySession;
             
             // Подписываемся на изменение выбранного объекта
             _selectedObjectID
                 .Where(objectID => objectID != ENetworkObjectType.None)
                 .Subscribe(objectID => 
                 {
-                    _localPlayerSession.CurrentSpawnObjectID = objectID;
+                    _localInventorySession.CurrentSpawnObjectID = objectID;
                     OnHandleClose?.Invoke();
                 })
                 .AddTo(_disposables);

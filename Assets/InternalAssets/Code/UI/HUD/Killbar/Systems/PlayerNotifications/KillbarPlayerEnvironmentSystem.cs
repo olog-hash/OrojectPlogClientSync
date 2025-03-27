@@ -32,7 +32,7 @@ namespace ProjectOlog.Code.UI.HUD.KillPanel.Systems.PlayerNotifications
         
         public override void OnAwake()
         {
-            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().With<EnvironmentAggressorEvent>().Without<VirtualEventMarker>().Build();
+            _playerDeathFilter = World.Filter.With<DeathEvent>().With<EntityVictimEvent>().With<EnvironmentAggressorEvent>().Without<FakeEventMarker>().Build();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -59,7 +59,7 @@ namespace ProjectOlog.Code.UI.HUD.KillPanel.Systems.PlayerNotifications
         {
             string username = userData.Username;
             string environmentType = environmentAggressorEvent.EnvironmentType.ToString();
-            bool isLocalPlayer = userData.ID == LocalData.LocalUserID;
+            bool isLocalPlayer = userData.ID == LocalData.LocalID;
             
             var builder = new KillbarBuilder();
             builder

@@ -39,7 +39,7 @@ namespace ProjectOlog.Code.Features.Entities.Destruction.SingleDestroy
                 DestroyObject(destroyEvent.ServerID);
                 
                 // Удаляем дальнейших код ивента, ибо это конечная система.
-                entityEvent.Dispose();
+                entityEvent.FinalSystemDispose();
             }
         }
 

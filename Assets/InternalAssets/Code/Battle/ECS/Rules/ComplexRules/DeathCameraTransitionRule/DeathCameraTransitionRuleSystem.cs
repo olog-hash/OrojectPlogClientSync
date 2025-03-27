@@ -89,7 +89,7 @@ namespace ProjectOlog.Code.Battle.ECS.Rules.ComplexRules.DeathCameraTransitionRu
             {
                 foreach (var spectatorSwitchingEvent in _spectatorSwitchingFilter)
                 {
-                    spectatorSwitchingEvent.Dispose();
+                    spectatorSwitchingEvent.RuleDispose();
                 }
             }
         }
