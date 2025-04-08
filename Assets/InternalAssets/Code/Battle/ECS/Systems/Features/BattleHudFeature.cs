@@ -3,6 +3,8 @@ using ProjectOlog.Code.UI.HUD.Debugger.Systems;
 using ProjectOlog.Code.UI.HUD.InventoryPanel;
 using ProjectOlog.Code.UI.HUD.KillPanel.Systems;
 using ProjectOlog.Code.UI.HUD.KillPanel.Systems.PlayerNotifications;
+using ProjectOlog.Code.UI.HUD.MenuESC;
+using ProjectOlog.Code.UI.HUD.MenuESC.View;
 using ProjectOlog.Code.UI.HUD.Overlays.DamageScreen;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.HealthPanel;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Systems;
@@ -18,7 +20,8 @@ namespace ProjectOlog.Code.Battle.ECS.Systems.Features
         public override void Execute(SystemsGroup _systemsGroup, EcsSystemsFactory _systemsFactory)
         {
             _systemsFactory.CreateSystem<HealthLogicSystem>(_systemsGroup);
-            
+
+            _systemsFactory.CreateSystem<MenuEscLogicSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<ChatLogicSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<TabLogicSystem>(_systemsGroup);
             _systemsFactory.CreateSystem<InventoryLogicSystem>(_systemsGroup);

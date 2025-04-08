@@ -1,0 +1,90 @@
+.tab-radio {
+    flex-grow: 1;
+    height: 35px;
+    margin: 5px 4px;
+    border-radius: 8px;
+    background-color: rgb(45, 48, 58);
+    border-width: 1px;
+    border-color: rgb(70, 75, 90);
+    color: rgb(180, 185, 200);
+    font-size: 13px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Скрываем стандартные элементы RadioButton */
+.tab-radio .unity-radio-button__checkmark-background,
+.tab-radio .unity-radio-button__checkmark {
+    display: none;
+}
+
+/* Стилизуем текстовый элемент */
+.tab-radio .unity-radio-button__text {
+    color: rgb(180, 185, 200);
+    margin-left: 0;
+    -unity-font-style: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    -unity-text-align: middle-center;
+    flex-grow: 1;
+}
+
+/* Стилизуем состояние при наведении */
+.tab-radio:hover {
+    background-color: rgb(55, 60, 80);
+}
+
+.tab-radio:hover .unity-radio-button__text {
+    color: rgb(200, 205, 220);
+}
+
+/* Стилизуем активное состояние (при клике) */
+.tab-radio:active {
+    background-color: rgb(65, 70, 95);
+    border-color: rgb(95, 100, 125);
+}
+
+.tab-radio:active .unity-radio-button__text {
+    color: rgb(255, 255, 255);
+}
+
+/* Стилизуем выбранное состояние (checked) - аналог tab-active */
+.tab-radio:checked {
+    background-color: rgb(36, 85, 131);
+    border-color: rgb(80, 120, 180);
+    border-left-color: rgb(71, 186, 255);
+    border-right-color: rgb(71, 186, 255);
+    border-top-color: rgb(71, 186, 255);
+    border-bottom-color: rgb(71, 186, 255);
+}
+
+.tab-radio:checked .unity-radio-button__text {
+    color: rgb(255, 255, 255);
+}
+
+/* Стилизуем наведение на выбранный элемент */
+.tab-radio:checked:hover {
+    background-color: rgb(60, 110, 170);
+    border-color: rgb(90, 130, 190);
+}
+
+.tab-radio:checked:hover .unity-radio-button__text {
+    color: rgb(255, 255, 255);
+}
+
+/* Стилизуем активацию (клик) выбранного элемента */
+.tab-radio:checked:active {
+    background-color: rgb(80, 130, 180);
+    border-color: rgb(100, 150, 210);
+}
+
+.tab-radio:checked:active .unity-radio-button__text {
+    color: rgb(255, 255, 255);
+}
+
+/* Дополнительные настройки для контейнера вкладок */
+.tabs-container {
+    flex-direction: row;
+    justify-content: space-between;
+}

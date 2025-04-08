@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/InternalAssets/Resources/UIToolkit/MenuESC/MenuESCStyles.uss?fileID=7433441132597879392&amp;guid=cd636a8c82ed622458cf06d96702e2a6&amp;type=3#MenuESCStyles" />
+    <engine:VisualElement name="ecs-main" class="menu-panel" style="width: 290px;">
+        <engine:VisualElement name="header" class="menu-header">
+            <engine:Label text="МЕНЮ" class="menu-title" style="font-size: 16px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="buttons-container" class="buttons-container" style="background-color: rgba(24, 28, 35, 0); padding-bottom: 12px;">
+            <engine:Button name="returnToGame" text="ВЕРНУТЬСЯ В ИГРУ" class="menu-button" style="color: rgb(255, 255, 255); text-shadow: 0 1px 2px rgba(0, 0, 0, 0.48);" />
+            <engine:Button name="fullscreen" text="НА ВЕСЬ ЭКРАН" class="menu-button" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.48);" />
+            <engine:Button name="settings" text="НАСТРОЙКИ" class="menu-button" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);" />
+            <engine:Button name="exitToMenu" text="ВЫХОД В МЕНЮ" class="menu-button exit-button" style="margin-bottom: 4px; margin-top: 2px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

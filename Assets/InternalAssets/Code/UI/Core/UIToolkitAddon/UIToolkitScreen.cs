@@ -26,6 +26,7 @@ namespace ProjectOlog.Code.UI.Core.UIToolkitAddon
             }
 
             SetVisualElements();
+            RegisterButtonCallbacks();
         }
 
         /// <summary>
@@ -33,6 +34,12 @@ namespace ProjectOlog.Code.UI.Core.UIToolkitAddon
         /// Переопределяется внутри каждого наследного класса опционально.
         /// </summary>
         protected virtual void SetVisualElements() { }
+        
+        /// <summary>
+        /// Устанавливает все call-back'и для визуальных элементов для UI
+        /// Переопределяется внутри каждого наследного класса опционально.
+        /// </summary>
+        protected virtual void RegisterButtonCallbacks() { }
         
         // Переопределяем метод, ибо в UIToolkit отображение и сокрытие работают чуть иначе.
         protected override void ApplyVisibility(bool isVisible)

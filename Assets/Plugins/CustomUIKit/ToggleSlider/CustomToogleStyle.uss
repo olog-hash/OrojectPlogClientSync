@@ -1,0 +1,50 @@
+.toggle-container {
+    margin: 10px;
+}
+
+.slider-toggle {
+    width: 60px;
+    height: 30px;
+    margin: 5px;
+}
+
+.slider-toggle .unity-toggle__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.track {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(204, 204, 204);
+    border-radius: 15px;
+}
+
+.slider-toggle:checked .track {
+    background-color: rgb(76, 175, 80);
+}
+
+.knob {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+}
+
+.slider-toggle:checked .knob {
+    left: 32px;
+}
+
+.slider-toggle .unity-toggle__text {
+    display: none;
+}
+
+.slider-toggle #unity-checkmark {
+    display: flex;
+    visibility: hidden;
+}

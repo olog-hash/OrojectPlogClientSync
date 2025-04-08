@@ -1,0 +1,107 @@
+.menu-panel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 310px;
+    border-radius: 4px;
+    background-color: rgb(28, 32, 40); /* Немного светлее для лучшей видимости */
+    overflow: hidden;
+    border-width: 1px;
+    border-color: rgb(64, 68, 82); /* Более заметная граница */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left-color: rgb(64, 68, 82);
+    border-right-color: rgb(64, 68, 82);
+    border-top-color: rgb(64, 68, 82);
+    border-bottom-color: rgb(64, 68, 82);
+    /* Добавляем легкую тень для глубины */
+    -unity-shadow-color: rgba(0, 0, 0, 0.5);
+    -unity-shadow-offset: 0 4px;
+    -unity-shadow-blur: 8px;
+}
+
+.menu-header {
+    height: 42px;
+    background-color: rgb(40, 44, 56); /* Более контрастный заголовок */
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(72, 76, 92); /* Более заметная разделительная линия */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Тень для текста */
+    -unity-text-outline-width: 0;
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    letter-spacing: 0;
+    word-spacing: 0;
+    -unity-paragraph-spacing: 0;
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.menu-title {
+    color: rgb(230, 235, 255); /* Слегка голубоватый оттенок для заголовка */
+    font-size: 15px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    height: 100%;
+    letter-spacing: 3px;
+}
+
+.buttons-container {
+    padding: 12px;
+    background-color: rgb(28, 32, 40);
+}
+
+.menu-button {
+    height: 40px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    background-color: rgb(45, 50, 65); /* Более светлые и насыщенные кнопки */
+    border-width: 1px;
+    border-color: rgb(70, 75, 90); /* Более заметные границы */
+    color: rgb(230, 235, 255); /* Слегка голубоватый оттенок для текста */
+    font-size: 14px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    border-left-color: rgb(70, 75, 90);
+    border-right-color: rgb(70, 75, 90);
+    border-top-color: rgb(70, 75, 90);
+    border-bottom-color: rgb(60, 65, 80); /* Немного темнее снизу для объема */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.menu-button:hover {
+    background-color: rgb(55, 60, 80); /* Более заметное состояние при наведении */
+    border-color: rgb(85, 90, 115);
+    color: rgb(255, 255, 255);
+}
+
+.menu-button:active {
+    background-color: rgb(65, 70, 95); /* Более заметное активное состояние */
+    border-color: rgb(95, 100, 125);
+    color: rgb(255, 255, 255);
+}
+
+.exit-button {
+    background-color: rgb(120, 60, 65); /* Более яркая кнопка выхода */
+    border-color: rgb(140, 70, 75);
+    color: rgb(255, 240, 240); /* Слегка розоватый оттенок для текста */
+    margin-top: 4px;
+}
+
+.exit-button:hover {
+    background-color: rgb(140, 70, 75); /* Более яркое состояние при наведении */
+    border-color: rgb(160, 80, 85);
+    color: rgb(255, 255, 255);
+}
+
+.exit-button:active {
+    background-color: rgb(160, 80, 85); /* Более яркое активное состояние */
+    border-color: rgb(180, 90, 95);
+    color: rgb(255, 255, 255);
+}

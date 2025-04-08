@@ -1,0 +1,58 @@
+.carousel-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 160px;
+    margin: 5px;
+}
+
+.carousel-button {
+    width: 25px;
+    height: 25px;
+    background-color: rgba(224, 224, 224, 0);
+    border-radius: 20px;
+    border-width: 0;
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    -unity-text-align: middle-center;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(235, 235, 235, 0);
+    color: rgb(170, 170, 170);
+}
+
+.carousel-button:active {
+    background-color: rgba(200, 200, 200, 0);
+    color: rgb(255, 255, 255);
+}
+
+.carousel-button:focus {
+    border-width: 2px;
+    border-color: rgba(76, 175, 80, 0.5);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    border-left-color: rgba(89, 89, 89, 0);
+    border-right-color: rgba(89, 89, 89, 0);
+    border-top-color: rgba(89, 89, 89, 0);
+    border-bottom-color: rgba(89, 89, 89, 0);
+}
+
+.current-value {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 16px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(60, 60, 60);
+    margin: 0 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+}

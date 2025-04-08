@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:VisualElement name="toggle-container" class="toggle-container" style="margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; height: auto; width: 60px; flex-shrink: 0;">
+        <engine:Toggle name="slider-toggle" class="slider-toggle" style="display: flex; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+            <engine:VisualElement name="track" class="track" style="transition-duration: 0.1s;">
+                <engine:VisualElement name="knob" class="knob" style="transition-property: all; transition-duration: 0.1s; transition-timing-function: ease; transition-delay: 0s;" />
+            </engine:VisualElement>
+        </engine:Toggle>
+    </engine:VisualElement>
+</engine:UXML>

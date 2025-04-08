@@ -1,0 +1,71 @@
+Slider {
+    height: auto;
+    margin: 12px 0;
+}
+
+Slider #unity-drag-container {
+    margin: 0 4px;
+}
+
+Slider #unity-tracker {
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgb(224, 224, 224);
+    border-width: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+}
+
+Slider #unity-tracker-fill {
+    background-color: rgb(76, 175, 80);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+Slider #unity-dragger {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: -12px;
+    border-width: 0;
+    -unity-background-image-tint-color: white;
+}
+
+Slider #unity-dragger-border {
+    border-width: 0;
+    background-color: rgba(155, 0, 0, 0);
+}
+
+Slider:disabled #unity-tracker {
+    background-color: rgb(204, 204, 204);
+}
+
+Slider:disabled #unity-tracker-fill {
+    background-color: rgb(100, 160, 220);
+    opacity: 0.6;
+}
+
+Slider:disabled #unity-dragger {
+    background-color: rgb(245, 245, 245);
+}
+
+Slider:focus #unity-dragger {
+    border-width: 2px;
+    border-color: rgba(76, 175, 80, 0.5);
+    border-left-color: rgb(100, 160, 220);
+    border-right-color: rgb(100, 160, 220);
+    border-top-color: rgb(100, 160, 220);
+    border-bottom-color: rgb(100, 160, 220);
+}
+
+Slider #unity-tracker-fill {
+    background-color: rgb(0, 120, 215);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+Slider .unity-slider__fill {
+    background-color: rgb(255, 0, 0);
+}

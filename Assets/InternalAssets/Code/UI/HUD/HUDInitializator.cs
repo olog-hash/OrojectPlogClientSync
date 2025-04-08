@@ -11,6 +11,8 @@ using ProjectOlog.Code.UI.HUD.InventoryPanel;
 using ProjectOlog.Code.UI.HUD.Killbar.Presenter;
 using ProjectOlog.Code.UI.HUD.Killbar.View;
 using ProjectOlog.Code.UI.HUD.KillPanel;
+using ProjectOlog.Code.UI.HUD.MenuESC.Presenter;
+using ProjectOlog.Code.UI.HUD.MenuESC.View;
 using ProjectOlog.Code.UI.HUD.Overlays.DamageScreen.Presenter;
 using ProjectOlog.Code.UI.HUD.Overlays.DamageScreen.View;
 using ProjectOlog.Code.UI.HUD.PlayerStats.Presenter;
@@ -22,6 +24,8 @@ using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.Presenter;
 using ProjectOlog.Code.UI.HUD.PlayerStatus.NotificationPanel.View;
 using ProjectOlog.Code.UI.HUD.Tab.Presenter;
 using ProjectOlog.Code.UI.HUD.Tab.View;
+using ProjectOlog.Code.UI.Shared.Settings.Presenter;
+using ProjectOlog.Code.UI.Shared.Settings.View;
 using UnityEngine;
 using Zenject;
 
@@ -61,6 +65,9 @@ namespace ProjectOlog.Code.UI.HUD
 
         private void RegisterViewModels()
         {
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<MenuEscViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<SettingsViewModel>());
+            
             _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<ChatViewModel>());
             _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<TabViewModel>());
             _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<InventoryViewModel>());
@@ -107,6 +114,9 @@ namespace ProjectOlog.Code.UI.HUD
             _interfaceBindLogic.SwitchView<DamageScreenView>();
             
             _interfaceBindLogic.SwitchView<InventoryView>();
+            
+            _interfaceBindLogic.SwitchView<MenuEscView>();
+            _interfaceBindLogic.SwitchView<SettingsView>();
         }
         
         private void BindCameras()

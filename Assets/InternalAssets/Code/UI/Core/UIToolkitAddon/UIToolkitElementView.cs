@@ -27,6 +27,7 @@ namespace ProjectOlog.Code.UI.Core.UIToolkitAddon
             Root = root ?? throw new ArgumentNullException(nameof(root));
 
             SetVisualElements();
+            RegisterButtonCallbacks();
             
             if (HideOnAwake)
             {
@@ -39,6 +40,12 @@ namespace ProjectOlog.Code.UI.Core.UIToolkitAddon
         /// Переопределяется внутри каждого наследного класса опционально.
         /// </summary>
         protected virtual void SetVisualElements() { }
+        
+        /// <summary>
+        /// Устанавливает все call-back'и для визуальных элементов для UI
+        /// Переопределяется внутри каждого наследного класса опционально.
+        /// </summary>
+        protected virtual void RegisterButtonCallbacks() { }
 
         public virtual void Show() => ApplyVisibility(true);
         public virtual void Hide() => ApplyVisibility(false);
