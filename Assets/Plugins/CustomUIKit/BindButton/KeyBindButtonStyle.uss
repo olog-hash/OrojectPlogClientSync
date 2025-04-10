@@ -1,0 +1,58 @@
+﻿.key-bind-button {
+    height: 35px;
+    margin: 5px 4px;
+    border-radius: 8px;
+    background-color: rgb(45, 48, 58);
+    border-width: 1px;
+    border-color: rgb(70, 75, 90);
+    color: rgb(180, 185, 200);
+    font-size: 13px;
+    -unity-font-style: bold;
+    padding: 0 12px;
+    flex-shrink: 0;
+    min-width: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease-out;
+}
+
+.key-bind-button:hover {
+    background-color: rgb(55, 60, 80);
+    color: rgb(200, 205, 220);
+    border-color: rgb(90, 95, 115);
+}
+
+.key-bind-button:active {
+    background-color: rgb(65, 70, 95);
+    border-color: rgb(100, 110, 135);
+    color: rgb(255, 255, 255);
+}
+
+.key-bind-button__text {
+    -unity-text-align: middle-center;
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.key-bind-button--listening {
+    background-color: rgb(36, 85, 131);
+    border-color: rgb(71, 186, 255);
+    color: rgb(255, 255, 255);
+    animation: pulse 1.5s infinite;
+}
+
+/* Переопределение стиля hover для активного состояния */
+.key-bind-button--listening:hover {
+    background-color: rgb(36, 85, 131);
+    border-color: rgb(71, 186, 255);
+    color: rgb(255, 255, 255);
+}
+
+@keyframes pulse {
+    0% { border-color: rgb(71, 186, 255); }
+    50% { border-color: rgb(180, 220, 255); }
+    100% { border-color: rgb(71, 186, 255); }
+}

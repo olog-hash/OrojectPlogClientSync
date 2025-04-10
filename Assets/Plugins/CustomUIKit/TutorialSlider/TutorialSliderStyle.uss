@@ -81,3 +81,12 @@
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
 }
+
+.tutorial-slider:focus .new-dragger {
+    border-width: 2px;
+    border-color: rgba(76, 175, 80, 0.5);
+    border-left-color: rgb(100, 160, 220);
+    border-right-color: rgb(100, 160, 220);
+    border-top-color: rgb(100, 160, 220);
+    border-bottom-color: rgb(100, 160, 220);
+}

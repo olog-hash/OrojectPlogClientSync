@@ -1,0 +1,107 @@
+.unity-scroller {
+    width: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.unity-scroll-view__vertical-scroller {
+    width: 16px;
+}
+
+.unity-scroll-view__horizontal-scroller {
+    height: 16px;
+}
+
+.unity-scroller__low-button {
+    display: none;
+    width: 0;
+    height: 0;
+    min-height: 0;
+    min-width: 0;
+}
+
+.unity-scroller__high-button {
+    display: none;
+    width: 0;
+    height: 0;
+    min-height: 0;
+    min-width: 0;
+}
+
+.unity-scroller .unity-slider {
+    margin: 0;
+    padding: 0;
+}
+
+.unity-base-slider__tracker {
+    background-color: rgb(32, 35, 42);
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: rgb(64, 68, 82);
+    margin: 0;
+}
+
+.unity-scroll-view__horizontal-scroller .unity-base-slider__tracker {
+    height: 10px;
+    margin-top: 3px;
+}
+
+.unity-scroll-view__vertical-scroller .unity-base-slider__tracker {
+    width: 10px;
+    margin-left: 3px;
+}
+
+.unity-base-slider__dragger {
+    background-color: rgb(45, 48, 58);
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgb(70, 75, 90);
+}
+
+.unity-scroll-view__horizontal-scroller .unity-base-slider__dragger {
+    height: 10px;
+    min-width: 45px;
+}
+
+.unity-scroll-view__vertical-scroller .unity-base-slider__dragger {
+    width: 10px;
+    min-height: 45px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.unity-base-slider__dragger:hover {
+    background-color: rgb(55, 60, 80);
+    border-color: rgb(90, 95, 115);
+}
+
+.unity-base-slider__dragger:active {
+    background-color: rgb(36, 85, 131);
+    border-color: rgb(71, 186, 255);
+}
+
+.unity-scroll-view:hover .unity-scroll-view__vertical-scroller {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+
+.unity-scroll-view:hover .unity-scroll-view__horizontal-scroller {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+
+.unity-scroll-view--always-visible .unity-scroll-view__vertical-scroller {
+    opacity: 1;
+}
+
+.unity-scroll-view--always-visible .unity-scroll-view__horizontal-scroller {
+    opacity: 1;
+}
+
+.unity-scroll-view--hidden .unity-scroll-view__vertical-scroller {
+    display: none;
+}
+
+.unity-scroll-view--hidden .unity-scroll-view__horizontal-scroller {
+    display: none;
+}

@@ -69,3 +69,27 @@ Slider #unity-tracker-fill {
 Slider .unity-slider__fill {
     background-color: rgb(255, 0, 0);
 }
+
+Slider #unity-text-input {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-text-align: middle-center;
+    width: auto;
+    max-width: 25px;
+    overflow: visible;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    visibility: visible;
+}
+
+Slider #unity-text-field {
+    overflow: visible;
+    max-width: 35px;
+}

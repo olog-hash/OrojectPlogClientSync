@@ -8,20 +8,21 @@ namespace ProjectOlog.Code.UI.Shared.Settings.View.Controllers
     // Контроллер вкладки графики
     public class GraphicsTabController : UIToolkitElementView
     {
-        // Контроллеры элементов
+        // Контроллеры элементов левой колонки
         private DropdownController _maxFpsDropdown;
-        private ToggleController _adaptiveMonitorToggle;
-        private ToggleController _fullscreenModeToggle;
-        private ToggleController _vSyncToggle;
-        private SliderController _gammaSlider;
+        private DropdownController _screenResolutionDropdown;
+        private RadioButtonGroupController _vSyncRadioGroup;
 
-        private CarouselController _qualityLevelCarousel;
-        private CarouselController _textureResolutionCarousel;
-        private CarouselController _geometryQualityCarousel;
-        private CarouselController _lightingQualityCarousel;
-        private CarouselController _shadowsQualityCarousel;
-        private CarouselController _particlesQualityCarousel;
-        private CarouselController _drawingDistanceCarousel;
+        // Контроллеры элементов правой колонки
+        private DropdownController _qualityLevelDropdown;
+        private DropdownController _renderScaleDropdown;
+        private DropdownController _shadowsActiveDropdown;
+        private DropdownController _shadowsResolutionDropdown;
+        private DropdownController _shadowsDistanceDropdown;
+        private DropdownController _antiAliasingDropdown;
+        private DropdownController _textureResolutionDropdown;
+        private DropdownController _levelOfDetailDropdown;
+        private DropdownController _anisotropicFilteringDropdown;
 
         private Button _defaultSettingsButton;
 
@@ -33,37 +34,39 @@ namespace ProjectOlog.Code.UI.Shared.Settings.View.Controllers
 
         protected override void SetVisualElements()
         {
-            // Получение UI-элементов
+            // Получение UI-элементов левой колонки
             var maxFpsElement = Root.Q<VisualElement>("fps-lock");
-            var adaptiveMonitorElement = Root.Q<VisualElement>("adaptive-monitor");
-            var fullscreenModeElement = Root.Q<VisualElement>("fullscreen-mode");
+            var screenResolutionElement = Root.Q<VisualElement>("screen-resolution");
             var vSyncElement = Root.Q<VisualElement>("vsync");
-            var gammaElement = Root.Q<VisualElement>("gamma");
 
+            // Получение UI-элементов правой колонки
             var qualityLevelElement = Root.Q<VisualElement>("quality-level");
+            var renderScaleElement = Root.Q<VisualElement>("render-scale");
+            var shadowsActiveElement = Root.Q<VisualElement>("shadows-active");
+            var shadowsResolutionElement = Root.Q<VisualElement>("shadows-resolution");
+            var shadowsDistanceElement = Root.Q<VisualElement>("shadows-distance");
+            var antiAliasingElement = Root.Q<VisualElement>("anti-aliasing");
             var textureResolutionElement = Root.Q<VisualElement>("texture-resolution");
-            var geometryQualityElement = Root.Q<VisualElement>("geometry-quality");
-            var lightingQualityElement = Root.Q<VisualElement>("lighting-quality");
-            var shadowsQualityElement = Root.Q<VisualElement>("shadows-quality");
-            var particlesQualityElement = Root.Q<VisualElement>("particals-quality");
-            var drawingDistanceElement = Root.Q<VisualElement>("drawing-distance");
+            var levelOfDetailElement = Root.Q<VisualElement>("level-of-detail");
+            var anisotropicFilteringElement = Root.Q<VisualElement>("anisotropic-filtering");
 
             _defaultSettingsButton = Root.Q<Button>("defaultSettings");
 
-            // Создание контроллеров
+            // Создание контроллеров для левой колонки
             _maxFpsDropdown = new DropdownController(maxFpsElement.Q<DropdownField>());
-            _adaptiveMonitorToggle = new ToggleController(adaptiveMonitorElement.Q("ToogleSlider"));
-            _fullscreenModeToggle = new ToggleController(fullscreenModeElement.Q("ToogleSlider"));
-            _vSyncToggle = new ToggleController(vSyncElement.Q("ToogleSlider"));
-            _gammaSlider = new SliderController(gammaElement.Q("Slider"));
+            _screenResolutionDropdown = new DropdownController(screenResolutionElement.Q<DropdownField>());
+            _vSyncRadioGroup = new RadioButtonGroupController(vSyncElement.Q("RadioButtonGroup"));
 
-            _qualityLevelCarousel = new CarouselController(qualityLevelElement.Q("Carousel"));
-            _textureResolutionCarousel = new CarouselController(textureResolutionElement.Q("Carousel"));
-            _geometryQualityCarousel = new CarouselController(geometryQualityElement.Q("Carousel"));
-            _lightingQualityCarousel = new CarouselController(lightingQualityElement.Q("Carousel"));
-            _shadowsQualityCarousel = new CarouselController(shadowsQualityElement.Q("Carousel"));
-            _particlesQualityCarousel = new CarouselController(particlesQualityElement.Q("Carousel"));
-            _drawingDistanceCarousel = new CarouselController(drawingDistanceElement.Q("Carousel"));
+            // Создание контроллеров для правой колонки (все выпадающие списки)
+            _qualityLevelDropdown = new DropdownController(qualityLevelElement.Q<DropdownField>());
+            _renderScaleDropdown = new DropdownController(renderScaleElement.Q<DropdownField>());
+            _shadowsActiveDropdown = new DropdownController(shadowsActiveElement.Q<DropdownField>());
+            _shadowsResolutionDropdown = new DropdownController(shadowsResolutionElement.Q<DropdownField>());
+            _shadowsDistanceDropdown = new DropdownController(shadowsDistanceElement.Q<DropdownField>());
+            _antiAliasingDropdown = new DropdownController(antiAliasingElement.Q<DropdownField>());
+            _textureResolutionDropdown = new DropdownController(textureResolutionElement.Q<DropdownField>());
+            _levelOfDetailDropdown = new DropdownController(levelOfDetailElement.Q<DropdownField>());
+            _anisotropicFilteringDropdown = new DropdownController(anisotropicFilteringElement.Q<DropdownField>());
         }
 
         protected override void RegisterButtonCallbacks()
@@ -75,20 +78,21 @@ namespace ProjectOlog.Code.UI.Shared.Settings.View.Controllers
         {
             _model = model;
 
-            // Связывание контроллеров с моделью
+            // Связывание контроллеров левой колонки с моделью
             _maxFpsDropdown.Bind(_model.MaxFPS, _model.FpsOptions);
-            _adaptiveMonitorToggle.Bind(_model.AdaptiveMonitor);
-            _fullscreenModeToggle.Bind(_model.FullscreenMode);
-            _vSyncToggle.Bind(_model.VSync);
-            _gammaSlider.Bind(_model.Gamma, 0.5f, 2.0f);
+            _screenResolutionDropdown.Bind(_model.ScreenResolution, _model.ResolutionOptions);
+            _vSyncRadioGroup.Bind(_model.VSync, _model.VSyncOptions);
 
-            _qualityLevelCarousel.Bind(_model.QualityLevel, _model.QualityOptions);
-            _textureResolutionCarousel.Bind(_model.TextureResolution, _model.DetailOptions);
-            _geometryQualityCarousel.Bind(_model.GeometryQuality, _model.DetailOptions);
-            _lightingQualityCarousel.Bind(_model.LightingQuality, _model.DetailOptions);
-            _shadowsQualityCarousel.Bind(_model.ShadowsQuality, _model.DetailOptions);
-            _particlesQualityCarousel.Bind(_model.ParticlesQuality, _model.DetailOptions);
-            _drawingDistanceCarousel.Bind(_model.DrawingDistance, _model.DetailOptions);
+            // Связывание контроллеров правой колонки с моделью
+            _qualityLevelDropdown.Bind(_model.QualityLevel, _model.QualityOptions);
+            _renderScaleDropdown.Bind(_model.RenderScale, _model.RenderScaleOptions);
+            _shadowsActiveDropdown.Bind(_model.ShadowsActive, _model.ShadowsActiveOptions);
+            _shadowsResolutionDropdown.Bind(_model.ShadowsResolution, _model.DetailOptions);
+            _shadowsDistanceDropdown.Bind(_model.ShadowsDistance, _model.ShadowsDistanceOptions);
+            _antiAliasingDropdown.Bind(_model.AntiAliasing, _model.AntiAliasingOptions);
+            _textureResolutionDropdown.Bind(_model.TextureResolution, _model.DetailOptions);
+            _levelOfDetailDropdown.Bind(_model.LevelOfDetail, _model.LevelOfDetailOptions);
+            _anisotropicFilteringDropdown.Bind(_model.AnisotropicFiltering, _model.AnisotropicOptions);
         }
 
         private void OnDefaultSettingsButtonClicked()
@@ -100,20 +104,20 @@ namespace ProjectOlog.Code.UI.Shared.Settings.View.Controllers
         {
             base.Dispose();
 
-            // Очистка ресурсов
+            // Очистка всех контроллеров
             _maxFpsDropdown?.Dispose();
-            _adaptiveMonitorToggle?.Dispose();
-            _fullscreenModeToggle?.Dispose();
-            _vSyncToggle?.Dispose();
-            _gammaSlider?.Dispose();
+            _screenResolutionDropdown?.Dispose();
+            _vSyncRadioGroup?.Dispose();
 
-            _qualityLevelCarousel?.Dispose();
-            _textureResolutionCarousel?.Dispose();
-            _geometryQualityCarousel?.Dispose();
-            _lightingQualityCarousel?.Dispose();
-            _shadowsQualityCarousel?.Dispose();
-            _particlesQualityCarousel?.Dispose();
-            _drawingDistanceCarousel?.Dispose();
+            _qualityLevelDropdown?.Dispose();
+            _renderScaleDropdown?.Dispose();
+            _shadowsActiveDropdown?.Dispose();
+            _shadowsResolutionDropdown?.Dispose();
+            _shadowsDistanceDropdown?.Dispose();
+            _antiAliasingDropdown?.Dispose();
+            _textureResolutionDropdown?.Dispose();
+            _levelOfDetailDropdown?.Dispose();
+            _anisotropicFilteringDropdown?.Dispose();
 
             if (_defaultSettingsButton != null)
                 _defaultSettingsButton.clicked -= OnDefaultSettingsButtonClicked;

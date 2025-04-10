@@ -1,4 +1,4 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Plugins/CustomUIKit/Slider/CustomSliderStyle.uss?fileID=7433441132597879392&amp;guid=677c067ddda4b6845bb72381c8fd5f4e&amp;type=3#CustomSliderStyle" />
-    <engine:Slider value="46.1" high-value="100" show-input-field="false" direction="Horizontal" inverted="false" style="height: 24px; margin-top: 0; margin-bottom: 0; min-height: 24px; max-height: none;" />
+    <engine:Slider value="46.1" high-value="100" show-input-field="true" direction="Horizontal" inverted="false" style="height: 24px; margin-top: 0; margin-bottom: 0; min-height: 24px; max-height: none;" />
 </engine:UXML>
