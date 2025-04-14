@@ -6,6 +6,7 @@ using ProjectOlog.Code.Infrastructure.Logging.Configuration;
 using ProjectOlog.Code.Infrastructure.Logging.Mapping;
 using TMPro;
 using UnityEngine;
+using Zenject;
 
 /*
  * Script for managing the in-game console.
@@ -15,13 +16,14 @@ namespace ProjectOlog.Code.Infrastructure.Logging
 {
     public class Console : MonoBehaviour, ILayer
     {
-        public const string LAYER_NAME = "BattleConsole";
+        public LayerInfo LayerInfo { get; set; }
         
         public GameObject ConsolePanel;
         public TMP_Text LogField;
         public TMP_InputField InputField;
         public ConsoleQuickView QuickView;
 
+        private LayersManager _layersManager;
         private static ConfVar historyCapacity;
         private static ConfVar scrollbackCapacity;
         private static ConfVar scrollSpeed;
@@ -34,7 +36,7 @@ namespace ProjectOlog.Code.Infrastructure.Logging
         private List<string> consoleHistory;
         private Queue<string> scrollback;
         private Queue<LogMessage> _messageQueue = new Queue<LogMessage>();
-
+        
         private int historyIndex;
         private int CurrentHistoryIndex
         {
@@ -84,6 +86,12 @@ namespace ProjectOlog.Code.Infrastructure.Logging
 
         #endregion
 
+        [Inject]
+        public void Construct(LayersManager layersManager)
+        {
+            _layersManager = layersManager;
+        }
+        
         public void Initialize()
         {
             SetSingleton();
@@ -103,7 +111,7 @@ namespace ProjectOlog.Code.Infrastructure.Logging
 
         private void Start()
         {
-            LayersManager.RegisterLayer(2, LAYER_NAME, this, LayerInfo.SelectedPanel);
+            _layersManager.RegisterLayer(ELayerChannel.Channel_2, this, LayerInputMode.SelectedPanel);
             
             CommandManager.RegisterCommand("toggleconsole", ToggleConsole, "", CommandType.hidden);
             CommandManager.RegisterCommand("clear", ClearConsole, "clears the console log", CommandType.normal);
@@ -186,13 +194,15 @@ namespace ProjectOlog.Code.Infrastructure.Logging
         {
             //ConsoleSet(!ConsolePanel.activeSelf);
 
-            if (!LayersManager.IsLayerActive(LAYER_NAME) && LayersManager.IsLayerCanBeShown(LAYER_NAME))
+            string layerName = nameof(Console);
+            
+            if (!_layersManager.IsLayerActive(layerName) && _layersManager.IsLayerCanBeShown(layerName))
             {
-                LayersManager.ShowLayer(LAYER_NAME);
+                _layersManager.ShowLayer(layerName);
             }
-            else if (LayersManager.IsLayerActive(LAYER_NAME))
+            else if (_layersManager.IsLayerActive(layerName))
             {
-                LayersManager.HideLayer(LAYER_NAME);
+                _layersManager.HideLayer(layerName);
             }
         }
 
@@ -427,6 +437,7 @@ namespace ProjectOlog.Code.Infrastructure.Logging
         public void OnDestroy()
         {
             UnityEngine.Application.logMessageReceivedThreaded -= LogHandler;
+            _layersManager.RemoveLayer(this);
         }
 
         private void ListCompletions(string[] completions, string msg, string prefix)
@@ -604,12 +615,12 @@ namespace ProjectOlog.Code.Infrastructure.Logging
 
         #endregion
 
-        public void ShowLayer()
+        public void OnShowLayer()
         {
             ConsoleSet(true);
         }
 
-        public void HideLayer()
+        public void OnHideLayer()
         {
             ConsoleSet(false);
         }

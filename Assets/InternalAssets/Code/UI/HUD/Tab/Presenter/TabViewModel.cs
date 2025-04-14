@@ -15,7 +15,7 @@ namespace ProjectOlog.Code.UI.HUD.Tab.Presenter
     /// Координирует работу всех компонентов табло (матч, статистика, игроки, команды)
     /// и обеспечивает интерфейс для взаимодействия с UI.
     /// </summary>
-    public class TabViewModel : BaseViewModel, ILayer
+    public class TabViewModel : LayerViewModel
     {
         public MatchInfoModel MatchInfoModel { get; } = new MatchInfoModel();
         public PlayerStatsModel PlayerStatsModel { get; } = new PlayerStatsModel();
@@ -58,9 +58,5 @@ namespace ProjectOlog.Code.UI.HUD.Tab.Presenter
             
             _networkToTabAdapter.Dispose();
         }
-
-        public void ShowLayer() => Show();
-
-        public void HideLayer() => Hide();
     }
 }

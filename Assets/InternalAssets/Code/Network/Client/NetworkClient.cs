@@ -48,11 +48,25 @@ namespace ProjectOlog.Code.Network.Client
                 SimulatePacketLoss = false,
                 SimulationPacketLossChance = 15
             };
-            _netManager.Start();
 
             _runtimeHelper.RegisterUpdate(this);
             _runtimeHelper.RegisterTickUpdate(this);
             _runtimeHelper.RegisterLateUpdate(this);
+        }
+
+        // Запускаем работу сетевого менеджера
+        public void StartNetwork()
+        {
+            _netManager.Start();
+        }
+        
+        // Отключаемся ото всех.
+        public void StopNetwork()
+        {
+            _netManager.DisconnectAll();
+            _server?.Disconnect();
+            
+            _netManager.Stop();
         }
 
         // Отправляем запрос на подключение к серверу

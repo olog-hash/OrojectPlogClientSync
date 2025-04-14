@@ -1,4 +1,6 @@
-﻿using ProjectOlog.Code.Engine.Cameras.Core;
+﻿using System;
+using ProjectOlog.Code.Engine.Cameras.Core;
+using ProjectOlog.Code.Infrastructure.Application.Layers;
 using ProjectOlog.Code.UI.Core;
 using ProjectOlog.Code.UI.Core.Services;
 using ProjectOlog.Code.UI.HUD.Chat.Presenter;
@@ -39,19 +41,24 @@ namespace ProjectOlog.Code.UI.HUD
         // Tools
         private HUDFactory _hudFactory;
         private InterfaceBindLogic _interfaceBindLogic;
-
+        private LayersManager _layersManager;
+        private LayersViewModelContainer _layersViewModelContainer;
 
         [Inject]
-        public void Construct(HUDFactory hudFactory, InterfaceBindLogic interfaceBindLogic)
+        public void Construct(HUDFactory hudFactory, InterfaceBindLogic interfaceBindLogic, LayersManager layersManager)
         {
             _hudFactory = hudFactory;
             _interfaceBindLogic = interfaceBindLogic;
+            _layersManager = layersManager;
+
+            _layersViewModelContainer = new LayersViewModelContainer(_layersManager);
         }
 
         private void Awake()
         {
             ResetServices();
             RegisterViewModels();
+            RegisterLayers();
             RegisterViews();
             BindInterfaces();
             BindCameras();
@@ -65,25 +72,38 @@ namespace ProjectOlog.Code.UI.HUD
 
         private void RegisterViewModels()
         {
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<MenuEscViewModel>());
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<SettingsViewModel>());
-            
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<ChatViewModel>());
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<TabViewModel>());
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<InventoryViewModel>());
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<InteractionViewModel>());
-            
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<PlayerStatsViewModel>());
-            
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<DebuggerViewModel>());
-            
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<NotificationViewModel>());
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<KillbarViewModel>());
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<DamageScreenViewModel>());
-            
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<PlayerBlockViewModel>());
-            
-            _interfaceBindLogic.RegisterViewModel(_hudFactory.CreateViewModel<CrossViewModel>());
+            // Системные интерфейсы (меню паузы, настройки)
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<MenuEscViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<SettingsViewModel>());
+    
+            // Основные интерактивные панели
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<ChatViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<TabViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<InventoryViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<InteractionViewModel>());
+    
+            // Основные элементы HUD
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<PlayerBlockViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<PlayerStatsViewModel>());    
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<CrossViewModel>());
+    
+            // Информационные и вспомогательные элементы
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<NotificationViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<KillbarViewModel>());
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<DebuggerViewModel>());
+    
+            // Визуальные эффекты
+            _interfaceBindLogic.RegisterViewModel(_hudFactory.ResolveViewModel<DamageScreenViewModel>());
+        }
+
+        private void RegisterLayers()
+        {
+            // Регистрируем все интерфейсы которые являются слоями (как следствие интерактивными)
+            RegisterLayerConfig<ChatViewModel>(ELayerChannel.Channel_1, LayerInputMode.SelectedPanel);
+            RegisterLayerConfig<InventoryViewModel>(ELayerChannel.Channel_1, LayerInputMode.Freedom);
+            RegisterLayerConfig<TabViewModel>(ELayerChannel.Channel_1, LayerInputMode.Game);
+            RegisterLayerConfig<MenuEscViewModel>(ELayerChannel.Channel_2, LayerInputMode.SelectedPanel);
+            RegisterLayerConfig<SettingsViewModel>(ELayerChannel.Channel_3, LayerInputMode.SelectedPanel);
         }
 
         private void RegisterViews()
@@ -101,22 +121,27 @@ namespace ProjectOlog.Code.UI.HUD
         // Тут происходит Бинд, а также активация тех интерфейсов, что были выбраны.
         private void BindInterfaces()
         {
+            // Системные интерфейсы
+            _interfaceBindLogic.SwitchView<MenuEscView>();
+            _interfaceBindLogic.SwitchView<SettingsView>();
+    
+            // Основные интерактивные панели
             _interfaceBindLogic.SwitchView<ChatView>();
-            _interfaceBindLogic.SwitchView<PlayerStatsView>();
             _interfaceBindLogic.SwitchView<TabView>();
+            _interfaceBindLogic.SwitchView<InventoryView>();
             _interfaceBindLogic.SwitchView<InteractionView>();
+    
+            // Основные элементы HUD
+            _interfaceBindLogic.SwitchView<PlayerStatsView>();
             _interfaceBindLogic.SwitchView<CrossView>();
-            
+    
+            // Информационные и вспомогательные элементы
             _interfaceBindLogic.SwitchView<DebuggerView>();
             _interfaceBindLogic.SwitchView<NotificationView>();
             _interfaceBindLogic.SwitchView<KillbarView>();
-            
+    
+            // Визуальные эффекты
             _interfaceBindLogic.SwitchView<DamageScreenView>();
-            
-            _interfaceBindLogic.SwitchView<InventoryView>();
-            
-            _interfaceBindLogic.SwitchView<MenuEscView>();
-            _interfaceBindLogic.SwitchView<SettingsView>();
         }
         
         private void BindCameras()
@@ -126,7 +151,15 @@ namespace ProjectOlog.Code.UI.HUD
         
         public void OnDestroy()
         {
-            
+            _layersViewModelContainer.ClearLayers();
+        }
+        
+        // Вспомогательный метод для регистрации слоя с типизированным ViewModel
+        private void RegisterLayerConfig<T>(ELayerChannel channel, LayerInputMode inputMode) 
+            where T : BaseViewModel, ILayer
+        {
+            var viewModel = _hudFactory.ResolveViewModel<T>();
+            _layersViewModelContainer.RegisterLayer(viewModel, channel, inputMode);
         }
     }
 }

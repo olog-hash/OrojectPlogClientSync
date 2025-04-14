@@ -1,4 +1,5 @@
 ﻿using ProjectOlog.Code.Infrastructure.Logging;
+using ProjectOlog.Code.Network.Client;
 using Zenject;
 
 namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
@@ -8,21 +9,20 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
     /// </summary>
     public class NetworkLunchState : ApplicationState
     {
-        private DiContainer _container;
         private ApplicationStateMachine _applicationStateMachine;
+        private NetworkClient _networkClient;
 
         [Inject]
-        public NetworkLunchState(DiContainer container, ApplicationStateMachine applicationStateMachine)
+        public NetworkLunchState(ApplicationStateMachine applicationStateMachine, NetworkClient networkClient)
         {
-            _container = container;
             _applicationStateMachine = applicationStateMachine;
+            _networkClient = networkClient;
         }
 
         public override void Enter()
         {
-            // По идее должен отвечать за привентивную инициализацию подключения к серверу... но т.к такие возможности еще нет - пустышка.
-            
-            Console.Log("NetworkLunch was completed.");
+            // По идее должен отвечать за привентивную инициализацию подключения к серверу
+            _networkClient.StartNetwork();
             
             _applicationStateMachine.Enter<MainMenuState>();
         }
@@ -34,7 +34,7 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
 
         public override void Exit()
         {
-            
+            Console.Log("NetworkLunch was completed.");
         }
     }
 }

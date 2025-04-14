@@ -11,23 +11,18 @@ namespace ProjectOlog.Code.UI.HUD.ChatPanel
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class ChatLogicSystem : UpdateSystem
     {
-        private const string LAYER_NAME = "BattleChat";
-        
         private ChatViewModel _chatViewModel;
+        private LayersManager _layersManager;
 
-        public ChatLogicSystem(ChatViewModel chatViewModel)
+        public ChatLogicSystem(ChatViewModel chatViewModel, LayersManager layersManager)
         {
             _chatViewModel = chatViewModel;
+            _layersManager = layersManager;
         }
 
         public override void OnAwake()
         {
-            LayersManager.RegisterLayer(1, LAYER_NAME, _chatViewModel, LayerInfo.SelectedPanel);
-        }
-        
-        public override void Dispose()
-        {
-            LayersManager.RemoveLayer(LAYER_NAME);
+            
         }
 
         public override void OnUpdate(float deltaTime)
@@ -36,19 +31,19 @@ namespace ProjectOlog.Code.UI.HUD.ChatPanel
             
             if (UnityEngine.Input.GetKeyDown(KeyCode.Return))
             {
-                if (!LayersManager.IsLayerActive(LAYER_NAME) && LayersManager.IsLayerCanBeShown(LAYER_NAME))
+                if (!_layersManager.IsLayerActive(_chatViewModel.LayerName) && _layersManager.IsLayerCanBeShown(_chatViewModel.LayerName))
                 {
-                    LayersManager.ShowLayer(LAYER_NAME);
+                    _layersManager.ShowLayer(_chatViewModel.LayerName);
                 }
-                else if (LayersManager.IsLayerActive(LAYER_NAME))
+                else if (_layersManager.IsLayerActive(_chatViewModel.LayerName))
                 {
-                    LayersManager.HideLayer(LAYER_NAME);
+                    _layersManager.HideLayer(_chatViewModel.LayerName);
                 }
             }
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && LayersManager.IsLayerActive(LAYER_NAME))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && _layersManager.IsLayerActive(_chatViewModel.LayerName))
             {
-                LayersManager.HideLayer(LAYER_NAME);
+                _layersManager.HideLayer(_chatViewModel.LayerName);
             }
         }
     }

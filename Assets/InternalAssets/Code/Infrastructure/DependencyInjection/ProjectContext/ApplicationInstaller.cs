@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.Infrastructure.Application.StateMachine;
+﻿using ProjectOlog.Code.Infrastructure.Application.Layers;
+using ProjectOlog.Code.Infrastructure.Application.StateMachine;
 using Zenject;
 
 namespace ProjectOlog.Code.Infrastructure.DependencyInjection
@@ -6,6 +7,19 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
     public class ApplicationInstaller : MonoInstaller
     {
         public override void InstallBindings()
+        {
+            BindApplicationLayerManager();
+
+            BindApplicationStateMachine();
+        }
+
+        private void BindApplicationLayerManager()
+        {
+            Container.Bind<ApplicationLayersController>().AsSingle();
+            Container.Bind<LayersManager>().AsSingle();
+        }
+        
+        private void BindApplicationStateMachine()
         {
             Container.Bind<ApplicationStateFactory>().AsSingle().NonLazy();
 

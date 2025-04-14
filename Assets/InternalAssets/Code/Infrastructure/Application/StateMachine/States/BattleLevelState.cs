@@ -14,18 +14,21 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
     public class BattleLevelState : ApplicationState
     {
         private UserConnectionNetworker _userConnectionNetworker;
+        private LayersManager _layersManager;
 
         [Inject]
-        public BattleLevelState(UserConnectionNetworker userConnectionNetworker)
+        public BattleLevelState(UserConnectionNetworker userConnectionNetworker, LayersManager layersManager)
         {
             _userConnectionNetworker = userConnectionNetworker;
+            _layersManager = layersManager;
         }
 
         public override void Enter()
         {
             // Выполняем загрузку и переключения слоя.
             SceneManager.LoadScene(1);
-            LayersManager.ShowLayer("Gameplay");
+            
+            _layersManager.ShowLayer("Gameplay");
             
             _userConnectionNetworker.ServerInitializeRequest();
         }
@@ -37,7 +40,7 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
 
         public override void Exit()
         {
-            Debug.Log("Bootstrap was completed.");
+            Debug.Log("BattleLevelState was completed.");
         }
     }
 }

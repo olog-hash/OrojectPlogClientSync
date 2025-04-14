@@ -13,7 +13,7 @@ namespace ProjectOlog.Code.UI.HUD
             _container = container;
         }
 
-        public T CreateViewModel<T>() where T : BaseViewModel
+        public T ResolveViewModel<T>() where T : BaseViewModel
         {
             return _container.Resolve<T>();
         }

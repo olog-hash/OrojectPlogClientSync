@@ -4,7 +4,7 @@ using R3;
 
 namespace ProjectOlog.Code.UI.Shared.Settings.Presenter
 {
-    public class SettingsViewModel : BaseViewModel, ILayer
+    public class SettingsViewModel : LayerViewModel
     {
         // Добавляем константу имени слоя
         public const string LAYER_NAME = "Settings";
@@ -36,8 +36,6 @@ namespace ProjectOlog.Code.UI.Shared.Settings.Presenter
 
         public SettingsViewModel()
         {
-            LayersManager.RegisterLayer(3, SettingsViewModel.LAYER_NAME, this, LayerInfo.SelectedPanel);
-            
             // Создаем модели для каждой вкладки
             GameSettings = new GameSettingsModel();
             ControlsSettings = new ControlsSettingsModel();
@@ -70,27 +68,19 @@ namespace ProjectOlog.Code.UI.Shared.Settings.Presenter
             UpdateApplyButtonState(_activeTab.Value);
         }
 
-        public void ShowLayer()
+        public void OnShowLayer()
         {
             Show();
         }
 
-        public void HideLayer()
+        public void OnHideLayer()
         {
             Hide();
         }
 
         public void CloseSettingsPanel()
         {
-            CloseLayer();
-        }
-
-        private void CloseLayer()
-        {
-            if (LayersManager.IsLayerActive(SettingsViewModel.LAYER_NAME))
-            {
-                LayersManager.HideLayer(SettingsViewModel.LAYER_NAME);
-            }
+            HideLayerItself();
         }
         
         // Переключение активной вкладки

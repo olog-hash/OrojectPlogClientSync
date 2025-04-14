@@ -8,7 +8,7 @@ using R3;
 
 namespace ProjectOlog.Code.UI.HUD.Chat.Presenter
 {
-    public class ChatViewModel : BaseViewModel, ILayer
+    public class ChatViewModel : LayerViewModel
     {
         public const int MaxMessageLength = 170;
         private const int MaxVisibleMessages = 20;
@@ -28,12 +28,12 @@ namespace ProjectOlog.Code.UI.HUD.Chat.Presenter
             NotificationUtilits.OnChatMessageReceived += AddMessage;
         }
         
-        public void ShowLayer()
+        public override void OnShowLayer()
         {
             IsInputActive.Value = true;
         }
 
-        public void HideLayer()
+        public override void OnHideLayer()
         {
             IsInputActive.Value = false;
             

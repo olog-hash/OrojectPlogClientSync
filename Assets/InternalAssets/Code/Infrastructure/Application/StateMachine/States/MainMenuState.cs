@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.Network.Profiles.Users;
+﻿using ProjectOlog.Code.Infrastructure.Application.Layers;
+using ProjectOlog.Code.Network.Profiles.Users;
 using Zenject;
 
 namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
@@ -8,19 +9,20 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
     /// </summary>
     public class MainMenuState : ApplicationState
     {
-        private DiContainer _container;
         private ApplicationStateMachine _applicationStateMachine;
 
+        private LayersManager _layersManager;
+        
         [Inject]
-        public MainMenuState(DiContainer container, ApplicationStateMachine applicationStateMachine)
+        public MainMenuState(ApplicationStateMachine applicationStateMachine, LayersManager layersManager)
         {
-            _container = container;
             _applicationStateMachine = applicationStateMachine;
+            _layersManager = layersManager;
         }
 
         public override void Enter()
         {
-            
+            _layersManager.ShowLayer("MainMenu");
         }
 
         public override void OnUpdate(float deltaTime)

@@ -1,5 +1,7 @@
 ﻿using System;
 using ProjectOlog.Code.Infrastructure.Application.Layers;
+using ProjectOlog.Code.Infrastructure.Application.StateMachine;
+using ProjectOlog.Code.Infrastructure.Application.StateMachine.States;
 using ProjectOlog.Code.UI.Core;
 using ProjectOlog.Code.UI.Shared.Settings.Presenter;
 using R3;
@@ -7,71 +9,50 @@ using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.MenuESC.Presenter
 {
-    public class MenuEscViewModel : BaseViewModel, ILayer
+    public class MenuEscViewModel : LayerViewModel
     {
-        public const string LAYER_NAME = "MenuEsc";
-        
-        // Свойство для отслеживания полноэкранного режима
-        public ReactiveProperty<bool> IsFullscreen { get; } = new ReactiveProperty<bool>(false);
-        
         protected override bool IsCanIgnoreGlobalVisibility => true;
         
-        public MenuEscViewModel() : base()
+        // Свойство для отслеживания полноэкранного режима
+        public ReactiveProperty<bool> IsFullscreen { get; } = new ReactiveProperty<bool>(Screen.fullScreen);
+
+        private ApplicationStateMachine _applicationStateMachine;
+        
+        public MenuEscViewModel(ApplicationStateMachine applicationStateMachine) : base()
         {
-            // Инициализация начального значения полноэкранного режима
+            _applicationStateMachine = applicationStateMachine;
+            
             IsFullscreen.Value = Screen.fullScreen;
         }
         
-        public void ShowLayer()
-        {
-            Show();
-        }
-
-        public void HideLayer()
-        {
-            Hide();
-        }
-        
-        // Метод для возврата в игру (закрытие меню)
         public void ReturnToGame()
         {
-            CloseLayer();
+            HideLayerItself();
         }
         
-        // Метод для переключения полноэкранного режима
         public void ToggleFullscreen()
         {
             IsFullscreen.Value = !IsFullscreen.Value;
             Screen.fullScreen = IsFullscreen.Value;
             
-            CloseLayer();
+            HideLayerItself();
         }
         
-        // Метод для открытия настроек
         public void OpenSettings()
         {
             // Скрываем меню ESC
-            CloseLayer();
+            HideLayerItself();
     
             // Показываем настройки
-            if (LayersManager.IsLayerCanBeShown(SettingsViewModel.LAYER_NAME))
+            if (_layersManager.IsLayerCanBeShown(nameof(SettingsViewModel)))
             {
-                LayersManager.ShowLayer(SettingsViewModel.LAYER_NAME);
+                _layersManager.ShowLayer(nameof(SettingsViewModel));
             }
         }
         
-        // Метод для выхода в главное меню
         public void ExitToMainMenu()
         {
-            Debug.Log("Выход в главное меню");
-        }
-
-        private void CloseLayer()
-        {
-            if (LayersManager.IsLayerActive(MenuEscViewModel.LAYER_NAME))
-            {
-                LayersManager.HideLayer(MenuEscViewModel.LAYER_NAME);
-            }
+            _applicationStateMachine.Enter<LeaveBattleLevelState>();
         }
         
         public override void Dispose()

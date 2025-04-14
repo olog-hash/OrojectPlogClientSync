@@ -8,14 +8,11 @@ using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.InventoryPanel
 {
-    public class InventoryViewModel : BaseViewModel, ILayer
+    public class InventoryViewModel : LayerViewModel
     {
         // Реактивное свойство для выбранного объекта
         private ReactiveProperty<ENetworkObjectType> _selectedObjectID = new ReactiveProperty<ENetworkObjectType>();
         public ReadOnlyReactiveProperty<ENetworkObjectType> SelectedObjectID => _selectedObjectID;
-        
-        // Событие для закрытия, как в оригинальном коде
-        public event Action OnHandleClose;
         
         private LocalInventorySession _localInventorySession;
 
@@ -29,7 +26,9 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
                 .Subscribe(objectID => 
                 {
                     _localInventorySession.CurrentSpawnObjectID = objectID;
-                    OnHandleClose?.Invoke();
+                    
+                    // Скрываем инвентарь
+                    HideLayerItself();
                 })
                 .AddTo(_disposables);
         }
@@ -38,10 +37,6 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
         {
             _selectedObjectID.Value = objectID;
         }
-        
-        public void ShowLayer() => Show();
-
-        public void HideLayer() => Hide();
         
         public override void Dispose()
         {

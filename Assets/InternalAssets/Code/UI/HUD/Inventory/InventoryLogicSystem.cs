@@ -11,29 +11,21 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class InventoryLogicSystem : UpdateSystem
     {
-        private const string LAYER_NAME = "BattleInventory";
-        
         private InventoryViewModel _inventoryViewModel;
+        private LayersManager _layersManager;
+        
         private LocalPlayerMonitoring _localPlayerMonitoring;
 
-        public InventoryLogicSystem(InventoryViewModel inventoryViewModel, LocalPlayerMonitoring localPlayerMonitoring)
+        public InventoryLogicSystem(InventoryViewModel inventoryViewModel, LocalPlayerMonitoring localPlayerMonitoring, LayersManager layersManager)
         {
             _inventoryViewModel = inventoryViewModel;
             _localPlayerMonitoring = localPlayerMonitoring;
+            _layersManager = layersManager;
         }
 
         public override void OnAwake()
         {
-            LayersManager.RegisterLayer(1, LAYER_NAME, _inventoryViewModel, LayerInfo.Freedom);
             
-            _inventoryViewModel.OnHandleClose += OnHandleClose;
-        }
-
-        public override void Dispose()
-        {
-            LayersManager.RemoveLayer(LAYER_NAME);
-
-            _inventoryViewModel.OnHandleClose -= OnHandleClose;
         }
 
         public override void OnUpdate(float deltaTime)
@@ -42,36 +34,28 @@ namespace ProjectOlog.Code.UI.HUD.InventoryPanel
            
             if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
-                if (!LayersManager.IsLayerActive(LAYER_NAME) && LayersManager.IsLayerCanBeShown(LAYER_NAME) &&
+                if (!_layersManager.IsLayerActive(_inventoryViewModel.LayerName) && _layersManager.IsLayerCanBeShown(_inventoryViewModel.LayerName) &&
                     !_localPlayerMonitoring.IsDead())
                 {
-                    LayersManager.ShowLayer(LAYER_NAME);
+                    _layersManager.ShowLayer(_inventoryViewModel.LayerName);
                 }
-                else if (LayersManager.IsLayerActive(LAYER_NAME))
+                else if (_layersManager.IsLayerActive(_inventoryViewModel.LayerName))
                 {
-                    LayersManager.HideLayer(LAYER_NAME);
+                    _layersManager.HideLayer(_inventoryViewModel.LayerName);
                 }
             }
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && LayersManager.IsLayerActive(LAYER_NAME))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && _layersManager.IsLayerActive(_inventoryViewModel.LayerName))
             {
-                LayersManager.HideLayer(LAYER_NAME);
+                _layersManager.HideLayer(_inventoryViewModel.LayerName);
             }
 
             if (_localPlayerMonitoring.IsDead())
             {
-                if (LayersManager.IsLayerActive(LAYER_NAME))
+                if (_layersManager.IsLayerActive(_inventoryViewModel.LayerName))
                 {
-                    LayersManager.HideLayer(LAYER_NAME);
+                    _layersManager.HideLayer(_inventoryViewModel.LayerName);
                 }
-            }
-        }
-
-        private void OnHandleClose()
-        {
-            if (LayersManager.IsLayerActive(LAYER_NAME))
-            {
-                LayersManager.HideLayer(LAYER_NAME);
             }
         }
     }

@@ -11,23 +11,19 @@ namespace ProjectOlog.Code.UI.HUD.Tab
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class TabLogicSystem : UpdateSystem
     {
-        private const string LAYER_NAME = "BattleTab";
-        
         private TabViewModel _tabViewModel;
 
-        public TabLogicSystem(TabViewModel tabViewModel)
+        private LayersManager _layersManager;
+
+        public TabLogicSystem(TabViewModel tabViewModel, LayersManager layersManager)
         {
             _tabViewModel = tabViewModel;
+            _layersManager = layersManager;
         }
 
         public override void OnAwake()
         {
-            LayersManager.RegisterLayer(1, LAYER_NAME, _tabViewModel, LayerInfo.Game);
-        }
-        
-        public override void Dispose()
-        {
-            LayersManager.RemoveLayer(LAYER_NAME);
+            
         }
 
         public override void OnUpdate(float deltaTime)
@@ -35,16 +31,17 @@ namespace ProjectOlog.Code.UI.HUD.Tab
             //_tabViewModel.OnUpdate(deltaTime);
             if (UnityEngine.Input.GetKey(KeyCode.Tab))
             {
-                if (!LayersManager.IsLayerActive(LAYER_NAME) && LayersManager.IsLayerCanBeShown(LAYER_NAME))
+                _layersManager.ShowLayer(_tabViewModel.LayerName);
+                if (!_layersManager.IsLayerActive(_tabViewModel.LayerName) && _layersManager.IsLayerCanBeShown(_tabViewModel.LayerName))
                 {
-                    LayersManager.ShowLayer(LAYER_NAME);
+                    _layersManager.ShowLayer(_tabViewModel.LayerName);
                 }
             }
             else
             {
-                if (LayersManager.IsLayerActive(LAYER_NAME))
+                if (_layersManager.IsLayerActive(_tabViewModel.LayerName))
                 {
-                    LayersManager.HideLayer(LAYER_NAME);
+                    _layersManager.HideLayer(_tabViewModel.LayerName);
                 }
             }
         }

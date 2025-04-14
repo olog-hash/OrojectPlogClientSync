@@ -15,19 +15,10 @@ namespace ProjectOlog.Code.UI.HUD.MenuESC.View
 
         protected override void SetVisualElements()
         {
-            // Добавим проверку и логирование
-            Debug.Log($"Root element found: {_root != null}");
-
             _returnToGameButton = _root.Q<Button>("returnToGame");
             _fullscreenButton = _root.Q<Button>("fullscreen");
             _settingsButton = _root.Q<Button>("settings");
             _exitToMenuButton = _root.Q<Button>("exitToMenu");
-
-            // Проверим, что кнопки найдены
-            Debug.Log($"Return button found: {_returnToGameButton != null}");
-            Debug.Log($"Fullscreen button found: {_fullscreenButton != null}");
-            Debug.Log($"Settings button found: {_settingsButton != null}");
-            Debug.Log($"Exit button found: {_exitToMenuButton != null}");
         }
 
         protected override void RegisterButtonCallbacks()

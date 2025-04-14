@@ -5,8 +5,10 @@
     /// </summary>
     public interface ILayer
     {
-        void ShowLayer();
+        public LayerInfo LayerInfo { get; set; }
 
-        void HideLayer();
+        void OnShowLayer();
+
+        void OnHideLayer();
     }
 }

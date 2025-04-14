@@ -13,21 +13,17 @@ namespace ProjectOlog.Code.UI.HUD.MenuESC
     public sealed class MenuEscLogicSystem : UpdateSystem
     {
         private MenuEscViewModel _menuEscViewModel;
+        private LayersManager _layersManager;
 
-        public MenuEscLogicSystem(MenuEscViewModel menuEscViewModel)
+        public MenuEscLogicSystem(MenuEscViewModel menuEscViewModel, LayersManager layersManager)
         {
             _menuEscViewModel = menuEscViewModel;
+            _layersManager = layersManager;
         }
 
         public override void OnAwake()
         {
-            // Регистрируем слой в LayersManager с высоким приоритетом
-            LayersManager.RegisterLayer(2, MenuEscViewModel.LAYER_NAME, _menuEscViewModel, LayerInfo.SelectedPanel);
-        }
-        
-        public override void Dispose()
-        {
-            LayersManager.RemoveLayer(MenuEscViewModel.LAYER_NAME);
+            
         }
 
         public override void OnUpdate(float deltaTime)
@@ -35,13 +31,13 @@ namespace ProjectOlog.Code.UI.HUD.MenuESC
             // Обработка нажатия клавиши ESC для показа/скрытия меню
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (LayersManager.IsLayerActive(MenuEscViewModel.LAYER_NAME))
+                if (_layersManager.IsLayerActive(_menuEscViewModel.LayerName))
                 {
-                    LayersManager.HideLayer(MenuEscViewModel.LAYER_NAME);
+                    _layersManager.HideLayer(_menuEscViewModel.LayerName);
                 }
-                else if (LayersManager.IsLayerCanBeShown(MenuEscViewModel.LAYER_NAME))
+                else if (_layersManager.IsLayerCanBeShown(_menuEscViewModel.LayerName))
                 {
-                    LayersManager.ShowLayer(MenuEscViewModel.LAYER_NAME);
+                    _layersManager.ShowLayer(_menuEscViewModel.LayerName);
                 }
             }
         }

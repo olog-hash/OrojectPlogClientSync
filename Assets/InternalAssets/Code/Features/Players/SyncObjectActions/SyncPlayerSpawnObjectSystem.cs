@@ -22,10 +22,13 @@ namespace ProjectOlog.Code.Features.Players.SyncObjectActions
         private ObjectNetworker _objectNetworker;
         private LocalInventorySession _localInventorySession;
 
-        public SyncPlayerSpawnObjectSystem(ObjectNetworker objectNetworker, LocalInventorySession localInventorySession)
+        private LayersManager _layersManager;
+
+        public SyncPlayerSpawnObjectSystem(ObjectNetworker objectNetworker, LocalInventorySession localInventorySession, LayersManager layersManager)
         {
             _objectNetworker = objectNetworker;
             _localInventorySession = localInventorySession;
+            _layersManager = layersManager;
         }
 
 
@@ -36,7 +39,7 @@ namespace ProjectOlog.Code.Features.Players.SyncObjectActions
 
         public override void OnUpdate(float deltaTime)
         {
-            if (!LayersManager.IsLayerActive("Gameplay")) return;
+            if (!_layersManager.IsLayerActive("Gameplay")) return;
 
             foreach (var entity in _localPlayerFilter)
             {

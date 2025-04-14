@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.Battle.ECS.Systems.Features;
+﻿using System;
+using ProjectOlog.Code.Battle.ECS.Systems.Features;
 using ProjectOlog.Code.Engine.Characters.KinematicCharacter.Interpolation;
 using ProjectOlog.Code.Engine.Interpolation;
 using ProjectOlog.Code.Engine.Transform;
@@ -14,24 +15,25 @@ using Zenject;
 
 namespace ProjectOlog.Code.Battle.ECS.Systems
 {
-    public class EcsStartup : MonoBehaviour, IFixedUpdate, ITickUpdate, IUpdate, ILateUpdate
+    public class EcsStartup : MonoBehaviour, IFixedUpdate, ITickUpdate, IUpdate, ILateUpdate, IDisposable
     {
         public int Order;
 
         private EcsSystemsFactory _systemsFactory;
-        
-        [SerializeField]
         private SystemsGroup _systemsGroup;
+
+        private RuntimeHelper _runtimeHelper;
 
         [Inject]
         public void Construct(RuntimeHelper runtimeHelper, EcsSystemsFactory systemsFactory)
         {
-            runtimeHelper.RegisterFixedUpdate(this);
-            runtimeHelper.RegisterTickUpdate(this);
-            runtimeHelper.RegisterUpdate(this);
-            runtimeHelper.RegisterLateUpdate(this);
-            
+            _runtimeHelper = runtimeHelper;
             _systemsFactory = systemsFactory;
+            
+            _runtimeHelper.RegisterFixedUpdate(this);
+            _runtimeHelper.RegisterTickUpdate(this);
+            _runtimeHelper.RegisterUpdate(this);
+            _runtimeHelper.RegisterLateUpdate(this);
 
             InitializedSystems();
             InitializedRules();
@@ -110,6 +112,20 @@ namespace ProjectOlog.Code.Battle.ECS.Systems
         public void OnLateUpdate(float deltaTime)
         {
             WorldExtensions.GlobalLateUpdate(deltaTime);
+        }
+
+        public void Dispose()
+        {
+            _runtimeHelper.DeregisterFixedUpdate(this);
+            _runtimeHelper.DeregisterTickUpdate(this);
+            _runtimeHelper.DeregisterUpdate(this);
+            _runtimeHelper.DeregisterLateUpdate(this);
+            
+            World.Default.RemoveSystemsGroup(_systemsGroup);
+            
+            _systemsGroup.Dispose();
+
+            WorldExtensions.InitializationDefaultWorld();
         }
     }
 }

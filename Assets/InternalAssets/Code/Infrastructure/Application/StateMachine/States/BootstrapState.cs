@@ -1,4 +1,5 @@
-﻿using ProjectOlog.Code.DataStorage.Core;
+﻿using ProjectOlog.Code.Context;
+using ProjectOlog.Code.DataStorage.Core;
 using ProjectOlog.Code.Engine.Inputs;
 using ProjectOlog.Code.Infrastructure.Application.Layers;
 using ProjectOlog.Code.Infrastructure.Logging;
@@ -16,18 +17,15 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
     /// </summary>
     public class BootstrapState: ApplicationState
     {
-        private RuntimeHelper _runtimeHelper;
         private ApplicationStateMachine _applicationStateMachine;
-        
-        private ApplicationLayersController _layersController;
-        private ContainersReloadService _containersReloadService;
+
+        private ContextLifeCycleService _contextLifeCycleService;
 
         [Inject]
-        public BootstrapState(RuntimeHelper runtimeHelper, ApplicationStateMachine applicationStateMachine, ContainersReloadService containersReloadService) 
+        public BootstrapState(ApplicationStateMachine applicationStateMachine, ContextLifeCycleService contextLifeCycleService)
         {
-            _runtimeHelper = runtimeHelper;
             _applicationStateMachine = applicationStateMachine;
-            _containersReloadService = containersReloadService;
+            _contextLifeCycleService = contextLifeCycleService;
         }
         
         public override void Enter()
@@ -36,9 +34,8 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
             LockRefreshRate();
 
             // Проводим очистку данных в основных сервисах игры
-            ResetProjectServices();
+            _contextLifeCycleService.ResetProjectContext();
             
-            Console.Log("Bootstrap was completed.");
             _applicationStateMachine.Enter<NetworkLunchState>();
         }
 
@@ -49,7 +46,7 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
 
         public override void Exit()
         {
-
+            Console.Log("Bootstrap was completed.");
         }
 
         private void LockRefreshRate()
@@ -61,25 +58,6 @@ namespace ProjectOlog.Code.Infrastructure.Application.StateMachine.States
             UnityEngine.Device.Application.targetFrameRate = refreshRate;
 
             Debug.Log($"Включено ограничение FPS : {refreshRate}");
-        }
-
-        private void ResetProjectServices()
-        {
-            // Initialization
-            _layersController = new ApplicationLayersController(_runtimeHelper);
-            
-            InputControls.Reset();
-            
-            LayersManager.Reset();
-            LayersManager.ShowLayer("MainMenu");
-
-            PrefabsResourcesLoader.Reset();
-            PrefabsResourcesLoader.RegisterAllPrefabs("Prefabs");
-            
-            NetworkTime.Reset();
-            NetworkObjectRegistration.RegisterNetworkObjects();
-            
-            _containersReloadService.ResetAllContainers();
         }
     }
 }

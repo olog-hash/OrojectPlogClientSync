@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using ProjectOlog.Code.Context;
 using ProjectOlog.Code.DataStorage.Core;
 using Zenject;
 
@@ -14,6 +15,7 @@ namespace ProjectOlog.Code.Infrastructure.DependencyInjection
             BindAllImplementationsOf<ISceneContainer>();
             
             Container.Bind<ContainersReloadService>().AsSingle().NonLazy();
+            Container.Bind<ContextLifeCycleService>().AsSingle();
         }
         
         public void BindAllImplementationsOf<TInterface>() where TInterface : class

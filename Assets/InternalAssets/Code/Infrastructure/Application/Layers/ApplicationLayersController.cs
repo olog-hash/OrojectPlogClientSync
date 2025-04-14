@@ -11,37 +11,35 @@ namespace ProjectOlog.Code.Infrastructure.Application.Layers
     /// </summary>
     public class ApplicationLayersController : IUpdate
     {
-        private static LayerInfo CurrentLayerInfo;
+        private LayerInputMode _currentLayerInputMode;
         
         public ApplicationLayersController(RuntimeHelper runtimeHelper)
         {
-            Reset();
-            
             runtimeHelper.RegisterUpdate(this);
         }
 
-        public static void Reset()
+        public void Reset()
         {
-            CurrentLayerInfo = LayerInfo.None;
+            _currentLayerInputMode = LayerInputMode.None;
         }
 
-        public static void ChangeState(LayerInfo newLayer)
+        public void ChangeState(LayerInputMode newLayer)
         {
-            CurrentLayerInfo = newLayer;
+            _currentLayerInputMode = newLayer;
             EnterState();
         }
         
-        public static void EnterState()
+        public void EnterState()
         {
-            InputControls.IsMouseControlEnabled = CurrentLayerInfo.IsMouseControlEnabled;
-            InputControls.IsKeyControlEnabled = CurrentLayerInfo.IsKeyControlEnabled;
+            InputControls.IsMouseControlEnabled = _currentLayerInputMode.IsMouseControlEnabled;
+            InputControls.IsKeyControlEnabled = _currentLayerInputMode.IsKeyControlEnabled;
             
-            Cursor.lockState = CurrentLayerInfo.IsCursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.lockState = _currentLayerInputMode.IsCursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
         }
         
-        public static void UpdateCurrentState()
+        public void UpdateCurrentState()
         {
-            if (CurrentLayerInfo.IsCursorLocked)
+            if (_currentLayerInputMode.IsCursorLocked)
             {
                 if (InputControls.GetMouseButtonDown(0) || InputControls.GetMouseButtonDown(1))
                 {

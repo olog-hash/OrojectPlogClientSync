@@ -3,21 +3,21 @@
     /// <summary>
     /// Класс для записи регистрации слоя со всем базовыми данными
     /// </summary>
-    public class LayerRegistration
+    public class LayerEntry
     {
-        public int LayerID;
-        public string Layername;
-        public ILayer LayerHandler;
         public LayerInfo LayerInfo;
-        
+        public ILayer LayerHandler;
         public bool IsEnabled;
 
-        public LayerRegistration(int layerID, string layername, ILayer layerHandler, LayerInfo layerInfo)
+        public LayerEntry(LayerInfo layerInfo, ILayer layerHandler)
         {
-            LayerID = layerID;
-            Layername = layername;
-            LayerHandler = layerHandler;
             LayerInfo = layerInfo;
+            LayerHandler = layerHandler;
+
+            if (layerHandler != null)
+            {
+                layerHandler.LayerInfo = layerInfo;
+            }
             
             IsEnabled = false;
         }
@@ -25,13 +25,13 @@
         public void Show()
         {
             IsEnabled = true;
-            LayerHandler?.ShowLayer();
+            LayerHandler?.OnShowLayer();
         }
 
         public void Hide()
         {
             IsEnabled = false;
-            LayerHandler?.HideLayer();
+            LayerHandler?.OnHideLayer();
         }
     }
 }

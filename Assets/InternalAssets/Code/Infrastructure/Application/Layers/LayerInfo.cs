@@ -1,30 +1,27 @@
 ﻿namespace ProjectOlog.Code.Infrastructure.Application.Layers
 {
-    /// <summary>
-    /// Информация о действующем активном слое:
-    /// будет ли заблокирован курсор,
-    /// будет ли заблокировано вращение камеры,
-    /// будет ли заблокировано перемещение.
-    /// </summary>
-    public readonly struct LayerInfo
+    public enum ELayerChannel
     {
-        public bool IsCursorLocked { get; }
-        public bool IsMouseControlEnabled { get; }
-        public bool IsKeyControlEnabled { get; }
-
-        private LayerInfo(bool isCursorLocked, bool isMouseControlEnabled, bool isKeyControlEnabled)
-        {
-            IsCursorLocked = isCursorLocked;
-            IsMouseControlEnabled = isMouseControlEnabled;
-            IsKeyControlEnabled = isKeyControlEnabled;
-        }
-
-        public static LayerInfo None => new LayerInfo(true, false, false);
-        public static LayerInfo Freedom => new LayerInfo(false, true, true);
-        public static LayerInfo Game => new LayerInfo(true, true, true);
-        public static LayerInfo SelectedPanel => new LayerInfo(false, false, false);
-        public static LayerInfo SelectedPanelFreeMove => new LayerInfo(false, false, true);
-        public static LayerInfo SelectedPanelFreeLook => new LayerInfo(false, true, false);
-        public static LayerInfo SelectedPanelFreeMoveLook => new LayerInfo(false, true, true);
+        /// <summary>
+        /// Базовый канал для основных элементов (меню, игровой процесс)
+        /// </summary>
+        BaseChannel = 0,
+        
+        // Остальные каналы
+        Channel_1,
+        Channel_2,
+        Channel_3,
+        Channel_4,
+        Channel_5,
+        Channel_6,
+        Channel_7,
+        Channel_8,
+    }
+    
+    public class LayerInfo
+    {
+        public ELayerChannel LayerChannel { get; set; }
+        public string LayerName { get; set; }
+        public LayerInputMode InputMode { get; set; }
     }
 }

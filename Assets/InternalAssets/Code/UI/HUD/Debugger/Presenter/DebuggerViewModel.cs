@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ProjectOlog.Code.UI.HUD.Debugger
 {
-    public class DebuggerViewModel: BaseViewModel
+    public class DebuggerViewModel : BaseViewModel
     {
         // Основные данные
         public float FrameRate;
