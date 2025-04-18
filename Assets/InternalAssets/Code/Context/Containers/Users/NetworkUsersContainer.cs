@@ -5,7 +5,7 @@ using ProjectOlog.Code.DataStorage.Core;
 namespace ProjectOlog.Code.Network.Profiles.Users
 {
      /// <summary>
-    /// Контейнер всех пользователей что подключены и авторизованы.
+    /// Контейнер всех пользователей, что подключены и авторизованы.
     /// </summary>
     public sealed class NetworkUsersContainer : ISceneContainer
     {

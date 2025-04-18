@@ -40,7 +40,7 @@ namespace ProjectOlog.Code.Network.Infrastructure.NetWorkers.Entities
             var position = dataPackage.GetVector3();
             var rotation = dataPackage.GetVector4();
 
-            if (!_entitiesContainer.PlayerEntities.TryGetPlayerEntity(userID, out var playerProvider)) return;
+            if (!_entitiesContainer.PlayerBaseEntities.TryGetPlayerEntity(userID, out var playerProvider)) return;
             
             var respawnPlayerEvent = new RespawnPlayerEvent
             {

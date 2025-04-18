@@ -6,8 +6,7 @@ namespace ProjectOlog.Code.UI.Shared.Settings.Presenter
 {
     public class SettingsViewModel : LayerViewModel
     {
-        // Добавляем константу имени слоя
-        public const string LAYER_NAME = "Settings";
+        protected override bool IsCanIgnoreGlobalVisibility => true;
         
         // Модели для каждой вкладки
         public GameSettingsModel GameSettings { get; }
@@ -32,8 +31,6 @@ namespace ProjectOlog.Code.UI.Shared.Settings.Presenter
             Audio
         }
         
-        protected override bool IsCanIgnoreGlobalVisibility => true;
-
         public SettingsViewModel()
         {
             // Создаем модели для каждой вкладки
@@ -66,16 +63,6 @@ namespace ProjectOlog.Code.UI.Shared.Settings.Presenter
 
             // Начальное обновление состояния кнопки
             UpdateApplyButtonState(_activeTab.Value);
-        }
-
-        public void OnShowLayer()
-        {
-            Show();
-        }
-
-        public void OnHideLayer()
-        {
-            Hide();
         }
 
         public void CloseSettingsPanel()

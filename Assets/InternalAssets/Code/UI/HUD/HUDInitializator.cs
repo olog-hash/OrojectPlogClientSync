@@ -2,7 +2,6 @@
 using ProjectOlog.Code.Engine.Cameras.Core;
 using ProjectOlog.Code.Infrastructure.Application.Layers;
 using ProjectOlog.Code.UI.Core;
-using ProjectOlog.Code.UI.Core.Services;
 using ProjectOlog.Code.UI.HUD.Chat.Presenter;
 using ProjectOlog.Code.UI.HUD.Chat.View;
 using ProjectOlog.Code.UI.HUD.ChatPanel;
@@ -67,7 +66,7 @@ namespace ProjectOlog.Code.UI.HUD
         private void ResetServices()
         {
             NotificationUtilits.Reset();
-            GlobalUIVisibility.Reset();
+            BaseViewModel.ResetGlobalVisibility();
         }
 
         private void RegisterViewModels()
@@ -146,7 +145,7 @@ namespace ProjectOlog.Code.UI.HUD
         
         private void BindCameras()
         {
-            MainCamera.Instance.InitializeCameras(_hudMainCamera, _hudCrosshairCamera);
+            MainCamera.Instance.InitializeCameras(_hudCrosshairCamera);
         }
         
         public void OnDestroy()

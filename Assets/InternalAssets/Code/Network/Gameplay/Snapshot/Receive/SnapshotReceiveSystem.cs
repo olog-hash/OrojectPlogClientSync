@@ -117,7 +117,7 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
                         continue;
 
                     // Если он все еще существует на карте
-                    if (_entitiesContainer.PlayerEntities.TryGetPlayerEntity(playerID, out var networkEntity))
+                    if (_entitiesContainer.PlayerBaseEntities.TryGetPlayerEntity(playerID, out var networkEntity))
                     {
                         var playerTransformClone = playerTransform.Clone();
                         

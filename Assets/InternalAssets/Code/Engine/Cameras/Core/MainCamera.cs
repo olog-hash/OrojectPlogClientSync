@@ -1,4 +1,4 @@
-using ProjectOlog.Code.UI.Core.Services;
+using R3;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -14,37 +14,46 @@ namespace ProjectOlog.Code.Engine.Cameras.Core
         
         [SerializeField] private UnityEngine.Camera _mainCamera;
         [SerializeField] private UnityEngine.Camera _itemsCamera;
-        [SerializeField] private UnityEngine.Camera _hudCamera;
         [SerializeField] private UnityEngine.Camera _hudCrosshairCamera;
         
         [Header("Transform")]
         [SerializeField] private Vector3 _targetPosition;
         [SerializeField] private Quaternion _targetRotation;
         
-        private GameObject _gameObject;
         private UnityEngine.Transform _transform;
         private VirtualCamera _currentVirtualCamera;
+        
+        // Статический доступ к видимости камеры предметов
+        private static ReactiveProperty<bool> _itemsCameraVisibility = new ReactiveProperty<bool>(true);
+        public static ReadOnlyReactiveProperty<bool> ItemsCameraVisibility => _itemsCameraVisibility.ToReadOnlyReactiveProperty();
+
+        private CompositeDisposable _disposables = new CompositeDisposable();
         
         public void Initialize()
         {
             Instance = this;
             
             _transform = transform;
-            _gameObject = gameObject;
             
             _targetPosition = Vector3.zero;
             _targetRotation = Quaternion.identity;
+            
+            // Подписываемся на изменения статической видимости
+            _itemsCameraVisibility
+                .Subscribe(visible => {
+                    if (Instance != null)
+                        Instance.ShowItemsCamera(visible);
+                })
+                .AddTo(_disposables);
         }
         
-        public void InitializeCameras(UnityEngine.Camera hudMain, UnityEngine.Camera hudCrosshair)
+        public void InitializeCameras(UnityEngine.Camera hudCrosshair)
         {
-            _hudCamera = hudMain;
             _hudCrosshairCamera = hudCrosshair;
             
             var cameraData = _mainCamera.GetUniversalAdditionalCameraData();
             cameraData.cameraStack.Add(_hudCrosshairCamera);
             cameraData.cameraStack.Add(_itemsCamera);
-            cameraData.cameraStack.Add(_hudCamera);
         }
 
         private void LateUpdate()
@@ -67,12 +76,6 @@ namespace ProjectOlog.Code.Engine.Cameras.Core
             _mainCamera.fieldOfView = _currentVirtualCamera.POV;
             _itemsCamera.fieldOfView = _currentVirtualCamera.POV;
         }
-        
-        public void ShowHudCamera(bool flag = true)
-        {
-            _hudCamera.enabled = flag;
-            _hudCrosshairCamera.enabled = flag;
-        }
 
         public void ShowItemsCamera(bool flag = true)
         {
@@ -82,6 +85,18 @@ namespace ProjectOlog.Code.Engine.Cameras.Core
         public void ShowMainCamera(bool flag = true)
         {
             _mainCamera.enabled = flag;
+        }
+        
+        // Статические методы для управления видимостью камеры предметов
+        public static void SetItemsCameraVisibility(bool visible) => _itemsCameraVisibility.Value = visible;
+        public static void ToggleItemsCamera() => _itemsCameraVisibility.Value = !_itemsCameraVisibility.Value;
+        
+        private void OnDestroy()
+        {
+            if (Instance == this)
+                Instance = null;
+                
+            _disposables.Dispose();
         }
     }
 }

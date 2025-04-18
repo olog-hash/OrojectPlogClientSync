@@ -1,5 +1,4 @@
 ﻿using System;
-using ProjectOlog.Code.UI.Core.Services;
 using R3;
 
 namespace ProjectOlog.Code.UI.Core
@@ -19,13 +18,17 @@ namespace ProjectOlog.Code.UI.Core
     /// </summary>
     public abstract class BaseViewModel : IViewModel
     {
-        // Локальная видимость (управляется непосредственно моделью)
-        private ReactiveProperty<bool> _localVisibility = new ReactiveProperty<bool>(true);
         // Комбинированная видимость с учётом глобального состояния
-        private ReactiveProperty<bool> _combinedVisibility = new ReactiveProperty<bool>(true);
-
         public ReadOnlyReactiveProperty<bool> IsVisible => _combinedVisibility;
+        private ReactiveProperty<bool> _combinedVisibility = new ReactiveProperty<bool>(true);
+        
+        // Статичная глобальная видимость
+        public static ReadOnlyReactiveProperty<bool> GlobalVisibility => _globalVisibility;
+        private static ReactiveProperty<bool> _globalVisibility = new ReactiveProperty<bool>(true);
+        
+        // Локальная видимость (управляется непосредственно моделью)
         public ReadOnlyReactiveProperty<bool> IsLocalVisible => _localVisibility;
+        private ReactiveProperty<bool> _localVisibility = new ReactiveProperty<bool>(true);
         
         // Подписки для этого абстрактного класса и наследников
         private CompositeDisposable _personalDisposables = new CompositeDisposable();
@@ -42,7 +45,7 @@ namespace ProjectOlog.Code.UI.Core
                 .Subscribe(_ => UpdateVisibility())
                 .AddTo(_personalDisposables);
             
-            GlobalUIVisibility.IsVisible
+            _globalVisibility
                 .Subscribe(_ => UpdateVisibility())
                 .AddTo(_personalDisposables);
 
@@ -61,11 +64,16 @@ namespace ProjectOlog.Code.UI.Core
             // Инициализируем начальное значение
             UpdateVisibility();
         }
-    
+        
+        // Статичные методы для управления глобальной видимостью
+        public static void ResetGlobalVisibility() => _globalVisibility.Value = true;
+        public static void ToggleGlobalVisibility() => _globalVisibility.Value = !_globalVisibility.Value;
+        public static void SetGlobalVisibility(bool isVisible) => _globalVisibility.Value = isVisible;
+        
         // Метод для обновления итоговой видимости
         private void UpdateVisibility()
         {
-            _combinedVisibility.Value = _localVisibility.Value && (GlobalUIVisibility.IsVisible.Value || IsCanIgnoreGlobalVisibility);
+            _combinedVisibility.Value = _localVisibility.Value && (_globalVisibility.Value || IsCanIgnoreGlobalVisibility);
         }
         
         // Методы Show/Hide теперь просто обновляют локальную видимость

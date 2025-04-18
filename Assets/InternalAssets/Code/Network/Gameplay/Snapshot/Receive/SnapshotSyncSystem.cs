@@ -67,7 +67,7 @@ namespace ProjectOlog.Code.Network.Gameplay.Snapshot.Receive
                 var currentTransform = playerData.Value;
                 
                 // Если такой сущности нет в мире - пропускаем
-                if (!_entitiesContainer.PlayerEntities.TryGetPlayerEntity(playerID, out var playerProvider))
+                if (!_entitiesContainer.PlayerBaseEntities.TryGetPlayerEntity(playerID, out var playerProvider))
                     continue;
 
                 var playerEntity = playerProvider.Entity;

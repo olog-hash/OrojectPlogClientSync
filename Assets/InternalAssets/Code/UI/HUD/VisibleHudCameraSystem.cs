@@ -1,5 +1,6 @@
-﻿using ProjectOlog.Code.Engine.Cameras.Core;
-using ProjectOlog.Code.UI.Core.Services;
+﻿using ProjectOlog.Code.DataStorage.Core.VisibilityHUD;
+using ProjectOlog.Code.Engine.Cameras.Core;
+using ProjectOlog.Code.UI.Core;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
@@ -11,8 +12,15 @@ namespace ProjectOlog.Code.UI.HUD.Systems
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class VisibleHudCameraSystem : UpdateSystem
     {
-        private bool _isActive = true;
+        private VisibilityHUDContainer _visibilityHUDContainer;
         
+        private bool _isActive = true;
+
+        public VisibleHudCameraSystem(VisibilityHUDContainer visibilityHUDContainer)
+        {
+            _visibilityHUDContainer = visibilityHUDContainer;
+        }
+
         public override void OnAwake()
         {
 
@@ -28,19 +36,17 @@ namespace ProjectOlog.Code.UI.HUD.Systems
                     
                     if (UnityEngine.Input.GetKey(KeyCode.LeftControl))
                     {
-                        MainCamera.Instance.ShowItemsCamera(_isActive);
+                        _visibilityHUDContainer.SetItemsCameraVisibility(_isActive);
                     }
                     
-                    GlobalUIVisibility.SetVisibility(_isActive);
-                    MainCamera.Instance.ShowHudCamera(_isActive);
+                    _visibilityHUDContainer.SetHUDVisibility(_isActive);
                 }
                 else
                 {
                     _isActive = !_isActive;
                     
-                    GlobalUIVisibility.SetVisibility(_isActive);
-                    MainCamera.Instance.ShowItemsCamera(_isActive);
-                    MainCamera.Instance.ShowHudCamera(_isActive);
+                    _visibilityHUDContainer.SetHUDVisibility(_isActive);
+                    _visibilityHUDContainer.SetItemsCameraVisibility(_isActive);
                 }
             }
         }

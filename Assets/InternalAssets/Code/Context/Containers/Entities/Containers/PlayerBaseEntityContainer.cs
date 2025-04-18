@@ -6,7 +6,7 @@ using Scellecs.Morpeh.Providers;
 
 namespace ProjectOlog.Code.Network.Profiles.Entities.Containers
 {
-     public class PlayerEntityContainer : EntityContainerBase
+     public class PlayerBaseEntityContainer : BaseEntityContainer
     {
         // Дополнительный индекс для быстрого поиска игроков по UserID
         private readonly Dictionary<byte, EntityProvider> _playersByUserId = new Dictionary<byte, EntityProvider>();

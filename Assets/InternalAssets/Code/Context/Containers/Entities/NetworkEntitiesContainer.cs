@@ -11,16 +11,16 @@ namespace ProjectOlog.Code.Network.Profiles.Entities
     {
         public EcsRules EcsRules;
 
-        public PlayerEntityContainer PlayerEntities { get; } = new PlayerEntityContainer();
-        public ObjectEntityContainer ObjectEntities { get; } = new ObjectEntityContainer();
+        public PlayerBaseEntityContainer PlayerBaseEntities { get; } = new PlayerBaseEntityContainer();
+        public ObjectBaseEntityContainer ObjectBaseEntities { get; } = new ObjectBaseEntityContainer();
         
         // Статистика
-        public int TotalEntitiesCount => PlayerEntities.Count + ObjectEntities.Count;
+        public int TotalEntitiesCount => PlayerBaseEntities.Count + ObjectBaseEntities.Count;
         
         public void Reset()
         {
-            ObjectEntities.Clear();
-            PlayerEntities.Clear();
+            ObjectBaseEntities.Clear();
+            PlayerBaseEntities.Clear();
         }
 
         public void RegisterEcsRules(EcsRules ecsRules)
@@ -34,8 +34,8 @@ namespace ProjectOlog.Code.Network.Profiles.Entities
         public EntityProvider GetNetworkEntity(ushort id)
         {
             // Оптимизировано: сначала проверяем объекты, так как их обычно больше
-            return ObjectEntities.GetNetworkEntity(id) ?? 
-                   PlayerEntities.GetNetworkEntity(id);
+            return ObjectBaseEntities.GetNetworkEntity(id) ?? 
+                   PlayerBaseEntities.GetNetworkEntity(id);
         }
 
         /// <summary>
@@ -53,8 +53,8 @@ namespace ProjectOlog.Code.Network.Profiles.Entities
         public bool RemoveNetworkEntity(ushort id)
         {
             // Удаляем из соответствующего контейнера
-            bool entityRemoved = PlayerEntities.RemoveNetworkEntity(id) || 
-                                 ObjectEntities.RemoveNetworkEntity(id);
+            bool entityRemoved = PlayerBaseEntities.RemoveNetworkEntity(id) || 
+                                 ObjectBaseEntities.RemoveNetworkEntity(id);
                                  
             // Логируем предупреждение, если ID освобожден, но сущность не найдена
             if (!entityRemoved)
@@ -70,8 +70,8 @@ namespace ProjectOlog.Code.Network.Profiles.Entities
         /// </summary>
         public bool ContainsNetworkEntityWithId(ushort id)
         {
-            return PlayerEntities.ContainsEntityWithId(id) || 
-                   ObjectEntities.ContainsEntityWithId(id);
+            return PlayerBaseEntities.ContainsEntityWithId(id) || 
+                   ObjectBaseEntities.ContainsEntityWithId(id);
         }
         
         /// <summary>
@@ -79,8 +79,8 @@ namespace ProjectOlog.Code.Network.Profiles.Entities
         /// </summary>
         public ushort[] GetAllNetworkIds()
         {
-            return PlayerEntities.GetAllEntityIds()
-                .Concat(ObjectEntities.GetAllEntityIds())
+            return PlayerBaseEntities.GetAllEntityIds()
+                .Concat(ObjectBaseEntities.GetAllEntityIds())
                 .ToArray();
         }
         
@@ -89,7 +89,7 @@ namespace ProjectOlog.Code.Network.Profiles.Entities
         /// </summary>
         public string GetContainerStatus()
         {
-            return $"Сетевые сущности: {TotalEntitiesCount} (Игроки: {PlayerEntities.Count}, Объекты: {ObjectEntities.Count})\n";
+            return $"Сетевые сущности: {TotalEntitiesCount} (Игроки: {PlayerBaseEntities.Count}, Объекты: {ObjectBaseEntities.Count})\n";
         }
     }
 }

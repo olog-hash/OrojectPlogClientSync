@@ -76,7 +76,7 @@ namespace ProjectOlog.Code.Features.Objects.Instantiate
                     provider.Entity.SetComponent(new NetworkIdentity { ServerID = networkIdentity.ServerID });
                     
                     // Добавляем в контейнер
-                    _entitiesContainer.ObjectEntities.AddEntity(provider);
+                    _entitiesContainer.ObjectBaseEntities.AddEntity(provider);
                 }
             }
         }

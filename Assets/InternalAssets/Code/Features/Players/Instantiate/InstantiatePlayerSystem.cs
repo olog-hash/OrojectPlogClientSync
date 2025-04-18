@@ -73,7 +73,7 @@ namespace ProjectOlog.Code.Features.Players.Instantiate
                     provider.Entity.SetComponent(new NetworkIdentity { ServerID = networkIdentity.ServerID });
                     
                     // Добавляем в контейнер
-                    _entitiesContainer.PlayerEntities.AddEntity(provider);
+                    _entitiesContainer.PlayerBaseEntities.AddEntity(provider);
                 }
             }
         }

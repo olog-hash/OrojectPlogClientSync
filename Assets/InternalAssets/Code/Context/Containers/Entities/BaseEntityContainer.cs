@@ -7,7 +7,7 @@ using Scellecs.Morpeh.Providers;
 
 namespace ProjectOlog.Code.Network.Profiles.Entities
 {
-    public abstract class EntityContainerBase : IEnumerable<EntityProvider>
+    public abstract class BaseEntityContainer : IEnumerable<EntityProvider>
     {
         // Единственное хранилище - словарь
         protected Dictionary<ushort, EntityProvider> EntitiesById { get; } = new Dictionary<ushort, EntityProvider>();

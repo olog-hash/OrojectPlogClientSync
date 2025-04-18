@@ -68,7 +68,7 @@ namespace ProjectOlog.Code.UI.HUD.Debugger.Systems
                 _debuggerViewModel.PacketLoss = _networkClient.NetStatistics.PacketLossPercent;
 
                 _debuggerViewModel.UsersCount = _usersContainer.UsersCount;
-                _debuggerViewModel.NetworkEntities = _entitiesContainer.ObjectEntities.Count;
+                _debuggerViewModel.NetworkEntities = _entitiesContainer.ObjectBaseEntities.Count;
                 
                 _networkClient.NetStatistics.Reset();
             }
